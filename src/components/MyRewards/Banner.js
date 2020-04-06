@@ -8,7 +8,7 @@ const Banner = ({ appName, token }) => {
     <div className="banner">
       <div className="container">
         <h1 className="logo-font">
-          {appName}
+          Test{appName}
         </h1>
         <p></p>
       </div>
