@@ -3,13 +3,10 @@ import Header from './common/Header';
 import Footer from './common/Footer';
 import React from 'react';
 import { connect } from 'react-redux';
-import { APP_LOAD, REDIRECT } from '../constants/actionTypes';
 import { Route, Switch } from 'react-router-dom';
-import Login from '../components/Login';
-import Settings from '../components/Settings';
 import { store } from '../store';
 import { push } from 'react-router-redux';
-import MyRewards from './myrewards';
+import MyRewards from './MyRewards';
 
 const mapStateToProps = state => {
   return {
