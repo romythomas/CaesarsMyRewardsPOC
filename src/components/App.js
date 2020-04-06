@@ -1,5 +1,6 @@
 import agent from '../agent';
-import Header from './Header';
+import Header from './common/Header';
+import Footer from './common/Footer';
 import React from 'react';
 import { connect } from 'react-redux';
 import { APP_LOAD, REDIRECT } from '../constants/actionTypes';
@@ -8,7 +9,7 @@ import Login from '../components/Login';
 import Settings from '../components/Settings';
 import { store } from '../store';
 import { push } from 'react-router-redux';
-import MyRewards from './MyRewards';
+import MyRewards from './myrewards';
 
 const mapStateToProps = state => {
   return {
@@ -38,12 +39,11 @@ class App extends React.Component {
   render() {
       return (
         <div>
-          <Header
-            appName={this.props.appName}
-            currentUser={this.props.currentUser} />
+          <Header appName={this.props.appName} currentUser={this.props.currentUser} />
             <Switch>
-            <Route exact path="/" component={MyRewards}/>
+              <Route exact path="/" component={MyRewards}/>
             </Switch>
+          <Footer appName={this.props.appName}> </Footer>
         </div>
       );
   }

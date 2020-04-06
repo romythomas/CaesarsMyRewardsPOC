@@ -1,4 +1,3 @@
-import Banner from './Banner';
 import React from 'react';
 import agent from '../../agent';
 import { connect } from 'react-redux';
@@ -32,7 +31,7 @@ class MyRewards extends React.Component {
     return (
       <div className="myrewards-page">
 
-       <Banner token={this.props.token} appName={this.props.appName} />
+        <h1>Home Page</h1>
 
       </div>
     );
