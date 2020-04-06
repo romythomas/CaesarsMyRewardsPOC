@@ -1,6 +1,7 @@
 import agent from '../agent';
 import Header from './common/Header';
 import Footer from './common/Footer';
+import SideNavigation from './common/SideNavigation';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
@@ -37,6 +38,7 @@ class App extends React.Component {
       return (
         <div>
           <Header appName={this.props.appName} currentUser={this.props.currentUser} />
+          <SideNavigation appName={this.props.appName}></SideNavigation>
             <Switch>
               <Route exact path="/" component={MyRewards}/>
             </Switch>
