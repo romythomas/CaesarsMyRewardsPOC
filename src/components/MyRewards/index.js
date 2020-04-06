@@ -31,7 +31,7 @@ class MyRewards extends React.Component {
     return (
       <div className="myrewards-page">
 
-        <h1>Home Page</h1>
+        <h2>Home Page</h2>
 
       </div>
     );
