@@ -2,25 +2,27 @@ import React from 'react';
 import agent from '../../agent';
 import { connect } from 'react-redux';
 import {
-  HOME_PAGE_LOADED,
-  HOME_PAGE_UNLOADED,
-  APPLY_TAG_FILTER
+  LOGIN
 } from '../../constants/actionTypes';
 
 const Promise = global.Promise;
 
 const mapStateToProps = state => ({
   appName: state.common.appName,
-  token: state.common.token
+  token: state.common.token,
+  accountID: state.common.accountID,
+  firstName: state.common.firstName,
+  LastName: state.common.lastName
 });
 
 const mapDispatchToProps = dispatch => ({
- 
+ onLogin: () =>
+ dispatch({ type: LOGIN, payload: agent.Auth.login() })
 });
 
 class MyRewards extends React.Component {
   componentWillMount() {
-    
+    this.props.onLogin();
   }
 
   componentWillUnmount() {
@@ -32,6 +34,8 @@ class MyRewards extends React.Component {
       <div className="page">
 
         <h2>Home Page</h2>
+        <h4>Account ID: {this.props.accountID}</h4>
+        <h4>User: {this.props.firstName} {this.props.LastName}</h4>
 
       </div>
     );

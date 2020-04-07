@@ -51,7 +51,7 @@ export default (state = defaultState, action) => {
         ...state,
         redirectTo: action.error ? null : '/',
         token: action.error ? null : action.payload.logininfo.token,
-        currentUser: action.error ? null : action.payload.logininfo.accountid,
+        accountID: action.error ? null : action.payload.logininfo.accountid,
         firstName: action.error ? null : action.payload.logininfo.firstname,
         lastName: action.error ? null : action.payload.logininfo.lastname,
       };

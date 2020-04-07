@@ -10,11 +10,9 @@ const responseBody = res => res.body;
 
 let token = null;
 const tokenPlugin = req => {
-  //if (token) {
-    //req.set('authorization', `Token ${token}`);
-    //req.set('Access-Control-Allow-Origin','*');
-    //req.set('Access-Control-Allow-Methods','*')
-  //}
+  if (token) {
+    req.set('authorization', `Token ${token}`);
+  }
 }
 
 const requests = {
