@@ -10,9 +10,9 @@ const Promise = global.Promise;
 const mapStateToProps = state => ({
   appName: state.common.appName,
   token: state.common.token,
-  accountID: state.common.accountID,
-  firstName: state.common.firstName,
-  LastName: state.common.lastName
+  accountID: state.auth.accountID,
+  firstName: state.auth.firstName,
+  LastName: state.auth.lastName
 });
 
 const mapDispatchToProps = dispatch => ({
