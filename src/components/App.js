@@ -7,11 +7,11 @@ import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { store } from '../store';
 import { push } from 'react-router-redux';
-import MyRewards from './myrewards';
-import LeaderBoard from './leaderboard';
-import QuestForRewards from './questforrewards';
-import MyOffers from './myoffers';
-import Reservation from './reservations';
+import MyRewards from './MyRewards';
+import LeaderBoard from './Leaderboard';
+import QuestForRewards from './QuestForRewards';
+import MyOffers from './MyOffers';
+import Reservation from './Reservations';
 
 const mapStateToProps = state => {
   return {
