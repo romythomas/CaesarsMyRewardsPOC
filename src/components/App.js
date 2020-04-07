@@ -12,6 +12,7 @@ import LeaderBoard from './leaderboard';
 import QuestForRewards from './questforrewards';
 import MyOffers from './myoffers';
 import Reservation from './reservations';
+import Login from './Login';
 
 const mapStateToProps = state => {
   return {
@@ -49,6 +50,7 @@ class App extends React.Component {
               <Route exact path="/leaderboard" component={LeaderBoard}/>
               <Route exact path="/badges" component={QuestForRewards}/>
               <Route exact path="/reservations" component={Reservation}/>
+              <Route exact path="/login" component={Login}/>
             </Switch>
           <Footer appName={this.props.appName}> </Footer>
         </div>

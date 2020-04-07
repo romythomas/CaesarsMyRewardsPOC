@@ -117,6 +117,7 @@ sup{
 	font-size: small;
 }
 
+.header a.navbar__link.active { background-color: #5bc0de; }
 
 #please-wait-dialog, #system-error-modal { background-color: #fff; display: none; left: 0px; top: 40px; padding-bottom: 25px; position: absolute; z-index: 400; -moz-box-shadow: 3px 0px 20px 0px #444444; -webkit-box-shadow: 0px 20px 5px 0px #444444; box-shadow: 0px 0px 20px 0px #444444; }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header = (props) => {
   return (
@@ -7,11 +8,26 @@ const Header = (props) => {
         <img src="https://www.caesars.com/myrewards/profile/images/caesars_rewards_logo_white.png"></img>  
         </a>
         <div className="header-left">
-          <a className="active" href="#home">Benefits</a>
-          <a href="#earn">Earn &amp; Redeem</a>
-          <a href="#promotions">Promotions</a>
-          <a href="#partners">Partners</a>
-          <a href="#booknow">Book Now</a>
+          <nav>
+            <NavLink exact activeClassName="active" className="navbar__link" to="/">
+              Benefits
+            </NavLink>
+            <NavLink exact activeClassName="active" className="navbar__link" to="#earn">
+              Earn &amp; Redeem
+            </NavLink>
+            <NavLink exact activeClassName="active" className="navbar__link" to="#promotions">
+              Promotions
+            </NavLink>
+            <NavLink exact activeClassName="active" className="navbar__link" to="#partners">
+              Partners
+            </NavLink>
+            <NavLink exact activeClassName="active" className="navbar__link" to="//https://www.caesars.com/book">
+              Book Now
+            </NavLink>
+            <NavLink activeClassName="active" className="navbar__link" to="/login" >
+              Login
+            </NavLink>
+          </nav>
         </div>
         <div className="header-right">
         <img id="mytr_icon" className="user-icon-img" src="https://www.caesars.com/myrewards/profile/images/user-icon.svg" width="40" height="40" alt="User Icon" />
