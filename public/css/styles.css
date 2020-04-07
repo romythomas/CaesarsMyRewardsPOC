@@ -4,7 +4,9 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.page{
+    padding-top: 10px;
+}
 .header {
   overflow: hidden;
   background-color: #7E7877;
@@ -319,13 +321,4 @@ nav#side-navigation {
 		.clr {
 	clear: both;
 	font-size: 0;
-}
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
 }
