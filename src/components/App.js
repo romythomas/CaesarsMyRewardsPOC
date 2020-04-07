@@ -1,7 +1,7 @@
 import agent from '../agent';
-import Header from './common/Header';
-import Footer from './common/Footer';
-import SideNavigation from './common/SideNavigation';
+import Header from './Common/Header';
+import Footer from './Common/Footer';
+import SideNavigation from './Common/SideNavigation';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
