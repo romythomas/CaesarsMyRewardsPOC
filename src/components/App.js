@@ -13,6 +13,9 @@ import QuestForRewards from './QuestForRewards';
 import MyOffers from './MyOffers';
 import Reservation from './Reservations';
 import Login from './Login';
+import {
+  LOGIN
+} from '../constants/actionTypes';
 
 const mapStateToProps = state => {
   return {
@@ -23,7 +26,8 @@ const mapStateToProps = state => {
   }};
 
 const mapDispatchToProps = dispatch => ({
-  
+  onLogin: () =>
+    dispatch({ type: LOGIN, payload: agent.Auth.login() })
 });
 
 class App extends React.Component {
@@ -36,7 +40,7 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-
+    this.props.onLogin();
   }
 
   render() {

@@ -43,10 +43,15 @@ getOfferList:(winnetid) =>
 }
 
 const Profile = {
+  follow: username =>
+    requests.post(`/profiles/${username}/follow`),
+  get: username =>
+    requests.get(`/profiles/${username}`),
+  unfollow: username =>
+    requests.del(`/profiles/${username}/follow`),
   getGuestProfile:(winnetid) =>
     requests.get(`stubs/getguestprofile.json?winnetid=${encode(winnetid)}&callback=foo`)
-  
-}
+};
 
 const Tags = {
   getAll: () => requests.get('/tags')
@@ -86,15 +91,6 @@ const Comments = {
     requests.del(`/articles/${slug}/comments/${commentId}`),
   forArticle: slug =>
     requests.get(`/articles/${slug}/comments`)
-};
-
-const Profile = {
-  follow: username =>
-    requests.post(`/profiles/${username}/follow`),
-  get: username =>
-    requests.get(`/profiles/${username}`),
-  unfollow: username =>
-    requests.del(`/profiles/${username}/follow`)
 };
 
 export default {

@@ -7,7 +7,7 @@ export default (state = {}, action) => {
         case GET_PROFILE:
             return {
                 ...state,
-                profile: action.error ? null : action.payload.profile,
+                tiercode: action.error ? null : action.payload.logininfo.tier.code,
               };
         default:
       return state;
