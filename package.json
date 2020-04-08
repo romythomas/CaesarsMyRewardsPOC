@@ -32,6 +32,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server -d --open --hot",
-    "build": "webpack -p"
+    "test": "jest",
+    "build_dev": "webpack --mode development",
+    "build_prod": "webpack --mode production"
   }
 }
