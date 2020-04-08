@@ -1,7 +1,7 @@
 import React from 'react';
 import OfferList from './OfferList'
 
-const offerListArray = ["1","2"];
+const offerListArray = [[1,2,3],[4,5,6]];
 
 const OfferContainer = () => {  
     return (

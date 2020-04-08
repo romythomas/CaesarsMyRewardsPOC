@@ -1,9 +1,9 @@
 import React from 'react';
 
-const OfferItem = () => {  
+const OfferItem = (props) => { 
     return (
         <div className="item">
-		    <p>Offer</p>
+		    <p>Offer {props.itemValue}</p>
 		</div>
     );
 }
