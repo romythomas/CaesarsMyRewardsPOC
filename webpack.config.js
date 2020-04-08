@@ -6,6 +6,15 @@ module.exports = {
 		filename: 'build.js',
 		path: path.join(__dirname, '/dist')
 	},
+	devServer: {
+		hot: true,
+		contentBase: __dirname,
+		publicPath: "/",
+		watchContentBase: true,
+		disableHostCheck: true,
+		historyApiFallback: true,
+		port: 4100
+	},
 	module:{
 		rules:[{
 			test: /\.js$/,
@@ -19,4 +28,3 @@ module.exports = {
 		)
 	]
 }
-console.log(__dirname);
