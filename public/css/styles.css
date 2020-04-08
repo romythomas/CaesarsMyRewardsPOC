@@ -318,3 +318,23 @@ nav#side-navigation {
 	clear: both;
 	font-size: 0;
 }
+.list {
+    margin-left: 50px;
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+.list .item {
+    float: left;
+    width: 32%;
+    padding: 10px;
+    border: 1px solid black;
+    height: 100%;
+    margin-left: 11px;
+    text-align: center;
+}
+.list .item p {
+    font-size: 20px;
+}

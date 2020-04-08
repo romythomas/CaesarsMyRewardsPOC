@@ -1,4 +1,5 @@
 import React from 'react';
+import OfferContainer from './OfferContainer';
 import agent from '../../agent';
 import { connect } from 'react-redux';
 import {
@@ -32,7 +33,7 @@ class MyOffers extends React.Component {
       <div className="page">
 
         <h2>My-Offers Page</h2>
-
+        <OfferContainer/>
       </div>
     );
   }
