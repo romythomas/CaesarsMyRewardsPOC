@@ -37,6 +37,17 @@ const Auth = {
     requests.put('/user', { user })
 };
 
+const Offer = {
+getOfferList:(winnetid) =>
+  requests.get(`stubs/getofferlist.json?winnetid=${encode(winnetid)}&callback=foo`)
+}
+
+const Profile = {
+  getGuestProfile:(winnetid) =>
+    requests.get(`stubs/getguestprofile.json?winnetid=${encode(winnetid)}&callback=foo`)
+  
+}
+
 const Tags = {
   getAll: () => requests.get('/tags')
 };
