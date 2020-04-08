@@ -7,7 +7,7 @@ export default (state = {}, action) => {
         case GET_PROFILE:
             return {
                 ...state,
-                guestProfile: action.error ? null : action.payload.profile,
+                profile: action.error ? null : action.payload.profile,
               };
         default:
       return state;
