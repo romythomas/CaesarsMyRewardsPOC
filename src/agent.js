@@ -37,10 +37,10 @@ const Auth = {
     requests.put('/user', { user })
 };
 
-const Offer = {
-getOfferList:(winnetid) =>
+const Offers = {
+  getOfferList:(winnetid) =>
   requests.get(`stubs/getofferlist.json?winnetid=${encode(winnetid)}&callback=foo`)
-}
+};
 
 const Profile = {
   follow: username =>
@@ -99,5 +99,6 @@ export default {
   Comments,
   Profile,
   Tags,
+  Offers,
   setToken: _token => { token = _token; }
 };
