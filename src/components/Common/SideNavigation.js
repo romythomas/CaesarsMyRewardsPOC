@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-class SideNavigation extends React.Component {
-  render() {
+const SideNavigation = (props) => {  
     return (
         <nav id="side-navigation">
             <div>
@@ -21,8 +20,7 @@ class SideNavigation extends React.Component {
                 </ul>
             </div>
         </nav>
-    );
-  }
+    );  
 }
 
 export default SideNavigation;
