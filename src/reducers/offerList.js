@@ -7,7 +7,7 @@ export default (state = {}, action) => {
         case GET_OFFER:
             return {
                 ...state,
-                offers: action.error ? null : action.payload.offers,
+                offers: action.error ? [] : action.payload.offers,
               };
         default:
       return state;
