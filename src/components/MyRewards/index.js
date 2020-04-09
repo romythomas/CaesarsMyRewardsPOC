@@ -30,13 +30,14 @@ class MyRewards extends Component {
   }
 
   render() {
+    const {accountID,firstName,LastName,TierCode} = this.props;
     return (
       <div className="page">
 
         <h2>Home Page</h2>
-        <h4>Account ID: {this.props.accountID}</h4>
-        <h4>User: {this.props.firstName} {this.props.LastName}</h4>
-        <h4>Tier: {this.props.TierCode}</h4>
+        <h4>Account ID: {accountID}</h4>
+        <h4>User: {firstName} {LastName}</h4>
+        <h4>Tier: {TierCode}</h4>
 
       </div>
     );
