@@ -329,20 +329,19 @@ nav#side-navigation {
     margin-left: 50px;
     width: 100%;
     padding: 10px;
-    height: 200px;
     margin-bottom: 20px;
 }
 .list h3 {
     margin-left: 10px;
 }
 .list .item {
-    float: left;
-    width: 32%;
+    width: 30%;
     padding: 10px;
     border: 1px solid black;
-    height: 100%;
-    margin-left: 11px;
+    height: 200px;
+    margin: 10px;
     text-align: center;
+    display: inline-block;
 }
 .list .item p {
     font-size: 20px;
