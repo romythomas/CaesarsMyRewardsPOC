@@ -2,7 +2,7 @@ import agent from '../agent';
 import Header from './Common/Header';
 import Footer from './Common/Footer';
 import SideNavigation from './Common/SideNavigation';
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { store } from '../store';
@@ -30,7 +30,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch({ type: LOGIN, payload: agent.Auth.login() })
 });
 
-class App extends React.Component {
+class App extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.redirectTo) {
       // this.context.router.replace(nextProps.redirectTo);

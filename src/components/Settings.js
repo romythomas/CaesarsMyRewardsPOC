@@ -1,5 +1,5 @@
 import ListErrors from './ListErrors';
-import React from 'react';
+import React, { Component } from 'react';
 import agent from '../agent';
 import { connect } from 'react-redux';
 import {
@@ -8,7 +8,7 @@ import {
   LOGOUT
 } from '../constants/actionTypes';
 
-class SettingsForm extends React.Component {
+class SettingsForm extends Component {
   constructor() {
     super();
 
@@ -136,7 +136,7 @@ const mapDispatchToProps = dispatch => ({
   onUnload: () => dispatch({ type: SETTINGS_PAGE_UNLOADED })
 });
 
-class Settings extends React.Component {
+class Settings extends Component {
   render() {
     return (
       <div className="settings-page">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import OfferContainer from './OfferContainer';
 import { connect } from 'react-redux';
 
@@ -12,7 +12,7 @@ const mapDispatchToProps = () => ({
  
 });
 
-class MyOffers extends React.Component {
+class MyOffers extends Component {
   componentWillMount() {
     
   }

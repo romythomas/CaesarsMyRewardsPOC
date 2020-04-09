@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import agent from '../../agent';
 import { connect } from 'react-redux';
 import {
@@ -20,7 +20,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch({ type: GET_PROFILE, payload: agent.Profile.getGuestProfile(accountID) })
 });
 
-class MyRewards extends React.Component {
+class MyRewards extends Component {
   componentWillMount() {
     this.props.onGetGuestProfile(this.props.accountID);
   }

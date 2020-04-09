@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
@@ -11,7 +11,7 @@ const mapDispatchToProps = () => ({
  
 });
 
-class Reservation extends React.Component {
+class Reservation extends Component {
   componentWillMount() {
     
   }

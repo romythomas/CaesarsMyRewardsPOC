@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import ListErrors from './ListErrors';
-import React from 'react';
+import React, { Component } from 'react';
 import agent from '../agent';
 import { connect } from 'react-redux';
 import {
@@ -22,7 +22,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch({ type: LOGIN_PAGE_UNLOADED })
 });
 
-class Login extends React.Component {
+class Login extends Component {
   constructor() {
     super();
     this.changeEmail = ev => this.props.onChangeEmail(ev.target.value);
