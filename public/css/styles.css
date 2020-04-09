@@ -318,13 +318,22 @@ nav#side-navigation {
 	clear: both;
 	font-size: 0;
 }
+.container {
+    padding: 10px;
+    padding-left: 5%;
+}
+.container h2 {
+    margin-left: 50px;
+}
 .list {
     margin-left: 50px;
     width: 100%;
     padding: 10px;
     height: 200px;
-    border: 1px solid black;
     margin-bottom: 20px;
+}
+.list h3 {
+    margin-left: 10px;
 }
 .list .item {
     float: left;

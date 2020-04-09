@@ -24,8 +24,6 @@ class MyOffers extends Component {
   render() {
     return (
       <div className="page">
-
-        <h2>My-Offers Page</h2>
         <OfferContainer/>
       </div>
     );
