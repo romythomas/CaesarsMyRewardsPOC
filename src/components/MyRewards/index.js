@@ -2,11 +2,9 @@ import React from 'react';
 import agent from '../../agent';
 import { connect } from 'react-redux';
 import {
-  LOGIN,
   GET_PROFILE
 } from '../../constants/actionTypes';
 
-const Promise = global.Promise;
 
 const mapStateToProps = state => ({
   appName: state.common.appName,

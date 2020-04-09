@@ -5,7 +5,7 @@ const Header = (props) => {
   return (
     <div className="header">
         <a href="#default" className="logo">
-        <img src="https://www.caesars.com/myrewards/profile/images/caesars_rewards_logo_white.png"></img>  
+        <img src="https://www.caesars.com/myrewards/profile/images/caesars_rewards_logo_white.png" alt="Caesars_Logo"></img>  
         </a>
         <div className="header-left">
           <nav>

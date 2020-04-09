@@ -1,21 +1,14 @@
 import React from 'react';
 import OfferContainer from './OfferContainer';
-import agent from '../../agent';
 import { connect } from 'react-redux';
-import {
-  HOME_PAGE_LOADED,
-  HOME_PAGE_UNLOADED,
-  APPLY_TAG_FILTER
-} from '../../constants/actionTypes';
 
-const Promise = global.Promise;
 
 const mapStateToProps = state => ({
   appName: state.common.appName,
   token: state.common.token
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = () => ({
  
 });
 
