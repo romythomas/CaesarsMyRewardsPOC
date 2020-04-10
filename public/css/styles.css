@@ -249,9 +249,11 @@ hr { border-top: 1px solid #cccccc; padding: 0; margin: 35px 5px; }
 
 
 nav#side-navigation {
-	width: 170px;
-	float: left;
-	margin-bottom: 3em;
+	width: 13%;
+    padding-top: 20px;
+    float: left;
+    margin-bottom: 3em;
+    display: inline-block;
 }
 
     nav#side-navigation ul { background: url('../images/side-menu-bg.png') repeat-y top left; position: relative; margin-top: 15px; margin-bottom: 30px; }
@@ -318,6 +320,11 @@ nav#side-navigation {
 	clear: both;
 	font-size: 0;
 }
+.offerPage {
+    padding-top: 10px;
+    display: inline-block;
+    width: 87%;
+}
 .container {
     padding: 10px;
     padding-left: 5%;
@@ -326,16 +333,15 @@ nav#side-navigation {
     margin-left: 50px;
 }
 .list {
-    margin-left: 50px;
-    width: 100%;
+    margin-left: 80px;
     padding: 10px;
     margin-bottom: 20px;
 }
-.list h3 {
+.list h2 {
     margin-left: 10px;
 }
 .list .item {
-    width: 30%;
+    width: 28%;
     padding: 10px;
     border: 1px solid black;
     height: 200px;

@@ -18,6 +18,12 @@ const mapDispatchToProps = dispatch => ({
   dispatch({ type: GET_OFFER, payload: agent.Offers.getOfferList(accountID) })
 });
 
+const getOffersOfAProperty = (Offers, propCode)=>{
+  return Offers.filter( (offer) => { 
+    return offer.propertyList.includes(propCode);
+  });
+}
+
 class MyOffers extends Component {
   componentWillMount() {
     this.props.onGetOfferList(this.props.accountID);
@@ -28,11 +34,23 @@ class MyOffers extends Component {
   }
 
   render() {
-    return (
-      <div className="page">
-        <OfferContainer/>
-      </div>
-    );
+    if(this.props.offers && this.props.offers.length > 0) {
+
+      const propCode = "CLV";
+      const clvOffers = getOffersOfAProperty(this.props.offers, propCode);
+
+      return (
+        <div className="offerPage">
+          <OfferContainer offerList={clvOffers} propCode = {propCode} />
+        </div>
+      );
+    } else {
+      return (
+        <div className="offerPage">
+          <h2>No Offers Available</h2>
+        </div>
+      )
+    }
   }
 }
 
