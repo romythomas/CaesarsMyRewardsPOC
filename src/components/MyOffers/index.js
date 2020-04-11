@@ -61,9 +61,7 @@ class MyOffers extends Component {
       const groupedOffers = getGroupedOffers(offers, markets);
       if(groupedOffers && groupedOffers.length) {
         return (
-          <div className="offerPage">
-            <OfferContainer offerList={groupedOffers} />
-          </div>
+          <OfferContainer offerList={groupedOffers} />
         );
       } else {
         return (

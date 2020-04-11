@@ -7,7 +7,7 @@ const OfferContainer = (props) => {
     offerList.map((offer) => {
         offerListElement.push(<OfferList key={offer.property.Code} propertyName={offer.property.Name} offerList={offer.propOffers}/>);
     });
-    return (<div>{offerListElement}</div> )
+    return (<div className="offerPage">{offerListElement}</div> )
 }
 
 export default OfferContainer;
