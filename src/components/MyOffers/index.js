@@ -19,10 +19,28 @@ const mapDispatchToProps = dispatch => ({
   dispatch({ type: GET_OFFER_DATA, payload })
 });
 
-const getOffersOfAProperty = (Offers, propCode)=>{
-  return Offers.filter( (offer) => { 
-    return offer.propertyList.includes(propCode);
+const getPropertyOffers = (Offers, propCode) => {
+  return Offers.filter(offer => { 
+      return offer.propertyList.includes(propCode);
   });
+}
+
+const getGroupedOffers = (offers, markets) => {
+  let offerGroup = [];
+  markets.map(market => {
+      market.Properties.map(property => {
+          let propertyOffer = getPropertyOffers(offers, property.Code);
+          if(propertyOffer && propertyOffer.length > 0) {
+              offerGroup.push(
+                  {
+                      property: property,
+                      propOffers: propertyOffer
+                  }
+              )
+          }
+      });
+  });
+  return offerGroup;
 }
 
 class MyOffers extends Component {
@@ -38,20 +56,26 @@ class MyOffers extends Component {
   }
 
   render() {
-    if(this.props.offers && this.props.offers.length > 0) {
-
-      const propCode = "CLV";
-      const clvOffers = getOffersOfAProperty(this.props.offers, propCode);
-
-      return (
-        <div className="offerPage">
-          <OfferContainer offerList={clvOffers} propCode = {propCode} />
-        </div>
-      );
+    const {offers, markets} = this.props;
+    if(markets && markets.length && offers && offers.length) {
+      const groupedOffers = getGroupedOffers(offers, markets);
+      if(groupedOffers && groupedOffers.length) {
+        return (
+          <div className="offerPage">
+            <OfferContainer offerList={groupedOffers} />
+          </div>
+        );
+      } else {
+        return (
+          <div className="offerPage">
+            <h2>No Offers Available</h2>
+          </div>
+        )
+      }
     } else {
       return (
         <div className="offerPage">
-          <h2>No Offers Available</h2>
+          <h1>Loading...</h1>
         </div>
       )
     }
