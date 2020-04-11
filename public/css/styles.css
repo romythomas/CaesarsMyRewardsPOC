@@ -253,7 +253,6 @@ nav#side-navigation {
     padding-top: 20px;
     float: left;
     margin-bottom: 3em;
-    display: inline-block;
 }
 
     nav#side-navigation ul { background: url('../images/side-menu-bg.png') repeat-y top left; position: relative; margin-top: 15px; margin-bottom: 30px; }
@@ -348,6 +347,13 @@ nav#side-navigation {
     margin: 10px;
     text-align: center;
     display: inline-block;
+}
+.list .listItem {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid black;
+    height: 50px;
+    margin: 10px;
 }
 .list .item p {
     font-size: 20px;
