@@ -42,6 +42,11 @@ const Offers = {
   requests.get(`stubs/getofferlist.json?winnetid=${encode(winnetid)}&callback=foo`)
 };
 
+const Markets = {
+  getMarkets:() =>
+  requests.get(`stubs/getmarkets.json?callback=foo`)
+};
+
 const Profile = {
   follow: username =>
     requests.post(`/profiles/${username}/follow`),
@@ -100,5 +105,6 @@ export default {
   Profile,
   Tags,
   Offers,
+  Markets,
   setToken: _token => { token = _token; }
 };

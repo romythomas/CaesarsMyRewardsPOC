@@ -3,19 +3,20 @@ import agent from '../../agent';
 import OfferContainer from './OfferContainer';
 import { connect } from 'react-redux';
 import {
-  GET_OFFER
+  GET_OFFER_DATA
 } from '../../constants/actionTypes';
 
 const mapStateToProps = state => ({
   appName: state.common.appName,
   token: state.common.token,
   accountID: state.auth.accountID,
-  offers: state.offerList.offers
+  offers: state.offerList.offers,
+  markets: state.offerList.markets
 });
 
 const mapDispatchToProps = dispatch => ({
-  onGetOfferList: (accountID) =>
-  dispatch({ type: GET_OFFER, payload: agent.Offers.getOfferList(accountID) })
+  getMyOffersData: payload =>
+  dispatch({ type: GET_OFFER_DATA, payload })
 });
 
 const getOffersOfAProperty = (Offers, propCode)=>{
@@ -26,7 +27,10 @@ const getOffersOfAProperty = (Offers, propCode)=>{
 
 class MyOffers extends Component {
   componentWillMount() {
-    this.props.onGetOfferList(this.props.accountID);
+    this.props.getMyOffersData(Promise.all([
+      agent.Offers.getOfferList(this.props.accountID),
+      agent.Markets.getMarkets()
+    ]));
   }
 
   componentWillUnmount() {
