@@ -7,7 +7,7 @@ const OfferList = (props) => {
           <h2>{props.propertyName}</h2>
           {
               props.offerList.map(
-                  (offer, index)=> {return <OfferItem key={index} offer={offer.id}/>}
+                  (offer, index)=> {return <OfferItem key={index} offer={offer}/>}
               )
           }
       </div>

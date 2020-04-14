@@ -358,6 +358,16 @@ nav#side-navigation {
     height: 50px;
     margin: 10px;
 }
+.list .listItem p {
+    display: inline-block;
+    margin-right: 15px;
+}
+.list .listItem p.type {
+    width: 5%;
+}
+.list .listItem p.title {
+    width: 30%;
+}
 .list .item p {
     font-size: 20px;
 }
