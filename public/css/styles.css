@@ -376,3 +376,7 @@ nav#side-navigation {
 .list .item p {
     font-size: 20px;
 }
+
+.left-align{
+    text-align: right;
+}
