@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import agent from '../../agent';
 import { connect } from 'react-redux';
+// import TierContainer from './TierContainer';
 import {
   GET_PROFILE
 } from '../../constants/actionTypes';
@@ -16,13 +17,16 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
- onGetGuestProfile: (accountID) =>
-    dispatch({ type: GET_PROFILE, payload: agent.Profile.getGuestProfile(accountID) })
+    onGetGuestProfile: payload =>
+    dispatch({ type: GET_PROFILE, payload })
 });
 
 class MyRewards extends Component {
   componentWillMount() {
-    this.props.onGetGuestProfile(this.props.accountID);
+    this.props.onGetGuestProfile(Promise.all([
+      agent.Profile.getGuestProfile(this.props.accountID),
+      agent.Profile.getFeeds()
+    ]));
   }
 
   componentWillUnmount() {
@@ -33,12 +37,11 @@ class MyRewards extends Component {
     const {accountID,firstName,LastName,TierCode} = this.props;
     return (
       <div className="page">
-
-        <h2>Home Page</h2>
+        {/* <h2>Home Page</h2>
         <h4>Account ID: {accountID}</h4>
         <h4>User: {firstName} {LastName}</h4>
-        <h4>Tier: {TierCode}</h4>
-
+        <h4>Tier: {TierCode}</h4> */}
+        <ProfileContainer/>
       </div>
     );
   }

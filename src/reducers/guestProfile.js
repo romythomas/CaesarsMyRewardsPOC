@@ -5,9 +5,13 @@ import {
 export default (state = {}, action) => {
     switch (action.type) {
         case GET_PROFILE:
+          console.log("getguest profile")
+          console.log(action.payload.logininfo)
+
             return {
-                ...state,
-                tiercode: action.error ? null : action.payload.logininfo.tier.code,
+                ...state,              
+                logininfo: action.error ? [] : action.payload.logininfo,
+                markets: action.error ? [] : action.payload[1].GetMarketsResult
               };
         default:
       return state;
