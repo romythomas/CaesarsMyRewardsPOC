@@ -3,14 +3,14 @@ import React from 'react';
 const OfferItem = (props) => {
     const {offer} = props;
     // Box type design
-    /*
     return (
         <div className="item">
 		    <p>{offer.title}</p>
 		</div>
     );
-    */
+    
    //List view design
+   /*
    return (
         <div className="listItem">
             <p className="type">{offer.type}</p>
@@ -21,6 +21,7 @@ const OfferItem = (props) => {
             <button className="viewOffer">View Offer</button>
         </div>
     );
+    */
 }
 
 export default OfferItem;

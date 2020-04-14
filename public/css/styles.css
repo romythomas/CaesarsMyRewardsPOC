@@ -335,17 +335,22 @@ nav#side-navigation {
     margin-left: 50px;
 }
 .list {
-    margin-left: 80px;
+    margin-left: 40px;
     padding: 10px;
     margin-bottom: 20px;
+    width: 90%;
+}
+.list .slick-next:before, .list .slick-prev:before
+{
+    color: #000;
 }
 .list h2 {
     margin-left: 10px;
 }
 .list .item {
-    width: 28%;
+    width: 90%;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid #000;
     height: 200px;
     margin: 10px;
     text-align: center;
