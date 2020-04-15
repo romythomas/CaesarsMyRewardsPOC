@@ -51,6 +51,8 @@ class App extends Component {
   }
 
   render() {
+    const {offers, markets} = this.props;
+    if(markets && markets.length && offers && offers.length) {
       return (
         <div>
           <Header appName={this.props.appName} currentUser={this.props.currentUser} />
@@ -66,6 +68,15 @@ class App extends Component {
           <Footer appName={this.props.appName}> </Footer>
         </div>
       );
+    } else {
+      return (
+        <div>
+          <Header appName={this.props.appName} currentUser={this.props.currentUser} />
+          <h2>Page Loading</h2>
+          <Footer appName={this.props.appName}> </Footer>
+        </div>
+      );
+    }
   }
 }
 
