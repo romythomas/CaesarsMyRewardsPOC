@@ -360,9 +360,7 @@ nav#side-navigation {
     width:25%;
     display: inline-grid;
 }
-.list .item.rewardsitem.image{
-    background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url("http://www.caesars.com/content/dam/caesars-rewards/card/cr-gold-card.png");
-}
+
 .list .listItem {
     width: 80%;
     padding: 10px;
@@ -384,3 +382,6 @@ nav#side-navigation {
     font-size: 16px;
 }
 
+.tr-crimson {
+    color: #AD1F23;
+}

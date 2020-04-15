@@ -10,7 +10,6 @@ import ProgressBarItem from './ProgressBarItem';
 
 const ProfileContainer = (props) => {  
     return (
-        
             <div className="container">                
                 <div className="list">
                     <TierScoreItem logininfo={props.logininfo} />
@@ -21,12 +20,11 @@ const ProfileContainer = (props) => {
                     <ProgressBarItem logininfo={props.logininfo} />
                 </div>   
                 <div  className="list">
-                    <OfferBlurbItem logininfo={props.logininfo} />
+                    <OfferBlurbItem offerList={props.offerList} />
                     <ReservationBlurbItem logininfo={props.logininfo} />
                     <PriceAlertBlurbItem logininfo={props.logininfo} />
                 </div> 
             </div>
-       
     );
 }
 
