@@ -3,11 +3,11 @@ import OfferList from './OfferList'
 
 const OfferContainer = (props) => {
     const {offerList} = props;
-    const offerListElement = [];
-    offerList.map((offer) => {
-        offerListElement.push(<OfferList key={offer.property.Code} propertyName={offer.property.Name} offerList={offer.propOffers}/>);
-    });
-    return (<div className="offerPage">{offerListElement}</div> )
+    return(
+        <div className="offerPage">
+            <OfferList offerList={offerList}/>
+        </div>
+    )
 }
 
 export default OfferContainer;
