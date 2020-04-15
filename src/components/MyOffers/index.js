@@ -4,9 +4,6 @@ import OfferContainer from './OfferContainer';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  appName: state.common.appName,
-  token: state.common.token,
-  accountID: state.auth.accountID,
   offers: state.common.offers,
   markets: state.common.markets
 });
