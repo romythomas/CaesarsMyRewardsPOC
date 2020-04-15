@@ -6,8 +6,8 @@ const defaultState = {
   appName: 'Caesars MyRewards',
   accountID: null,
   token: null,
-  offers: null,
-  markets: null
+  offers: [],
+  markets: []
 };
 
 export default (state = defaultState, action) => {
