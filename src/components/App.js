@@ -22,12 +22,14 @@ const mapStateToProps = state => {
     appLoaded: state.common.appLoaded,
     appName: state.common.appName,
     currentUser: state.common.currentUser,
-    redirectTo: state.common.redirectTo
+    redirectTo: state.common.redirectTo,
+    offers: state.common.offers,
+    markets: state.common.markets
   }};
 
 const mapDispatchToProps = dispatch => ({
-  onLogin: () =>
-    dispatch({ type: LOGIN, payload: agent.Auth.login() })
+  onLogin: payload =>
+    dispatch({ type: LOGIN, payload })
 });
 
 class App extends Component {
@@ -40,7 +42,12 @@ class App extends Component {
   }
 
   componentWillMount() {
-    this.props.onLogin();
+    //load common data - login, offerlist and getmarkets
+    this.props.onLogin(Promise.all([
+      agent.Auth.login(),
+      agent.Offers.getOfferList(this.props.accountID),
+      agent.Markets.getMarkets()
+    ]));
   }
 
   render() {

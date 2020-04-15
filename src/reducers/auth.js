@@ -7,9 +7,9 @@ export default (state = {}, action) => {
     case LOGIN:
       return {
         ...state,
-        accountID: action.error ? null : action.payload.logininfo.accountid,
-        firstName: action.error ? null : action.payload.logininfo.firstname,
-        lastName: action.error ? null : action.payload.logininfo.lastname,
+        accountID: action.error ? null : action.payload[0].logininfo.accountid,
+        firstName: action.error ? null : action.payload[0].logininfo.firstname,
+        lastName: action.error ? null : action.payload[0].logininfo.lastname,
       };
     default:
       return state;
