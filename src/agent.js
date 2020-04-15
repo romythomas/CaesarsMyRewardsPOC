@@ -4,7 +4,6 @@ import _superagent from 'superagent';
 const superagent = superagentPromise(_superagent, global.Promise);
 
 const API_ROOT = 'http://caesarspoc.s3-website.us-east-2.amazonaws.com/';
-const CAESARS_FEED = 'https://www.caesars.com/api/v1/';
 
 const encode = encodeURIComponent;
 const responseBody = res => res.body;
@@ -27,10 +26,6 @@ const requests = {
     superagent.post(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody)
 };
 
-const feedrequests = { 
-  get: url =>
-    superagent.get(`${CAESARS_FEED}${url}`).use(tokenPlugin).then(responseBody),
-};
 const Auth = {
   current: () =>
     requests.get('/user'),
@@ -62,7 +57,7 @@ const Profile = {
   getGuestProfile:(winnetid) =>
     requests.get(`stubs/getguestprofile.json?winnetid=${encode(winnetid)}&callback=foo`),
   getFeeds:() =>
-    feedrequests.get(`crwtiersprogress?callback=foo`)
+    requests.get(`stubs/crwtiersprogress.json?callback=foo`)
 };
 
 const Tags = {

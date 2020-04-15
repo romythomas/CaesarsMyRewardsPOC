@@ -4,14 +4,11 @@ import {
 
 export default (state = {}, action) => {
     switch (action.type) {
-        case GET_PROFILE:
-          console.log("getguest profile")
-          console.log(action.payload.logininfo)
-
+        case GET_PROFILE:         
             return {
                 ...state,              
-                logininfo: action.error ? [] : action.payload.logininfo,
-                markets: action.error ? [] : action.payload[1].GetMarketsResult
+                logininfo: action.error ? [] : action.payload[0].logininfo,
+                feeds: action.error ? [] : action.payload[1]
               };
         default:
       return state;

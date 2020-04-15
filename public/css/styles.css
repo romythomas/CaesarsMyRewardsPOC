@@ -356,6 +356,13 @@ nav#side-navigation {
     text-align: center;
     display: inline-block;
 }
+.list .item.rewardsitem{
+    width:25%;
+    display: inline-grid;
+}
+.list .item.rewardsitem.image{
+    background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url("../images/cr-gold-card.png");
+}
 .list .listItem {
     width: 80%;
     padding: 10px;
@@ -374,9 +381,6 @@ nav#side-navigation {
     width: 30%;
 }
 .list .item p {
-    font-size: 20px;
+    font-size: 16px;
 }
 
-.left-align{
-    text-align: right;
-}

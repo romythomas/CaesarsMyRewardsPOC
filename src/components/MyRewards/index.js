@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import agent from '../../agent';
 import { connect } from 'react-redux';
-// import TierContainer from './TierContainer';
+import ProfileContainer from './ProfileContainer';
 import {
   GET_PROFILE
 } from '../../constants/actionTypes';
@@ -10,10 +10,8 @@ import {
 const mapStateToProps = state => ({
   appName: state.common.appName,
   token: state.common.token,
-  accountID: state.auth.accountID,
-  firstName: state.auth.firstName,
-  LastName: state.auth.lastName,
-  TierCode: state.guestProfile.tiercode
+  logininfo: state.guestProfile.logininfo,
+  feeds: state.guestProfile.feeds
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -34,16 +32,21 @@ class MyRewards extends Component {
   }
 
   render() {
-    const {accountID,firstName,LastName,TierCode} = this.props;
-    return (
-      <div className="page">
-        {/* <h2>Home Page</h2>
-        <h4>Account ID: {accountID}</h4>
-        <h4>User: {firstName} {LastName}</h4>
-        <h4>Tier: {TierCode}</h4> */}
-        <ProfileContainer/>
-      </div>
-    );
+    const {logininfo,feeds} = this.props;
+    if(logininfo && feeds){
+      return (
+
+        <div className="page">
+          <h2>Home Page</h2>          
+          <ProfileContainer logininfo = {logininfo} feeds = {feeds}/>
+        </div>
+      );
+    }
+    else{
+      return(
+      <h2>Loading</h2>
+      );
+    }
   }
 }
 
