@@ -47,6 +47,11 @@ const Properties = {
   requests.get('stubs/properties.json?callback=foo')
 };
 
+const Reservations = {
+  getReservation:()=>
+  requests.get('stubs/getreservation.json?callback=foo')
+};
+
 const Markets = {
   getMarkets:() =>
   requests.get(`stubs/getmarkets.json?callback=foo`)
@@ -114,5 +119,6 @@ export default {
   Offers,
   Markets,
   Properties,
+  Reservations,
   setToken: _token => { token = _token; }
 };

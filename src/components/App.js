@@ -25,7 +25,8 @@ const mapStateToProps = state => {
     redirectTo: state.common.redirectTo,
     offers: state.common.offers,
     markets: state.common.markets,
-    properties: state.common.properties
+    properties: state.common.properties,
+    reservations: state.common.reservations
   }};
 
 const mapDispatchToProps = dispatch => ({
@@ -48,13 +49,14 @@ class App extends Component {
       agent.Auth.login(),
       agent.Offers.getOfferList(this.props.accountID),
       agent.Markets.getMarkets(),
-      agent.Properties.getProperties()
+      agent.Properties.getProperties(),
+      agent.Reservations.getReservation()
     ]));
   }
 
   render() {
-    const {offers, markets, properties} = this.props;
-    if(markets && markets.length && offers && offers.length && properties) {
+    const {offers, markets, properties, reservations} = this.props;
+    if(markets && markets.length && offers && offers.length && properties && reservations) {
       return (
         <div>
           <Header appName={this.props.appName} currentUser={this.props.currentUser} />

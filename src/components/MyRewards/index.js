@@ -14,7 +14,8 @@ const mapStateToProps = state => ({
   feeds: state.guestProfile.feeds,
   offers: state.common.offers,
   markets: state.common.markets,
-  properties: state.common.properties
+  properties: state.common.properties,
+  reservations: state.common.reservations
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -35,13 +36,14 @@ class MyRewards extends Component {
   }
 
   render() {
-    const {logininfo,feeds,offers, properties} = this.props;
+    const {logininfo,feeds,offers, properties, reservations} = this.props;
     if(logininfo && feeds && properties){
       return (
 
         <div className="page">
           <h2>Home Page</h2>          
-          <ProfileContainer logininfo = {logininfo} feeds = {feeds} offerList = {offers} propertyList = {properties}/>
+          <ProfileContainer logininfo = {logininfo} feeds = {feeds} offerList = {offers} 
+                        propertyList = {properties} reservationList ={reservations}/>
         </div>
       );
     }

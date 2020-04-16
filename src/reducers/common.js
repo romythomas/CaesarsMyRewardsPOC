@@ -8,7 +8,8 @@ const defaultState = {
   token: null,
   offers: [],
   markets: [],
-  properties: []
+  properties: [],
+  reservations: []
 };
 
 export default (state = defaultState, action) => {
@@ -22,7 +23,8 @@ export default (state = defaultState, action) => {
         token: action.error ? null : action.payload[0].logininfo.token,
         offers: action.error ? [] : action.payload[1].offers,
         markets: action.error ? [] : action.payload[2].GetMarketsResult,
-        properties: action.error? [] : action.payload[3]
+        properties: action.error? [] : action.payload[3],
+        reservations: action.error? []: action.payload[4]
       };
     default:
       return state;
