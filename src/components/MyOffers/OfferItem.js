@@ -1,27 +1,21 @@
 import React from 'react';
 
+function myOfferDetails() {
+    alert('TODO!');
+  }
 const OfferItem = (props) => {
     const {offer} = props;
     // Box type design
     return (
         <div className="item">
-		    <p>{offer.title}</p>
-		</div>
-    );
-    
-   //List view design
-   /*
-   return (
-        <div className="listItem">
             <p className="type">{offer.type}</p>
             <p className="title">{offer.title}</p>
             <p className="code">{offer.id}</p>
             <p className="start">{offer.start}</p>
             <p className="end">{offer.end}</p>
-            <button className="viewOffer">View Offer</button>
-        </div>
+            <button className="myrewards-button" onClick={myOfferDetails}>Details</button>
+		</div>
     );
-    */
 }
 
 export default OfferItem;

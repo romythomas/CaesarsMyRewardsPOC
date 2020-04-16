@@ -1,3 +1,4 @@
+import {filterOffers} from '../utilities/Filter'
 import {
   LOGIN,
   FILTER_OFFER
@@ -30,10 +31,9 @@ export default (state = defaultState, action) => {
         reservations: action.error? []: action.payload[4]
       };
     case FILTER_OFFER:
-      const filteredOffers = action.payload ? state.offers.filter((offer, index) => { return index < 10; }) : state.offers;
       return {
         ...state,
-        filteredOffers: filteredOffers
+        filteredOffers: filterOffers(state.offers,action.filtertype,action.filtervalue)
       };
     default:
       return state;

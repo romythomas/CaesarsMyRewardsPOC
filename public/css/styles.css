@@ -334,6 +334,7 @@ nav#side-navigation {
 .container h2 {
     margin-left: 50px;
 }
+
 .list {
     margin-left: 40px;
     padding: 10px;
@@ -362,7 +363,7 @@ nav#side-navigation {
 }
 
 .list .item.rewardsitem.offer{
-    height: auto;
+    height: 335px;
 }
 .offer-image{
     width:205px;
@@ -392,4 +393,55 @@ nav#side-navigation {
 
 .tr-crimson {
     color: #AD1F23;
+}
+.myrewards-button{
+    background-color: #AD1F23;
+    color: #ffffff;
+    border: 2px solid #AD1F23;
+    height: 22px;
+}
+input[type=checkbox] {
+    position: relative;
+      cursor: pointer;
+}
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color:#e9e9e9;
+}
+input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color:#1E80EF;
+}
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+.filter-label{    
+    margin-left: 19px;
+    position: absolute;
+    padding-top: 9px;
+    font-weight: bold;
+    font-size: 14px;
 }

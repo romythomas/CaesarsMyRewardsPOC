@@ -4,8 +4,8 @@ import OfferList from './OfferList'
 import {FILTER_OFFER} from '../../constants/actionTypes'
 
 const mapDispatchToProps = dispatch => ({
-    getFilteredOffers: payload => dispatch({ 
-        type: FILTER_OFFER, payload 
+    getFilteredOffers: (filtervalue, filtertype) => dispatch({ 
+        type: FILTER_OFFER, filtervalue, filtertype 
     })
 });
 
@@ -13,9 +13,9 @@ const OfferContainer = (props) => {
     const {offerList} = props;
     return (
         <div className="offerPage">
-                <input type="checkbox" id="filter" name="offerfilter" onChange={(e) => props.getFilteredOffers(e.target.checked)} />
-                <label htmlFor="offerfilter"> Filter 10 Offers</label>
-                <OfferList offerList={offerList}/>
+                <input type="checkbox" id="filter" name="offerfilter" onChange={(e) => props.getFilteredOffers(e.target.checked, "checkbox")} />
+                <label htmlFor="offerfilter" className="filter-label"> Filter 10 Offers</label>
+                <OfferList offerList={offerList}/>                
             </div>
     )
 }

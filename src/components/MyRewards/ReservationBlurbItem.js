@@ -13,12 +13,19 @@ const ReservationBlurbItem = (props) => {
             propertyName = property.propertyName.toUpperCase();
         }
     }
+    function myReservation() {
+        alert('TODO!');
+      }
     return (        
         <div className="item rewardsitem offer">
             <h4>MY RESERVATION <span className="tr-crimson">NEW!</span></h4>
             <img alt="reservation image" className="offer-image" src={imageUrl}></img>
             <div>{propertyName}</div>
             <div>Date:- {reservations.checkInDate} - {reservations.checkOutDate}</div>
+            
+            <br/> 
+            <button className="myrewards-button" onClick={myReservation}>View All </button>      
+
         </div>
     );
 }
