@@ -6,7 +6,7 @@ const OfferBlurbItem = (props) => {
         <div className="item rewardsitem">
             <h4>MY OFFERS <span class="tr-crimson">NEW!</span></h4>
             <h2>{props.propertyName}</h2>
-            <img></img>
+            <img alt="todo" src=""></img>
             <div>Title:- {offers[0].title}</div>
             <div>Properties:- {offers[0].propertyList}</div>
             <div>Description:- {offers[0].description}</div>
