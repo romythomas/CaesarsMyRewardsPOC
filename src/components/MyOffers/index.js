@@ -4,7 +4,7 @@ import OfferContainer from './OfferContainer';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  filteredOffers: state.common.offers,
+  filteredOffers: state.common.filteredOffers,
   markets: state.common.markets,
   properties: state.common.properties
 });
