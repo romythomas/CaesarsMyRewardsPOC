@@ -40,3 +40,7 @@ export const getProperty = (properties, code) =>{
         return(prop);
     }
 }
+
+export const isEmpty = (val) =>{
+    return (val === null || val === undefined || new string(val) == '' || new string(val) == 'null');
+}
