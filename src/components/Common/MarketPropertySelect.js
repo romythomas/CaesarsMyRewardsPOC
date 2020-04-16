@@ -10,6 +10,7 @@ const filterOptions = createFilterOptions({
 const  MarketPropertySelect = (props)  => {
   var options=[];
   const markets = props.markets;
+  const width = props.width ? props.width : 500;
 
   const onSelect = value => {
     if(props.onSelect)
@@ -42,7 +43,7 @@ const  MarketPropertySelect = (props)  => {
       getOptionLabel={(option) => option.propertyName}
       filterOptions={filterOptions}
       onChange={(event, value) => onSelect(value)}
-      style={{ width: 500 }}
+      style={{ width: width }}
       renderInput={(params) => <TextField {...params} label="Market/Property" variant="outlined" />}
     />
   );
