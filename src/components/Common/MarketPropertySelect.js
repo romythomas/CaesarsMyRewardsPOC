@@ -1,0 +1,51 @@
+import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import Autocomplete, {createFilterOptions} from '@material-ui/lab/Autocomplete';
+
+const filterOptions = createFilterOptions({
+    matchFrom: 'any',
+    stringify: (option) => option.marketName + option.propertyName + option.parentLocation ,
+  });
+
+const  MarketPropertySelect = (props)  => {
+  var options=[];
+  const markets = props.markets;
+
+  const onSelect = value => {
+    if(props.onSelect)
+    {
+      props.onSelect(value);
+    }
+  };
+
+  if(markets){
+    markets.map((market) => {
+      const marketName = market.Name;
+      const parentLocation = market.ParentLocation?.Name;
+      market.Properties.map((property) => {
+          options.push(
+          {
+              marketName: marketName,
+              propertyCode: property.Code,
+              propertyName: property.Name,
+              parentLocation: parentLocation
+          });
+      })
+    })
+  }
+
+  return (
+    <Autocomplete
+      id="market-property-select"
+      options={options}
+      groupBy={(option) => option.marketName}
+      getOptionLabel={(option) => option.propertyName}
+      filterOptions={filterOptions}
+      onChange={(event, value) => onSelect(value)}
+      style={{ width: 500 }}
+      renderInput={(params) => <TextField {...params} label="Market/Property" variant="outlined" />}
+    />
+  );
+}
+
+export default MarketPropertySelect;
