@@ -13,6 +13,7 @@ const OfferBlurbItem = (props) => {
             propertyName = property.propertyName;
         }
     }
+    
     return (        
         <div className="item rewardsitem offer">
             <h4>MY OFFERS <span className="tr-crimson">NEW!</span></h4>
@@ -20,9 +21,10 @@ const OfferBlurbItem = (props) => {
             <img alt="offer image" className="offer-image" src={imageUrl}></img>
             <div>Title:- {offers.title}</div>
             <div>Properties:- {propertyName}</div>
-            <div>Description:- {offers.description}</div>
-            {/* <button className="" type="submit">View Offer</button>
-            <button className="" type="submit">View All</button> */}
+            <div>Description:- {offers.description}</div>           
+            <br/> 
+            <button className="myrewards-button" onClick="">View Offer </button>  <br/>          
+            <button className="myrewards-button" onClick="">View All </button>
         </div>
     );
 }

@@ -14,8 +14,8 @@ const OfferContainer = (props) => {
     return (
         <div className="offerPage">
                 <input type="checkbox" id="filter" name="offerfilter" onChange={(e) => props.getFilteredOffers(e.target.checked)} />
-                <label htmlFor="offerfilter"> Filter 10 Offers</label>
-                <OfferList offerList={offerList}/>
+                <label htmlFor="offerfilter" className="filter-label"> Filter 10 Offers</label>
+                <OfferList offerList={offerList}/>                
             </div>
     )
 }

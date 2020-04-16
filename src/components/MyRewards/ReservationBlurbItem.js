@@ -19,6 +19,10 @@ const ReservationBlurbItem = (props) => {
             <img alt="reservation image" className="offer-image" src={imageUrl}></img>
             <div>{propertyName}</div>
             <div>Date:- {reservations.checkInDate} - {reservations.checkOutDate}</div>
+            
+            <br/> 
+            <button className="myrewards-button" onClick="">View All </button>      
+
         </div>
     );
 }
