@@ -20,7 +20,7 @@ const ProfileContainer = (props) => {
                     <ProgressBarItem logininfo={props.logininfo} />
                 </div>   
                 <div  className="list">
-                    <OfferBlurbItem offerList={props.offerList} />
+                    <OfferBlurbItem offerList={props.offerList} propertyList = {props.propertyList}/>
                     <ReservationBlurbItem logininfo={props.logininfo} />
                     <PriceAlertBlurbItem logininfo={props.logininfo} />
                 </div> 

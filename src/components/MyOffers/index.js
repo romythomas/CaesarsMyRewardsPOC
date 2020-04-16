@@ -5,12 +5,13 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
   offers: state.common.offers,
-  markets: state.common.markets
+  markets: state.common.markets,
+  properties: state.common.properties
 });
 
 class MyOffers extends Component {
   render() {
-    const {offers, markets} = this.props;
+    const {offers, markets, properties} = this.props;
     if(markets && markets.length && offers && offers.length) {
       return (
         <OfferContainer offerList={offers} />

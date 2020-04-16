@@ -1,12 +1,24 @@
 import React from 'react';
+import {getProperty} from '../../utilities/Helper'
 
 const OfferBlurbItem = (props) => { 
+    var imageUrl ='';
     var offers = props.offerList;
+    if(props.propertyList && offers && offers[0] && offers[0].propertyList[0]){
+
+        var property = getProperty(props.propertyList, offers[0].propertyList[0]);
+        if(property){
+            imageUrl ="http://caesars.com" + property.thumbnail.url;
+        }
+        else{
+            imageUrl ="http://www.caesars.com/myrewards/profile/images/tr-placeholder.jpg";
+        }
+    }
     return (        
-        <div className="item rewardsitem">
-            <h4>MY OFFERS <span class="tr-crimson">NEW!</span></h4>
+        <div className="item rewardsitem offer">
+            <h4>MY OFFERS <span className="tr-crimson">NEW!</span></h4>
             <h2>{props.propertyName}</h2>
-            <img alt="todo" src=""></img>
+            <img alt="offer image" className="offer-image" src={imageUrl}></img>
             <div>Title:- {offers[0].title}</div>
             <div>Properties:- {offers[0].propertyList}</div>
             <div>Description:- {offers[0].description}</div>

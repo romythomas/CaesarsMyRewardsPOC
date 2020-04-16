@@ -24,7 +24,8 @@ const mapStateToProps = state => {
     currentUser: state.common.currentUser,
     redirectTo: state.common.redirectTo,
     offers: state.common.offers,
-    markets: state.common.markets
+    markets: state.common.markets,
+    properties: state.common.properties
   }};
 
 const mapDispatchToProps = dispatch => ({
@@ -46,13 +47,14 @@ class App extends Component {
     this.props.onLogin(Promise.all([
       agent.Auth.login(),
       agent.Offers.getOfferList(this.props.accountID),
-      agent.Markets.getMarkets()
+      agent.Markets.getMarkets(),
+      agent.Properties.getProperties()
     ]));
   }
 
   render() {
-    const {offers, markets} = this.props;
-    if(markets && markets.length && offers && offers.length) {
+    const {offers, markets, properties} = this.props;
+    if(markets && markets.length && offers && offers.length && properties) {
       return (
         <div>
           <Header appName={this.props.appName} currentUser={this.props.currentUser} />

@@ -39,7 +39,12 @@ const Auth = {
 
 const Offers = {
   getOfferList:(winnetid) =>
-  requests.get(`stubs/getofferlist.json?winnetid=${encode(winnetid)}&callback=foo`)
+  requests.get(`stubs/getofferlist.json?winnetid=${encode(winnetid)}&callback=foo`) 
+};
+
+const Properties = {
+  getProperties:()=>
+  requests.get('stubs/properties.json?callback=foo')
 };
 
 const Markets = {
@@ -108,5 +113,6 @@ export default {
   Tags,
   Offers,
   Markets,
+  Properties,
   setToken: _token => { token = _token; }
 };

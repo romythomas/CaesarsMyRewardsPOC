@@ -361,6 +361,12 @@ nav#side-navigation {
     display: inline-grid;
 }
 
+.list .item.rewardsitem.offer{
+    height: auto;
+}
+.offer-image{
+    width:205px;
+}
 .list .listItem {
     width: 80%;
     padding: 10px;
