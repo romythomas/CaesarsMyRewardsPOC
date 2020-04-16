@@ -1,5 +1,8 @@
 import React from 'react';
 
+function myOfferDetails() {
+    alert('TODO!');
+  }
 const OfferItem = (props) => {
     const {offer} = props;
     // Box type design
@@ -10,7 +13,7 @@ const OfferItem = (props) => {
             <p className="code">{offer.id}</p>
             <p className="start">{offer.start}</p>
             <p className="end">{offer.end}</p>
-            <button className="myrewards-button">Details</button>
+            <button className="myrewards-button" onClick={myOfferDetails}>Details</button>
 		</div>
     );
 }

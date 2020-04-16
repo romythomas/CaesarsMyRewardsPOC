@@ -1,5 +1,8 @@
 import React from 'react';
 
+function myPriceAlerts() {
+    alert('TODO!');
+  }
 const PriceAlertBlurbItem = (props) => { 
     return (        
         <div className="item rewardsitem offer">
@@ -8,8 +11,8 @@ const PriceAlertBlurbItem = (props) => {
             <div>TODO</div>
 
             <br/> 
-            <button className="myrewards-button" onClick="">View </button><br/> 
-            <button className="myrewards-button" onClick="">View All </button>
+            <button className="myrewards-button" onClick={myPriceAlerts}>View </button><br/> 
+            <button className="myrewards-button" onClick={myPriceAlerts}>View All </button>
         </div>
     );
 }

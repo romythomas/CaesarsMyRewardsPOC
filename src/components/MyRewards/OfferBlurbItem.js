@@ -1,5 +1,6 @@
 import React from 'react';
 import {getProperty} from '../../utilities/Helper'
+import {Link} from 'react-router-dom'
 
 const OfferBlurbItem = (props) => { 
     var imageUrl ='http://www.caesars.com/myrewards/profile/images/tr-placeholder.jpg"';
@@ -13,7 +14,12 @@ const OfferBlurbItem = (props) => {
             propertyName = property.propertyName;
         }
     }
-    
+    function myOfferDetails() {
+        alert('TODO!');
+      }
+    function myOffer() {
+        window.location.href='/my-offers'
+      }
     return (        
         <div className="item rewardsitem offer">
             <h4>MY OFFERS <span className="tr-crimson">NEW!</span></h4>
@@ -23,8 +29,8 @@ const OfferBlurbItem = (props) => {
             <div>Properties:- {propertyName}</div>
             <div>Description:- {offers.description}</div>           
             <br/> 
-            <button className="myrewards-button" onClick="">View Offer </button>  <br/>          
-            <button className="myrewards-button" onClick="">View All </button>
+            <button className="myrewards-button" onClick={myOfferDetails}>View Offer </button>  <br/>          
+            <button className="myrewards-button" onClick={myOffer}>View All </button>
         </div>
     );
 }
