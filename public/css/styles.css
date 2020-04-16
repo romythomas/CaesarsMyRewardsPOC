@@ -366,6 +366,8 @@ nav#side-navigation {
 }
 .offer-image{
     width:205px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .list .listItem {
     width: 80%;
