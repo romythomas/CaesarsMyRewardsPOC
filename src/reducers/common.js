@@ -1,4 +1,4 @@
-import {filterOffers} from '../utilities/Filter'
+import {filterOffers, updateSelectedFilter} from '../utilities/Filter'
 import {
   LOGIN,
   FILTER_OFFER
@@ -10,6 +10,7 @@ const defaultState = {
   token: null,
   offers: [],
   filteredOffers: [],
+  selectedOfferFilters: [],
   markets: [],
   properties: [],
   reservations: []
@@ -31,9 +32,15 @@ export default (state = defaultState, action) => {
         reservations: action.error? []: action.payload[4]
       };
     case FILTER_OFFER:
+      const newFilter = {
+        filterType: action.filterType,
+        filterValue: action.filterValue
+      };
+      const updatedFilters = updateSelectedFilter(state.selectedOfferFilters, newFilter);
       return {
         ...state,
-        filteredOffers: filterOffers(state.offers,action.filtertype,action.filtervalue)
+        selectedOfferFilters: updatedFilters,
+        filteredOffers: filterOffers(state.offers, updatedFilters)
       };
     default:
       return state;

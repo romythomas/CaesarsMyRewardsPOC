@@ -4,15 +4,13 @@ import OfferContainer from './OfferContainer';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  filteredOffers: state.common.filteredOffers,
-  markets: state.common.markets,
-  properties: state.common.properties
+  filteredOffers: state.common.filteredOffers
 });
 
 class MyOffers extends Component {
   render() {
-    const {filteredOffers, markets, properties} = this.props;
-    if(markets && markets.length && filteredOffers && filteredOffers.length) {
+    const {filteredOffers} = this.props;
+    if(filteredOffers && filteredOffers.length) {
       return (
         <OfferContainer offerList={filteredOffers} />
       );
