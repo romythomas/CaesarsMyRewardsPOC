@@ -327,6 +327,9 @@ nav#side-navigation {
 .offerPage h1 {
     margin: 10% 0 0 30%;
 }
+.offerPage .noOffers {
+    margin-left: 50px;
+}
 .container {
     padding: 10px;
     padding-left: 5%;
@@ -390,6 +393,24 @@ nav#side-navigation {
 .list .item p {
     font-size: 16px;
 }
+.offerFilter {
+    margin-left: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 90px;
+}
+.offerFilter .sampleFilter {
+    width: 13%;
+    height: 70px;
+    float: left;
+    vertical-align: middle;
+}
+.offerFilter .propertyFilter {
+    width: 50%;
+    height: 70px;
+    float: left;
+}
 
 .tr-crimson {
     color: #AD1F23;
@@ -439,9 +460,13 @@ input[type=checkbox]:checked:after {
     left: 6px;
 }
 .filter-label{    
-    margin-left: 19px;
+    margin-top: 20px;
+    margin-left: 15px;
     position: absolute;
     padding-top: 9px;
     font-weight: bold;
     font-size: 14px;
+}
+#countfilter {
+    margin-top: 25px;
 }
