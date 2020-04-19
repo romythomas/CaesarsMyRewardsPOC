@@ -22,7 +22,9 @@ const  MarketPropertySelect = (props)  => {
   if(markets){
     markets.map((market) => {
       const marketName = market.Name;
-      const parentLocation = market.ParentLocation?.Name;
+      let parentLocation = "";
+      parentLocation += market.ParentLocation ? market.ParentLocation.Code + " , " + market.ParentLocation.Name : "";
+      parentLocation += market.ParentLocation && market.ParentLocation.ParentLocation ? " , " + market.ParentLocation.ParentLocation.Code + " , " + market.ParentLocation.ParentLocation.Name : "";
       market.Properties.map((property) => {
           options.push(
           {
