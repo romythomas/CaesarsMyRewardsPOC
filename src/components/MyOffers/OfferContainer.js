@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import OfferList from "./OfferList";
 import { FILTER_OFFER } from "../../constants/actionTypes";
 import MarketPropertySelect from "../Common/MarketPropertySelect";
+import MultiSelectDropdown from "../Common/MultiSelectDropdown";
 
 const mapStateToProps = (state) => ({
     filteredOffers: state.common.filteredOffers,
@@ -54,6 +55,12 @@ class OfferContainer extends Component {
                 }
             }
         }
+
+        this.onOfferTypeChange = value => {
+            if(value && value.length){
+                this.props.getFilteredOffers("type", value);
+            }
+        }
     }
 
     componentDidMount() {
@@ -62,6 +69,7 @@ class OfferContainer extends Component {
     
     render() {
         const { filteredOffers, markets } = this.props;
+        const offerTypes = ["Hotel", "Cash", "Gaming", "Entertainment", "Events", "Dining", "Other", "Package", "Favorite"];
         return (
             <div className="offerPage">
                 <div className="offerFilter">
@@ -96,6 +104,14 @@ class OfferContainer extends Component {
                         <p className="dateerror hide">
                             Enter proper dates (yyyy-mm-dd)
                         </p>
+                    </div>
+                    <div className="typeFilter">
+                        <MultiSelectDropdown 
+                            options={offerTypes} 
+                            selectTitle="Offer Type" 
+                            width="100%" 
+                            onChange={this.onOfferTypeChange}
+                        />
                     </div>
                 </div>
                 {filteredOffers && filteredOffers.length ? (

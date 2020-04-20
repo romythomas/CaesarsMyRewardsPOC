@@ -890,6 +890,12 @@ a.nav:active {
     float: left;
     margin-left: 20px;
 }
+.offerFilter .typeFilter {
+    width: 20%;
+    height: 70px;
+    float: left;
+    margin-left: 20px;
+}
 .offerFilter .dateFilter .startDateFilter {
     margin-bottom: 10px;
 }
