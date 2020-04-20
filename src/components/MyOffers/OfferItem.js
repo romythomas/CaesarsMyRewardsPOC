@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 
 function myOfferDetails() {
-    alert('TODO!');
-  }
+    alert("TODO!");
+}
 const OfferItem = (props) => {
-    const {offer} = props;
-    // Box type design
+    const { offer } = props;
     return (
         <div className="item">
             <p className="type">{offer.type}</p>
@@ -13,9 +12,11 @@ const OfferItem = (props) => {
             <p className="code">{offer.id}</p>
             <p className="start">{offer.start}</p>
             <p className="end">{offer.end}</p>
-            <button className="myrewards-button" onClick={myOfferDetails}>Details</button>
-		</div>
+            <button className="myrewards-button" onClick={myOfferDetails}>
+                Details
+            </button>
+        </div>
     );
-}
+};
 
 export default OfferItem;
