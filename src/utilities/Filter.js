@@ -21,11 +21,6 @@ export const filterOffers = (offers, selectedOfferFilters) => {
     ) {
         selectedOfferFilters.map((filter) => {
             const { filterType, filterValue } = filter;
-            if (filterType === "checkbox" && filterValue) {
-                filteredOffers = filteredOffers.filter((offer, index) => {
-                    return index < 10;
-                });
-            }
             if (filterType === "location" && filterValue) {
                 filteredOffers = filteredOffers.filter((offer) => {
                     return offer.propertyList.includes(filterValue);

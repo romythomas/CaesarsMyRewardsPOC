@@ -879,17 +879,10 @@ a.nav:active {
     width: 90%;
     height: 90px;
 }
-.offerFilter .sampleFilter {
-    width: 11%;
-    height: 70px;
-    float: left;
-    vertical-align: middle;
-}
 .offerFilter .propertyFilter {
-    width: 32%;
+    width: 25%;
     height: 70px;
     float: left;
-    margin-left: 20px;
 }
 .offerFilter .dateFilter {
     width: 20%;
@@ -898,7 +891,7 @@ a.nav:active {
     margin-left: 20px;
 }
 .offerFilter .dateFilter .startDateFilter {
-    margin-top: 5px;
+    margin-bottom: 10px;
 }
 .offerFilter .dateFilter .dateerror {
     color: red;
@@ -952,15 +945,4 @@ input[type="checkbox"]:checked:after {
     position: absolute;
     top: 2px;
     left: 6px;
-}
-.filter-label {
-    margin-top: 20px;
-    margin-left: 15px;
-    position: absolute;
-    padding-top: 9px;
-    font-weight: bold;
-    font-size: 14px;
-}
-#countfilter {
-    margin-top: 25px;
 }

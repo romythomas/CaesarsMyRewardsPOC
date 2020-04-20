@@ -44,23 +44,6 @@ const OfferContainer = (props) => {
     return (
         <div className="offerPage">
             <div className="offerFilter">
-                <div className="sampleFilter">
-                    <input
-                        type="checkbox"
-                        id="countfilter"
-                        name="countfilter"
-                        onChange={(e) =>
-                            props.getFilteredOffers(
-                                "checkbox",
-                                e.target.checked
-                            )
-                        }
-                    />
-                    <label htmlFor="filter" className="filter-label">
-                        {" "}
-                        Filter 10 Offers
-                    </label>
-                </div>
                 <div className="propertyFilter">
                     <MarketPropertySelect
                         markets={markets}
