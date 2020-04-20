@@ -23,31 +23,41 @@ class OfferContainer extends Component {
         super();
 
         this.onLocationChange = value => {
-            this.props.getFilteredOffers("location", value.propertyCode);
+            if(value && value.propertyCode){
+                this.props.getFilteredOffers("location", value.propertyCode);
+            }
         }
 
         this.dateRangeChanged = () => {
-            const errorElement = document.getElementsByClassName("dateerror")[0];
-            const startDate = new Date(
-                document.getElementsByClassName("startDate")[0].value + "T00:00:00"
-            );
-            const endDate = new Date(
-                document.getElementsByClassName("endDate")[0].value + "T23:59:59"
-            );
-            if (
-                startDate.toString() != "Invalid Date" &&
-                endDate.toString() != "Invalid Date" &&
-                endDate >= startDate
-            ) {
-                errorElement.className = "dateerror hide";
-                this.props.getFilteredOffers("date", {
-                    startDate: startDate,
-                    endDate: endDate,
-                });
-            } else {
-                errorElement.className = "dateerror";
+            const startDateElement = document.getElementsByClassName("startDate");
+            const endDateElement = document.getElementsByClassName("endDate");
+            if(startDateElement && startDateElement.length && endDateElement && endDateElement.length){
+                const errorElement = document.getElementsByClassName("dateerror")[0];
+                const startDate = new Date(
+                    startDateElement[0].value + "T00:00:00"
+                );
+                const endDate = new Date(
+                    endDateElement[0].value + "T23:59:59"
+                );
+                if (
+                    startDate.toString() != "Invalid Date" &&
+                    endDate.toString() != "Invalid Date" &&
+                    endDate >= startDate
+                ) {
+                    errorElement.className = "dateerror hide";
+                    this.props.getFilteredOffers("date", {
+                        startDate: startDate,
+                        endDate: endDate,
+                    });
+                } else {
+                    errorElement.className = "dateerror";
+                }
             }
         }
+    }
+
+    componentDidMount() {
+        this.dateRangeChanged();
     }
     
     render() {
