@@ -4,22 +4,28 @@ import OfferList from "./OfferList";
 import { FILTER_OFFER, SORT_OFFER } from "../../constants/actionTypes";
 import MarketPropertySelect from "../Common/MarketPropertySelect";
 import MultiSelectDropdown from "../Common/MultiSelectDropdown";
+import {filterOffers, updateSelectedFilter} from '../../utilities/Filter'
+import {sortOffers} from '../../utilities/Sort'
 
 const mapStateToProps = (state) => ({
+    offers: state.common.offers,
     filteredOffers: state.common.filteredOffers,
+    selectedOfferFilters: state.common.selectedOfferFilters,
+    selectedOfferSort: state.common.selectedOfferSort,
     markets: state.common.markets
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    getFilteredOffers: (filterType, filterValue) =>
+    getFilteredOffers: (filteredOffers, updatedFilters) =>
         dispatch({
             type: FILTER_OFFER,
-            filterType,
-            filterValue
+            filteredOffers,
+            updatedFilters
         }),
-    getSortedOffers: (sortType) =>
+    getSortedOffers: (sortedOffers, sortType) =>
         dispatch({
             type: SORT_OFFER,
+            sortedOffers,
             sortType
         })
 });
@@ -28,16 +34,38 @@ class OfferContainer extends Component {
     constructor() {
         super();
 
+        this.filterOffers = (type, value) => {
+            const newFilter = {
+                filterType: type,
+                filterValue: value
+            };
+            const updatedFilters = updateSelectedFilter(this.props.selectedOfferFilters, newFilter);
+            let filteredOffers = filterOffers(this.props.offers, updatedFilters);
+            filteredOffers = sortOffers(filteredOffers, this.props.selectedOfferSort);
+            this.props.getFilteredOffers(filteredOffers, updatedFilters);
+        }
+
+        this.sortOffers = (sortType) => {
+            if(!sortType) {
+                const sortElement = document.getElementsByClassName("offersortingoptions");
+                if(sortElement && sortElement.length) {
+                    sortType = sortElement[0].value;
+                }
+            }
+            const sortedOffers = sortOffers(this.props.filteredOffers, sortType);
+            this.props.getSortedOffers(sortedOffers, sortType);
+        }
+
         this.onLocationChange = value => {
             if(value && value.propertyCode){
-                this.props.getFilteredOffers("location", value.propertyCode);
+                this.filterOffers("location", value.propertyCode);
             }
         }
 
         this.dateRangeChanged = () => {
             const startDateElement = document.getElementsByClassName("startDate");
             const endDateElement = document.getElementsByClassName("endDate");
-            if(startDateElement && startDateElement.length && endDateElement && endDateElement.length){
+            if(startDateElement && startDateElement.length && endDateElement && endDateElement.length) {
                 const errorElement = document.getElementsByClassName("dateerror")[0];
                 const startDate = new Date(
                     startDateElement[0].value + "T00:00:00"
@@ -51,10 +79,11 @@ class OfferContainer extends Component {
                     endDate >= startDate
                 ) {
                     errorElement.className = "dateerror hide";
-                    this.props.getFilteredOffers("date", {
+                    this.filterOffers("date", {
                         startDate: startDate,
                         endDate: endDate,
                     });
+
                 } else {
                     errorElement.className = "dateerror";
                 }
@@ -62,7 +91,7 @@ class OfferContainer extends Component {
         }
 
         this.onOfferTypeChange = value => {
-            this.props.getFilteredOffers("type", value && value.length ? value : []);
+            this.filterOffers("type", value && value.length ? value : []);
         }
 
         this.onSortingChange = sort => {
@@ -75,13 +104,12 @@ class OfferContainer extends Component {
                     sortValue = sortElement[0].value;
                 }
             }
-            this.props.getSortedOffers(sortValue);
+            this.sortOffers(sortValue);
         }
     }
 
     componentDidMount() {
         this.dateRangeChanged();
-        this.onSortingChange();
     }
     
     render() {
