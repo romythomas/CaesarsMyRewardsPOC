@@ -35,7 +35,7 @@ export const getTierDetails = (tiers, code) => {
 }
 
 export const getProperty = (properties, code) =>{
-    if(properties && code){
+        if(properties && code){
         var prop = properties.find(t => t.id.toUpperCase() === code.toUpperCase());
         return(prop);
     }
