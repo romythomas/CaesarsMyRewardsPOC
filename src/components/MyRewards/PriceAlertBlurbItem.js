@@ -1,7 +1,10 @@
 import React from 'react';
 import {buildEnterpriseResponse, getProperty} from '../../utilities/Helper'
 
-function myPriceAlerts() {
+function viewMyPriceAlerts() {
+    alert('TODO!');
+  }
+function viewAllMyPriceAlerts() {
     alert('TODO!');
   }
 const PriceAlertBlurbItem = (props) => { 
@@ -44,8 +47,8 @@ const PriceAlertBlurbItem = (props) => {
 					<h6>Based on availability</h6>
 				</div>
             <br/> 
-            <button className="myrewards-button" onClick={myPriceAlerts}>View </button><br/> 
-            <button className="myrewards-button" onClick={myPriceAlerts}>View All </button>
+            <button className="myrewards-button" onClick={viewMyPriceAlerts}>View </button><br/> 
+            <button className="myrewards-button" onClick={viewAllMyPriceAlerts}>View All </button>
         </div>
     );
 }

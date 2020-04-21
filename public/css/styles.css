@@ -844,6 +844,11 @@ a.nav:active {
     display: inline-grid;
 }
 
+.list .item.rewardsitem.progressbar {
+    width: 935px;
+    height: auto;
+}
+
 .list .item.rewardsitem.offer {
     height: 335px;
 }
@@ -958,4 +963,7 @@ input[type="checkbox"]:checked:after {
     font-size: 12px;
     color: #484848;
     margin-top: 15px;
+}
+.left{
+    text-align: left;
 }
