@@ -39,22 +39,24 @@ export default (state = defaultState, action) => {
         priceAlert: action.error? [] : action.payload[6]
       };
     case FILTER_OFFER:
+      let offers = state.offers;
       const newFilter = {
         filterType: action.filterType,
         filterValue: action.filterValue
       };
       const updatedFilters = updateSelectedFilter(state.selectedOfferFilters, newFilter);
+      offers = sortOffers(offers, state.selectedOfferSort);
       return {
         ...state,
         selectedOfferFilters: updatedFilters,
-        filteredOffers: filterOffers(state.offers, updatedFilters)
+        filteredOffers: filterOffers(offers, updatedFilters)
       };
     case SORT_OFFER:
       const {sortType} = action;
       return {
         ...state,
         selectedOfferSort: sortType,
-        filteredOffers: sortOffers(state.offers, sortType)
+        filteredOffers: sortOffers(state.filteredOffers, sortType)
       };
     default:
       return state;

@@ -68,7 +68,15 @@ class OfferContainer extends Component {
         }
 
         this.onSortingChange = sort => {
-            const sortValue = (sort && sort.target && sort.target.value) ? sort.target.value : "offerType";
+            let sortValue = "";
+            if(sort && sort.target && sort.target.value) {
+                sortValue = sort.target.value;
+            } else {
+                const sortElement = document.getElementsByClassName("offersortingoptions");
+                if(sortElement && sortElement.length) {
+                    sortValue = sortElement[0].value;
+                }
+            }
             this.props.getSortedOffers(sortValue);
         }
     }
