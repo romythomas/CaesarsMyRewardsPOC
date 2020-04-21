@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import OfferList from "./OfferList";
-import { FILTER_OFFER } from "../../constants/actionTypes";
+import { FILTER_OFFER, SORT_OFFER } from "../../constants/actionTypes";
 import MarketPropertySelect from "../Common/MarketPropertySelect";
 import MultiSelectDropdown from "../Common/MultiSelectDropdown";
 
@@ -17,6 +17,11 @@ const mapDispatchToProps = (dispatch) => ({
             filterType,
             filterValue
         }),
+    getSortedOffers: (sortType) =>
+        dispatch({
+            type: SORT_OFFER,
+            sortType
+        })
 });
 
 class OfferContainer extends Component {
@@ -61,10 +66,16 @@ class OfferContainer extends Component {
                 this.props.getFilteredOffers("type", value);
             }
         }
+
+        this.onSortingChange = sort => {
+            const sortValue = (sort && sort.target && sort.target.value) ? sort.target.value : "offerType";
+            this.props.getSortedOffers(sortValue);
+        }
     }
 
     componentDidMount() {
         this.dateRangeChanged();
+        this.onSortingChange();
     }
     
     render() {
@@ -72,7 +83,7 @@ class OfferContainer extends Component {
         const offerTypes = ["Hotel", "Cash", "Gaming", "Entertainment", "Events", "Dining", "Other", "Package", "Favorite"];
         return (
             <div className="offerPage">
-                <div className="offerFilter">
+                <div className="offerFilterAndSort">
                     <div className="propertyFilter">
                         <MarketPropertySelect
                             markets={markets}
@@ -112,6 +123,12 @@ class OfferContainer extends Component {
                             width="100%" 
                             onChange={this.onOfferTypeChange}
                         />
+                    </div>
+                    <div className="offerSorting">
+                        <select className="offersortingoptions" onChange={this.onSortingChange}>
+                            <option value="offerType">Offer Type</option>
+                            <option value="preference">Preference</option>
+                        </select>
                     </div>
                 </div>
                 {filteredOffers && filteredOffers.length ? (

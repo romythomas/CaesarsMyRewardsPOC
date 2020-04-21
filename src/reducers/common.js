@@ -1,7 +1,9 @@
 import {filterOffers, updateSelectedFilter} from '../utilities/Filter'
+import {sortOffers} from '../utilities/Sort'
 import {
   LOGIN,
-  FILTER_OFFER
+  FILTER_OFFER,
+  SORT_OFFER
 } from '../constants/actionTypes';
 
 const defaultState = {
@@ -11,6 +13,7 @@ const defaultState = {
   offers: [],
   filteredOffers: [],
   selectedOfferFilters: [],
+  selectedOfferSort: "",
   markets: [],
   properties: [],
   reservations: [],
@@ -45,6 +48,13 @@ export default (state = defaultState, action) => {
         ...state,
         selectedOfferFilters: updatedFilters,
         filteredOffers: filterOffers(state.offers, updatedFilters)
+      };
+    case SORT_OFFER:
+      const {sortType} = action;
+      return {
+        ...state,
+        selectedOfferSort: sortType,
+        filteredOffers: sortOffers(state.offers, sortType)
       };
     default:
       return state;
