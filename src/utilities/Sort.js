@@ -5,14 +5,9 @@ export const sortOffers = (offers, sortType) => {
         offers.length
     ) {
         if(sortType === "offerType") {
-            sortedOffers = sortedOffers.sort((offer) => {
-                return offer.type;
-            });
-        }
-        else if(sortType === "preference") {
-            sortedOffers = sortedOffers.sort((offer) => {
-                return offer.pref;
-            });
+            sortedOffers = offers.sort((firstOffer, nextOffer) => (firstOffer.type < nextOffer.type) ? 1 : -1);
+        } else if (sortType === "preference") {
+            sortedOffers = offers.sort((firstOffer, nextOffer) => (firstOffer.pref < nextOffer.pref) ? 1 : -1);
         }
     }
     return sortedOffers;

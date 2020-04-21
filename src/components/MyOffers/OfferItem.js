@@ -11,6 +11,7 @@ const OfferItem = (props) => {
             <p className="title">{offer.title}</p>
             <p className="code">{offer.id}</p>
             <p className="validity">{new Date(offer.start).toLocaleDateString()} - {new Date(offer.end).toLocaleDateString()}</p>
+            <p className="code">Preference : {offer.pref}</p>
             <button className="myrewards-button" onClick={myOfferDetails}>
                 Details
             </button>
