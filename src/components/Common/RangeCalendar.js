@@ -18,8 +18,8 @@ const RangeCalendar = (props)  => {
     return(
         <div style={{width: width}}>
         <RangeDatePicker
-            startDate={new Date()}
-            endDate={new Date()}
+            startDate={startDt}
+            endDate={endDt}
             minDate={new Date(1900, 0, 1)}
             maxDate={new Date(2100, 0, 1)}
             onChange={(startDate, endDate) => onDateChange(startDate,endDate)}
