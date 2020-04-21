@@ -12,7 +12,9 @@ const defaultState = {
   filteredOffers: [],
   markets: [],
   properties: [],
-  reservations: []
+  reservations: [],
+  enterpriseFeed: [],
+  priceAlert: []
 };
 
 export default (state = defaultState, action) => {
@@ -28,7 +30,9 @@ export default (state = defaultState, action) => {
         filteredOffers: action.error ? [] : action.payload[1].offers,
         markets: action.error ? [] : action.payload[2].GetMarketsResult,
         properties: action.error? [] : action.payload[3],
-        reservations: action.error? []: action.payload[4]
+        reservations: action.error? [] : action.payload[4],
+        enterpriseFeed: action.error? [] : action.payload[5],
+        priceAlert: action.error? [] : action.payload[6]
       };
     case FILTER_OFFER:
       return {

@@ -26,7 +26,9 @@ const mapStateToProps = state => {
     filteredOffers: state.common.filteredOffers,
     markets: state.common.markets,
     properties: state.common.properties,
-    reservations: state.common.reservations
+    reservations: state.common.reservations,
+    priceAlert: state.common.priceAlert,
+    enterpriseFeed: state.common.enterpriseFeed
   }};
 
 const mapDispatchToProps = dispatch => ({
@@ -50,13 +52,16 @@ class App extends Component {
       agent.Offers.getOfferList(this.props.accountID),
       agent.Markets.getMarkets(),
       agent.Properties.getProperties(),
-      agent.Reservations.getReservation()
+      agent.Reservations.getReservation(),
+      agent.PriceAlert.getPriceAlert(),
+      agent.Enterprise.getLowestRate()
     ]));
   }
 
   render() {
-    const {filteredOffers, markets, properties, reservations} = this.props;
-    if(markets && markets.length && filteredOffers && filteredOffers.length && properties && reservations) {
+    const {filteredOffers, markets, properties, reservations, enterpriseFeed, priceAlert} = this.props;
+    if(markets && markets.length && filteredOffers && filteredOffers.length && properties 
+              && reservations && priceAlert && enterpriseFeed) {
       return (
         <div>
           <Header appName={this.props.appName} currentUser={this.props.currentUser} />

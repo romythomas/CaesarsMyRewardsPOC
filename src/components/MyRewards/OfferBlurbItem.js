@@ -1,6 +1,5 @@
 import React from 'react';
 import {getProperty} from '../../utilities/Helper'
-import {Link} from 'react-router-dom'
 
 const OfferBlurbItem = (props) => { 
     var imageUrl ='http://www.caesars.com/myrewards/profile/images/tr-placeholder.jpg"';
