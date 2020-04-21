@@ -71,6 +71,7 @@ class App extends Component {
               <Route exact path="/leaderboard" component={LeaderBoard}/>
               <Route exact path="/badges" component={QuestForRewards}/>
               <Route exact path="/reservations" component={Reservation}/>
+              <Route exact path="/my-offerdetails:id" component={MyOffers}/>
             </Switch>
           <Footer appName={this.props.appName}> </Footer>
         </div>

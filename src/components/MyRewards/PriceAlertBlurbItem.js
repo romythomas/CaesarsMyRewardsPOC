@@ -21,7 +21,7 @@ const PriceAlertBlurbItem = (props) => {
         if(lowestRate){
             var property = getProperty(props.propertyList, lowestRate.propertyCode);
             if(property){
-                imageUrl ="http://caesars.com" + property.thumbnail.url;
+                imageUrl ="http://caesars.com" + property.images[0].url;
                 propertyName = property.propertyName.toUpperCase();
             }
             if (lowestRate.rate < parseInt(priceAlert.threshold, 10)) {
@@ -35,7 +35,7 @@ const PriceAlertBlurbItem = (props) => {
             }
         }
     }
-
+    
     return (        
         <div className="item rewardsitem offer">
             <h4>MY PRICE ALERT <span className="tr-crimson">NEW!</span></h4>
