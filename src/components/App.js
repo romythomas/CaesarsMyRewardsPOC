@@ -12,7 +12,6 @@ import LeaderBoard from './Leaderboard';
 import QuestForRewards from './QuestForRewards';
 import MyOffers from './MyOffers';
 import Reservation from './Reservations';
-import Login from './Login';
 import {
   LOGIN
 } from '../constants/actionTypes';
@@ -23,6 +22,7 @@ const mapStateToProps = state => {
     appName: state.common.appName,
     currentUser: state.common.currentUser,
     redirectTo: state.common.redirectTo,
+    offers: state.common.offers,
     filteredOffers: state.common.filteredOffers,
     markets: state.common.markets,
     properties: state.common.properties,
@@ -59,9 +59,8 @@ class App extends Component {
   }
 
   render() {
-    const {filteredOffers, markets, properties, reservations, enterpriseFeed, priceAlert} = this.props;
-    if(markets && markets.length && filteredOffers && filteredOffers.length && properties 
-              && reservations && priceAlert && enterpriseFeed) {
+    const {offers, filteredOffers, markets, properties, reservations, enterpriseFeed, priceAlert} = this.props;
+    if(markets && markets.length && offers && offers.length && properties && reservations && priceAlert && enterpriseFeed) {
       return (
         <div>
           <Header appName={this.props.appName} currentUser={this.props.currentUser} />
@@ -72,7 +71,6 @@ class App extends Component {
               <Route exact path="/leaderboard" component={LeaderBoard}/>
               <Route exact path="/badges" component={QuestForRewards}/>
               <Route exact path="/reservations" component={Reservation}/>
-              <Route exact path="/login" component={Login}/>
             </Switch>
           <Footer appName={this.props.appName}> </Footer>
         </div>

@@ -1,29 +1,8 @@
-import React, { Component } from 'react';
-import agent from '../../agent';
-import OfferContainer from './OfferContainer';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import OfferContainer from "./OfferContainer";
 
-const mapStateToProps = state => ({
-  filteredOffers: state.common.filteredOffers,
-  markets: state.common.markets,
-  properties: state.common.properties
-});
+const MyOffers = (props) => {
+    return <OfferContainer />;
+};
 
-class MyOffers extends Component {
-  render() {
-    const {filteredOffers, markets, properties} = this.props;
-    if(markets && markets.length && filteredOffers && filteredOffers.length) {
-      return (
-        <OfferContainer offerList={filteredOffers} />
-      );
-    } else {
-      return (
-        <div className="offerPage">
-          <h1>Loading...</h1>
-        </div>
-      )
-    }
-  }
-}
-
-export default connect(mapStateToProps)(MyOffers);
+export default MyOffers;

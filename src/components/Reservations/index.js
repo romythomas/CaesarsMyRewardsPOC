@@ -17,7 +17,7 @@ class Reservation extends Component {
   }
 
   componentWillUnmount() {
-    this.props.onUnload();
+
   }
 
   render() {

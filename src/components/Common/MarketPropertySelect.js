@@ -10,6 +10,7 @@ const filterOptions = createFilterOptions({
 const  MarketPropertySelect = (props)  => {
   var options=[];
   const markets = props.markets;
+  const width = props.width ? props.width : 500;
 
   const onSelect = value => {
     if(props.onSelect)
@@ -21,7 +22,9 @@ const  MarketPropertySelect = (props)  => {
   if(markets){
     markets.map((market) => {
       const marketName = market.Name;
-      const parentLocation = market.ParentLocation?.Name;
+      let parentLocation = "";
+      parentLocation += market.ParentLocation ? market.ParentLocation.Code + " , " + market.ParentLocation.Name : "";
+      parentLocation += market.ParentLocation && market.ParentLocation.ParentLocation ? " , " + market.ParentLocation.ParentLocation.Code + " , " + market.ParentLocation.ParentLocation.Name : "";
       market.Properties.map((property) => {
           options.push(
           {
@@ -42,7 +45,7 @@ const  MarketPropertySelect = (props)  => {
       getOptionLabel={(option) => option.propertyName}
       filterOptions={filterOptions}
       onChange={(event, value) => onSelect(value)}
-      style={{ width: 500 }}
+      style={{ width: width }}
       renderInput={(params) => <TextField {...params} label="Market/Property" variant="outlined" />}
     />
   );

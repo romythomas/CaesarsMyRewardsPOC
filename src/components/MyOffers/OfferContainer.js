@@ -1,23 +1,127 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import OfferList from './OfferList'
-import {FILTER_OFFER} from '../../constants/actionTypes'
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import OfferList from "./OfferList";
+import { FILTER_OFFER } from "../../constants/actionTypes";
+import MarketPropertySelect from "../Common/MarketPropertySelect";
+import MultiSelectDropdown from "../Common/MultiSelectDropdown";
 
-const mapDispatchToProps = dispatch => ({
-    getFilteredOffers: (filtervalue, filtertype) => dispatch({ 
-        type: FILTER_OFFER, filtervalue, filtertype 
-    })
+const mapStateToProps = (state) => ({
+    filteredOffers: state.common.filteredOffers,
+    markets: state.common.markets
 });
 
-const OfferContainer = (props) => {
-    const {offerList} = props;
-    return (
-        <div className="offerPage">
-                <input type="checkbox" id="filter" name="offerfilter" onChange={(e) => props.getFilteredOffers(e.target.checked, "checkbox")} />
-                <label htmlFor="offerfilter" className="filter-label"> Filter 10 Offers</label>
-                <OfferList offerList={offerList}/>                
+const mapDispatchToProps = (dispatch) => ({
+    getFilteredOffers: (filterType, filterValue) =>
+        dispatch({
+            type: FILTER_OFFER,
+            filterType,
+            filterValue
+        }),
+});
+
+class OfferContainer extends Component {
+    constructor() {
+        super();
+
+        this.onLocationChange = value => {
+            if(value && value.propertyCode){
+                this.props.getFilteredOffers("location", value.propertyCode);
+            }
+        }
+
+        this.dateRangeChanged = () => {
+            const startDateElement = document.getElementsByClassName("startDate");
+            const endDateElement = document.getElementsByClassName("endDate");
+            if(startDateElement && startDateElement.length && endDateElement && endDateElement.length){
+                const errorElement = document.getElementsByClassName("dateerror")[0];
+                const startDate = new Date(
+                    startDateElement[0].value + "T00:00:00"
+                );
+                const endDate = new Date(
+                    endDateElement[0].value + "T23:59:59"
+                );
+                if (
+                    startDate.toString() != "Invalid Date" &&
+                    endDate.toString() != "Invalid Date" &&
+                    endDate >= startDate
+                ) {
+                    errorElement.className = "dateerror hide";
+                    this.props.getFilteredOffers("date", {
+                        startDate: startDate,
+                        endDate: endDate,
+                    });
+                } else {
+                    errorElement.className = "dateerror";
+                }
+            }
+        }
+
+        this.onOfferTypeChange = value => {
+            if(value && value.length){
+                this.props.getFilteredOffers("type", value);
+            }
+        }
+    }
+
+    componentDidMount() {
+        this.dateRangeChanged();
+    }
+    
+    render() {
+        const { filteredOffers, markets } = this.props;
+        const offerTypes = ["Hotel", "Cash", "Gaming", "Entertainment", "Events", "Dining", "Other", "Package", "Favorite"];
+        return (
+            <div className="offerPage">
+                <div className="offerFilter">
+                    <div className="propertyFilter">
+                        <MarketPropertySelect
+                            markets={markets}
+                            width="100%"
+                            onSelect={this.onLocationChange}
+                        />
+                    </div>
+                    <div className="dateFilter">
+                        <div className="startDateFilter">
+                            <label>Start Date</label>
+                            <input
+                                type="text"
+                                className="startDate"
+                                placeholder="yyyy-mm-dd"
+                                defaultValue="2020-05-01"
+                                onBlur={this.dateRangeChanged}
+                            />
+                        </div>
+                        <div className="endDateFilter">
+                            <label>End Date  </label>
+                            <input
+                                type="text"
+                                className="endDate"
+                                placeholder="yyyy-mm-dd"
+                                defaultValue="2020-05-31"
+                                onBlur={this.dateRangeChanged}
+                            />
+                        </div>
+                        <p className="dateerror hide">
+                            Enter proper dates (yyyy-mm-dd)
+                        </p>
+                    </div>
+                    <div className="typeFilter">
+                        <MultiSelectDropdown 
+                            options={offerTypes} 
+                            selectTitle="Offer Type" 
+                            width="100%" 
+                            onChange={this.onOfferTypeChange}
+                        />
+                    </div>
+                </div>
+                {filteredOffers && filteredOffers.length ? (
+                    <OfferList offerList={filteredOffers} />
+                ) : (
+                    <h2 className="noOffers">No offers available</h2>
+                )}
             </div>
-    )
+        );
+    }
 }
 
-export default connect(null, mapDispatchToProps)(OfferContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(OfferContainer);

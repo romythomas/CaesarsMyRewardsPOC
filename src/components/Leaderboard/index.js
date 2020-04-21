@@ -17,7 +17,7 @@ class LeaderBoard extends Component {
   }
 
   componentWillUnmount() {
-    this.props.onUnload();
+    
   }
 
   render() {
