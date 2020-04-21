@@ -814,10 +814,6 @@ a.nav:active {
     margin-bottom: 20px;
     width: 90%;
 }
-.list .slick-next:before,
-.list .slick-prev:before {
-    color: #000;
-}
 .list h2 {
     margin-left: 10px;
 }
