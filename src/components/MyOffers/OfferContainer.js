@@ -62,9 +62,7 @@ class OfferContainer extends Component {
         }
 
         this.onOfferTypeChange = value => {
-            if(value && value.length){
-                this.props.getFilteredOffers("type", value);
-            }
+            this.props.getFilteredOffers("type", value && value.length ? value : []);
         }
 
         this.onSortingChange = sort => {
