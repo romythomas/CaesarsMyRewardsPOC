@@ -569,9 +569,7 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
-a:hover {
-    color: #671215;
-}
+
 .tr-primary {
     color: #ad1f23;
 }
@@ -692,7 +690,6 @@ nav#side-navigation {
 }
 
 nav#side-navigation ul {
-    background: url("../images/side-menu-bg.png") repeat-y top left;
     position: relative;
     margin-top: 15px;
     margin-bottom: 30px;
@@ -703,7 +700,6 @@ nav#side-navigation ul:after {
     position: absolute;
     top: -15px;
     left: 0px;
-    background: url("../images/side-menu-bg-top.png") no-repeat center left;
     width: 6px;
     height: 16px;
 }
@@ -713,17 +709,12 @@ nav#side-navigation ul:before {
     position: absolute;
     bottom: -15px;
     left: 0px;
-    background: url("../images/side-menu-bg-bot.png") no-repeat center left;
     width: 6px;
     height: 16px;
 }
 
 nav#side-navigation ul li {
     padding: 3px 0 18px 20px;
-}
-
-nav#side-navigation ul li.active {
-    background: url("../images/side-menu-active.png") no-repeat top left;
 }
 
 nav#side-navigation ul li a {
@@ -973,4 +964,16 @@ input[type="checkbox"]:checked:after {
 }
 .left{
     text-align: left;
+}
+#offer-image {
+    float: right;
+    width: 300px;
+    display: inline;
+}
+.offerfooter{
+    padding-top:150px;
+}
+.offer-details-left-panel{
+    float: left;
+    width: 650px;
 }

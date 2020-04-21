@@ -1,8 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-function myOfferDetails() {
-    alert("TODO!");
-}
 const OfferItem = (props) => {
     const { offer } = props;
     return (
@@ -11,9 +9,12 @@ const OfferItem = (props) => {
             <p className="title">{offer.title}</p>
             <p className="code">{offer.id}</p>
             <p className="validity">{new Date(offer.start).toLocaleDateString()} - {new Date(offer.end).toLocaleDateString()}</p>
-            <button className="myrewards-button" onClick={myOfferDetails}>
+           
+            <Link
+                to={`/my-offer-details/${offer.id}`}
+                className="myrewards-button">
                 Details
-            </button>
+            </Link>
         </div>
     );
 };
