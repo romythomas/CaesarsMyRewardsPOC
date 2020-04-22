@@ -22,7 +22,8 @@ const ProfileContainer = (props) => {
                 <div  className="list">
                     <OfferBlurbItem offerList={props.offerList} propertyList = {props.propertyList}/>
                     <ReservationBlurbItem reservationList ={props.reservationList} propertyList = {props.propertyList}/>
-                    <PriceAlertBlurbItem logininfo={props.logininfo} />
+                    <PriceAlertBlurbItem priceList={props.priceList} enterpriseList={props.enterpriseList}
+                                        propertyList = {props.propertyList} />
                 </div> 
             </div>
     );

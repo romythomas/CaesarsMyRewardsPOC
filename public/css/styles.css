@@ -569,9 +569,7 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
-a:hover {
-    color: #671215;
-}
+
 .tr-primary {
     color: #ad1f23;
 }
@@ -692,7 +690,6 @@ nav#side-navigation {
 }
 
 nav#side-navigation ul {
-    background: url("../images/side-menu-bg.png") repeat-y top left;
     position: relative;
     margin-top: 15px;
     margin-bottom: 30px;
@@ -703,7 +700,6 @@ nav#side-navigation ul:after {
     position: absolute;
     top: -15px;
     left: 0px;
-    background: url("../images/side-menu-bg-top.png") no-repeat center left;
     width: 6px;
     height: 16px;
 }
@@ -713,17 +709,12 @@ nav#side-navigation ul:before {
     position: absolute;
     bottom: -15px;
     left: 0px;
-    background: url("../images/side-menu-bg-bot.png") no-repeat center left;
     width: 6px;
     height: 16px;
 }
 
 nav#side-navigation ul li {
     padding: 3px 0 18px 20px;
-}
-
-nav#side-navigation ul li.active {
-    background: url("../images/side-menu-active.png") no-repeat top left;
 }
 
 nav#side-navigation ul li a {
@@ -823,10 +814,6 @@ a.nav:active {
     margin-bottom: 20px;
     width: 90%;
 }
-.list .slick-next:before,
-.list .slick-prev:before {
-    color: #000;
-}
 .list h2 {
     margin-left: 10px;
 }
@@ -837,11 +824,16 @@ a.nav:active {
     height: 200px;
     margin: 10px;
     text-align: center;
-    display: inline-block;
+    float: left;
 }
 .list .item.rewardsitem {
     width: 25%;
     display: inline-grid;
+}
+
+.list .item.rewardsitem.progressbar {
+    width: 935px;
+    height: auto;
 }
 
 .list .item.rewardsitem.offer {
@@ -872,38 +864,45 @@ a.nav:active {
 .list .item p {
     font-size: 16px;
 }
-.offerFilter {
+.offerFilterAndSort {
     margin-left: 40px;
     padding: 10px;
     margin-bottom: 20px;
-    width: 90%;
+    width: 85%;
     height: 90px;
 }
-.offerFilter .propertyFilter {
+.offerFilterAndSort .propertyFilter {
     width: 25%;
     height: 70px;
     float: left;
 }
-.offerFilter .dateFilter {
+.offerFilterAndSort .dateFilter {
     width: 20%;
     height: 70px;
     float: left;
     margin-left: 20px;
 }
-.offerFilter .typeFilter {
+.offerFilterAndSort .typeFilter {
     width: 20%;
     height: 70px;
     float: left;
     margin-left: 20px;
 }
-.offerFilter .dateFilter .startDateFilter {
+.offerFilterAndSort .dateFilter .startDateFilter {
     margin-bottom: 10px;
 }
-.offerFilter .dateFilter .dateerror {
+.offerFilterAndSort .dateFilter .dateerror {
     color: red;
 }
-.offerFilter .dateFilter .dateerror.hide {
+.offerFilterAndSort .dateFilter .dateerror.hide {
     display: none;
+}
+.offerFilterAndSort .offerSorting {
+    height: 70px;
+    float: right;
+}
+.offerFilterAndSort .offerSorting .offersortingoptions {
+    height: 40px;
 }
 .tr-crimson {
     color: #ad1f23;
@@ -951,4 +950,26 @@ input[type="checkbox"]:checked:after {
     position: absolute;
     top: 2px;
     left: 6px;
+}
+.amount{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #484848;
+    margin-top: 15px;
+}
+.left{
+    text-align: left;
+}
+#offer-image {
+    float: right;
+    width: 300px;
+    display: inline;
+}
+.offerfooter{
+    padding-top:150px;
+}
+.offer-details-left-panel{
+    float: left;
+    width: 650px;
 }

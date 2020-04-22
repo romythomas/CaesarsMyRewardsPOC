@@ -35,12 +35,24 @@ export const getTierDetails = (tiers, code) => {
 }
 
 export const getProperty = (properties, code) =>{
-    if(properties && code){
+        if(properties && code){
         var prop = properties.find(t => t.id.toUpperCase() === code.toUpperCase());
         return(prop);
     }
 }
-
+export const buildEnterpriseResponse = (list) =>{
+    var response = [];
+    if(list){
+        for (var a = 0, len = list.length; a < len; a++) {           
+            response.push({
+                propertyCode: list[a].propCode,
+                rateSet: list[a].roomtype["rateSet"],
+                rate: list[a].roomtype["amount"]
+            });
+        }
+        return(response);
+    }    
+}
 export const isEmpty = (val) =>{
     return (val === null || val === undefined || new string(val) == '' || new string(val) == 'null');
 }

@@ -12,6 +12,8 @@ import LeaderBoard from './Leaderboard';
 import QuestForRewards from './QuestForRewards';
 import MyOffers from './MyOffers';
 import Reservation from './Reservations';
+import OfferDetails from './MyOffers/OfferDetails'
+
 import {
   LOGIN
 } from '../constants/actionTypes';
@@ -26,7 +28,9 @@ const mapStateToProps = state => {
     filteredOffers: state.common.filteredOffers,
     markets: state.common.markets,
     properties: state.common.properties,
-    reservations: state.common.reservations
+    reservations: state.common.reservations,
+    priceAlert: state.common.priceAlert,
+    enterpriseFeed: state.common.enterpriseFeed
   }};
 
 const mapDispatchToProps = dispatch => ({
@@ -50,13 +54,15 @@ class App extends Component {
       agent.Offers.getOfferList(this.props.accountID),
       agent.Markets.getMarkets(),
       agent.Properties.getProperties(),
-      agent.Reservations.getReservation()
+      agent.Reservations.getReservation(),
+      agent.PriceAlert.getPriceAlert(),
+      agent.Enterprise.getLowestRate()
     ]));
   }
 
   render() {
-    const {offers, filteredOffers, markets, properties, reservations} = this.props;
-    if(markets && markets.length && offers && offers.length && properties && reservations) {
+    const {offers, filteredOffers, markets, properties, reservations, enterpriseFeed, priceAlert} = this.props;
+    if(markets && markets.length && offers && offers.length && properties && reservations && priceAlert && enterpriseFeed) {
       return (
         <div>
           <Header appName={this.props.appName} currentUser={this.props.currentUser} />
@@ -67,6 +73,7 @@ class App extends Component {
               <Route exact path="/leaderboard" component={LeaderBoard}/>
               <Route exact path="/badges" component={QuestForRewards}/>
               <Route exact path="/reservations" component={Reservation}/>
+              <Route exact path="/my-offer-details/:id" component={OfferDetails}/>
             </Switch>
           <Footer appName={this.props.appName}> </Footer>
         </div>
