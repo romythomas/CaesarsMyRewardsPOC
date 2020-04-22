@@ -1,9 +1,10 @@
 import React from 'react';
 import {getProperty} from '../../utilities/Helper'
 import { Link } from 'react-router-dom';
+import {getImageUrl} from '../../Configs/Configs'
 
 const OfferBlurbItem = (props) => { 
-    var imageUrl ='http://www.caesars.com/myrewards/profile/images/tr-placeholder.jpg"';
+    var imageUrl = getImageUrl();
     var propertyName = '';
     var offers = (props.offerList[0]== null)? '' : props.offerList[0];
     if(props.propertyList && offers && offers && offers.propertyList[0]){
@@ -14,9 +15,7 @@ const OfferBlurbItem = (props) => {
             propertyName = property.propertyName;
         }
     }
-    function myOfferDetails() {
-        alert('TODO!');
-      }
+    
     function myOffer() {
         window.location.href='/my-offers'
       }

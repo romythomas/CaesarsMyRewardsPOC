@@ -53,3 +53,18 @@ export const buildEnterpriseResponse = (list) =>{
         return(response);
     }    
 }
+ 
+export const getPropertiesListByCode = (list, codes) => {
+    //Return Prop code and prop name
+    var propertyNamesList = [];
+    if (list != null && list != undefined) {
+        for (var i = 0; i < list.length; i++) {
+            for (let index = 0; index < codes.length; index++) {
+                if (codes[index].toUpperCase() === list[i].id.toUpperCase()) {
+                    propertyNamesList.push({ "id": list[i].id +','+list[i].marketCode, "name": list[i].name });
+                }
+            }
+        }
+    }
+    return propertyNamesList;
+}

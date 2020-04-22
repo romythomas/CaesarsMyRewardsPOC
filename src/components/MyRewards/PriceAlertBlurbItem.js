@@ -1,5 +1,6 @@
 import React from 'react';
 import {buildEnterpriseResponse, getProperty} from '../../utilities/Helper'
+import {getImageUrl} from '../../Configs/Configs'
 
 function viewMyPriceAlerts() {
     alert('TODO!');
@@ -11,7 +12,7 @@ const PriceAlertBlurbItem = (props) => {
     var rooms = [];
     var priceAlert = null;
     var lowestRate = null;
-    var imageUrl ='http://www.caesars.com/myrewards/profile/images/tr-placeholder.jpg"';
+    var imageUrl = getImageUrl();
     var propertyName = '';     
 
     var enterprise = buildEnterpriseResponse(props.priceList.harrahs.roomtypes);

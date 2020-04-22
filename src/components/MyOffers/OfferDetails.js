@@ -1,13 +1,22 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import {getProperty} from '../../utilities/Helper'
+import {getProperty, getPropertiesListByCode} from '../../utilities/Helper'
+import {getImageUrl} from '../../Configs/Configs'
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
-    properties: state.common.properties 
+    properties: state.common.properties
 });
 
-class OfferDetails  extends Component  {      
+const gotoNBE = (parameter) => (event) => {
+    var e = document.getElementById("property");
+    var val = e.options[e.selectedIndex].value.split(',');   
+    var url = 'http://www.caesars.com/book/?view=ratecal&offerCode=' + parameter[0] + '&arrival=' + parameter[1] + '&departure=' + parameter[2] + '&propCode=' + val[0] + '&regionCode=' + val[1] + '&adults=1&children=0'
+    window.location = url;
+}
+  
+
+class OfferDetails  extends Component  {       
     render(){
         const { offers, properties } = this.props;
         if ((this.props.match.params) && (this.props.match.params.id)) {
@@ -17,12 +26,11 @@ class OfferDetails  extends Component  {
         });
 
         if(properties){
-            var imageUrl ='http://www.caesars.com/myrewards/profile/images/tr-placeholder.jpg"';
-            var propertyName = '';
+            var imageUrl = getImageUrl();
             var property = getProperty(properties, selectedOffer[0].propertyList[0]);
+            var proplist = getPropertiesListByCode(properties, new Array(selectedOffer[0].propertyList[0]));
             if(property){
                 imageUrl ="http://caesars.com" + property.images[0].url;
-                propertyName = property.propertyName;
             }
         }
         return ( 
@@ -37,12 +45,21 @@ class OfferDetails  extends Component  {
                     <br/>          
                     <strong>Expires: </strong>
                     <span>{selectedOffer[0].end}</span>
-                    <br/>          
-                    <strong>Properties:</strong>
-                    <span>{propertyName}</span>
-                    <br/>          
+                    <br/>
                     <strong>Description: </strong> 
                     <span>{selectedOffer[0].description}</span>
+                    <br/>
+                    <br/>
+                    <strong>Properties:</strong>
+                    <span>                   
+                        <select id="property" className="offersortingoptions" >
+                            {proplist.map((t) => <option value={t.id}>{t.name}</option>)}
+                        </select>
+                        <button className="myrewards-button" 
+                            onClick={gotoNBE(new Array(selectedOffer[0].id, selectedOffer[0].start,selectedOffer[0].end))} >
+                            Book</button> 
+                    </span>
+                    <br/>  
                 </div>
                 <div id="offer-image">
                     <img src={imageUrl} width="210" alt="offer details image" />

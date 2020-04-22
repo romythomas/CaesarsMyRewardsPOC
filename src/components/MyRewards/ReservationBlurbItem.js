@@ -1,8 +1,9 @@
 import React from 'react';
 import {getProperty} from '../../utilities/Helper'
+import {getImageUrl} from '../../Configs/Configs'
 
 const ReservationBlurbItem = (props) => { 
-    var imageUrl ='http://www.caesars.com/myrewards/profile/images/tr-placeholder.jpg"';
+    var imageUrl = getImageUrl();
     var propertyName = '';
     var reservations = props.reservationList.reservations[0];
     if(props.propertyList && reservations && reservations && reservations.propertyCode){

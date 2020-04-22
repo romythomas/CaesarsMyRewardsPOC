@@ -14,3 +14,7 @@ export const getOfferSortTypes = () => {
         }
     ];
 }
+
+export const getImageUrl =()=>{
+    return 'http://www.caesars.com/myrewards/profile/images/tr-placeholder.jpg';
+}
