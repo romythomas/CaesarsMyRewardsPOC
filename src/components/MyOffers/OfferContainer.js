@@ -35,26 +35,28 @@ class OfferContainer extends Component {
         super();
 
         this.filterOffers = (type, value) => {
+            const {selectedOfferFilters, selectedOfferSort, offers, getFilteredOffers} = this.props;
             const newFilter = {
                 filterType: type,
                 filterValue: value
             };
-            const updatedFilters = updateSelectedFilter(this.props.selectedOfferFilters, newFilter);
-            const sortType = this.props.selectedOfferSort ? this.props.selectedOfferSort : this.getSortElementValue();
-            let filteredOffers = filterOffers(this.props.offers, updatedFilters);
+            const updatedFilters = updateSelectedFilter(selectedOfferFilters, newFilter);
+            const sortType = selectedOfferSort ? selectedOfferSort : this.getSortElementValue();
+            let filteredOffers = filterOffers(offers, updatedFilters);
             filteredOffers = sortOffers(filteredOffers, sortType);
-            this.props.getFilteredOffers(filteredOffers, updatedFilters);
+            getFilteredOffers(filteredOffers, updatedFilters);
         }
 
         this.sortOffers = (sortType) => {
+            const {filteredOffers, getSortedOffers} = this.props;
             if(!sortType) {
                 const sortElement = document.getElementsByClassName("offersortingoptions");
                 if(sortElement && sortElement.length) {
                     sortType = sortElement[0].value;
                 }
             }
-            const sortedOffers = sortOffers(this.props.filteredOffers, sortType);
-            this.props.getSortedOffers(sortedOffers, sortType);
+            const sortedOffers = sortOffers(filteredOffers, sortType);
+            getSortedOffers(sortedOffers, sortType);
         }
 
         this.getSortElementValue = () => {
@@ -99,7 +101,7 @@ class OfferContainer extends Component {
         }
 
         this.onOfferTypeChange = value => {
-            this.filterOffers("type", value && value.length ? value : []);
+            this.filterOffers("type", (value && value.length) ? value : []);
         }
 
         this.onSortingChange = sort => {
