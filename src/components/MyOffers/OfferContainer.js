@@ -40,8 +40,9 @@ class OfferContainer extends Component {
                 filterValue: value
             };
             const updatedFilters = updateSelectedFilter(this.props.selectedOfferFilters, newFilter);
+            const sortType = this.props.selectedOfferSort ? this.props.selectedOfferSort : this.getSortElementValue();
             let filteredOffers = filterOffers(this.props.offers, updatedFilters);
-            filteredOffers = sortOffers(filteredOffers, this.props.selectedOfferSort);
+            filteredOffers = sortOffers(filteredOffers, sortType);
             this.props.getFilteredOffers(filteredOffers, updatedFilters);
         }
 
@@ -54,6 +55,13 @@ class OfferContainer extends Component {
             }
             const sortedOffers = sortOffers(this.props.filteredOffers, sortType);
             this.props.getSortedOffers(sortedOffers, sortType);
+        }
+
+        this.getSortElementValue = () => {
+            const sortElement = document.getElementsByClassName("offersortingoptions");
+            if(sortElement && sortElement.length) {
+                return sortElement[0].value;
+            }
         }
 
         this.onLocationChange = value => {
@@ -99,10 +107,7 @@ class OfferContainer extends Component {
             if(sort && sort.target && sort.target.value) {
                 sortValue = sort.target.value;
             } else {
-                const sortElement = document.getElementsByClassName("offersortingoptions");
-                if(sortElement && sortElement.length) {
-                    sortValue = sortElement[0].value;
-                }
+                sortValue = this.getSortElementValue();
             }
             this.sortOffers(sortValue);
         }
