@@ -6,6 +6,7 @@ import MarketPropertySelect from "../Common/MarketPropertySelect";
 import MultiSelectDropdown from "../Common/MultiSelectDropdown";
 import {filterOffers, updateSelectedFilter} from '../../utilities/Filter'
 import {sortOffers} from '../../utilities/Sort'
+import {getOfferFilterTypes, getOfferSortTypes} from "../../Configs/Configs"
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -41,7 +42,7 @@ class OfferContainer extends Component {
                 filterValue: value
             };
             const updatedFilters = updateSelectedFilter(selectedOfferFilters, newFilter);
-            const sortType = selectedOfferSort ? selectedOfferSort : this.getSortElementValue();
+            const sortType = selectedOfferSort ? selectedOfferSort : this.getDefaultSortValue();
             let filteredOffers = filterOffers(offers, updatedFilters);
             filteredOffers = sortOffers(filteredOffers, sortType);
             getFilteredOffers(filteredOffers, updatedFilters);
@@ -50,19 +51,16 @@ class OfferContainer extends Component {
         this.sortOffers = (sortType) => {
             const {filteredOffers, getSortedOffers} = this.props;
             if(!sortType) {
-                const sortElement = document.getElementsByClassName("offersortingoptions");
-                if(sortElement && sortElement.length) {
-                    sortType = sortElement[0].value;
-                }
+                sortType = this.getDefaultSortValue();
             }
             const sortedOffers = sortOffers(filteredOffers, sortType);
             getSortedOffers(sortedOffers, sortType);
         }
 
-        this.getSortElementValue = () => {
-            const sortElement = document.getElementsByClassName("offersortingoptions");
-            if(sortElement && sortElement.length) {
-                return sortElement[0].value;
+        this.getDefaultSortValue = () => {
+            const offerSortTypes = getOfferSortTypes();
+            if(offerSortTypes && offerSortTypes.length) {
+                return offerSortTypes[0].value;
             }
         }
 
@@ -109,7 +107,7 @@ class OfferContainer extends Component {
             if(sort && sort.target && sort.target.value) {
                 sortValue = sort.target.value;
             } else {
-                sortValue = this.getSortElementValue();
+                sortValue = this.getDefaultSortValue();
             }
             this.sortOffers(sortValue);
         }
@@ -121,7 +119,8 @@ class OfferContainer extends Component {
     
     render() {
         const { filteredOffers, markets } = this.props;
-        const offerTypes = ["Hotel", "Cash", "Gaming", "Entertainment", "Events", "Dining", "Other", "Package", "Favorite"];
+        const offerTypes = getOfferFilterTypes();
+        const offerSortTypes = getOfferSortTypes();
         return (
             <div className="offerPage">
                 <div className="offerFilterAndSort">
@@ -167,8 +166,9 @@ class OfferContainer extends Component {
                     </div>
                     <div className="offerSorting">
                         <select className="offersortingoptions" onChange={this.onSortingChange}>
-                            <option value="offerType">Offer Type</option>
-                            <option value="preference">Preference</option>
+                            {offerSortTypes.map((sortType, index) => {
+                                return (<option key={index} value={sortType.value}>{sortType.name}</option>);
+                            })}
                         </select>
                     </div>
                 </div>
