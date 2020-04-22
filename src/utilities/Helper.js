@@ -53,6 +53,3 @@ export const buildEnterpriseResponse = (list) =>{
         return(response);
     }    
 }
-export const isEmpty = (val) =>{
-    return (val === null || val === undefined || new string(val) == '' || new string(val) == 'null');
-}

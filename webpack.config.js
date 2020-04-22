@@ -31,7 +31,8 @@ module.exports = {
 				// Compiles Sass to CSS
 				'sass-loader',
 			  ]
-		}
+		},
+		{ test: /\.css$/, loader: "style-loader!css-loader" }
 	]
 	},
 	plugins:[

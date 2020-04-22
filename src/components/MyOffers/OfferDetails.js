@@ -48,7 +48,7 @@ class OfferDetails  extends Component  {
                     <img src={imageUrl} width="210" alt="offer details image" />
                 </div> 
                 <div id="offer-links">
-                    <div id="offer-favorite-icon"><span id="fav-icon" class="favorite"></span></div>
+                    <div id="offer-favorite-icon"><span id="fav-icon" className="favorite"></span></div>
                 </div>
                 <br/>
                 <div className="offerfooter">

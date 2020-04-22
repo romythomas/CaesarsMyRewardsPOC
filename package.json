@@ -8,6 +8,7 @@
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
     "cross-env": "^4.0.0",
+    "css-loader": "^3.5.2",
     "html-webpack-plugin": "^4.0.4",
     "react-scripts": "0.9.5",
     "webpack": "^4.42.1",
@@ -19,6 +20,7 @@
     "@material-ui/lab": "^4.0.0-alpha.49",
     "history": "^4.6.3",
     "marked": "^0.3.6",
+    "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.5.10",
     "react": "^16.13.1",
@@ -32,6 +34,7 @@
     "redux-devtools-extension": "^2.13.2",
     "redux-logger": "^3.0.1",
     "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.4",
     "superagent": "^2.3.0",
     "superagent-promise": "^1.1.0"
   },
