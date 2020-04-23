@@ -1,15 +1,28 @@
 import React from "react";
+import { connect } from "react-redux";
 import OfferItem from "./OfferItem";
 
+const mapStateToProps = (state) => ({
+    filteredSortedOffers: state.offers.offers,
+});
+
 const OfferList = (props) => {
-    return (
-        <div className="list">
-            <h2>{props.propertyName}</h2>
-            {props.offerList.map((offer, index) => {
-                return <OfferItem key={index} offer={offer} />;
-            })}
-        </div>
-    );
+    if(props.filteredSortedOffers){
+        return (
+            <div className="list">
+                {props.filteredSortedOffers.map((offer, index) => {
+                    return <OfferItem key={index} offer={offer} />;
+                })}
+            </div>
+        );   
+    }
+    else
+    {
+        return (
+            <div>Loading</div>
+        );
+    }
+    
 };
 
-export default OfferList;
+export default connect(mapStateToProps)(OfferList);

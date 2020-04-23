@@ -33,5 +33,4 @@ export const UPDATE_FIELD_EDITOR = 'UPDATE_FIELD_EDITOR';
 export const FOLLOW_USER = 'FOLLOW_USER';
 export const UNFOLLOW_USER = 'UNFOLLOW_USER';
 export const GET_PROFILE = 'GET_PROFILE';
-export const FILTER_OFFER = 'FILTER_OFFER';
-export const SORT_OFFER = 'SORT_OFFER';
+export const FILTER_SORT_OFFER = 'FILTER_OFFER';

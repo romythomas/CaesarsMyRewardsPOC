@@ -25,7 +25,6 @@ const mapStateToProps = state => {
     currentUser: state.common.currentUser,
     redirectTo: state.common.redirectTo,
     offers: state.common.offers,
-    filteredOffers: state.common.filteredOffers,
     markets: state.common.markets,
     properties: state.common.properties,
     reservations: state.common.reservations,
@@ -61,7 +60,7 @@ class App extends Component {
   }
 
   render() {
-    const {offers, filteredOffers, markets, properties, reservations, enterpriseFeed, priceAlert} = this.props;
+    const {offers, markets, properties, reservations, enterpriseFeed, priceAlert} = this.props;
     if(markets && markets.length && offers && offers.length && properties && reservations && priceAlert && enterpriseFeed) {
       return (
         <div>
