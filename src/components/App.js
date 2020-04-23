@@ -67,14 +67,21 @@ class App extends Component {
         <div>
           <Header appName={this.props.appName} currentUser={this.props.currentUser} />
           <SideNavigation appName={this.props.appName}></SideNavigation>
-            <Switch>
-              <Route exact path="/myrewards" component={MyRewards}/>              
-              <Route exact path="/my-offers" component={MyOffers}/>
-              <Route exact path="/leaderboard" component={LeaderBoard}/>
-              <Route exact path="/badges" component={QuestForRewards}/>
-              <Route exact path="/reservations" component={Reservation}/>
-              <Route exact path="/my-offer-details/:id" component={OfferDetails}/>
-            </Switch>
+          <div id="page-content">
+            <div className="spotlight">
+                <img src="images/spotlight-1.jpg" alt="Caesars"/>
+            </div>
+            <div className="container-fluid">
+              <Switch>
+                <Route exact path="/myrewards" component={MyRewards}/>              
+                <Route exact path="/my-offers" component={MyOffers}/>
+                <Route exact path="/leaderboard" component={LeaderBoard}/>
+                <Route exact path="/badges" component={QuestForRewards}/>
+                <Route exact path="/reservations" component={Reservation}/>
+                <Route exact path="/my-offer-details/:id" component={OfferDetails}/>
+              </Switch>
+            </div>
+          </div>
           <Footer appName={this.props.appName}> </Footer>
         </div>
       );

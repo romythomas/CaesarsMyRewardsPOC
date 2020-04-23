@@ -3,37 +3,40 @@ import { NavLink } from 'react-router-dom';
 
 const Header = (props) => {
   return (
-    <div className="header">      
-        <a href="#default" className="logo">
-        <img src="https://www.caesars.com/myrewards/profile/images/caesars_rewards_logo_white.png" alt="Caesars_Logo"></img>  
-        </a>
-        <div className="header-left">
-          <nav>
-            <NavLink exact activeClassName="active" className="navbar__link" to="/">
-              Benefits
-            </NavLink>
-            <NavLink exact activeClassName="active" className="navbar__link" to="#earn">
-              Earn &amp; Redeem
-            </NavLink>
-            <NavLink exact activeClassName="active" className="navbar__link" to="#promotions">
-              Promotions
-            </NavLink>
-            <NavLink exact activeClassName="active" className="navbar__link" to="#partners">
-              Partners
-            </NavLink>
-            <NavLink exact activeClassName="active" className="navbar__link" to="//https://www.caesars.com/book">
-              Book Now
-            </NavLink>
-            <NavLink activeClassName="active" className="navbar__link" to="/login" >
-              Login
+    <header className="header fixed-top">
+    <div className="logo"> 
+      <div id="sidebar_menu" className="sidebar__toggle"><span className="bar1"></span> <span className="bar2"></span> <span className="bar3"></span> </div><a href="#"><img src="images/logo.png" alt="Caesars Entertainment Logo"/></a>
+      
+    </div>
+    <nav className="navbar navbar-expand-lg">
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <i className="fa fa-th" aria-hidden="true"></i>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <nav className="navbar-nav">
+             <NavLink exact activeClassName="active" className="nav-item nav-link" to="/">
+                BENEFITS
+                <span className="sr-only">(current)</span>
+             </NavLink>
+             <NavLink exact activeClassName="active" className="nav-item nav-link" to="#earn">
+             EARN & REDEEM
+             </NavLink>
+             <NavLink exact activeClassName="active" className="nav-item nav-link" to="#promotions">
+             PROMOTIONS
+             </NavLink>
+             <NavLink exact activeClassName="active" className="nav-item nav-link" to="#partners">
+             PARTNERS
+             </NavLink>
+             <NavLink exact activeClassName="active" className="nav-item nav-link" to="//https://www.caesars.com/book">
+             BOOK NOW
             </NavLink>
           </nav>
-        </div>
-        <div className="header-right">
-        <img id="mytr_icon" className="user-icon-img" src="https://www.caesars.com/myrewards/profile/images/user-icon.svg" width="40" height="40" alt="User Icon" />
-          <a className="active" href="#myaccount">My Account</a>
-        </div>
       </div>
+    </nav>
+    <ul className="top-menu">
+      <li className="user"> <a href="#"> <img src="images/user.png" alt="user"/> <span className="username">Hello, Username</span></a> </li>
+    </ul>
+  </header>
   );
 };
 

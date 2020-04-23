@@ -1,0 +1,83 @@
+//filter starts here
+.filter{
+	position: relative;
+	.filter-wrap{
+		height: 35px;
+		display: flex;
+		justify-content: space-between;
+		border: #c6c8cc solid 1px;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 600;
+		color: $custome-primary;
+		padding: 0 10px;
+		cursor: pointer;
+		.filter__text{
+			position: relative;
+			padding: 0 10px 0 25px;
+			&:before{
+				position: absolute;
+				content: "";
+				background: url(../images/sprite.png) no-repeat -7px -6px;
+				width: 15px;
+				height: 10px;
+				top: 5px;
+				left: 0;
+			}
+		}
+	}
+	.filter-content{
+		background: $custome-white;
+		position: absolute;
+		width: 440px;
+		right: 0;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
+		display: none;
+		z-index: 99;
+		@include break-point(991px){
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			top: 0;
+			z-index: 9999;
+		}
+		ul{
+			display: flex;
+			margin:30px 30px 40px 30px;
+			@include break-point(991px){
+				display: block;
+			}
+			li{
+				margin-right: 60px;
+				@include break-point(991px){
+					margin-bottom: 30px;
+					margin-right: 10px;
+				}
+			}
+			h6{
+				margin: 0 0 15px 0;
+			}
+		}
+		.filter__btn{
+			background: #f1f1f6;
+			padding: 10px;
+			text-align: right;
+		}
+	}
+	.close{
+		position: absolute;
+		right: 10px;
+		top: 5px;
+		display: none;
+		@include break-point(991px){
+			display: block;
+		}
+		&:before{
+			@include fontawesome;
+			content: "\f00d";
+			right: 0;
+			-webkit-text-stroke: 6px $custome-white;
+			font-size: 45px;
+		}
+	}
+}
