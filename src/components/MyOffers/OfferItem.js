@@ -1,13 +1,27 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
+import {getProperty} from '../../utilities/Helper'
+
+const mapStateToProps = (state) => ({
+    properties: state.common.properties
+});
 
 const OfferItem = (props) => {
-    const { offer } = props;
+    const { offer, properties } = props;
+
+    let offerImageUrl = "images/list-img.jpg";
+    const propertyFeed = getProperty(properties, offer.propertyList[0]);
+    debugger;
+    if(propertyFeed && propertyFeed.images && propertyFeed.images.length >= 2) {
+        offerImageUrl ="http://caesars.com" + propertyFeed.images[1].url;
+    }
+
     return (
         <li className="col-md-3 col-sm-6">
             <div className="listing-wrap">
                 <div className="listing__img">
-                    <img className="thumb" src="images/list-img.jpg" alt="Caesars"/>
+                    <img className="thumb" src={offerImageUrl} alt="Caesars"/>
                     <div className="fav">
                         <img src="images/favorate-icon.png" alt="Caesars"/>
                     </div>
@@ -27,4 +41,4 @@ const OfferItem = (props) => {
     );
 };
 
-export default OfferItem;
+export default connect(mapStateToProps, null)(OfferItem);
