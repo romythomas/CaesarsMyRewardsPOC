@@ -12,7 +12,6 @@ const OfferItem = (props) => {
 
     let offerImageUrl = "images/list-img.jpg";
     const propertyFeed = getProperty(properties, offer.propertyList[0]);
-    debugger;
     if(propertyFeed && propertyFeed.images && propertyFeed.images.length >= 2) {
         offerImageUrl ="http://caesars.com" + propertyFeed.images[1].url;
     }
