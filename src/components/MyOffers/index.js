@@ -75,6 +75,11 @@ class MyOffers extends Component {
             this.filterOffers("type", (value && value.length) ? value : []);
         }
 
+        this.onOfferCodeChange = element => {
+            const offerCode = (element && element.target && element.target.value) ? element.target.value : "";
+            this.filterOffers("code", offerCode);
+        }
+
         this.onSortingChange = sort => {
             let sortValue = "";
             if(sort && sort.target && sort.target.value) {
@@ -93,6 +98,7 @@ class MyOffers extends Component {
                     onDateRangeChange={this.onDateRangeChange} 
                     onOfferTypeChange={this.onOfferTypeChange} 
                     onSortingChange={this.onSortingChange} 
+                    onOfferCodeChange={this.onOfferCodeChange}
                     markets={this.props.markets}/>
                 <OfferList/>
             </div>

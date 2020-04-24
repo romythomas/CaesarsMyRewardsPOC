@@ -7,7 +7,8 @@ const mapStateToProps = (state) => ({
 });
 
 const OfferList = (props) => {
-    if(props.filteredSortedOffers){
+    const { filteredSortedOffers } = props;
+    if(filteredSortedOffers && filteredSortedOffers.length){
         return (
             <div className="listing">
                 <ul className="row">
@@ -21,7 +22,9 @@ const OfferList = (props) => {
     else
     {
         return (
-            <div className="listing">Loading</div>
+            <div className="listing">
+                <h2>No offers available</h2>
+            </div>
         );
     }
     

@@ -51,6 +51,16 @@ const OfferFilter = (props) => {
                                 />
                         </div>
                     </li>
+                    <li>
+                        <div className="offer-code-filter">
+                            <label>Offer Code</label>
+                            <input 
+                                type = "text" 
+                                placeholder="Enter offer code" 
+                                onBlur={props.onOfferCodeChange}
+                            />
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>

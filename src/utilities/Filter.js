@@ -39,6 +39,11 @@ export const filterOffers = (offers, selectedOfferFilters) => {
                     return filterValue.includes(offer.type);
                 });
             }
+            if(filterType === "code" && filterValue) {
+                filteredOffers = filteredOffers.filter((offer) => {
+                    return offer.id === filterValue;
+                });
+            }
         });
     }
     return filteredOffers;
