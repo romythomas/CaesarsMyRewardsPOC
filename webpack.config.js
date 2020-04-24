@@ -4,7 +4,8 @@ module.exports = {
 	entry: path.join(__dirname, '/src/index.js'),
 	output: {
 		filename: 'build.js',
-		path: path.join(__dirname, '/dist')
+    path: path.join(__dirname, '/dist')
+    publicPath: '/'
 	},
 	devServer: {
 		hot: true,
