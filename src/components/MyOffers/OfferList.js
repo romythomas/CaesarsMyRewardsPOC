@@ -23,7 +23,7 @@ const OfferList = (props) => {
     {
         return (
             <div className="listing">
-                <h2>No offers available</h2>
+                <h2 className="offer-error">No offers available</h2>
             </div>
         );
     }
