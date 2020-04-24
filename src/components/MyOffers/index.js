@@ -32,9 +32,9 @@ class MyOffers extends Component {
                 filterType: type,
                 filterValue: value
             };
-            const updatedFilters = updateSelectedFilter(selectedOfferFilters, newFilter);
+            selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, newFilter);
             const sortType = selectedOfferSort ? selectedOfferSort : this.getDefaultSortValue();
-            let filteredSortedOffers = filterOffers(offers, updatedFilters);
+            let filteredSortedOffers = filterOffers(offers, selectedOfferFilters);
             filteredSortedOffers = sortOffers(filteredSortedOffers, sortType);
             getFilteredSortedOffers(filteredSortedOffers);
         }
@@ -44,6 +44,7 @@ class MyOffers extends Component {
             if(!sortType) {
                 sortType = this.getDefaultSortValue();
             }
+            selectedOfferSort = sortType;
             let filteredSortedOffers = filterOffers(offers, selectedOfferFilters);
             filteredSortedOffers = sortOffers(filteredSortedOffers, sortType);
             getFilteredSortedOffers(filteredSortedOffers);
@@ -57,9 +58,8 @@ class MyOffers extends Component {
         }
 
         this.onLocationChange = value => {
-            if(value && value.propertyCode){
-                this.filterOffers("location", value.propertyCode);
-            }
+            const locationValue = value && value.propertyCode ? value.propertyCode : null;
+            this.filterOffers("location", locationValue);
         }
 
         this.onDateRangeChange = (startDate, endDate) => {
@@ -88,15 +88,13 @@ class MyOffers extends Component {
 
     render() {
         return(
-            <div>
-            <OfferFilter onLocationChange={this.onLocationChange} 
-                onDateRangeChange={this.onDateRangeChange} 
-                onOfferTypeChange={this.onOfferTypeChange} 
-                onSortingChange={this.onSortingChange} 
-                markets={this.props.markets}/>
-
-            <OfferList/>
-
+            <div className="container-fluid">
+                <OfferFilter onLocationChange={this.onLocationChange} 
+                    onDateRangeChange={this.onDateRangeChange} 
+                    onOfferTypeChange={this.onOfferTypeChange} 
+                    onSortingChange={this.onSortingChange} 
+                    markets={this.props.markets}/>
+                <OfferList/>
             </div>
         );
     }

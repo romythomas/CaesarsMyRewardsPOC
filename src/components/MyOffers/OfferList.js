@@ -9,17 +9,19 @@ const mapStateToProps = (state) => ({
 const OfferList = (props) => {
     if(props.filteredSortedOffers){
         return (
-            <div className="list">
-                {props.filteredSortedOffers.map((offer, index) => {
-                    return <OfferItem key={index} offer={offer} />;
-                })}
+            <div className="listing">
+                <ul className="row">
+                    {props.filteredSortedOffers.map((offer, index) => {
+                        return <OfferItem key={index} offer={offer} />;
+                    })}
+                </ul>
             </div>
         );   
     }
     else
     {
         return (
-            <div>Loading</div>
+            <div className="listing">Loading</div>
         );
     }
     

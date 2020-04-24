@@ -70,16 +70,14 @@ class App extends Component {
             <div className="spotlight">
                 <img src="images/spotlight-1.jpg" alt="Caesars"/>
             </div>
-            <div className="container-fluid">
-              <Switch>
-                <Route exact path="/myrewards" component={MyRewards}/>              
-                <Route exact path="/my-offers" component={MyOffers}/>
-                <Route exact path="/leaderboard" component={LeaderBoard}/>
-                <Route exact path="/badges" component={QuestForRewards}/>
-                <Route exact path="/reservations" component={Reservation}/>
-                <Route exact path="/my-offer-details/:id" component={OfferDetails}/>
-              </Switch>
-            </div>
+            <Switch>
+              <Route exact path="/myrewards" component={MyRewards}/>              
+              <Route exact path="/my-offers" component={MyOffers}/>
+              <Route exact path="/leaderboard" component={LeaderBoard}/>
+              <Route exact path="/badges" component={QuestForRewards}/>
+              <Route exact path="/reservations" component={Reservation}/>
+              <Route exact path="/my-offer-details/:id" component={OfferDetails}/>
+            </Switch>
           </div>
           <Footer appName={this.props.appName}> </Footer>
         </div>
