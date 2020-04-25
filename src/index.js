@@ -5,6 +5,9 @@ import { store, history} from './store';
 import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 import App from './components/App';
+import '../public/scss/bootstrap.scss';
+import '../public/scss/main.scss';
+import '../public/css/my-offer.css';
 
 render((
 	<Provider store={store}>
