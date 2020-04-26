@@ -68,7 +68,7 @@ class App extends Component {
           <SideNavigation appName={this.props.appName}></SideNavigation>
           <div id="page-content">
             <div className="spotlight">
-                <img src="../src/images/spotlight-1.jpg" alt="Caesars"/>
+                <img src="../images/spotlight-1.jpg" alt="Caesars"/>
             </div>
             <Switch>
               <Route exact path="/myrewards" component={MyRewards}/>              

@@ -5,7 +5,7 @@ const Header = (props) => {
   return (
     <header className="header fixed-top">
     <div className="logo"> 
-      <div id="sidebar_menu" className="sidebar__toggle"><span className="bar1"></span> <span className="bar2"></span> <span className="bar3"></span> </div><a href="#"><img src="../src/images/logo.png" alt="Caesars Entertainment Logo"/></a>
+      <div id="sidebar_menu" className="sidebar__toggle"><span className="bar1"></span> <span className="bar2"></span> <span className="bar3"></span> </div><a href="#"><img src="../images/logo.png" alt="Caesars Entertainment Logo"/></a>
       
     </div>
     <nav className="navbar navbar-expand-lg">
@@ -34,7 +34,7 @@ const Header = (props) => {
       </div>
     </nav>
     <ul className="top-menu">
-      <li className="user"> <a href="#"> <img src="../src/images/user.png" alt="user"/> <span className="username">Hello, Username</span></a> </li>
+      <li className="user"> <a href="#"> <img src="../images/user.png" alt="user"/> <span className="username">Hello, Username</span></a> </li>
     </ul>
   </header>
   );
