@@ -1,22 +1,45 @@
 import React from "react";
 import MarketPropertySelect from "../Common/MarketPropertySelect";
 import MultiSelectDropdown from "../Common/MultiSelectDropdown";
-import RangeCalendar from "../Common/RangeCalendar"
-import {getOfferFilterTypes, getOfferSortTypes} from "../../Configs/Configs"
+import RangeCalendar from "../Common/RangeCalendar";
+import {getOfferFilterTypes, getOfferSortTypes} from "../../Configs/Configs";
 
 
 const OfferFilter = (props) => {
     const offerTypes = getOfferFilterTypes();
-    const offerSortTypes = getOfferSortTypes(); 
+    const offerSortTypes = getOfferSortTypes();
+
+    const {defaultSort,defaultFilter} = props;
+    let defaultDateRange = "", defaultLocation = "", defaultType = "", defaultOfferCode = "";
+    if(defaultFilter && defaultFilter.length) {
+        defaultFilter.map((filter) => {
+            const {filterType, filterValue} = filter;
+            if(filterType === "date") {
+                defaultDateRange = {
+                    "startDate" : filterValue.startDate,
+                    "endDate": filterValue.endDate
+                };
+            }
+            if(filterType === "location") {
+                defaultLocation = filterValue;
+            }
+            if(filterType === "type") {
+                defaultType = filterValue;
+            }
+            if(filterType === "code") {
+                defaultOfferCode = filterValue;
+            }
+        });
+    }
     return (
         <div>
             <div className="title">
                 <h1>My Offers</h1>
                 <div className="filter">
                     <div className="filter-wrap">
-                        <select className="offersortingoptions" onChange={props.onSortingChange}>
+                        <select className="offersortingoptions" onChange={props.onSortingChange} defaultValue={defaultSort}>
                             {offerSortTypes.map((sortType, index) => {
-                                return (<option key={index} value={sortType.value}>{sortType.name}</option>);
+                                return (<option key={index} value={sortType.value} >{sortType.name}</option>);
                             })}
                         </select>
                     </div>
@@ -30,6 +53,7 @@ const OfferFilter = (props) => {
                                 markets={props.markets}
                                 width="100%"
                                 onSelect={props.onLocationChange}
+                                defaultValue = {defaultLocation}
                             />
                         </div>
                     </li>
@@ -38,6 +62,7 @@ const OfferFilter = (props) => {
                             <RangeCalendar 
                                 width="100%"
                                 onChange={props.onDateRangeChange}
+                                defaultValue={defaultDateRange}
                             />
                         </div>
                     </li>
@@ -48,6 +73,7 @@ const OfferFilter = (props) => {
                                     selectTitle="Offer Type" 
                                     width="100%" 
                                     onChange={props.onOfferTypeChange}
+                                    defaultValue = {defaultType}
                                 />
                         </div>
                     </li>
@@ -56,6 +82,7 @@ const OfferFilter = (props) => {
                             <label>Offer Code</label>
                             <input 
                                 type = "text" 
+                                defaultValue = {defaultOfferCode}
                                 placeholder="Enter offer code" 
                                 onBlur={props.onOfferCodeChange}
                             />

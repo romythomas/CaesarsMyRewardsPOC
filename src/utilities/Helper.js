@@ -68,3 +68,17 @@ export const getPropertiesListByCode = (list, codes) => {
     }
     return propertyNamesList;
 }
+
+export const getUrlParams = (search) => {
+    const params = {};
+    if(search) {
+        search = decodeURIComponent(search.toLowerCase());
+        search = decodeURIComponent(search);
+        const hashes = search.slice(search.indexOf('?') + 1).split('&');
+        hashes.map(hash => {
+            const [key, val] = hash.split('=')
+            params[key] = decodeURIComponent(val)
+        });
+    }
+    return params
+}

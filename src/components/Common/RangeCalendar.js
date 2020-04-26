@@ -3,20 +3,26 @@ import { RangeDatePicker } from 'react-google-flight-datepicker';
 import 'react-google-flight-datepicker/dist/main.css';
 
 const RangeCalendar = (props)  => {
+    const {defaultValue, width} = props;
+    let startDt = new Date();
+    let endDt = new Date().setDate(startDt.getDate() + 30);
 
-    var startDt   = new Date();
-    var endDt   =   new Date().setDate(startDt.getDate()+30);
-    const width = props.width ? props.width : 500;
+    if(defaultValue) {
+        const {startDate, endDate} = defaultValue;
+        if(startDate && startDate.toString() !== "Invalid Date" && endDate && endDate.toString() !== "Invalid Date") {
+            startDt = startDate;
+            endDt = endDate;
+        }
+    }
 
     const onDateChange = (startDate, endDate) =>{
-        if(props.onChange)
-        {
-        props.onChange(startDate, endDate);
+        if(props.onChange) {
+            props.onChange(startDate, endDate);
         }
     }
 
     return(
-        <div style={{width: width}}>
+        <div style={{width: width ? width : "100%"}}>
         <RangeDatePicker
             startDate={startDt}
             endDate={endDt}

@@ -5,7 +5,8 @@ import OfferFilter from './OfferFilter';
 import { FILTER_SORT_OFFER } from "../../constants/actionTypes";
 import {filterOffers, updateSelectedFilter} from '../../utilities/Filter'
 import {sortOffers} from '../../utilities/Sort'
-import {getOfferSortTypes} from "../../Configs/Configs"
+import {getUrlParams} from '../../utilities/Helper'
+import {getOfferSortTypes, getOfferFilterTypes} from "../../Configs/Configs"
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -23,31 +24,37 @@ const mapDispatchToProps = (dispatch) => ({
 class MyOffers extends Component {
     constructor() {
         super();
+        this.selectedOfferFilters = [];
+        this.selectedOfferSort = "";
+
         var selectedOfferFilters = [];
         var selectedOfferSort = "";
 
-        this.filterOffers = (type, value) => {
+        this.updateOfferList = () => {
             const {offers, getFilteredSortedOffers} = this.props;
+            selectedOfferSort = selectedOfferSort ? selectedOfferSort : this.getDefaultSortValue();
+            this.selectedOfferSort = selectedOfferSort;
+            this.selectedOfferFilters = selectedOfferFilters;
+            let filteredSortedOffers = filterOffers(offers, selectedOfferFilters);
+            filteredSortedOffers = sortOffers(filteredSortedOffers, selectedOfferSort);
+            getFilteredSortedOffers(filteredSortedOffers);
+        }
+
+        this.filterOffers = (type, value) => {
             const newFilter = {
                 filterType: type,
                 filterValue: value
             };
             selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, newFilter);
-            const sortType = selectedOfferSort ? selectedOfferSort : this.getDefaultSortValue();
-            let filteredSortedOffers = filterOffers(offers, selectedOfferFilters);
-            filteredSortedOffers = sortOffers(filteredSortedOffers, sortType);
-            getFilteredSortedOffers(filteredSortedOffers);
+            this.updateOfferList();
         }
 
         this.sortOffers = (sortType) => {
-            const {offers, getFilteredSortedOffers} = this.props;
             if(!sortType) {
                 sortType = this.getDefaultSortValue();
             }
             selectedOfferSort = sortType;
-            let filteredSortedOffers = filterOffers(offers, selectedOfferFilters);
-            filteredSortedOffers = sortOffers(filteredSortedOffers, sortType);
-            getFilteredSortedOffers(filteredSortedOffers);
+            this.updateOfferList();
         }
 
         this.getDefaultSortValue = () => {
@@ -89,9 +96,83 @@ class MyOffers extends Component {
             }
             this.sortOffers(sortValue);
         }
+
+        this.createDefaultFilterAndSort = (searchParams) => {
+            selectedOfferFilters = [];
+            let filterStartDate = new Date();
+            let filterEndDate = new Date(new Date().setDate(filterStartDate.getDate() + 30));
+            selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
+                filterType: "date",
+                filterValue: {
+                    startDate: filterStartDate,
+                    endDate: filterEndDate
+                }
+            });
+            if(searchParams) {
+                const {propcode, startdate, enddate, type, offercode, defaultsort} = searchParams;
+                if(startdate || enddate) {
+                    const UrlStartdate = new Date(startdate);
+                    const UrlEbdDate = new Date(enddate);
+                    if(UrlStartdate.toString() !== "Invalid Date" && UrlStartdate >= new Date()) {
+                        filterStartDate = UrlStartdate;
+                    }
+                    if(UrlEbdDate.toString() !== "Invalid Date" && UrlEbdDate >= UrlStartdate) {
+                        filterEndDate = UrlEbdDate;
+                    } else {
+                        filterEndDate = new Date(new Date(filterStartDate).setDate(filterStartDate.getDate() + 30));
+                    }
+                    selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
+                        filterType: "date",
+                        filterValue: {
+                            startDate: filterStartDate,
+                            endDate: filterEndDate
+                        }
+                    });
+                }
+                if(propcode) {
+                    selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
+                        filterType: "location",
+                        filterValue: propcode.toUpperCase()
+                    });
+                }
+                if(type) {
+                    try {
+                        const offerTypes = getOfferFilterTypes();
+                        const offerTypeFilter = JSON.parse(type.toLowerCase());
+                        const typeFilter = [];
+                        offerTypes.map((type) => {
+                            if(offerTypeFilter.includes(type.toLowerCase())){
+                                typeFilter.push(type);
+                            }
+                        });
+                        selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
+                            filterType: "type",
+                            filterValue: typeFilter
+                        });
+                    } catch (ex) {}
+                }
+                if(offercode) {
+                    selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
+                        filterType: "code",
+                        filterValue: offercode
+                    });
+                }
+                if(defaultsort) {
+                    selectedOfferSort = defaultsort;
+                }
+            }
+        }
+
+        this.applyDefaultFilterAndSort = () => {
+            const {location} = this.props;
+            const searchParams = getUrlParams(location ? location.search : "");
+            this.createDefaultFilterAndSort(searchParams);
+            this.updateOfferList();
+        }
     }
 
     render() {
+        this.applyDefaultFilterAndSort();
         return(
             <div className="container-fluid">
                 <OfferFilter onLocationChange={this.onLocationChange} 
@@ -99,7 +180,9 @@ class MyOffers extends Component {
                     onOfferTypeChange={this.onOfferTypeChange} 
                     onSortingChange={this.onSortingChange} 
                     onOfferCodeChange={this.onOfferCodeChange}
-                    markets={this.props.markets}/>
+                    markets={this.props.markets}
+                    defaultSort={this.selectedOfferSort}
+                    defaultFilter={this.selectedOfferFilters}/>
                 <OfferList/>
             </div>
         );
