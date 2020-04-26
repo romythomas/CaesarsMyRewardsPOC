@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import OfferList from "./OfferList";
 import OfferFilter from './OfferFilter';
 import { FILTER_SORT_OFFER } from "../../constants/actionTypes";
-import {filterOffers, updateSelectedFilter} from '../../utilities/Filter'
-import {sortOffers} from '../../utilities/Sort'
-import {getUrlParams} from '../../utilities/Helper'
-import {getOfferSortTypes, getOfferFilterTypes} from "../../Configs/Configs"
+import {filterOffers, updateSelectedFilter} from '../../utilities/Filter';
+import {sortOffers} from '../../utilities/Sort';
+import {getUrlParams} from '../../utilities/Helper';
+import {getOfferSortTypes, getOfferFilterTypes} from "../../Configs/Configs";
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -27,8 +27,8 @@ class MyOffers extends Component {
         this.selectedOfferFilters = [];
         this.selectedOfferSort = "";
 
-        var selectedOfferFilters = [];
-        var selectedOfferSort = "";
+        let selectedOfferFilters = [];
+        let selectedOfferSort = "";
 
         this.updateOfferList = () => {
             const {offers, getFilteredSortedOffers} = this.props;

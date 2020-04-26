@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
-import {getProperty} from '../../utilities/Helper'
+import {getProperty} from '../../utilities/Helper';
 
 const mapStateToProps = (state) => ({
     properties: state.common.properties
