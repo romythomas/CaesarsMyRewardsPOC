@@ -35,7 +35,7 @@ const  MultiSelectDropdown = (props)  => {
                     renderValue={(selected) => selected.join(', ')} >
                     {options.map((name) => (
                         <MenuItem key={name} value={name}>
-                            <Checkbox checked={selectedOptions.indexOf(name.toLowerCase()) > -1} />
+                            <Checkbox checked={selectedOptions.indexOf(name) > -1} />
                             <ListItemText primary={name} />
                         </MenuItem>
                     ))}
