@@ -154,7 +154,7 @@ class MyOffers extends Component {
                 if(offercode) {
                     selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
                         filterType: "code",
-                        filterValue: offercode
+                        filterValue: offercode.toUpperCase()
                     });
                 }
                 if(defaultsort) {
