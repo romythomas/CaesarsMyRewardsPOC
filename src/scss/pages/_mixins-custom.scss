@@ -1,0 +1,38 @@
+@mixin transform($deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
+}
+  
+@mixin transition($sec) {
+    -webkit-transition: $sec;
+    -moz-transition: $sec;
+    -o-transition: $sec;
+    transition: $sec;
+}
+
+@mixin forminput() {
+  height: 25px;
+  border-radius:0px;
+  padding: 5px 3px;   
+}
+
+@mixin fontawesome(){
+	position:absolute;
+	font-family:FontAwesome;
+}
+ 
+@mixin break-point($point) {
+    @media all and (max-width: $point) {
+        @content;
+    }
+}
+
+
+@mixin linear-gradient($val...) {
+	 background-image: -o-linear-gradient($val); 
+	 background-image: -moz-linear-gradient($val); 
+	 background-image: -webkit-linear-gradient($val); 
+	 background-image: linear-gradient($val); 
+}

@@ -1,0 +1,68 @@
+//header starts here
+header{
+	background:#141414;
+	align-items:center;
+	display:flex;
+	justify-content:space-between;
+	height:61px;
+	transform: translate3d(0,0,0);
+	position:device-fixed;
+	.logo{
+		margin:0 35px 0 15px;
+		display: flex;
+		@include break-point(991px){
+			width: 56%;
+			justify-content: space-between;
+		}
+	}
+	.top-menu{
+		align-items: center;
+		margin-right:20px;
+		@include break-point(767px){
+			margin-right:10px;
+		}
+		li{
+			position:relative;
+			float:left;
+			&.user{
+				padding:0 10px 0 0;
+				> a{
+					position: relative;
+					&:before{
+						@include fontawesome;
+						right: -8px;
+						top: -3px;
+						content: "\f107";
+						font-size: 18px;
+						font-weight: 700;
+						color: $custome-white;
+						@include break-point(991px){
+							display: none;
+						}
+					}
+				}
+				.username{
+					font-size:$primary-fontsize;
+					color: $custome-white;
+					margin:6px 12px;
+					position:relative;
+					font-family: OpenSans-Regular; 
+					@include break-point(991px){
+						display: none;
+					}
+				}
+			}
+			.sidebar__toggle{
+				background:none;
+				display: none;
+				@include break-point(767px){
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+
+
+

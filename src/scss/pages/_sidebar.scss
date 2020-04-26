@@ -1,0 +1,163 @@
+//sidebar starts here
+.sidebar {
+	left: 0;
+	width: 230px;
+	background: #f8f8f8;
+	position: fixed;
+	height: 100%;
+	z-index: 10000;
+	transition: all .2s ease 0s;
+	top:61px;
+	-webkit-box-shadow: 6px 0px 13px -10px rgba(0,0,0,0.35);
+	-moz-box-shadow: 6px 0px 13px -10px rgba(0,0,0,0.35);
+	box-shadow: 6px 0px 13px -10px rgba(0,0,0,0.35);
+	@include break-point(991px){
+		left:-240px;
+	}
+	li{
+		&.item-nav{
+			a{
+				text-decoration: none;
+				padding: 10px 13px;
+				display: block;
+				height: 39px;
+				font-family: OpenSans-Light;
+				&:hover{
+					background:$custome-secondary;
+					color:$custome-white;
+					i{
+						-webkit-text-stroke-color: #fff;
+					}
+				}
+				span{
+					margin-left:30px;
+				}
+				i{
+					font-style:normal;
+					position:relative;
+					font-size:18px;
+					display:table-cell;
+					&:before{
+						@include fontawesome;
+						content: "\f091";
+						position:absolute;
+						left:0;
+						top:-2px;
+						font-size:16px;
+					}
+					&.icon__offer{
+						&:before{
+							content: "\f0e0";
+						}
+					}
+					&.icon__leaderboard{
+						&:before{
+							content: "\f201";
+						}
+					}
+					&.icon__quest{
+						&:before{
+							content: "\f059";
+						}
+					}
+					&.icon__profile{
+						&:before{
+							content: "\f007";
+						}
+					}
+					&.icon__payment{
+						&:before{
+							content: "\f09d";
+						}
+					}
+						&.icon__reservation{
+						&:before{
+							content: "\f145";
+						}
+					}
+					&.icon__price{
+						&:before{
+							content: "\f155";
+						}
+					}
+					&.icon__win{
+						&:before{
+							content: "\f087";
+						}
+					}
+					&.icon__reward{
+						&:before{
+							content: "\f19d";
+						}
+					}
+					&.icon__casino{
+						&:before{
+							content: "\f0d6";
+						}
+					}
+					&.icon__gift{
+						&:before{
+							content: "\f06b";
+						}
+					}
+				}
+			}
+			.nav-drop{
+				background: #eee;
+				li{
+					position: relative;
+					&:hover{
+						.nav-fly{
+							display: block;
+						}
+					}
+				}
+				a{
+					height: 35px;
+					padding: 7px 13px 7px 43px;
+					&:hover{
+						background: #ccc;
+						color: $custome-secondary;
+					}	
+				}
+				.nav-fly{
+					position: absolute;
+					right: -230px;
+					width: 100%;
+					background: #eee;
+					display: none;
+					top: 0;
+					@include break-point(991px){
+						position: relative;
+						right: 0;
+						background: #ddd;
+					}
+				}
+			}
+		}
+		&.selected{
+			> a{
+				background: $custome-secondary;
+				color:$custome-white;
+				i{
+					-webkit-text-stroke-color: #fff;
+				} 
+			}
+		}
+
+	}
+}
+
+.sidebar__active{
+	@include break-point(991px){
+		padding-left:0;
+	}
+	.sidebar{
+		@include break-point(991px){
+			width: 100%;
+			transition: all .4s ease 0s;
+			left: 0;
+		}
+	}
+}
+
