@@ -52,7 +52,7 @@ module.exports = {
 	},
 	plugins:[
 		new HWP(
-			{template: path.join(__dirname,'/index.html')}
+			{template: path.join(__dirname,'src/index.html')}
 		)
 	]
 }

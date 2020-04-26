@@ -19,6 +19,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "@material-ui/lab": "^4.0.0-alpha.49",
+    "file-loader": "^6.0.0",
     "history": "^4.6.3",
     "marked": "^0.3.6",
     "moment": "^2.24.0",
