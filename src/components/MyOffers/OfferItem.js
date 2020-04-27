@@ -9,11 +9,10 @@ const mapStateToProps = (state) => ({
 
 const OfferItem = (props) => {
     const { offer, properties } = props;
-
     let offerImageUrl = "images/list-img.jpg";
-    const propertyFeed = getProperty(properties, offer.propertyList[0]);
-    if(propertyFeed && propertyFeed.images && propertyFeed.images.length >= 2) {
-        offerImageUrl ="http://caesars.com" + propertyFeed.images[1].url;
+    const propertyDetails = getProperty(properties, offer.propertyList[0]);
+    if(propertyDetails && propertyDetails.thumbnail && propertyDetails.thumbnail.url) {
+        offerImageUrl ="http://caesars.com" + propertyDetails.thumbnail.url + "/hd/l/cover";
     }
 
     return (
