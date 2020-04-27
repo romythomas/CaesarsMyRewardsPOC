@@ -10,7 +10,7 @@ const SideNavigation = (props) => {
                     <Link to="/myrewards"> <i className="icon__rewards"></i> <span>MY REWARDS</span> </Link> 
                 </li>
                 <li className="item-nav selected"> 
-                    <Link to="/my-offers"> <i className="icon__offer"></i> <span>MY OFFERS</span> </Link> 
+                    <Link to="/myoffers"> <i className="icon__offer"></i> <span>MY OFFERS</span> </Link> 
                 </li>
                 <li className="item-nav"> <Link to="#"> <i className="icon__leaderboard"></i> <span>MY LEADERBOARD</span> </Link> </li>
                 <li className="item-nav"> <Link to="#"> <i className="icon__quest"></i> <span>QUEST FOR REWARDS</span> </Link> </li>

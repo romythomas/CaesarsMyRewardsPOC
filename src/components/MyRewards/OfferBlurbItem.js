@@ -17,7 +17,7 @@ const OfferBlurbItem = (props) => {
     }
     
     function myOffer() {
-        window.location.href='/my-offers'
+        window.location.href='/myoffers'
       }
     return (        
         <div className="item rewardsitem offer">
