@@ -60,7 +60,7 @@ export const getPropertiesListByCode = (list, codes) => {
     if (list != null && list != undefined) {
         for (var i = 0; i < list.length; i++) {
             for (let index = 0; index < codes.length; index++) {
-                if (codes[index].toUpperCase() === list[i].id.toUpperCase()) {
+                if (codes[index] === list[i].id) {
                     propertyNamesList.push({ "id": list[i].id +','+list[i].marketCode, "name": list[i].name });
                 }
             }

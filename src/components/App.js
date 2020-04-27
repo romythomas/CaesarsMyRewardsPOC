@@ -1,6 +1,7 @@
 import agent from '../agent';
 import Header from './Common/Header';
 import Footer from './Common/Footer';
+import SpotLight from './Common/SpotLight';
 import SideNavigation from './Common/SideNavigation';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -67,9 +68,7 @@ class App extends Component {
           <Header appName={this.props.appName} currentUser={this.props.currentUser} />
           <SideNavigation appName={this.props.appName}></SideNavigation>
           <div id="page-content">
-            <div className="spotlight">
-                <img src="../images/spotlight-1.jpg" alt="Caesars"/>
-            </div>
+            <SpotLight appName={this.props.appName}></SpotLight>
             <Switch>
               <Route exact path="/myrewards" component={MyRewards}/>              
               <Route exact path="/my-offers" component={MyOffers}/>
