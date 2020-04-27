@@ -135,14 +135,12 @@
 				}
 			}
 		}
-		&.selected{
-			> a{
+		&> a.selected{
 				background: $custome-secondary;
 				color:$custome-white;
 				i{
 					-webkit-text-stroke-color: #fff;
 				} 
-			}
 		}
 
 	}

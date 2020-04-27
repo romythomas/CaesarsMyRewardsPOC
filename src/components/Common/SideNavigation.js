@@ -1,28 +1,71 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 const SideNavigation = (props) => {  
     return (
         <aside className="sidebar">
-            {/*TODO: Change ul-li to nav-navlink and handle active class */}
-            <ul>
+            <nav>                
                 <li className="item-nav"> 
-                    <Link to="/myrewards"> <i className="icon__rewards"></i> <span>MY REWARDS</span> </Link> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="/myrewards">
+                        <i className="icon__rewards"></i> <span>MY REWARDS</span>
+                    </NavLink>
                 </li>
-                <li className="item-nav selected"> 
-                    <Link to="/myoffers"> <i className="icon__offer"></i> <span>MY OFFERS</span> </Link> 
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="/myoffers"> 
+                        <i className="icon__offer"></i> <span>MY OFFERS</span>
+                    </NavLink>
                 </li>
-                <li className="item-nav"> <Link to="#"> <i className="icon__leaderboard"></i> <span>MY LEADERBOARD</span> </Link> </li>
-                <li className="item-nav"> <Link to="#"> <i className="icon__quest"></i> <span>QUEST FOR REWARDS</span> </Link> </li>
-                <li className="item-nav"> <Link to="#"> <i className="icon__profile"></i> <span>PROFILE</span> </Link> </li>
-                <li className="item-nav"> <Link to="#"> <i className="icon__payment"></i> <span>PAYMENT OPTIONS</span> </Link> </li>
-                <li className="item-nav"> <Link to="#"> <i className="icon__reservation"></i> <span>RESERVATIONS</span> </Link> </li>
-                <li className="item-nav"> <Link to="#"> <i className="icon__price"></i> <span>PRICE ALERTS</span> </Link> </li>
-                <li className="item-nav"> <Link to="#"> <i className="icon__win"></i> <span>WIN/LOSS STATEMENT</span> </Link> </li>
-                <li className="item-nav"> <Link to="#"> <i className="icon__reward"></i> <span>REWARDS STATEMENT</span> </Link> </li>
-                <li className="item-nav"> <Link to="#"> <i className="icon__casino"></i> <span>CASINO CREDIT</span> </Link> </li>
-                <li className="item-nav"> <Link to="#"> <i className="icon__gift"></i> <span>GREAT GIFT WRAP UP</span> </Link> </li>
-            </ul>
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="#"> 
+                        <i className="icon__leaderboard"></i> <span>MY LEADERBOARD</span> 
+                    </NavLink> 
+                </li>
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="#"> 
+                        <i className="icon__quest"></i> <span>QUEST FOR REWARDS</span> 
+                    </NavLink> 
+                </li>
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="#"> 
+                        <i className="icon__profile"></i> <span>PROFILE</span> 
+                    </NavLink> 
+                </li>
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="#"> 
+                        <i className="icon__payment"></i> <span>PAYMENT OPTIONS</span> 
+                    </NavLink> 
+                </li>
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="#"> 
+                        <i className="icon__reservation"></i> <span>RESERVATIONS</span> 
+                    </NavLink> 
+                </li>
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="#"> 
+                        <i className="icon__price"></i> <span>PRICE ALERTS</span> 
+                    </NavLink>
+                </li>
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="#"> 
+                        <i className="icon__win"></i> <span>WIN/LOSS STATEMENT</span> 
+                    </NavLink> 
+                </li>
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="#"> 
+                        <i className="icon__reward"></i> <span>REWARDS STATEMENT</span> 
+                    </NavLink>
+                </li>
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="#"> 
+                        <i className="icon__casino"></i> <span>CASINO CREDIT</span> 
+                    </NavLink> 
+                </li>
+                <li className="item-nav"> 
+                    <NavLink exact activeClassName="selected" className="item-nav" to="#"> 
+                        <i className="icon__gift"></i> <span>GREAT GIFT WRAP UP</span> 
+                    </NavLink> 
+                </li>
+            </nav>
         </aside>
     );  
 }
