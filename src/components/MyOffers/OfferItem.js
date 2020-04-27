@@ -34,7 +34,7 @@ const OfferItem = (props) => {
                     <span className="date">Valid : {new Date(offer.start).toLocaleDateString()} - {new Date(offer.end).toLocaleDateString()}</span>
                     <button className="button">
                         <Link
-                            to={`/my-offer-details/${offer.id}`}>
+                            to={`/offerdetails/${offer.id}`}>
                             Details
                         </Link>
                     </button>

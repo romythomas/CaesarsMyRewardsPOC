@@ -29,7 +29,7 @@ const OfferBlurbItem = (props) => {
             <div>Description:- {offers.description}</div>           
             <br/> 
             <Link
-                to={`/my-offer-details/${offers.id}`}
+                to={`/offerdetails/${offers.id}`}
                 className="myrewards-button">
                 View Offer
             </Link>         
