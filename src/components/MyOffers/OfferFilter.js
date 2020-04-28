@@ -3,7 +3,7 @@ import SelectList from "../Common/SelectList";
 import MarketPropertySelect from "../Common/MarketPropertySelect";
 import MultiSelectDropdown from "../Common/MultiSelectDropdown";
 import RangeCalendar from "../Common/RangeCalendar";
-import {getOfferFilterTypes, getOfferSortTypes} from "../../Configs/Configs";
+import {getOfferFilterTypes, getOfferSortTypes} from "../../constants/configs";
 
 
 const OfferFilter = (props) => {

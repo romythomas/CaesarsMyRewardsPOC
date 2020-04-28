@@ -1,6 +1,6 @@
 import React from 'react';
 import {getProperty,truncate} from '../../utilities/Helper'
-import {getImageUrl} from '../../Configs/Configs'
+import {getImageUrl} from '../../constants/configs'
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({    

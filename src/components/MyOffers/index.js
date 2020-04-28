@@ -6,7 +6,7 @@ import { FILTER_SORT_OFFER } from "../../constants/actionTypes";
 import {filterOffers, updateSelectedFilter} from '../../utilities/Filter';
 import {sortOffers} from '../../utilities/Sort';
 import {getUrlParams} from '../../utilities/Helper';
-import {getOfferSortTypes, getOfferFilterTypes} from "../../Configs/Configs";
+import {getOfferSortTypes, getOfferFilterTypes} from "../../constants/configs";
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,

@@ -1,7 +1,7 @@
 import React, { Component , useRef, useEffect} from "react";
 import { connect } from 'react-redux';
 import {getProperty, getPropertiesListByCode} from '../../utilities/Helper'
-import {getImageUrl} from '../../Configs/Configs'
+import {getImageUrl} from '../../constants/configs'
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers, 
