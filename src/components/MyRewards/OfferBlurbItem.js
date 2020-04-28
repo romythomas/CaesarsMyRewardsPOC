@@ -11,7 +11,7 @@ const OfferBlurbItem = (props) => {
 
         var property = getProperty(props.propertyList, offers.propertyList[0]);
         if(property){
-            imageUrl ="http://caesars.com" + property.thumbnail.url;
+            imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/l/cover";
             propertyName = property.propertyName;
         }
     }

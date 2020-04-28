@@ -22,7 +22,7 @@ const PriceAlertBlurbItem = (props) => {
         if(lowestRate){
             var property = getProperty(props.propertyList, lowestRate.propertyCode);
             if(property){
-                imageUrl ="http://caesars.com" + property.images[0].url;
+                imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/l/cover";
                 propertyName = property.propertyName.toUpperCase();
             }
             if (lowestRate.rate < parseInt(priceAlert.threshold, 10)) {

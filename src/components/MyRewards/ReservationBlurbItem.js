@@ -10,7 +10,7 @@ const ReservationBlurbItem = (props) => {
 
         var property = getProperty(props.propertyList, reservations.propertyCode);
         if(property){
-            imageUrl ="http://caesars.com" + property.thumbnail.url;
+            imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/l/cover";
             propertyName = property.propertyName.toUpperCase();
         }
     }
