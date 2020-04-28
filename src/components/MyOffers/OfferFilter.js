@@ -1,4 +1,5 @@
 import React from "react";
+import SelectList from "../Common/SelectList";
 import MarketPropertySelect from "../Common/MarketPropertySelect";
 import MultiSelectDropdown from "../Common/MultiSelectDropdown";
 import RangeCalendar from "../Common/RangeCalendar";
@@ -36,16 +37,10 @@ const OfferFilter = (props) => {
             <div className="title">
                 <h1>My Offers</h1>
                 <div className="sort">
-                    <a href="#" className="close"></a>
-                    <div className="dropdown selectDropdown filled">
-                        <ul>
-                            {offerSortTypes.map((sortType, index) => {
-                                let isSelected = sortType.value === defaultSort;
-                                return (<li className={isSelected ? "active" : ""} key={index} ><a onClick={props.onSortingChange} value={sortType.value} key={index}>{sortType.name}</a></li>);
-                            })}
-                        </ul>
-                        <span>{defaultSort}</span>
-                    </div>
+                    <SelectList 
+                        dataList={offerSortTypes} 
+                        defaultValue={defaultSort} 
+                        onClick={props.onSortingChange} />
                 </div>
             </div>
             <div className="form--search">
