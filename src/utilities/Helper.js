@@ -55,12 +55,11 @@ export const buildEnterpriseResponse = (list) =>{
 }
  
 export const getPropertiesListByCode = (list, codes) => {
-    //Return Prop code and prop name
     var propertyNamesList = [];
-    if (list != null && list != undefined) {
+    if (list != null && list != undefined && codes) {
         for (var i = 0; i < list.length; i++) {
-            for (let index = 0; index < codes.length; index++) {
-                if (codes[index] === list[i].id) {
+            for (let index = 0; index < codes[0].length; index++) {
+                if (codes[0][index].toLowerCase() === list[i].id.toLowerCase()) {
                     propertyNamesList.push({ "id": list[i].id +','+list[i].marketCode, "name": list[i].name });
                 }
             }

@@ -30,7 +30,7 @@ class OfferDetails  extends Component  {
             var property = getProperty(properties, selectedOffer[0].propertyList[0]);
             var proplist = getPropertiesListByCode(properties, new Array(selectedOffer[0].propertyList));
             if(property){
-                imageUrl ="http://caesars.com" + property.images[0].url;
+                imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/l/cover";
             }
         }
         return ( 
@@ -44,7 +44,7 @@ class OfferDetails  extends Component  {
                     <span> {selectedOffer[0].id} </span>
                     <br/>          
                     <strong>Expires: </strong>
-                    <span>{selectedOffer[0].end}</span>
+                    <span>{new Date(selectedOffer[0].end).toLocaleDateString()}</span>
                     <br/>
                     <strong>Description: </strong> 
                     <span>{selectedOffer[0].description}</span>
@@ -53,10 +53,10 @@ class OfferDetails  extends Component  {
                     <strong>Properties:</strong>
                     <span>                   
                         <select id="property" className="offersortingoptions" >
-                            {proplist.map((t) => <option value={t.id}>{t.name}</option>)}
+                            {proplist.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}
                         </select>
                         <button className="myrewards-button" 
-                            onClick={gotoNBE(new Array(selectedOffer[0].id, selectedOffer[0].start,selectedOffer[0].end))} >
+                            onClick={gotoNBE(new Array(selectedOffer[0].id, new Date(selectedOffer[0].start).toLocaleDateString(),new Date(selectedOffer[0].end).toLocaleDateString()))} >
                             Book</button> 
                     </span>
                     <br/>  
