@@ -7,8 +7,6 @@ const mapStateToProps = (state) => ({
     offers: state.common.offers, 
     properties: state.common.properties
 });
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
-const useMountEffect = (fun) => useEffect(fun, [])
 
 const gotoNBE = (parameter) => (event) => {
     var e = document.getElementById("property");

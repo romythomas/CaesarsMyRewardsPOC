@@ -1,9 +1,13 @@
 import React from 'react';
 import {getTierName} from '../../utilities/Helper'
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => ({
+    logininfo: state.guestProfile.logininfo
+  });
 
 const TierScoreItem = (props) => {     
-    const { logininfo } =props;
-    
+    const { logininfo } =props;    
     return (        
         <div className="rewards__card">
              <img src="images/icon-dollar.png" alt="Caesars"/>
@@ -15,4 +19,4 @@ const TierScoreItem = (props) => {
         </div>
     );
 }
-export default TierScoreItem;
+export default connect(mapStateToProps)(TierScoreItem);

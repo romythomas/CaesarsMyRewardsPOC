@@ -1,5 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
+const mapStateToProps = state => ({
+  logininfo: state.guestProfile.logininfo
+});
 
 const ProgressBarItem = (props) => { 
     return (        
@@ -29,4 +33,4 @@ const ProgressBarItem = (props) => {
     );
 }
 
-export default ProgressBarItem;
+export default connect(mapStateToProps)(ProgressBarItem);

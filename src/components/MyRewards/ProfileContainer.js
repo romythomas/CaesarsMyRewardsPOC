@@ -2,11 +2,21 @@ import React from 'react';
 import RewardCreditItem from './RewardCreditItem';
 import TierScoreDetailsItem from './TierScoreDetailsItem';
 import TierScoreItem from './TierScoreItem';
-
+import { connect } from 'react-redux';
 import OfferBlurbItem from './OfferBlurbItem';
 import ReservationBlurbItem from './ReservationBlurbItem';
 import PriceAlertBlurbItem from './PriceAlertBlurbItem';
 import ProgressBarItem from './ProgressBarItem';
+
+const mapStateToProps = state => ({
+    logininfo: state.guestProfile.logininfo,
+    feeds: state.guestProfile.feeds,
+    offers: state.common.offers,
+    properties: state.common.properties,
+    reservations: state.common.reservations,
+    enterpriseFeed: state.common.enterpriseFeed,
+    priceAlert: state.common.priceAlert
+  });
 
 const ProfileContainer = (props) => {  
     return (
@@ -14,30 +24,29 @@ const ProfileContainer = (props) => {
                 <div className="content-box">
                     <div className="row">
                         <div className="col-md-4">
-                            <RewardCreditItem logininfo = {props.logininfo} feeds = {props.feeds} />
+                            <RewardCreditItem /> 
                         </div>
                         <div className="col-md-4">
-                            <TierScoreItem logininfo={props.logininfo} />
+                            <TierScoreItem />
                         </div>
                         <div className="col-md-4">
-                            <TierScoreDetailsItem logininfo = {props.logininfo} feeds = {props.feeds} />
+                            <TierScoreDetailsItem />
                         </div>
                     </div>
                 </div>
                 
-                <ProgressBarItem logininfo={props.logininfo} />
+                <ProgressBarItem />
                   
                 <div className="listing listing--reward">
                     <ul className="row">
                     <li className="col-md-4 col-sm-6">
-                        <OfferBlurbItem offerList={props.offerList} propertyList = {props.propertyList}/>
+                        <OfferBlurbItem />
                     </li>
                     <li className="col-md-4 col-sm-6">
-                        <ReservationBlurbItem reservationList ={props.reservationList} propertyList = {props.propertyList}/>
+                        <ReservationBlurbItem />
                     </li>
                     <li className="col-md-4 col-sm-6">
-                        <PriceAlertBlurbItem priceList={props.priceList} enterpriseList={props.enterpriseList}
-                                            propertyList = {props.propertyList} />
+                        <PriceAlertBlurbItem />
                     </li>
                     </ul>
                 </div> 
@@ -45,4 +54,4 @@ const ProfileContainer = (props) => {
     );
 }
 
-export default ProfileContainer;
+export default connect(mapStateToProps)(ProfileContainer);

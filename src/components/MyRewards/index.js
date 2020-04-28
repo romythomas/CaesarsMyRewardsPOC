@@ -45,9 +45,7 @@ class MyRewards extends Component {
           <div className="title">
             <h1>My Rewards</h1>
           </div>                
-            <ProfileContainer logininfo={logininfo} feeds={feeds} offerList={offers} 
-                          propertyList={properties} reservationList={reservations} 
-                          priceList={priceAlert} enterpriseList={enterpriseFeed}/>
+            <ProfileContainer />
         </div>
       );
     }

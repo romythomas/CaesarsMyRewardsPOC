@@ -1,14 +1,20 @@
 import React from 'react';
 import {getProperty} from '../../utilities/Helper'
 import {getImageUrl} from '../../Configs/Configs'
+import { connect } from 'react-redux';
 
+const mapStateToProps = state => ({
+    propertyList: state.common.properties,
+    reservationList: state.common.reservations
+  });
 const ReservationBlurbItem = (props) => { 
-    var imageUrl = getImageUrl();
-    var propertyName = '';
-    var reservations = props.reservationList.reservations[0];
-    if(props.propertyList && reservations && reservations && reservations.propertyCode){
+    const {propertyList, reservationList} = props;
 
-        var property = getProperty(props.propertyList, reservations.propertyCode);
+    let imageUrl = getImageUrl();
+    let propertyName = '';
+    let reservations = reservationList.reservations[0];
+    if(propertyList && reservations && reservations && reservations.propertyCode){
+        let property = getProperty(props.propertyList, reservations.propertyCode);
         if(property){
             imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/l/cover";
             propertyName = property.propertyName.toUpperCase();
@@ -24,12 +30,14 @@ const ReservationBlurbItem = (props) => {
                 <img className="thumb" src={imageUrl} alt="Caesars"/>
                 <div className="img-info">
                     <h5>{propertyName}</h5>
-                    <span className="place">Las Vegas</span>
+                    <span className="place">&nbsp;</span>
                 </div>
             </div>
             <div className="listing__details">
-                <h2>Date</h2>
-                <span className="rate">{reservations.checkInDate} - {reservations.checkOutDate}</span>
+                <h2>Date:- &nbsp;&nbsp;
+                    {new Date(reservations.checkInDate).toLocaleDateString()} 
+                    &nbsp;- &nbsp;{new Date(reservations.checkOutDate).toLocaleDateString()}</h2>
+                <span className="rate">&nbsp;</span>
             </div>
             <div className="btn-wrap-double">
                 <button className="button" onClick={myReservation}>View All</button>
@@ -38,4 +46,4 @@ const ReservationBlurbItem = (props) => {
     );
 }
 
-export default ReservationBlurbItem;
+export default connect(mapStateToProps)(ReservationBlurbItem);
