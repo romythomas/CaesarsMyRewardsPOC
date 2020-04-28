@@ -89,8 +89,8 @@ class MyOffers extends Component {
 
         this.onSortingChange = sort => {
             let sortValue = "";
-            if(sort && sort.target && sort.target.value) {
-                sortValue = sort.target.value;
+            if(sort && sort.target && sort.target.text && sort.target.attributes && sort.target.attributes.length && sort.target.attributes[0].value) {
+                sortValue = sort.target.attributes[0].value;
             } else {
                 sortValue = this.getDefaultSortValue();
             }
@@ -171,7 +171,35 @@ class MyOffers extends Component {
             this.updateOfferList();
         }
     }
-
+    componentDidMount() {
+        $('.dropdown > span').on('click touch', function(e) {
+            e.preventDefault();
+            const $self = $(this).parent();
+            $self.toggleClass('open');
+        });
+        $(document).on('click touch', function(e) {
+            e.preventDefault();
+            const $dropdown = $('.dropdown');
+            if($dropdown !== e.target && !$dropdown.has(e.target).length) {
+                $dropdown.removeClass('open');
+            }
+        });
+        $(document).on('click touch', '.selectDropdown ul li a', function(e) {
+            e.preventDefault();
+            const $this = $(this);
+            const $parent = $this.parent();
+            const $dropdown = $parent.parent().parent();
+            const active = $parent.hasClass('active');
+            const label = $this.text();
+            $dropdown.find('ul li').removeClass('active');
+            $dropdown.toggleClass('filled', !active);
+            $dropdown.children('span').text(label);
+            if(!active) {
+                $parent.addClass('active');
+            }
+            $dropdown.removeClass('open');
+        });
+    }
     render() {
         this.applyDefaultFilterAndSort();
         return(
