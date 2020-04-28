@@ -31,11 +31,11 @@ class MyOffers extends Component {
         let selectedOfferSort = "";
 
         this.updateOfferList = () => {
-            const {offers, getFilteredSortedOffers} = this.props;
+            const {offers, markets, getFilteredSortedOffers} = this.props;
             selectedOfferSort = selectedOfferSort ? selectedOfferSort : this.getDefaultSortValue();
             this.selectedOfferSort = selectedOfferSort;
             this.selectedOfferFilters = selectedOfferFilters;
-            let filteredSortedOffers = filterOffers(offers, selectedOfferFilters);
+            let filteredSortedOffers = filterOffers(offers, selectedOfferFilters, markets);
             filteredSortedOffers = sortOffers(filteredSortedOffers, selectedOfferSort);
             getFilteredSortedOffers(filteredSortedOffers);
         }
@@ -109,7 +109,7 @@ class MyOffers extends Component {
                 }
             });
             if(searchParams) {
-                const {propcode, startdate, enddate, type, offercode, defaultsort} = searchParams;
+                const {regioncode, propcode, startdate, enddate, type, offercode, defaultsort} = searchParams;
                 if(startdate || enddate) {
                     const UrlStartdate = new Date(startdate);
                     const UrlEbdDate = new Date(enddate);
@@ -129,10 +129,11 @@ class MyOffers extends Component {
                         }
                     });
                 }
-                if(propcode) {
+                if(propcode || regioncode) {
+                    const locationCode = propcode ? propcode : (regioncode ? regioncode : "");
                     selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
                         filterType: "location",
-                        filterValue: propcode.toUpperCase()
+                        filterValue: locationCode.toUpperCase() 
                     });
                 }
                 if(type) {

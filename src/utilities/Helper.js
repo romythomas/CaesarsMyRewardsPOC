@@ -82,3 +82,20 @@ export const getUrlParams = (search) => {
     }
     return params
 }
+
+export const getMarketDetails = (markets, code) => {
+    if(markets && code) {
+        const market = markets.filter((market) => {
+            return market.Code.toLowerCase() === code.toLowerCase();
+        });
+        if(market && market.length) {
+            return market[0];
+        }
+    }
+    return null;
+}
+
+export const getPropertiesOfMarket = (markets, code) => {
+    const market = getMarketDetails(markets, code);
+    return market && market.Properties && market.Properties.length ? market.Properties : [];
+}

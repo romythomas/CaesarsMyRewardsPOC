@@ -1,3 +1,5 @@
+import {getPropertiesOfMarket} from "./Helper";
+
 export const updateSelectedFilter = (selectedOfferFilters, newFilter) => {
     const existingFilterIndex = selectedOfferFilters.findIndex((filter) => {
         return filter.filterType === newFilter.filterType;
@@ -11,7 +13,7 @@ export const updateSelectedFilter = (selectedOfferFilters, newFilter) => {
     return selectedOfferFilters;
 };
 
-export const filterOffers = (offers, selectedOfferFilters) => {
+export const filterOffers = (offers, selectedOfferFilters, markets) => {
     let filteredOffers = offers;
     if (
         offers &&
@@ -22,8 +24,15 @@ export const filterOffers = (offers, selectedOfferFilters) => {
         selectedOfferFilters.map((filter) => {
             const { filterType, filterValue } = filter;
             if (filterType === "location" && filterValue) {
+                let propertiesToFilter = [filterValue];
+                const propertiesList = getPropertiesOfMarket(markets, filterValue);
+                if(propertiesList && propertiesList.length) {
+                    propertiesToFilter = propertiesList.map(({ Code }) => Code)
+                }
                 filteredOffers = filteredOffers.filter((offer) => {
-                    return offer.propertyList.includes(filterValue);
+                    return (
+                        offer.propertyList.some((prop) => propertiesToFilter.indexOf(prop) !== -1)
+                    );
                 });
             }
             if (filterType === "date" && filterValue) {
