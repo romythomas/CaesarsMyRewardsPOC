@@ -18,15 +18,22 @@ const ReservationBlurbItem = (props) => {
         alert('TODO!');
       }
     return (        
-        <div className="item rewardsitem offer">
-            <h4>MY RESERVATION <span className="tr-crimson">NEW!</span></h4>
-            <img alt="reservation image" className="offer-image" src={imageUrl}></img>
-            <div>{propertyName}</div>
-            <div>Date:- {reservations.checkInDate} - {reservations.checkOutDate}</div>
-            
-            <br/> 
-            <button className="myrewards-button" onClick={myReservation}>View All </button>      
-
+        <div className="listing-wrap">
+            <h3>My Reservation</h3>
+            <div className="listing__img">
+                <img className="thumb" src={imageUrl} alt="Caesars"/>
+                <div className="img-info">
+                    <h5>{propertyName}</h5>
+                    <span className="place">Las Vegas</span>
+                </div>
+            </div>
+            <div className="listing__details">
+                <h2>Date</h2>
+                <span className="rate">{reservations.checkInDate} - {reservations.checkOutDate}</span>
+            </div>
+            <div className="btn-wrap-double">
+                <button className="button" onClick={myReservation}>View All</button>
+            </div>
         </div>
     );
 }

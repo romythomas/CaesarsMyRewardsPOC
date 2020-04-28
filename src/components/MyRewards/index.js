@@ -41,18 +41,23 @@ class MyRewards extends Component {
     const {logininfo,feeds,offers, properties, reservations, priceAlert, enterpriseFeed} = this.props;
     if(logininfo && feeds && properties){
       return (
-
-        <div className="page">
-          <h2>Home Page</h2>          
-          <ProfileContainer logininfo={logininfo} feeds={feeds} offerList={offers} 
-                        propertyList={properties} reservationList={reservations} 
-                        priceList={priceAlert} enterpriseList={enterpriseFeed}/>
+        <div className="container-fluid">
+          <div className="title">
+            <h1>My Rewards</h1>
+          </div>                
+            <ProfileContainer logininfo={logininfo} feeds={feeds} offerList={offers} 
+                          propertyList={properties} reservationList={reservations} 
+                          priceList={priceAlert} enterpriseList={enterpriseFeed}/>
         </div>
       );
     }
     else{
       return(
-      <h2>Loading</h2>
+        <div className="container-fluid">
+          <div className="title">
+            <h1>Loading</h1>
+          </div>  
+        </div> 
       );
     }
   }

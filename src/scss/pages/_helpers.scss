@@ -472,11 +472,41 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@include break-point(767px){
+		flex-wrap: wrap;
+	}
 	h1{
 		font-size: 25px;
 		color: $custome-primary;
 		font-weight: normal;
+		@include break-point(767px){
+			width: 100%;
+			margin-bottom: 15px;
+		}
 	}
+}
+
+.close{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	display: none;
+	@include break-point(991px){
+		display: block;
+	}
+	&:before{
+		@include fontawesome;
+		content: "\f00d";
+		right: 0;
+		-webkit-text-stroke: 6px $custome-white;
+		font-size: 45px;
+	}
+}
+
+.content-box{
+	background: $custome-white;
+	box-shadow: 6px 0px 13px -10px rgba(0,0,0,0.35);
+	margin: 20px 0;
 }
 
 

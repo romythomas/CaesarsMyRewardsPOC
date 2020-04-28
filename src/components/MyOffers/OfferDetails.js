@@ -1,12 +1,14 @@
-import React, { Component } from "react";
+import React, { Component , useRef, useEffect} from "react";
 import { connect } from 'react-redux';
 import {getProperty, getPropertiesListByCode} from '../../utilities/Helper'
 import {getImageUrl} from '../../Configs/Configs'
 
 const mapStateToProps = (state) => ({
-    offers: state.common.offers,
+    offers: state.common.offers, 
     properties: state.common.properties
 });
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
+const useMountEffect = (fun) => useEffect(fun, [])
 
 const gotoNBE = (parameter) => (event) => {
     var e = document.getElementById("property");
@@ -28,7 +30,7 @@ class OfferDetails  extends Component  {
         if(properties){
             var imageUrl = getImageUrl();
             var property = getProperty(properties, selectedOffer[0].propertyList[0]);
-            var proplist = getPropertiesListByCode(properties, new Array(selectedOffer[0].propertyList[0]));
+            var proplist = getPropertiesListByCode(properties, new Array(selectedOffer[0].propertyList));
             if(property){
                 imageUrl ="http://caesars.com" + property.images[0].url;
             }

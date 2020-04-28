@@ -38,19 +38,26 @@ const PriceAlertBlurbItem = (props) => {
     }
     
     return (        
-        <div className="item rewardsitem offer">
-            <h4>MY PRICE ALERT <span className="tr-crimson">NEW!</span></h4>
-            <img alt="price alert image" className="offer-image" src={rooms[0].roomImageUrl}></img>
-            <h5>{rooms[0].propertyName}</h5>
-				<div className="amount">
-					Stay for as little as
-					<b>${rooms[0].rate}</b>
-					<h6>Based on availability</h6>
-				</div>
-            <br/> 
-            <button className="myrewards-button" onClick={viewMyPriceAlerts}>View </button><br/> 
-            <button className="myrewards-button" onClick={viewAllMyPriceAlerts}>View All </button>
+        <div className="listing-wrap">
+            <h3>My Price Alert</h3>
+            <div className="listing__img">
+                <img className="thumb" src={rooms[0].roomImageUrl} alt="price alert image"/>
+                <div className="img-info">
+                    <h5>{rooms[0].propertyName}</h5>
+                    <span className="place">Las Vegas</span>
+                </div>
+            </div>
+            <div className="listing__details">
+                <h2>Stay for as little as</h2>
+                <span className="rate">${rooms[0].rate}</span>
+                
+            </div>
+            <div className="btn-wrap-double">
+                <button className="button" onClick={viewMyPriceAlerts}>View Offer</button>
+                <button className="button button-outline" onClick={viewAllMyPriceAlerts}>View All</button>
+            </div>
         </div>
+   				// <h6>Based on availability</h6>
     );
 }
 

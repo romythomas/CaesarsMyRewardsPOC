@@ -12,14 +12,12 @@ const RewardCreditItem = (props) => {
       };
 
     return (        
-        <div className="item rewardsitem" style={imageStyle}>
-            <div>
-                <h3 className="upper no-margin">MY CURRENT REWARD CREDIT BALANCE</h3>
-                <b>{info.rewardcredits.balance}</b>
-                <p>Reward Credits</p>
-                <p><b>Reward Credit balance expiration date: {info.rewardcredits.expirationdate}</b></p>
-                <div><i>May not reflect most recent activity.</i></div>
-            </div>
+        // <div className="item rewardsitem" style={imageStyle}>
+        <div className="rewards__box">           
+            MY CURRENT REWARD CREDIT BALANCE
+            <strong>{info.rewardcredits.balance}</strong>
+            Reward Credit balance expiration date: {info.rewardcredits.expirationdate}
+            &nbsp;May not reflect most recent activity.            
         </div>
     );
 }

@@ -20,20 +20,29 @@ const OfferBlurbItem = (props) => {
         window.location.href='/myoffers'
       }
     return (        
-        <div className="item rewardsitem offer">
-            <h4>MY OFFERS <span className="tr-crimson">NEW!</span></h4>
-            <h2>{props.propertyName}</h2>
-            <img alt="offer image" className="offer-image" src={imageUrl}></img>
-            <div>Title:- {offers.title}</div>
-            <div>Properties:- {propertyName}</div>
-            <div>Description:- {offers.description}</div>           
-            <br/> 
-            <Link
-                to={`/offerdetails/${offers.id}`}
-                className="myrewards-button">
-                View Offer
-            </Link>         
-            <button className="myrewards-button" onClick={myOffer}>View All </button>
+        <div className="listing-wrap">
+            <h3>My Offer</h3>
+            <div className="listing__img">
+                  <img className="thumb" src={imageUrl} alt="offer image"/>
+                  <div className="img-info">
+                    <h5>{offers.title}</h5>
+                    <span className="place">{props.propertyName}</span>
+                  </div>
+            </div>
+            <div className="listing__details">
+                <h2>{offers.description}</h2>
+                <span className="rate">$49</span>
+                
+            </div>
+            <div className="btn-wrap-double">
+                <Link
+                    to={`/offerdetails/${offers.id}`}
+                    className="button">
+                    View Offer
+                </Link> 
+                <button className="button button-outline">View All</button>
+            </div>
+            {/* <div>Properties:- {propertyName}</div> */}            
         </div>
     );
 }

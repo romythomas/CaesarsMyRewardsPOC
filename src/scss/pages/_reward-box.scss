@@ -1,0 +1,79 @@
+//reward box  starts here
+	.rewards__box{
+		color: #333333;
+		padding: 20px 30px;
+		text-align: center;
+		line-height: 24px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		strong{
+			font-size: 20px;
+			color: $custome-secondary;
+			font-family: 'Montserrat Bold';
+			display: block;
+		}
+	}
+	.rewards__card{
+		background: #ac9651;
+		color: $custome-white;
+		display: flex;
+		height: 100%;
+		align-items: center;
+		padding:20px 40px;
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+		&:before{
+			content:"";
+			height: 298px;
+			width: 159px;
+			background: url(/images/leaf-lft.png) no-repeat 0 0;
+			position: absolute;
+			background-size: 72%;
+			left: 0;
+			top: auto;
+			opacity: 0.5;
+			@include break-point(767px){
+				left: 50px;
+			}
+		}
+		&:after{
+			content:"";
+			height: 298px;
+			width: 159px;
+			background: url(/images/leaf-rit.png) no-repeat 0 0;
+			position: absolute;
+			background-size: 72%;
+			right: -44px;
+			top: auto;
+			opacity: 0.5;
+			@include break-point(767px){
+				right: 0;
+			}
+		}
+		strong{
+			font-size: 20px;
+			display: block;
+			font-family: 'Montserrat Black';
+		}
+	}
+	.rewards__benifits{
+		padding: 20px 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		line-height: 24px;
+		height: 100%;
+		flex-direction: column;
+		a{
+			font-size: 15px;
+			color: $custome-secondary;
+			font-family: 'Montserrat Bold';
+			display: block;
+			
+		}
+	}
