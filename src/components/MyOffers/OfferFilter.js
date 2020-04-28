@@ -35,13 +35,16 @@ const OfferFilter = (props) => {
         <div>
             <div className="title">
                 <h1>My Offers</h1>
-                <div className="filter">
-                    <div className="filter-wrap">
-                        <select className="offersortingoptions" onChange={props.onSortingChange} defaultValue={defaultSort}>
+                <div className="sort">
+                    <a href="#" className="close"></a>
+                    <div className="dropdown selectDropdown filled">
+                        <ul>
                             {offerSortTypes.map((sortType, index) => {
-                                return (<option key={index} value={sortType.value} >{sortType.name}</option>);
+                                let isSelected = sortType.value === defaultSort;
+                                return (<li className={isSelected ? "active" : ""} key={index} ><a onClick={props.onSortingChange} value={sortType.value} key={index}>{sortType.name}</a></li>);
                             })}
-                        </select>
+                        </ul>
+                        <span>{defaultSort}</span>
                     </div>
                 </div>
             </div>
