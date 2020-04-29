@@ -38,6 +38,12 @@ const mapDispatchToProps = dispatch => ({
     dispatch({ type: LOGIN, payload })
 });
 
+const loadScript = () => {
+  $(document).ready(function () {
+       $('html, body').animate({ scrollTop: $('#sub-content').offset().top - 80}, 1);
+  });
+  
+}
 class App extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.redirectTo) {
@@ -61,6 +67,7 @@ class App extends Component {
   }
 
   render() {
+    loadScript();
     const {offers, markets, properties, reservations, enterpriseFeed, priceAlert} = this.props;
     if(markets && markets.length && offers && offers.length && properties && reservations && priceAlert && enterpriseFeed) {
       return (
@@ -69,14 +76,16 @@ class App extends Component {
           <SideNavigation appName={this.props.appName}></SideNavigation>
           <div id="page-content">
             <SpotLight appName={this.props.appName}></SpotLight>
-            <Switch>
-              <Route exact path="/myrewards" component={MyRewards}/>              
-              <Route exact path="/myoffers" component={MyOffers}/>
-              <Route exact path="/leaderboard" component={LeaderBoard}/>
-              <Route exact path="/badges" component={QuestForRewards}/>
-              <Route exact path="/reservations" component={Reservation}/>
-              <Route exact path="/offerdetails/:id" component={OfferDetails}/>
-            </Switch>
+            <div id="sub-content">
+              <Switch>
+                <Route exact path="/myrewards" component={MyRewards}/>              
+                <Route exact path="/myoffers" component={MyOffers}/>
+                <Route exact path="/leaderboard" component={LeaderBoard}/>
+                <Route exact path="/badges" component={QuestForRewards}/>
+                <Route exact path="/reservations" component={Reservation}/>
+                <Route exact path="/offerdetails/:id" component={OfferDetails}/>
+              </Switch>
+            </div>
           </div>
           <Footer appName={this.props.appName}> </Footer>
         </div>
