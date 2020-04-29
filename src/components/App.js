@@ -48,7 +48,7 @@ const loadScript = () => {
 }
 class App extends Component {
 
-  componentDidMount() {
+  componentWillMount(){
     //load common data - login, offerlist and getmarkets
     this.props.onLogin(Promise.all([
       agent.Auth.login(),
