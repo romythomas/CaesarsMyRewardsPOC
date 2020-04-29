@@ -26,10 +26,18 @@ const Footer = (props) => {
           </div>
         </div>
         <div className="icons-social">
-            <a href="#" className="fa fa-facebook"></a>
-            <a href="#" className="fa fa-twitter"></a>
-            <a href="#" className="fa fa-youtube"></a>
-            <a href="#" className="fa fa-instagram"></a>
+            <a href="#" href="https://www.facebook.com/caesarsrewards" title="Caesars Rewards on facebook" className="fa fa-facebook">
+            <span class="icon-text">Caesars Rewards on facebook</span>
+            </a>
+            <a href="#" href="https://twitter.com/Caesars_Rewards" title="Caesars Rewards on twitter" className="fa fa-twitter">
+            <span class="icon-text">Caesars Rewards on twitter</span>
+            </a>
+            <a href="#" href="https://www.youtube.com/c/CaesarsRewards" title="Caesars Rewards on youtube" className="fa fa-youtube">
+            <span class="icon-text">Caesars Rewards on youtube</span>
+            </a>
+            <a href="#" href="https://www.instagram.com/caesarsrewards/" title="Caesars Rewards on instagram" className="fa fa-instagram">
+            <span class="icon-text">Caesars Rewards on instagram</span>
+            </a>
         </div>
         <div className="footer__link">
           <a href="#">About Caesars Entertainment Corporate</a>
