@@ -8,6 +8,8 @@ const loadScript = () => {
             $(".filter-content").toggle();
         });
         $('.close').on('click touch', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             $(".filter-content").hide();
         });
         $('.filter-content').on('click touch', function(e) {
