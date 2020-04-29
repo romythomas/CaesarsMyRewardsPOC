@@ -4,13 +4,13 @@ import {NavLink} from 'react-router-dom'
 const loadScript = () => {
     $(document).ready(function checkWidth() {
         if ($(window).width() <= 991) {  
-          $(".sidebar__toggle").click(function(e) {
-              e.preventDefault();
-              $(this).toggleClass("open");
-              $(".main").toggleClass("sidebar__active");
-          });	
-       } 
-       $(window).resize(checkWidth);	
+            $(".sidebar__toggle").click(function(e) {
+                e.stopImmediatePropagation();
+                $(this).toggleClass("open");
+                $(".main").toggleClass("sidebar__active");
+            });	
+        } 
+        $(window).resize(checkWidth);
     });
 }
 const SideNavigation = (props) => {
