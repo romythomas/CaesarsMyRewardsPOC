@@ -1,19 +1,21 @@
 import React from 'react';
 
 const loadScript = () => {
-    $(document).on('click', '.filter-wrap', function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-		$(".filter-content").toggle();
-    });
-    $(document).on('click', '.close', function(e) {
-		$(".filter-content").hide();
-    });
-    $(document).on('click', '.filter-content', function(e) {
-        e.stopPropagation();       
-    });
-    $(document).on('click', 'body', function(e) {
-		$('.filter-content').hide();
+    $(document).ready(function(){
+        $('.filter-wrap').on('click touch', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(".filter-content").toggle();
+        });
+        $('.close').on('click touch', function(e) {
+            $(".filter-content").hide();
+        });
+        $('.filter-content').on('click touch', function(e) {
+            return false;       
+        });
+        $(document).on('click', 'body', function(e) {
+            $('.filter-content').hide();
+        });
     });
 }
 
