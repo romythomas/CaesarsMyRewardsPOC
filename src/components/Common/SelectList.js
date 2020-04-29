@@ -7,7 +7,7 @@ const loadScript = () => {
             const $self = $(this).parent();
             $self.toggleClass('open');
         });
-        $(document).on('click touch', function(e) {
+        $(document).on('click touch', 'body', function(e) {
             const $dropdown = $('.dropdown');
             if($dropdown !== e.target && !$dropdown.has(e.target).length) {
                 $dropdown.removeClass('open');
