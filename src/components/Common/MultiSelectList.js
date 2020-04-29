@@ -42,7 +42,7 @@ const MultiSelectList = (props) => {
             <div className="filter">
                 <div className="filter-wrap">
                     <span className="filter__text">{title}</span>
-                    <span className="filter__count"></span>
+                    <span className="filter__count">{selectedValues.length}</span>
                 </div>
                 <div className="filter-content">
                     <a href="#" className="close"></a>
@@ -59,7 +59,7 @@ const MultiSelectList = (props) => {
                                                 onChange={onChange} 
                                                 className="checkbox-custom" 
                                                 name={checkBoxId + "-" + index} 
-                                                //checked={isChecked}
+                                                defaultChecked={isChecked}
                                                 type="checkbox" />
                                             <label 
                                                 htmlFor={checkBoxId + "-" + index} 
