@@ -29,7 +29,7 @@ const OfferBlurbItem = (props) => {
 
     return (   
         <div className="listing-wrap">
-            <h3>My Offer</h3>
+            <h3>My Offers</h3>
             <div className="listing__img">
                   <img className="thumb" src={imageUrl} alt="offer image"/>
                   <div className="img-info">
