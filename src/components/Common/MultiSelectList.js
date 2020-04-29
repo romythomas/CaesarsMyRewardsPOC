@@ -11,7 +11,7 @@ const loadScript = () => {
             $(".filter-content").hide();
         });
         $('.filter-content').on('click touch', function(e) {
-            return false;       
+            e.stopPropagation();      
         });
         $(document).on('click', 'body', function(e) {
             $('.filter-content').hide();
