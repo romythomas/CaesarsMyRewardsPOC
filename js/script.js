@@ -24,6 +24,7 @@ $(document).ready(function(){
 	$('body').click(function(){
 		$('.filter-content').hide();
 	});
+	
 
   var allPanels = $('.nav-drop').hide();   
   $('.item-nav > a').click(function() {
