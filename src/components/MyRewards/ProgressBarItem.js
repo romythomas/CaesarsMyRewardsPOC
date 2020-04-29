@@ -1,10 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+/**
+ * 
+ * @param {*} state 
+ */
 const mapStateToProps = state => ({
   logininfo: state.guestProfile.logininfo
 });
 
+/**
+ * 
+ * @param {*} props 
+ */
 const ProgressBarItem = (props) => { 
     return (        
         <div className="reward-progress">

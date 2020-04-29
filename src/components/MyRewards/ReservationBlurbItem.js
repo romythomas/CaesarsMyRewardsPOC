@@ -3,10 +3,19 @@ import {getProperty} from '../../utilities/Helper'
 import {getImageUrl} from '../../constants/configs'
 import { connect } from 'react-redux';
 
+/**
+ * 
+ * @param {*} state 
+ */
 const mapStateToProps = state => ({
     propertyList: state.common.properties,
     reservationList: state.common.reservations
   });
+
+  /**
+   * 
+   * @param {*} props 
+   */
 const ReservationBlurbItem = (props) => { 
     const {propertyList, reservationList} = props;
 
@@ -16,13 +25,11 @@ const ReservationBlurbItem = (props) => {
     if(propertyList && reservations && reservations && reservations.propertyCode){
         let property = getProperty(props.propertyList, reservations.propertyCode);
         if(property){
-            imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/l/cover";
+            imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/m/cover";
             propertyName = property.propertyName.toUpperCase();
         }
     }
-    function myReservation() {
-        alert('TODO!');
-      }
+    
     return (        
         <div className="listing-wrap">
             <h3>My Reservations</h3>
@@ -40,7 +47,7 @@ const ReservationBlurbItem = (props) => {
                 <span className="rate">&nbsp;</span>
             </div>
             <div className="btn-wrap-double">
-                <button className="button" onClick={myReservation}>View All</button>
+                <button className="button">View All</button>
             </div>
         </div>
     );

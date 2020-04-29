@@ -8,6 +8,10 @@ import ReservationBlurbItem from './ReservationBlurbItem';
 import PriceAlertBlurbItem from './PriceAlertBlurbItem';
 import ProgressBarItem from './ProgressBarItem';
 
+/**
+ * 
+ * @param {*} state 
+ */
 const mapStateToProps = state => ({
     logininfo: state.guestProfile.logininfo,
     feeds: state.guestProfile.feeds,
@@ -18,6 +22,10 @@ const mapStateToProps = state => ({
     priceAlert: state.common.priceAlert
   });
 
+  /**
+   * 
+   * @param {*} props 
+   */
 const ProfileContainer = (props) => {  
     return (
             <div>                

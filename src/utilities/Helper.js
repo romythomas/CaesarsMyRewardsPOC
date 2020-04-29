@@ -1,4 +1,7 @@
-
+/**
+ * 
+ * @param {*} code 
+ */
 export const getTierName = (code) => {
     var tiername = '';
     if(code){
@@ -26,48 +29,67 @@ export const getTierName = (code) => {
     return tiername;  
 }
 
-
+/**
+ * 
+ * @param {*} tiers 
+ * @param {*} code 
+ */
 export const getTierDetails = (tiers, code) => {   
     if(tiers && code){
         var usertier = tiers.find(t => t.name === code);
         return(usertier);
     }  
 }
-
+/**
+ * 
+ * @param {*} properties 
+ * @param {*} code 
+ */
 export const getProperty = (properties, code) =>{
         if(properties && code){
         var prop = properties.find(t => t.id.toUpperCase() === code.toUpperCase());
         return(prop);
     }
 }
+/**
+ * 
+ * @param {*} list 
+ */
 export const buildEnterpriseResponse = (list) =>{
     var response = [];
     if(list){
-        for (var a = 0, len = list.length; a < len; a++) {           
+        list.map((li) => {
             response.push({
-                propertyCode: list[a].propCode,
-                rateSet: list[a].roomtype["rateSet"],
-                rate: list[a].roomtype["amount"]
+                propertyCode: li.propCode,
+                rateSet: li.roomtype["rateSet"],
+                rate: li.roomtype["amount"]
             });
-        }
+        }) 
         return(response);
     }    
 }
- 
+ /**
+  * 
+  * @param {*} list 
+  * @param {*} codes 
+  */
 export const getPropertiesListByCode = (list, codes) => {
     var propertyNamesList = [];
     if (list != null && list != undefined && codes) {
-        for (var i = 0; i < list.length; i++) {
-            for (let index = 0; index < codes[0].length; index++) {
-                if (codes[0][index].toLowerCase() === list[i].id.toLowerCase()) {
-                    propertyNamesList.push({ "id": list[i].id +','+list[i].marketCode, "name": list[i].name });
+        list.map((li) => {
+            codes[0].map((code) => {
+                if (code === li.id.toUpperCase()) {
+                    propertyNamesList.push({ "id": li.id +','+li.marketCode, "name": li.name });
                 }
-            }
-        }
+            })
+        })
     }
     return propertyNamesList;
 }
-
+/**
+ * 
+ * @param {*} search 
+ */
 export const getUrlParams = (search) => {
     const params = {};
     if(search) {
@@ -81,7 +103,11 @@ export const getUrlParams = (search) => {
     }
     return params
 }
-
+/**
+ * 
+ * @param {*} markets 
+ * @param {*} code 
+ */
 export const getMarketDetails = (markets, code) => {
     if(markets && code) {
         const market = markets.filter((market) => {
@@ -93,12 +119,20 @@ export const getMarketDetails = (markets, code) => {
     }
     return null;
 }
-
+/**
+ * 
+ * @param {*} markets 
+ * @param {*} code 
+ */
 export const getPropertiesOfMarket = (markets, code) => {
     const market = getMarketDetails(markets, code);
     return market && market.Properties && market.Properties.length ? market.Properties : [];
 }
-
+/**
+ * 
+ * @param {*} source 
+ * @param {*} size 
+ */
 export const truncate = (source, size) => {
     return source.length > size ? source.slice(0, size - 1) + "…" : source;
 }

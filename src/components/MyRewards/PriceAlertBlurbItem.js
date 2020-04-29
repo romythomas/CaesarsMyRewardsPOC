@@ -3,35 +3,37 @@ import {buildEnterpriseResponse, getProperty} from '../../utilities/Helper'
 import {getImageUrl} from '../../constants/configs'
 import { connect } from 'react-redux';
 
+/**
+ * 
+ * @param {*} state 
+ */
 const mapStateToProps = state => ({    
     propertyList: state.common.properties,
     enterpriseList: state.common.enterpriseFeed,
     priceList: state.common.priceAlert
   });
 
-function viewMyPriceAlerts() {
-    alert('TODO!');
-  }
-function viewAllMyPriceAlerts() {
-    alert('TODO!');
-  }
+/**
+ * 
+ * @param {*} props 
+ */
 const PriceAlertBlurbItem = (props) => { 
     const {propertyList, enterpriseList, priceList} = props;
 
-    var rooms = [];
-    var priceAlert = null;
-    var lowestRate = null;
-    var imageUrl = getImageUrl();
-    var propertyName = '';     
+    let rooms = [];
+    let priceAlert = null;
+    let lowestRate = null;
+    let imageUrl = getImageUrl();
+    let propertyName = '';     
 
     var enterprise = buildEnterpriseResponse(priceList.harrahs.roomtypes);
-    for (var a = 0, len = enterpriseList.priceAlerts.length; a < len; a++) {      
-        priceAlert = enterpriseList.priceAlerts[a];
+    enterpriseList.priceAlerts.map((li) => {
+        priceAlert = li;
         lowestRate = enterprise.find(t => t.propertyCode.toUpperCase() === priceAlert.propcode.toUpperCase());
         if(lowestRate){
-            var property = getProperty(propertyList, lowestRate.propertyCode);
+            let property = getProperty(propertyList, lowestRate.propertyCode);
             if(property){
-                imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/l/cover";
+                imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/m/cover";
                 propertyName = property.propertyName.toUpperCase();
             }
             if (lowestRate.rate < parseInt(priceAlert.threshold, 10)) {
@@ -44,8 +46,8 @@ const PriceAlertBlurbItem = (props) => {
                 })
             }
         }
-    }
-    
+    })
+
     return (        
         <div className="listing-wrap">
             <h3>My Price Alerts</h3>
@@ -63,8 +65,8 @@ const PriceAlertBlurbItem = (props) => {
                 
             </div>
             <div className="btn-wrap-double">
-                <button className="button" onClick={viewMyPriceAlerts}>View</button>
-                <button className="button button-outline" onClick={viewAllMyPriceAlerts}>View All</button>
+                <button className="button">View</button>
+                <button className="button button-outline">View All</button>
             </div>
         </div>
     );

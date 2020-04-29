@@ -25,6 +25,9 @@ const mapDispatchToProps = dispatch => ({
     dispatch({ type: GET_PROFILE, payload })
 });
 
+/**
+ * 
+ */
 class MyRewards extends Component {
 
   componentDidMount() {

@@ -15,7 +15,9 @@ const gotoNBE = (parameter) => (event) => {
     window.location = url;
 }
   
-
+/**
+ * 
+ */
 class OfferDetails  extends Component  {       
     render(){
         const { offers, properties } = this.props;
@@ -30,7 +32,7 @@ class OfferDetails  extends Component  {
             var property = getProperty(properties, selectedOffer[0].propertyList[0]);
             var proplist = getPropertiesListByCode(properties, new Array(selectedOffer[0].propertyList));
             if(property){
-                imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/l/cover";
+                imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/m/cover";
             }
         }
         return ( 

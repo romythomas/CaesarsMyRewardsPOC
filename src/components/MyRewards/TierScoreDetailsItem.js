@@ -2,11 +2,19 @@ import React from 'react';
 import {getTierName, getTierDetails} from '../../utilities/Helper'
 import { connect } from 'react-redux';
 
+/**
+ * 
+ * @param {*} state 
+ */
 const mapStateToProps = state => ({
     logininfo: state.guestProfile.logininfo,
     feeds: state.guestProfile.feeds
   });
-
+  
+/**
+ * 
+ * @param {*} props 
+ */
 const TierScoreDetailsItem = (props) => { 
     let tierName = getTierName(props.logininfo.tier.code);
     let tier = getTierDetails(props.feeds.tiers, tierName);

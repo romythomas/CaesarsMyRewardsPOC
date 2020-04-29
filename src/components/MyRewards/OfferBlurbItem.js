@@ -4,11 +4,19 @@ import {getImageUrl} from '../../constants/configs'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+/**
+ * 
+ * @param {*} state 
+ */
 const mapStateToProps = state => ({    
     offerList: state.common.offers,
     propertyList: state.common.properties
   });
 
+/**
+ * 
+ * @param {*} props 
+ */
 const OfferBlurbItem = (props) => { 
     const { offerList, propertyList} = props;
 
@@ -18,15 +26,10 @@ const OfferBlurbItem = (props) => {
     if(propertyList && offers && offers && offers.propertyList[0]){
         var property = getProperty(propertyList, offers.propertyList[0]);
         if(property){
-            imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/l/cover";
+            imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/m/cover";
             propertyName = property.propertyName;
         }
     }
-    function myOffer() {
-        window.location.href='/myoffers'
-    }
-    
-
     return (   
         <div className="listing-wrap">
             <h3>My Offers</h3>
