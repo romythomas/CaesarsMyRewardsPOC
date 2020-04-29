@@ -19,7 +19,7 @@ const SideNavigation = (props) => {
         <aside className="sidebar">
             <nav>                
                 <li className="item-nav"> 
-                    <NavLink exact activeClassName="selected" className="item-nav" to="/myrewards">
+                    <NavLink exact activeClassName="selected" className="item-nav" to="/">
                         <i className="icon__rewards"></i> <span>MY REWARDS</span>
                     </NavLink>
                 </li>

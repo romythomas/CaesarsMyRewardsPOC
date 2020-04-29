@@ -78,7 +78,7 @@ class App extends Component {
             <SpotLight appName={this.props.appName}></SpotLight>
             <div id="sub-content">
               <Switch>
-                <Route exact path="/myrewards" component={MyRewards}/>              
+                <Route exact path="/" component={MyRewards}/>              
                 <Route exact path="/myoffers" component={MyOffers}/>
                 <Route exact path="/leaderboard" component={LeaderBoard}/>
                 <Route exact path="/badges" component={QuestForRewards}/>
