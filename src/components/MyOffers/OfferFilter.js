@@ -1,6 +1,7 @@
 import React from "react";
 import SelectList from "../Common/SelectList";
-import Textbox from "../Common/Textbox"
+import Textbox from "../Common/Textbox";
+import MultiSelectList from "../Common/MultiSelectList";
 import MarketPropertySelect from "../Common/MarketPropertySelect";
 import MultiSelectDropdown from "../Common/MultiSelectDropdown";
 import RangeCalendar from "../Common/RangeCalendar";
@@ -66,15 +67,12 @@ const OfferFilter = (props) => {
                         </div>
                     </li>
                     <li>
-                        <div className="offer-type-filter">
-                            <MultiSelectDropdown 
-                                    options={offerTypes} 
-                                    selectTitle="Offer Type" 
-                                    width="100%" 
-                                    onChange={props.onOfferTypeChange}
-                                    defaultValue = {defaultType}
-                                />
-                        </div>
+                        <MultiSelectList 
+                            dataList={offerTypes} 
+                            title="Offer Types" 
+                            checkBoxId="offer-type" 
+                            defaultValue = {defaultType} 
+                            onChange={props.onOfferTypeChange} />
                     </li>
                     <li>
                         <Textbox 
