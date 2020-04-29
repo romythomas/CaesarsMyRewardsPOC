@@ -4,13 +4,22 @@ import {NavLink} from 'react-router-dom'
 const loadScript = () => {
     $(document).ready(function checkWidth() {
         if ($(window).width() <= 991) {  
-            $(".sidebar__toggle").click(function(e) {
-                e.stopImmediatePropagation();
+            $(".sidebar__toggle").unbind().click(function(e) {
                 $(this).toggleClass("open");
                 $(".main").toggleClass("sidebar__active");
             });	
         } 
         $(window).resize(checkWidth);
+    });
+    $(document).ready(function(){
+        var allPanels = $('.nav-drop').hide();   
+        $('.item-nav > a').unbind().click(function() {
+            allPanels.slideUp();
+            $(this).next().slideDown();
+            $(".sidebar__toggle").toggleClass("open");
+            $(".main").toggleClass("sidebar__active");
+        });
+        
     });
 }
 const SideNavigation = (props) => {
