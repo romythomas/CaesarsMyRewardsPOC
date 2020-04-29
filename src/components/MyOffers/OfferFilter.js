@@ -1,5 +1,6 @@
 import React from "react";
 import SelectList from "../Common/SelectList";
+import Textbox from "../Common/Textbox"
 import MarketPropertySelect from "../Common/MarketPropertySelect";
 import MultiSelectDropdown from "../Common/MultiSelectDropdown";
 import RangeCalendar from "../Common/RangeCalendar";
@@ -76,15 +77,10 @@ const OfferFilter = (props) => {
                         </div>
                     </li>
                     <li>
-                        <div className="offer-code-filter">
-                            <label>Offer Code</label>
-                            <input 
-                                type = "text" 
-                                defaultValue = {defaultOfferCode}
-                                placeholder="Enter offer code" 
-                                onBlur={props.onOfferCodeChange}
-                            />
-                        </div>
+                        <Textbox 
+                            textboxId = "offerCodeSearch"
+                            defaultValue = {defaultOfferCode}
+                            onBlur={props.onOfferCodeChange} />
                     </li>
                 </ul>
             </div>
