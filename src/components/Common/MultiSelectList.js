@@ -12,8 +12,8 @@ const loadScript = () => {
             e.stopPropagation();
             $(".filter-content").hide();
         });
-        $('.filter-content').on('click touch', function(e) {
-            e.stopPropagation();      
+        $(document).on('click', '.filter-content', function(e) {
+            e.stopPropagation();       
         });
         $(document).on('click', 'body', function(e) {
             $('.filter-content').hide();
@@ -51,7 +51,7 @@ const MultiSelectList = (props) => {
                     <label className="form-control-placeholder" htmlFor={selectId}>{title}</label>
                 </div>
                 <div className="filter-content">
-                    <a href="#" className="close"></a>
+                    <span className="close"></span>
                     <div className="filter__list">
                         <ul>
                             <li>
