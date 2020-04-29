@@ -12,13 +12,6 @@ const mapDispatchToProps = () => ({
 });
 
 class QuestForRewards extends Component {
-  componentWillMount() {
-    
-  }
-
-  componentWillUnmount() {
-    
-  }
 
   render() {
     return (

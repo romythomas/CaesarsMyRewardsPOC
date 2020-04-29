@@ -26,16 +26,14 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class MyRewards extends Component {
-  componentWillMount() {
+
+  componentDidMount() {
     this.props.onGetGuestProfile(Promise.all([
       agent.Profile.getGuestProfile(this.props.accountID),
       agent.Profile.getFeeds()
     ]));
   }
 
-  componentWillUnmount() {
-    //this.props.onUnload();
-  }
 
   render() {
     const {logininfo,feeds,offers, properties, reservations, priceAlert, enterpriseFeed} = this.props;

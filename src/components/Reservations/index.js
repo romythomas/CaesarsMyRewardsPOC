@@ -12,13 +12,6 @@ const mapDispatchToProps = () => ({
 });
 
 class Reservation extends Component {
-  componentWillMount() {
-    
-  }
-
-  componentWillUnmount() {
-
-  }
 
   render() {
     return (

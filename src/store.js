@@ -5,9 +5,10 @@ import {promiseMiddleware} from './middlewares/promiseMiddleware';
 import reducer from './reducers';
 
 import { routerMiddleware } from 'react-router-redux'
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history'
+//import createHistory from 'history/createBrowserHistory';
 
-export const history = createHistory();
+export const history = createBrowserHistory();
 
 // Build the middleware for intercepting and dispatching navigation actions
 const myRouterMiddleware = routerMiddleware(history);

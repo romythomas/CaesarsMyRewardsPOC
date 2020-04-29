@@ -12,13 +12,6 @@ const mapDispatchToProps = () => ({
 });
 
 class LeaderBoard extends Component {
-  componentWillMount() {
-    
-  }
-
-  componentWillUnmount() {
-    
-  }
 
   render() {
     return (

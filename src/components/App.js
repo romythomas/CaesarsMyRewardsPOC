@@ -47,15 +47,8 @@ const loadScript = () => {
   
 }
 class App extends Component {
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.redirectTo) {
-      // this.context.router.replace(nextProps.redirectTo);
-      store.dispatch(push(nextProps.redirectTo));
-      this.props.onRedirect();
-    }
-  }
 
-  componentWillMount() {
+  componentDidMount() {
     //load common data - login, offerlist and getmarkets
     this.props.onLogin(Promise.all([
       agent.Auth.login(),
