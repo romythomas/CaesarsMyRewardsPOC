@@ -53,7 +53,7 @@ const MultiSelectList = (props) => {
                                 {dataList.map((data, index) => {
                                     let isChecked = isDefaultValueAvailable ? defaultValue.includes(data) : false;
                                     return(
-                                        <div className="filter__item">
+                                        <div key={index} className="filter__item">
                                             <input 
                                                 id={checkBoxId + "-" + index} 
                                                 onChange={onChange} 
