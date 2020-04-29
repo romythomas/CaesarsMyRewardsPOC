@@ -2,10 +2,18 @@ import React from 'react';
 import {getTierName} from '../../utilities/Helper'
 import { connect } from 'react-redux';
 
+/**
+ * 
+ * @param {*} state 
+ */
 const mapStateToProps = state => ({
     logininfo: state.guestProfile.logininfo
   });
 
+/**
+ * 
+ * @param {*} props 
+ */
 const TierScoreItem = (props) => {     
     const { logininfo } =props;    
     return (        
