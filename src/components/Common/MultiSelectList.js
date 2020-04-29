@@ -15,13 +15,14 @@ const loadScript = () => {
     $(document).on('click', 'body', function(e) {
 		$('.filter-content').hide();
     });
-    $(document).on('click', '.checkbox-custom', function(e) {
-        $(".filter__count").text($('input[class="checkbox-custom"]:checked').length);
-    });
+}
+
+const updateTextboxValue = (selectedValues) => {
+    $(".filter").find(".filter-wrap").find("input:text").val(selectedValues.join(","));
 }
 
 const MultiSelectList = (props) => {
-    const {title, dataList, checkBoxId, defaultValue} = props;
+    const {title, dataList, selectId, defaultValue} = props;
     const isDefaultValueAvailable = defaultValue && defaultValue.length;
     let selectedValues = isDefaultValueAvailable ? defaultValue : [];
     const onChange = (value) =>{
@@ -31,6 +32,7 @@ const MultiSelectList = (props) => {
             } else {
                 selectedValues = selectedValues.filter(item => item.toLowerCase() !== value.target.nextElementSibling.innerText.toLowerCase())
             }
+            updateTextboxValue(selectedValues);
             if(props.onChange) {
                 props.onChange(selectedValues);
             }
@@ -41,28 +43,27 @@ const MultiSelectList = (props) => {
         return(
             <div className="filter">
                 <div className="filter-wrap">
-                    <span className="filter__text">{title}</span>
-                    <span className="filter__count">{selectedValues.length}</span>
+                    <input className="form-control txt" type="text" id={selectId} value={selectedValues.join(",")} required />
+                    <label className="form-control-placeholder" htmlFor={selectId}>{title}</label>
                 </div>
                 <div className="filter-content">
                     <a href="#" className="close"></a>
                     <div className="filter__list">
                         <ul>
                             <li>
-                                <h6>{title}</h6>
                                 {dataList.map((data, index) => {
                                     let isChecked = isDefaultValueAvailable ? defaultValue.includes(data) : false;
                                     return(
                                         <div key={index} className="filter__item">
                                             <input 
-                                                id={checkBoxId + "-" + index} 
+                                                id={selectId + "-chk-" + index} 
                                                 onChange={onChange} 
                                                 className="checkbox-custom" 
-                                                name={checkBoxId + "-" + index} 
+                                                name={selectId + "-chk-" + index} 
                                                 defaultChecked={isChecked}
                                                 type="checkbox" />
                                             <label 
-                                                htmlFor={checkBoxId + "-" + index} 
+                                                htmlFor={selectId + "-chk-" + index} 
                                                 className="checkbox-custom-label">
                                                 {data}
                                             </label>
@@ -71,7 +72,7 @@ const MultiSelectList = (props) => {
                                 })}
                             </li>
                         </ul>
-                    </div>
+                  </div>
                 </div>
             </div>
         )

@@ -2,16 +2,6 @@
 .filter{
 	position: relative;
 	.filter-wrap{
-		height: 35px;
-		display: flex;
-		justify-content: space-between;
-		border: #c6c8cc solid 1px;
-		align-items: center;
-		font-size: 14px;
-		font-weight: 600;
-		color: $custome-primary;
-		padding: 0 10px;
-		cursor: pointer;
 		.filter__text{
 			position: relative;
 			padding: 0 10px 0 25px;

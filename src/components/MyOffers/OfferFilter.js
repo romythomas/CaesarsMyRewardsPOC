@@ -70,7 +70,7 @@ const OfferFilter = (props) => {
                         <MultiSelectList 
                             dataList={offerTypes} 
                             title="Offer Types" 
-                            checkBoxId="offer-type" 
+                            selectId="offer-type" 
                             defaultValue = {defaultType} 
                             onChange={props.onOfferTypeChange} />
                     </li>
