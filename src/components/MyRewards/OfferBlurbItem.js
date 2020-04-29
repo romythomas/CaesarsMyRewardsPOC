@@ -2,6 +2,7 @@ import React from 'react';
 import {getProperty,truncate} from '../../utilities/Helper'
 import {getImageUrl} from '../../constants/configs'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const mapStateToProps = state => ({    
     offerList: state.common.offers,
@@ -24,10 +25,7 @@ const OfferBlurbItem = (props) => {
     function myOffer() {
         window.location.href='/myoffers'
     }
-    const myOfferDetails = (parameter) => (event) => {       
-        let url = '/offerdetails/' + parameter[0]
-        window.location = url;
-    }       
+    
 
     return (   
         <div className="listing-wrap">
@@ -43,9 +41,13 @@ const OfferBlurbItem = (props) => {
                 <h2>{truncate(offers.description, 63)}</h2>
                 <span className="rate">&nbsp;</span>                
             </div>
-            <div className="btn-wrap-double">                
-                <button className="button" onClick={myOfferDetails(new Array(offers.id))}>View Offer</button>
-                <button className="button button-outline" onClick={myOffer}>View All</button>
+            <div className="btn-wrap-double">   
+            <button className="button">      
+                <Link to={`/offerdetails/${offers.id}`}> View Offer</Link>   
+            </button>    
+            <button className="button button-outline" > 
+                <Link to={`/myoffers`}> View All</Link>  
+            </button>
             </div>
         </div>
     );

@@ -40,7 +40,9 @@ const mapDispatchToProps = dispatch => ({
 
 const loadScript = () => {
   $(document).ready(function () {
+    if($('#sub-content').length){
        $('html, body').animate({ scrollTop: $('#sub-content').offset().top - 80}, 1);
+    }
   });
   
 }

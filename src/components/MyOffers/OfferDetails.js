@@ -34,8 +34,10 @@ class OfferDetails  extends Component  {
             }
         }
         return ( 
-            <div className="item rewardsitem progressbar">           
-                <h2>My Offer Details</h2>
+            <div className="container-fluid">
+                <div className="title">
+                    <h1>My Offer Details</h1>
+                </div> 
                 <div className="offer-details-left-panel"> 
                     <strong>Title:</strong>                      
                     <span>{selectedOffer[0].title}</span>
@@ -52,10 +54,10 @@ class OfferDetails  extends Component  {
                     <br/>
                     <strong>Properties:</strong>
                     <span>                   
-                        <select id="property" className="offersortingoptions" >
+                        <select id="property" className="dropdown selectDropdown filled" >
                             {proplist.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}
                         </select>
-                        <button className="myrewards-button" 
+                        <button className="button" 
                             onClick={gotoNBE(new Array(selectedOffer[0].id, new Date(selectedOffer[0].start).toLocaleDateString(),new Date(selectedOffer[0].end).toLocaleDateString()))} >
                             Book</button> 
                     </span>
