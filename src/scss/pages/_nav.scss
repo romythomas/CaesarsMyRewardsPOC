@@ -3,29 +3,11 @@ nav{
 	&.navbar{
 		margin-right: auto;
 		@include break-point(991px){
-			padding: 0;
-			margin-left: auto;
-			margin-right: 0;
-			flex-direction: row-reverse;
-			flex-wrap: nowrap;
+			display: none;
 		}
 	}
-	.navbar-toggler{
-		color: $custome-white;
-		font-size: 14px;
-		.fa{
-			font-size: 20px;
-		}
-	}
+
 	.navbar-collapse{
-		@include break-point(991px){
-		background: $custome-white;
-		padding: 20px 0 0;
-		position: absolute;
-		top: 42px;
-		width: 200px;
-		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
-	}
 		.nav-link{
 			color: $custome-white;
 			font-family: OpenSans-Light;
@@ -33,20 +15,14 @@ nav{
 				text-decoration: underline;
 				color: $custome-white;
 			}
-			@include break-point(991px){
-			border-bottom: #ccc solid 1px;
-			margin-bottom: 5px;
-			padding: 0 20px 5px;
-			color: $custome-black;
-			&:hover{
-				color: $custome-secondary;
-				text-decoration: none;
-			}
-			&:last-child{
-				border: none;
-			}
 		}
-		}
+	}
+}
+
+.nav-mobbile{
+	display: none;
+	@include break-point(991px){
+		display: block;
 	}
 }
 

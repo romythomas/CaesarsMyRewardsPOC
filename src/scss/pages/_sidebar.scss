@@ -13,9 +13,17 @@
 	box-shadow: 6px 0px 13px -10px rgba(0,0,0,0.35);
 	@include break-point(991px){
 		left:-240px;
+		overflow: auto;
 	}
 	li{
-		&.item-nav{
+		&.list-group-item{
+			padding: 0;
+			background-color: none;
+			border-radius: none;
+			border: none;
+			&:last-child{
+				border: none;
+			}
 			a{
 				text-decoration: none;
 				padding: 10px 13px;
@@ -29,8 +37,30 @@
 						-webkit-text-stroke-color: #fff;
 					}
 				}
+				&.open{
+					&:after{
+						@include fontawesome;
+						content: "\f107";
+						right: 10px;
+						top: 6px;
+						font-size:16px;
+					}
+					&.collapsed{
+						&:after{
+							content: "\f105";
+						}
+					}
+					
+					&.main-head{
+						font-family: OpenSans-Bold;
+						span{
+							margin: 0;
+						}
+					}
+				}
 				span{
 					margin-left:30px;
+					text-transform: uppercase;
 				}
 				i{
 					font-style:normal;
@@ -40,7 +70,6 @@
 					&:before{
 						@include fontawesome;
 						content: "\f091";
-						position:absolute;
 						left:0;
 						top:-2px;
 						font-size:16px;
@@ -100,25 +129,43 @@
 							content: "\f06b";
 						}
 					}
-				}
-			}
-			.nav-drop{
-				background: #eee;
-				li{
-					position: relative;
-					&:hover{
-						.nav-fly{
-							display: block;
+					&.icon__benifits{
+						&:before{
+							content: "\f0fe";
+						}
+					}
+					&.icon__earn{
+						&:before{
+							content: "\f237";
+						}
+					}
+					&.icon__promotion{
+						&:before{
+							content: "\f0a1";
+						}
+					}
+					&.icon__partner{
+						&:before{
+							content: "\f2b5";
+						}
+					}
+					&.icon__book{
+						&:before{
+							content: "\f090";
 						}
 					}
 				}
-				a{
-					height: 35px;
-					padding: 7px 13px 7px 43px;
-					&:hover{
-						background: #ccc;
-						color: $custome-secondary;
-					}	
+			}
+				li{
+					position: relative;
+					li{
+						position: relative;
+						&:hover{
+							.nav-fly{
+								display: block;
+							}
+						}
+					}
 				}
 				.nav-fly{
 					position: absolute;
@@ -133,14 +180,35 @@
 						background: #ddd;
 					}
 				}
-			}
+				.main-sub{
+					li{
+						>a{
+							padding-left: 30px;
+						}
+					}
+				}
 		}
-		&> a.selected{
+		&.selected{
+			> a{
 				background: $custome-secondary;
 				color:$custome-white;
 				i{
 					-webkit-text-stroke-color: #fff;
 				} 
+			}
+		}
+		.secondary-sub{
+			background: #eee;
+			li{
+				a{
+					background: none;
+					border: none;
+					&:hover{
+						background: #ccc;
+						color: $custome-secondary;
+					}
+				}
+			}
 		}
 
 	}

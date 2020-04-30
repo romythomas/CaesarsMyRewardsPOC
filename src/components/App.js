@@ -5,7 +5,7 @@ import SpotLight from './Common/SpotLight';
 import SideNavigation from './Common/SideNavigation';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import MyRewards from './MyRewards';
 import LeaderBoard from './Leaderboard';
 import QuestForRewards from './QuestForRewards';
@@ -13,7 +13,6 @@ import MyOffers from './MyOffers';
 import Reservation from './Reservations';
 import OfferDetails from './MyOffers/OfferDetails'
 import {hideWarning} from '../utilities/Helper'
-
 import {
   LOGIN
 } from '../constants/actionTypes';
@@ -74,7 +73,8 @@ class App extends Component {
             <SpotLight appName={this.props.appName}></SpotLight>
             <div id="sub-content">
               <Switch>
-                <Route exact path="/" component={MyRewards}/>              
+                <Redirect exact from="/" to="myrewards" />
+                <Route exact path="/myrewards" component={MyRewards}/>              
                 <Route exact path="/myoffers" component={MyOffers}/>
                 <Route exact path="/leaderboard" component={LeaderBoard}/>
                 <Route exact path="/badges" component={QuestForRewards}/>
