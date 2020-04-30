@@ -20,7 +20,20 @@ module.exports = {
 		rules:[{
 			test: /\.js$/,
 			exclude: /node_modules/,
-			loader: 'babel-loader'
+			loader: 'babel-loader',
+			options: {
+                presets: [
+                  ['@babel/preset-env', {
+                    debug: true,
+					useBuiltIns: 'usage',
+					"corejs": 3
+                  }],
+                ],
+                plugins: [
+                   '@babel/plugin-proposal-object-rest-spread',
+                   '@babel/plugin-transform-spread'
+                ]
+              }
 		},
 		{
 			test: /\.scss$/,
@@ -51,8 +64,6 @@ module.exports = {
 	]
 	},
 	plugins:[
-		new HWP(
-			{template: path.join(__dirname,'src/index.html')}
-		)
+		new HWP({template: path.join(__dirname,'src/index.html')})
 	]
 }
