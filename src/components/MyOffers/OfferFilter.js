@@ -2,6 +2,7 @@ import React from "react";
 import SelectList from "../Common/SelectList";
 import Textbox from "../Common/Textbox";
 import MultiSelectList from "../Common/MultiSelectList";
+import Autocomplete from "../Common/Autocomplete";
 import MarketPropertySelect from "../Common/MarketPropertySelect";
 import MultiSelectDropdown from "../Common/MultiSelectDropdown";
 import RangeCalendar from "../Common/RangeCalendar";
@@ -48,14 +49,7 @@ const OfferFilter = (props) => {
             <div className="form--search">
                 <ul className="row">
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div className="location-filter">
-                            <MarketPropertySelect
-                                markets={props.markets}
-                                width="100%"
-                                onSelect={props.onLocationChange}
-                                defaultValue = {defaultLocation}
-                            />
-                        </div>
+                        <Autocomplete />
                     </li>
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div className="date-range-filter">

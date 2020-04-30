@@ -1,0 +1,34 @@
+//autocomplete starts here
+.autocomplete {
+	.autocomplete-content[data-toggle="false"] {
+		display : none;
+	}
+	.autocomplete-content[data-toggle="true"] {
+		display : block;
+	}
+	.autocomplete-content {
+		background: #fff;
+		position: absolute;
+		width: 100%;
+		right: 0;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
+		display: none;
+		z-index: 99;
+
+		li.item-bold {
+			font-weight: bold;
+		}
+		li[data-display="false"] { 
+			display : none 
+		}
+		li[data-display="true"] { 
+			display : inherit 
+		}
+		li[data-highlight="false"] {
+			background-color: none;
+		}
+		li[data-highlight="true"] {
+			background-color: grey;
+		}
+	}
+}
