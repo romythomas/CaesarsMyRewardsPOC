@@ -2,37 +2,37 @@ import React from 'react';
 
 const loadScript = () => {
     $(document).ready(function() {
-        var count = 1;
-        var body = document.getElementsByTagName("body")[0];
-        var group = document.getElementById('autocomplete-component');
-        var list_group = group.querySelector('div.autocomplete-content');
-        var list_array = group.querySelectorAll('li.autocomplete__item');
-        var search = group.getElementsByClassName('autocomplete-search')[0];
+        let count = 1;
+        const body = document.getElementsByTagName("body")[0];
+        const autocomplete_component = document.getElementById('autocomplete-component');
+        const autocomplete_content = autocomplete_component.querySelector('div.autocomplete-content');
+        const autocomplete_list_array = autocomplete_component.querySelectorAll('li.autocomplete__item');
+        let autocomplete_text_input = autocomplete_component.getElementsByClassName('autocomplete-search')[0];
         
-        search.addEventListener('input', function (e) {
-            for (var i = 0; i < list_array.length; i++) {
-                matching(list_array[i])
+        autocomplete_text_input.addEventListener('input', function (e) {
+            for (var i = 0; i < autocomplete_list_array.length; i++) {
+                matching(autocomplete_list_array[i])
             }
-            show_list(list_group);
+            show_list(autocomplete_content);
             key_up_down();
         });
         
-        search.addEventListener('click', function (e) {
+        autocomplete_text_input.addEventListener('click', function (e) {
             init_list();
-            show_list(list_group);
+            show_list(autocomplete_content);
             key_up_down();
         });
         
-        search.addEventListener('keypress', function (e) {
+        autocomplete_text_input.addEventListener('keypress', function (e) {
             if (e.keyCode == 13) {
-                e.target.value = list_group.querySelector('[data-highlight="true"]').innerHTML
+                e.target.value = autocomplete_content.querySelector('[data-highlight="true"]').innerHTML
             }
-            hide_list(list_group)
+            hide_list(autocomplete_content)
             init_list();
         });
         
         function matching(item) {
-            var str = new RegExp(search.value, 'gi');
+            var str = new RegExp(autocomplete_text_input.value, 'gi');
             if (item.innerHTML.match(str)) {
                 item.dataset.display = 'true'
             } else {
@@ -44,9 +44,9 @@ const loadScript = () => {
         
         function init_list() {
             count = 0;
-            for (var i = 0; i < list_array.length; i++) {
-                init_item(list_array[i]);
-                list_array[i].addEventListener('click', copy_paste);
+            for (var i = 0; i < autocomplete_list_array.length; i++) {
+                init_item(autocomplete_list_array[i]);
+                autocomplete_list_array[i].addEventListener('click', copy_paste);
             }
         }
         
@@ -56,10 +56,10 @@ const loadScript = () => {
         }
         
         function copy_paste() {
-            search.value = this.innerHTML;
+            autocomplete_text_input.value = this.innerHTML;
             // todo : check match of list text and input value for .current 
             init_list();
-            hide_list(list_group);
+            hide_list(autocomplete_content);
         }
         
         function hide_list(ele) {
@@ -71,39 +71,39 @@ const loadScript = () => {
         }
         
         function key_up_down() {
-            var items = group.querySelectorAll('li.autocomplete__item[data-display="true"]')
-            var last = items[items.length - 1];
-            var first = items[0];
+            let items = autocomplete_component.querySelectorAll('li.autocomplete__item[data-display="true"]')
+            let last = items[items.length - 1];
+            let first = items[0];
             
-            search.onkeydown = function (e) {
+            autocomplete_text_input.onkeydown = function (e) {
                 if (e.keyCode === 38) {
-                count--;
-                count = count <= 0 ? items.length : count;
-                items[count - 1].dataset.highlight = items[count - 1] ? 'true' : 'false';
-                if (items[count]) {
-                    items[count].dataset.highlight = 'false';
-                }
-                else {
-                    first.dataset.highlight = 'false';
-                }
+                    count--;
+                    count = count <= 0 ? items.length : count;
+                    items[count - 1].dataset.highlight = items[count - 1] ? 'true' : 'false';
+                    if (items[count]) {
+                        items[count].dataset.highlight = 'false';
+                    }
+                    else {
+                        first.dataset.highlight = 'false';
+                    }
                 } 
                 
                 if (e.keyCode === 40) {
-                items[count].dataset.highlight = items[count] ? 'true' : 'false';
-                if (items[count - 1]) {
-                    items[count - 1].dataset.highlight = 'false';
-                }
-                else {
-                    last.dataset.highlight = 'false';
-                }
-                count++;
-                count = count >= items.length ? 0 : count;
+                    items[count].dataset.highlight = items[count] ? 'true' : 'false';
+                    if (items[count - 1]) {
+                        items[count - 1].dataset.highlight = 'false';
+                    }
+                    else {
+                        last.dataset.highlight = 'false';
+                    }
+                    count++;
+                    count = count >= items.length ? 0 : count;
                 }
             };
         }
-        group.addEventListener('mouseleave', function(event){
-            if (event.target != list_group && event.target.parentNode != list_group){
-                list_group.dataset.toggle = 'false'
+        autocomplete_component.addEventListener('mouseleave', function(event){
+            if (event.target != autocomplete_content && event.target.parentNode != autocomplete_content){
+                autocomplete_content.dataset.toggle = 'false'
             }
         });
     });
