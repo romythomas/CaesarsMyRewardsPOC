@@ -156,3 +156,19 @@ export const getFavouriteImage = (pref) => {
     }
     return imageUrl;
 }
+
+/**
+ *  * @param  {...any} warnings 
+ *  hide componentWillMount, componentWillUpdate, componentWillReceiveProps warnings
+ */
+export const hideWarning = (...warnings) =>{
+    const warn = console.warn;
+    let showWarning = true;
+    warnings.forEach(warning => {
+      if(warning.includes("componentWillReceiveProps"))    showWarning = false;
+      else if(warning.includes("componentWillMount"))  showWarning = false;
+      else if(warning.includes("componentWillUpdate"))   showWarning = false;
+    });
+    if(showWarning) warn(...warnings);
+    console.warn  = hideWarning;
+}

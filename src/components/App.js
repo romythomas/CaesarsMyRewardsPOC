@@ -6,14 +6,13 @@ import SideNavigation from './Common/SideNavigation';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
-import { store } from '../store';
-import { push } from 'react-router-redux';
 import MyRewards from './MyRewards';
 import LeaderBoard from './Leaderboard';
 import QuestForRewards from './QuestForRewards';
 import MyOffers from './MyOffers';
 import Reservation from './Reservations';
 import OfferDetails from './MyOffers/OfferDetails'
+import {hideWarning} from '../utilities/Helper'
 
 import {
   LOGIN
@@ -37,6 +36,8 @@ const mapDispatchToProps = dispatch => ({
   onLogin: payload =>
     dispatch({ type: LOGIN, payload })
 });
+
+hideWarning();
 
 const loadScript = () => {
   $(document).ready(function () {
