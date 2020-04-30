@@ -9,7 +9,7 @@ const Textbox = (props) => {
     }
 
     return(
-        <div className="txtbox txtbox-wrap">
+        <div className="txt-wrap">
             <input 
                 className="form-control txt" 
                 type="text" 

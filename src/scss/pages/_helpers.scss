@@ -199,10 +199,6 @@ a{
 	color:#000;
 }
 
-a:hover{
-	
-}
-
 *:focus{
 	outline:none;
 }
@@ -288,54 +284,48 @@ select:-webkit-autofill:focus {
 	background-color:#fff !important;
 }
 
-.txt, .select, input[type=text], input[type="date"], input[type="time"], input[type="password"]{
-	border:none;
-	border:#757575 solid 1px;
-	height:30px;
-	padding:5px 10px;
-	color:$custome-primary;
-	width:100%;
-	font-size:$primary-fontsize;
-	border-radius:0;
-}
-
-input[type="date"]::-webkit-clear-button, input[type="date"]::-webkit-inner-spin-button {
-    display: none;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-    opacity:0;
-}
-
-.date-wrap{
-	position:relative;
-	&:before{
+.select-wrap {
+	position: relative;
+	&:after {
 		@include fontawesome;
-		content: "\f073";
-		color:$custome-primary;
-		right:10px;
-		top:4px;
+		right: 14px;
+		top: 3px;
+		content: "\f107";
+		font-size: 25px;
+		color: #8f9296;
 		pointer-events: none;
 	}
 }
 
-.select-wrap{
-	position:relative;
-	&:before{
-		@include fontawesome;
-		content: "\f107";
-		right:10px;
-		top:5px;
-		color:$custome-primary;
-		font-weight:700;
-		font-size:13px;
-	}
-	select{
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-	}
+.txt-wrap {
+	position: relative;
+}
 
+.txt{
+	height: 44px;
+	border-radius: 4px;
+	padding-top: 15px;
+	font-size: 14px;
+	color: $custome-black;
+}
+.txt:focus + .form-control-placeholder,
+.txt:valid + .form-control-placeholder {
+	font-size: 10px;
+	transform: translate3d(0, -30%, 0);
+	opacity: 1;
+	color: #666;
+}
+.txt:focus{
+	border: #000 solid 1px;
+	border-radius: 4px 4px 0px 0px;
+	border-bottom-width: 2px;
+}
+.form-control-placeholder {
+	position: absolute;
+	top: 0;
+	padding: 10px 0 0 13px;
+	transition: all 200ms;
+	opacity: 0.5;
 }
 
 .checkbox-custom, .radio-custom {
