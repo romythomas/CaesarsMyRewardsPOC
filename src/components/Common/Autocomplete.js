@@ -131,11 +131,11 @@ const Autocomplete = (props) => {
             <div className="autocomplete__list">
                 <ul>
                 {value.map((item, index) => {
-                    const boldClass = index === 0 ? "item-bold" : "";
+                    const itemClass = index === 0 ? "autocomplete__item item-bold" : "autocomplete__item";
                     return (
                     <li
                         key={index}
-                        className={"autocomplete__item", boldClass}
+                        className={itemClass}
                         data-display="true"
                         data-highlight="false"
                     >
