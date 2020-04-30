@@ -2,18 +2,18 @@ import React from 'react';
 
 const loadScript = () => {
     $(document).ready(function(){
-        $('.dropdown > span').on('click touch', function(e) {
+        $('.selectList.dropdown > span').on('click touch', function(e) {
             e.preventDefault();
             const $self = $(this).parent();
             $self.toggleClass('open');
         });
         $(document).on('click touch', 'body', function(e) {
-            const $dropdown = $('.dropdown');
+            const $dropdown = $('.selectList.dropdown');
             if($dropdown !== e.target && !$dropdown.has(e.target).length) {
                 $dropdown.removeClass('open');
             }
         });
-        $('.selectDropdown ul li a').on('click touch', function(e) {
+        $('.selectList.selectDropdown ul li a').on('click touch', function(e) {
             e.preventDefault();
             const $this = $(this);
             const $parent = $this.parent();
@@ -42,7 +42,7 @@ const SelectList = (props) => {
         loadScript();
         let valueToDisplay = defaultValue;
         return(
-            <div className="dropdown selectDropdown filled">
+            <div className="selectList dropdown selectDropdown filled">
                 <ul>
                     {dataList.map((data, index) => {
                         let isSelected = false;
