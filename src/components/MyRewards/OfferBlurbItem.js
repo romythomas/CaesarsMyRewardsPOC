@@ -45,12 +45,8 @@ const OfferBlurbItem = (props) => {
                 <span className="rate">&nbsp;</span>                
             </div>
             <div className="btn-wrap-double">   
-            <button className="button">      
-                <Link to={`/offerdetails/${offers.id}`}> View Offer</Link>   
-            </button>    
-            <button className="button button-outline" > 
-                <Link to={`/myoffers`}> View All</Link>  
-            </button>
+                <Link className="button" to={`/offerdetails/${offers.id}`}> View Offer</Link>   
+                <Link className="button button-outline" to={`/myoffers`}> View All</Link>  
             </div>
         </div>
     );

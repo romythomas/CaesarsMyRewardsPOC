@@ -14,21 +14,8 @@
 			flex-wrap: wrap;
 		}
 		>li{
-			margin-right: 10px;
 			width: 100%;
-			@include break-point(1299px){
-				width: 80%;
-			}
-			@include break-point(1199px){
-				width: 60%;
-			}
-			@include break-point(1023px){
-				width: 48%;
-				margin-bottom: 10px;
-			}
-			@include break-point(767px){
-				width: 100%;
-			}
+			margin-bottom: 10px;
 		}
 	}
 	.button{

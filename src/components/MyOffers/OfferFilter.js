@@ -46,8 +46,8 @@ const OfferFilter = (props) => {
                 </div>
             </div>
             <div className="form--search">
-                <ul>
-                    <li>
+                <ul className="row">
+                    <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div className="location-filter">
                             <MarketPropertySelect
                                 markets={props.markets}
@@ -57,7 +57,7 @@ const OfferFilter = (props) => {
                             />
                         </div>
                     </li>
-                    <li>
+                    <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div className="date-range-filter">
                             <RangeCalendar 
                                 width="100%"
@@ -66,7 +66,7 @@ const OfferFilter = (props) => {
                             />
                         </div>
                     </li>
-                    <li>
+                    <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <MultiSelectList 
                             dataList={offerTypes} 
                             title="Offer Types" 
@@ -74,7 +74,7 @@ const OfferFilter = (props) => {
                             defaultValue = {defaultType} 
                             onChange={props.onOfferTypeChange} />
                     </li>
-                    <li>
+                    <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <Textbox 
                             textboxId = "offerCodeSearch"
                             defaultValue = {defaultOfferCode}

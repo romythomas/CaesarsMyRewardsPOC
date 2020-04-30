@@ -1,12 +1,17 @@
 //listing  starts here
 .listing{
-	.listing-wrap{
-		margin: 0 7px;
-		margin-bottom: 40px;
+	.listing-wrap{	
+		margin: 0 0 20px;
+		background: #fff;
+		padding: 5px;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px;
 	}
 	.listing__img{
 		position: relative;
 		margin-bottom: 20px;
+		@include break-point(767px){
+			margin-bottom: 10px;
+		}
 		.thumb{
 			width: 100%;
 		}
@@ -56,9 +61,13 @@
 			color: #666;
 			display: block;
 			margin-bottom: 20px;
+			@include break-point(767px){
+				margin-bottom: 10px;
+			}
 		}
 		.button{
 			width: 100%;
+			display: block;
 		}
 	}
 }

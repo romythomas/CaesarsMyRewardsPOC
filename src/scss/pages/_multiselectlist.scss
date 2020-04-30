@@ -4,7 +4,7 @@
 	.multiselectlist-content{
 		background: $custome-white;
 		position: absolute;
-		width: 100%;
+		width: 450px;
 		right: 0;
 		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
 		display: none;
@@ -23,9 +23,18 @@
 				display: block;
 			}
 			li{
+				display: flex;
+				flex-wrap: wrap;
 				@include break-point(991px){
+					display: block;
 					margin-bottom: 30px;
 					margin-right: 10px;
+				}
+				.multiselectlist__item {
+					width: 33.33%;
+					@include break-point(991px){
+						width: 100%;
+					}
 				}
 			}
 			h6{
