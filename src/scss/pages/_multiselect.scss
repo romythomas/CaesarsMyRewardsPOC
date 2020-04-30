@@ -1,22 +1,23 @@
-//filter starts here
-.filter{
+//multiselect starts here
+.multiselect{
 	position: relative;
-	.filter-wrap{
-		.filter__text{
-			position: relative;
-			padding: 0 10px 0 25px;
-			&:before{
-				position: absolute;
-				content: "";
-				background: url(/images/sprite.png) no-repeat -7px -6px;
-				width: 15px;
-				height: 10px;
-				top: 5px;
-				left: 0;
-			}
+	.multiselect-wrap{
+		.txt{ 
+			height: 44px;
+			border-radius: 4px;
+			padding-top: 15px;
+			font-size: 14px;
+			color: $custome-black;
+		}
+		.form-control-placeholder {
+			position: absolute;
+			top: 0;
+			padding: 10px 0 0 13px;
+			transition: all 200ms;
+			opacity: 0.5;
 		}
 	}
-	.filter-content{
+	.multiselect-content{
 		background: $custome-white;
 		position: absolute;
 		width: 335px;
@@ -48,7 +49,7 @@
 				margin: 0 0 15px 0;
 			}
 		}
-		.filter__btn{
+		.multiselect__btn{
 			background: #f1f1f6;
 			padding: 10px;
 			text-align: right;

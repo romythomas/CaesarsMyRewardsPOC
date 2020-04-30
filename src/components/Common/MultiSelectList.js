@@ -2,27 +2,27 @@ import React from 'react';
 
 const loadScript = () => {
     $(document).ready(function(){
-        $('.filter-wrap').on('click touch', function(e) {
+        $('.multiselect-wrap').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            $(".filter-content").toggle();
+            $(".multiselect-content").toggle();
         });
         $('.close').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            $(".filter-content").hide();
+            $(".multiselect-content").hide();
         });
-        $(document).on('click', '.filter-content', function(e) {
+        $(document).on('click', '.multiselect-content', function(e) {
             e.stopPropagation();       
         });
         $(document).on('click', 'body', function(e) {
-            $('.filter-content').hide();
+            $('.multiselect-content').hide();
         });
     });
 }
 
 const updateTextboxValue = (selectedValues) => {
-    $(".filter").find(".filter-wrap").find("input:text").val(selectedValues.join(","));
+    $(".multiselect").find(".multiselect-wrap").find("input:text").val(selectedValues.join(","));
 }
 
 const MultiSelectList = (props) => {
@@ -45,20 +45,20 @@ const MultiSelectList = (props) => {
     if(dataList && dataList.length) {
         loadScript();
         return(
-            <div className="filter">
-                <div className="txt-wrap filter-wrap">
+            <div className="multiselect">
+                <div className="txt-wrap multiselect-wrap">
                     <input className="form-control txt" type="text" id={selectId} defaultValue={selectedValues.join(",")} required />
                     <label className="form-control-placeholder" htmlFor={selectId}>{title}</label>
                 </div>
-                <div className="filter-content">
+                <div className="multiselect-content">
                     <span className="close"></span>
-                    <div className="filter__list">
+                    <div className="multiselect__list">
                         <ul>
                             <li>
                                 {dataList.map((data, index) => {
                                     let isChecked = isDefaultValueAvailable ? defaultValue.includes(data) : false;
                                     return(
-                                        <div key={index} className="filter__item">
+                                        <div key={index} className="multiselect__item">
                                             <input 
                                                 id={selectId + "-chk-" + index} 
                                                 onChange={onChange} 
