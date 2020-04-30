@@ -18,6 +18,18 @@
 			font-size: 14px;
 			color: $custome-black;
 		}
+		.txt:focus + .form-control-placeholder,
+		.txt:valid + .form-control-placeholder {
+			font-size: 10px;
+			transform: translate3d(0, -30%, 0);
+			opacity: 1;
+			color: #666;
+		}
+		.txt:focus{
+			border: #000 solid 1px;
+			border-radius: 4px 4px 0px 0px;
+			border-bottom-width: 2px;
+		}
 		.form-control-placeholder {
 			position: absolute;
 			top: 0;
