@@ -4,7 +4,7 @@
 	.multiselectlist-content{
 		background: $custome-white;
 		position: absolute;
-		width: 335px;
+		width: 100%;
 		right: 0;
 		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
 		display: none;
@@ -18,12 +18,11 @@
 		}
 		ul{
 			display: flex;
-			margin:30px 30px 40px 30px;
+			margin:30px 15px;
 			@include break-point(991px){
 				display: block;
 			}
 			li{
-				margin-right: 60px;
 				@include break-point(991px){
 					margin-bottom: 30px;
 					margin-right: 10px;
