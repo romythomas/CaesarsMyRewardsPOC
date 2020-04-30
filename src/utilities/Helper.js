@@ -3,7 +3,7 @@
  * @param {*} code 
  */
 export const getTierName = (code) => {
-    var tiername = '';
+    let tiername = '';
     if(code){
         switch(code){
                 case 'GLD':
@@ -135,4 +135,24 @@ export const getPropertiesOfMarket = (markets, code) => {
  */
 export const truncate = (source, size) => {
     return source.length > size ? source.slice(0, size - 1) + "…" : source;
+}
+
+/**
+ * 
+ * @param {*} pref 
+ */
+export const getFavouriteImage = (pref) => {
+    let imageUrl='';
+    if(pref){
+        switch(pref){
+            case 'F':
+                imageUrl = '../images/favorate-red.png';
+                break;
+            case 'N':                
+            case 'V':               
+                imageUrl = '../images/favorate-icon.png';
+                break;
+        }
+    }
+    return imageUrl;
 }
