@@ -46,7 +46,7 @@ const MultiSelectList = (props) => {
         loadScript();
         return(
             <div className="filter">
-                <div className="filter-wrap">
+                <div className="txt-wrap filter-wrap">
                     <input className="form-control txt" type="text" id={selectId} defaultValue={selectedValues.join(",")} required />
                     <label className="form-control-placeholder" htmlFor={selectId}>{title}</label>
                 </div>
