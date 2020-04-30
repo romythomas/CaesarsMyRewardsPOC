@@ -2,6 +2,15 @@
 .multiselect{
 	position: relative;
 	.multiselect-wrap{
+		&:after{
+			@include fontawesome;
+			right: 14px;
+			top: 3px;
+			content: "\f107";
+			font-size: 25px;
+			color: #8f9296;
+			pointer-events: none;
+		}
 		.txt{ 
 			height: 44px;
 			border-radius: 4px;
