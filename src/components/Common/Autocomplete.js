@@ -101,9 +101,13 @@ const loadScript = () => {
                 }
             };
         }
-        autocomplete_component.addEventListener('mouseleave', function(event){
-            if (event.target != autocomplete_content && event.target.parentNode != autocomplete_content){
-                autocomplete_content.dataset.toggle = 'false'
+        $(document).on('click', 'body', function(event) {
+            if(event) {
+                const {target} = event;
+                const targetClassName = (target.className) ? "." + target.className : "";
+                if(targetClassName !== "autocomplete" && $(autocomplete_component).find(target).length <= 0) {
+                    autocomplete_content.dataset.toggle = 'false'
+                }
             }
         });
     });
@@ -116,20 +120,20 @@ const Autocomplete = (props) => {
     return (
         <div className="autocomplete" id="autocomplete-component">
             <div className="select-wrap">
-            <input
-                className="form-control txt autocomplete-search"
-                type="text"
-                id={selectId}
-                required
-            />
-            <label className="form-control-placeholder" htmlFor={selectId}>
-                {title}
-            </label>
+                <input
+                    className="form-control txt autocomplete-search"
+                    type="text"
+                    id={selectId}
+                    required
+                />
+                <label className="form-control-placeholder" htmlFor={selectId}>
+                    {title}
+                </label>
             </div>
             <div className="autocomplete-content" data-toggle="false">
             <span className="close"></span>
             <div className="autocomplete__list">
-                <ul>
+                <ul className="autocomplete__listwrap">
                 {value.map((item, index) => {
                     const itemClass = index === 0 ? "autocomplete__item item-bold" : "autocomplete__item";
                     return (
