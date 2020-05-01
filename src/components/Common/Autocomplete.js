@@ -3,7 +3,6 @@ import React from 'react';
 const loadScript = () => {
     $(document).ready(function() {
         let count = 1;
-        const body = document.getElementsByTagName("body")[0];
         const autocomplete_component = document.getElementById('autocomplete-component');
         const autocomplete_content = autocomplete_component.querySelector('div.autocomplete-content');
         const autocomplete_list_array = autocomplete_component.querySelectorAll('li.autocomplete__item');
@@ -114,7 +113,24 @@ const loadScript = () => {
 }
 
 const Autocomplete = (props) => {
-    const value = ["one", "two", "three"];
+    const value = [
+        {
+            text: "one",
+            code: "odd"
+        },
+        {
+            text: "two",
+            code: "even"
+        },
+        {
+            text: "three",
+            code: "odd"
+        },
+        {
+            text: "four",
+            code: "even"
+        }
+    ];
     const selectId = "location", title = "Where do you want to go?";
     loadScript(); 
     return (
@@ -140,10 +156,11 @@ const Autocomplete = (props) => {
                     <li
                         key={index}
                         className={itemClass}
+                        data-content={item.code}
                         data-display="true"
                         data-highlight="false"
                     >
-                        {item}
+                        {item.text}
                     </li>
                     );
                 })}
