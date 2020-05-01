@@ -65,7 +65,7 @@ class MyOffers extends Component {
         }
 
         this.onLocationChange = value => {
-            const locationValue = value && value.propertyCode ? value.propertyCode : null;
+            const locationValue = value ? value : null;
             this.filterOffers("location", locationValue);
         }
 

@@ -113,62 +113,55 @@ const loadScript = () => {
 }
 
 const Autocomplete = (props) => {
-    const value = [
-        {
-            text: "one",
-            code: "odd"
-        },
-        {
-            text: "two",
-            code: "even"
-        },
-        {
-            text: "three",
-            code: "odd"
-        },
-        {
-            text: "four",
-            code: "even"
+    const {dataList, elementid, title} = props;
+    const onClick = (value) =>{
+        if(value && value.target && value.target.dataset && value.target.dataset.value) {
+            if(props.onChange) {
+                props.onChange(value.target.dataset.value);
+            }
         }
-    ];
-    const selectId = "location", title = "Where do you want to go?";
-    loadScript(); 
-    return (
-        <div className="autocomplete" id="autocomplete-component">
-            <div className="select-wrap">
-                <input
-                    className="form-control txt autocomplete-search"
-                    type="text"
-                    id={selectId}
-                    required
-                />
-                <label className="form-control-placeholder" htmlFor={selectId}>
-                    {title}
-                </label>
+    }
+    if(dataList && dataList.length) {
+        loadScript(); 
+        return (
+            <div className="autocomplete" id="autocomplete-component">
+                <div className="select-wrap">
+                    <input
+                        className="form-control txt autocomplete-search"
+                        type="text"
+                        id={elementid}
+                        required
+                    />
+                    <label className="form-control-placeholder" htmlFor={elementid}>
+                        {title}
+                    </label>
+                </div>
+                <div className="autocomplete-content" data-toggle="false">
+                <span className="close"></span>
+                <div className="autocomplete__list">
+                    <ul className="autocomplete__listwrap">
+                    {dataList.map((item, index) => {
+                        const stylingClass = item.isStylingRequired ? "highlight" : "";
+                        return (
+                            <li
+                                key={index}
+                                className={"autocomplete__item " + stylingClass}
+                                data-searchcontent={item.searchdata}
+                                data-display="true"
+                                data-value={item.value}
+                                data-highlight="false"
+                                onClick={onClick}
+                            >
+                                {item.display}
+                            </li>
+                        );
+                    })}
+                    </ul>
+                </div>
+                </div>
             </div>
-            <div className="autocomplete-content" data-toggle="false">
-            <span className="close"></span>
-            <div className="autocomplete__list">
-                <ul className="autocomplete__listwrap">
-                {value.map((item, index) => {
-                    const itemClass = index === 0 ? "autocomplete__item item-bold" : "autocomplete__item";
-                    return (
-                    <li
-                        key={index}
-                        className={itemClass}
-                        data-searchcontent={item.code}
-                        data-display="true"
-                        data-highlight="false"
-                    >
-                        {item.text}
-                    </li>
-                    );
-                })}
-                </ul>
-            </div>
-            </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Autocomplete;

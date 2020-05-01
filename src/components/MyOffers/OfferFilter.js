@@ -3,8 +3,6 @@ import SelectList from "../Common/SelectList";
 import Textbox from "../Common/Textbox";
 import MultiSelectList from "../Common/MultiSelectList";
 import Autocomplete from "../Common/Autocomplete";
-import MarketPropertySelect from "../Common/MarketPropertySelect";
-import MultiSelectDropdown from "../Common/MultiSelectDropdown";
 import RangeCalendar from "../Common/RangeCalendar";
 import {getOfferFilterTypes, getOfferSortTypes} from "../../constants/configs";
 
@@ -13,7 +11,7 @@ const OfferFilter = (props) => {
     const offerTypes = getOfferFilterTypes();
     const offerSortTypes = getOfferSortTypes();
 
-    const {defaultSort,defaultFilter} = props;
+    const {defaultSort,defaultFilter, markets} = props;
     let defaultDateRange = "", defaultLocation = "", defaultType = "", defaultOfferCode = "";
     if(defaultFilter && defaultFilter.length) {
         defaultFilter.map((filter) => {
@@ -35,6 +33,34 @@ const OfferFilter = (props) => {
             }
         });
     }
+
+    let marketPropertyListData = [];
+    markets.map((market) => {
+        const marketName = market.Name;
+        let propertyListNames = "";
+        let parentLocation = "";
+        parentLocation += market.ParentLocation ? market.ParentLocation.Code + " , " + market.ParentLocation.Name : "";
+        parentLocation += market.ParentLocation && market.ParentLocation.ParentLocation ? " , " + market.ParentLocation.ParentLocation.Code + " , " + market.ParentLocation.ParentLocation.Name : "";
+        const propertyList = [];
+        market.Properties.map((property) => {
+            const propertyName = property.Name;
+            propertyListNames = propertyListNames + " , " + propertyName;
+            propertyList.push({
+                display: propertyName,
+                value: property.Code,
+                isStylingRequired: false,
+                searchdata: marketName + " , " + propertyName + " , " + parentLocation
+            });
+        });
+        marketPropertyListData.push({
+            display: marketName,
+            value: market.Code,
+            isStylingRequired: true,
+            searchdata: marketName + " , " + propertyListNames + " , " + parentLocation
+        });
+        marketPropertyListData = [...marketPropertyListData, ...propertyList]
+    });
+
     return (
         <div>
             <div className="title">
@@ -49,7 +75,11 @@ const OfferFilter = (props) => {
             <div className="form--search">
                 <ul className="row">
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <Autocomplete />
+                        <Autocomplete 
+                            dataList={marketPropertyListData} 
+                            elementid="market-property" 
+                            title="Where do you want to go?" 
+                            onChange={props.onLocationChange} />
                     </li>
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div className="date-range-filter">
