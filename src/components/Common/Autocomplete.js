@@ -26,7 +26,7 @@ const loadScript = () => {
             if (e.keyCode == 13) {
                 const highlightedElement = autocomplete_content.querySelector('[data-highlight="true"]');
                 set_selected(highlightedElement);
-                e.target.value = highlightedElement.innerHTML
+                e.target.value = highlightedElement.querySelector('span').innerHTML
             }
             hide_list(autocomplete_content)
             init_list();
@@ -58,7 +58,7 @@ const loadScript = () => {
         
         function copy_paste() {
             set_selected(this);
-            autocomplete_text_input.value = this.innerHTML;
+            autocomplete_text_input.value = this.querySelector('span').innerHTML;
             // todo : check match of list text and input value for .current 
             init_list();
             hide_list(autocomplete_content);
@@ -179,7 +179,7 @@ const Autocomplete = (props) => {
                                 data-highlight="false"
                                 onClick={onClick}
                             >
-                                {item.display}
+                                <span className="autocomplete__itemname">{item.display}</span>
                             </li>
                         );
                     })}

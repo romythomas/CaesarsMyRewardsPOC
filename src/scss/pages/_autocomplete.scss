@@ -1,5 +1,11 @@
 //autocomplete starts here
 .autocomplete {
+	.form-control-placeholder, .form-control.txt {
+		cursor: default;
+	}
+	.form-control.txt:focus {
+		cursor: text;
+	}
 	.autocomplete-content[data-toggle="false"] {
 		display : none;
 	}
@@ -14,9 +20,25 @@
 		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
 		display: none;
 		z-index: 99;
-
+		cursor: pointer;
+		.autocomplete__list {
+			padding: 10px 0px;
+		}
+		li {
+			padding-left: 20px;
+			height: 35px;
+			span{
+				margin-left: 20px;
+			}
+		}
+		li:hover {
+			background-color: rgb(241, 241, 246);
+		}
 		li.highlight {
-			font-weight: bold;
+			span{
+				margin-left: 0px;
+				text-transform: uppercase;
+			}
 		}
 		li[data-display="false"] { 
 			display : none 
@@ -28,10 +50,10 @@
 			background-color: none;
 		}
 		li[data-highlight="true"] {
-			background-color: grey;
+			background-color: rgb(241, 241, 246);;
 		}
 		li[data-selected="true"] {
-			background-color: red;
+			font-weight: bold;
 		}
 	}
 }
