@@ -79,6 +79,7 @@ const OfferFilter = (props) => {
                             dataList={marketPropertyListData} 
                             elementId="market-property" 
                             title="Where do you want to go?" 
+                            defaultValue={defaultLocation} 
                             onChange={props.onLocationChange} />
                     </li>
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">

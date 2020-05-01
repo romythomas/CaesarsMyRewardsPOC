@@ -126,7 +126,8 @@ const loadScript = () => {
 }
 
 const Autocomplete = (props) => {
-    const {dataList, elementId, title} = props;
+    const {dataList, elementId, title, defaultValue} = props;
+    let dafaultDataDisplay = "", defaultDataValue = "";
     const onClick = (value) =>{
         if(value && value.target && value.target.dataset && value.target.dataset.value) {
             if(props.onChange) {
@@ -135,6 +136,16 @@ const Autocomplete = (props) => {
         }
     }
     if(dataList && dataList.length) {
+        if(defaultValue) {
+            const dafaultData = dataList.find((data) => {
+                return data.value.toUpperCase() === defaultValue.toUpperCase();
+            });
+            if(dafaultData) {
+                dafaultDataDisplay = dafaultData.display;
+                defaultDataValue = dafaultData.value;
+            }
+
+        }
         loadScript(); 
         return (
             <div className="autocomplete" id="autocomplete-component">
@@ -142,6 +153,7 @@ const Autocomplete = (props) => {
                     <input
                         className="form-control txt autocomplete-search"
                         type="text"
+                        defaultValue={dafaultDataDisplay}
                         id={elementId}
                         required
                     />
@@ -155,12 +167,13 @@ const Autocomplete = (props) => {
                     <ul className="autocomplete__listwrap">
                     {dataList.map((item, index) => {
                         const stylingClass = item.isStylingRequired ? "highlight" : "";
+                        const isSelected = item.value.toUpperCase() === defaultDataValue.toUpperCase();
                         return (
                             <li
                                 key={index}
                                 className={"autocomplete__item " + stylingClass}
                                 data-searchcontent={item.searchdata}
-                                data-selected="false"
+                                data-selected={isSelected.toString()}
                                 data-display="true"
                                 data-value={item.value}
                                 data-highlight="false"
