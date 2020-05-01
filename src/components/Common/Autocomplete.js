@@ -9,7 +9,7 @@ const loadScript = () => {
         let autocomplete_text_input = autocomplete_component.getElementsByClassName('autocomplete-search')[0];
         
         autocomplete_text_input.addEventListener('input', function (e) {
-            for (var i = 0; i < autocomplete_list_array.length; i++) {
+            for (let i = 0; i < autocomplete_list_array.length; i++) {
                 matching(autocomplete_list_array[i])
             }
             show_list(autocomplete_content);
@@ -24,14 +24,16 @@ const loadScript = () => {
         
         autocomplete_text_input.addEventListener('keypress', function (e) {
             if (e.keyCode == 13) {
-                e.target.value = autocomplete_content.querySelector('[data-highlight="true"]').innerHTML
+                const highlightedElement = autocomplete_content.querySelector('[data-highlight="true"]');
+                set_selected(highlightedElement);
+                e.target.value = highlightedElement.innerHTML
             }
             hide_list(autocomplete_content)
             init_list();
         });
         
         function matching(item) {
-            var str = new RegExp(autocomplete_text_input.value, 'gi');
+            let str = new RegExp(autocomplete_text_input.value, 'gi');
             if (item.dataset.searchcontent.match(str)) {
                 item.dataset.display = 'true'
             } else {
@@ -43,7 +45,7 @@ const loadScript = () => {
         
         function init_list() {
             count = 0;
-            for (var i = 0; i < autocomplete_list_array.length; i++) {
+            for (let i = 0; i < autocomplete_list_array.length; i++) {
                 init_item(autocomplete_list_array[i]);
                 autocomplete_list_array[i].addEventListener('click', copy_paste);
             }
@@ -55,10 +57,21 @@ const loadScript = () => {
         }
         
         function copy_paste() {
+            set_selected(this);
             autocomplete_text_input.value = this.innerHTML;
             // todo : check match of list text and input value for .current 
             init_list();
             hide_list(autocomplete_content);
+        }
+
+        function set_selected(item) {
+            const selectedElements = autocomplete_component.querySelectorAll('li.autocomplete__item[data-selected="true"]');
+            if(selectedElements && selectedElements.length) {
+                for (let i = 0; i < selectedElements.length; i++) {
+                    selectedElements[i].dataset.selected = 'false';
+                }
+            }
+            item.dataset.selected = 'true';
         }
         
         function hide_list(ele) {
@@ -70,7 +83,7 @@ const loadScript = () => {
         }
         
         function key_up_down() {
-            let items = autocomplete_component.querySelectorAll('li.autocomplete__item[data-display="true"]')
+            let items = autocomplete_component.querySelectorAll('li.autocomplete__item[data-display="true"]');
             let last = items[items.length - 1];
             let first = items[0];
             
@@ -147,6 +160,7 @@ const Autocomplete = (props) => {
                                 key={index}
                                 className={"autocomplete__item " + stylingClass}
                                 data-searchcontent={item.searchdata}
+                                data-selected="false"
                                 data-display="true"
                                 data-value={item.value}
                                 data-highlight="false"

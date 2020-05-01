@@ -30,5 +30,8 @@
 		li[data-highlight="true"] {
 			background-color: grey;
 		}
+		li[data-selected="true"] {
+			background-color: red;
+		}
 	}
 }
