@@ -6,6 +6,9 @@ const loadScript = () => {
             e.preventDefault();
             $(".multiselectlist-content").toggle();
         });
+        $('.multiselectlist-wrap .txt').keypress(function(e) {
+            return false;
+        });
         $('.close').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();

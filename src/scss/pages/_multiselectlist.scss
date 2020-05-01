@@ -1,6 +1,14 @@
 //multiselectlist starts here
 .multiselectlist{
 	position: relative;
+	.form-control-placeholder, .form-control.txt {
+		cursor: pointer;
+		color: transparent;
+		text-shadow: 0 0 0 #000;
+		&:focus {
+			outline: none;
+		}
+	}
 	.multiselectlist-content{
 		background: $custome-white;
 		position: absolute;
