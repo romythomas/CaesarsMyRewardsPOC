@@ -113,7 +113,7 @@ const loadScript = () => {
 }
 
 const Autocomplete = (props) => {
-    const {dataList, elementid, title} = props;
+    const {dataList, elementId, title} = props;
     const onClick = (value) =>{
         if(value && value.target && value.target.dataset && value.target.dataset.value) {
             if(props.onChange) {
@@ -129,10 +129,10 @@ const Autocomplete = (props) => {
                     <input
                         className="form-control txt autocomplete-search"
                         type="text"
-                        id={elementid}
+                        id={elementId}
                         required
                     />
-                    <label className="form-control-placeholder" htmlFor={elementid}>
+                    <label className="form-control-placeholder" htmlFor={elementId}>
                         {title}
                     </label>
                 </div>
