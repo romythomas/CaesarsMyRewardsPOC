@@ -130,10 +130,29 @@ class MyOffers extends Component {
                     });
                 }
                 if(propcode || regioncode) {
-                    const locationCode = propcode ? propcode : (regioncode ? regioncode : "");
+                    const {markets} = this.props;
+                    let locationIndex = -1;
+                    let locationCode = "";
+                    if(regioncode) {
+                        locationIndex = markets.findIndex((market) => { 
+                            return regioncode.toUpperCase() === market.Code.toUpperCase(); 
+                        });
+                        if(locationIndex >= 0) {
+                            locationCode = regioncode.toUpperCase();
+                        }
+                    } else {
+                        locationIndex = markets.findIndex((market) => { 
+                            return (market.Properties.findIndex((property) => { 
+                                return propcode.toUpperCase() === property.Code.toUpperCase(); 
+                            }) >= 0);
+                        });
+                        if(locationIndex >= 0) {
+                            locationCode = propcode.toUpperCase();
+                        }
+                    }
                     selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
                         filterType: "location",
-                        filterValue: locationCode.toUpperCase() 
+                        filterValue: locationCode 
                     });
                 }
                 if(type) {
