@@ -9,7 +9,7 @@ const loadScript = () => {
         $('.multiselectlist-wrap .txt').keypress(function(e) {
             return false;
         });
-        $('.close').on('click touch', function(e) {
+        $('.multiselectlist-content .close').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
             $(".multiselectlist-content").hide();
@@ -60,6 +60,7 @@ const MultiSelectList = (props) => {
     }
     if(dataList && dataList.length) {
         loadScript();
+        //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
         return(
             <div className="multiselectlist">
                 <div className="select-wrap multiselectlist-wrap">
