@@ -32,7 +32,7 @@ const loadScript = () => {
         
         function matching(item) {
             var str = new RegExp(autocomplete_text_input.value, 'gi');
-            if (item.innerHTML.match(str)) {
+            if (item.dataset.searchcontent.match(str)) {
                 item.dataset.display = 'true'
             } else {
                 item.dataset.display = 'false';
@@ -156,7 +156,7 @@ const Autocomplete = (props) => {
                     <li
                         key={index}
                         className={itemClass}
-                        data-content={item.code}
+                        data-searchcontent={item.code}
                         data-display="true"
                         data-highlight="false"
                     >
