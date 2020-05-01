@@ -17,6 +17,7 @@ const loadScript = () => {
         });
         
         autocomplete_text_input.addEventListener('click', function (e) {
+            change_valueToPlaceholder();
             init_list();
             show_list(autocomplete_content);
             key_up_down();
@@ -55,8 +56,23 @@ const loadScript = () => {
             item.dataset.display = 'true';
             item.dataset.highlight = 'false';
         }
+
+        function change_valueToPlaceholder() {
+            if(autocomplete_text_input.value) {
+                autocomplete_text_input.placeholder = autocomplete_text_input.value;
+            }
+            autocomplete_text_input.value = "";
+        }
+
+        function set_selectedToText() {
+            const selectedElements = autocomplete_component.querySelectorAll('li.autocomplete__item[data-selected="true"]');
+            if(selectedElements && selectedElements.length) {
+                autocomplete_text_input.value = selectedElements[0].querySelector('span').innerHTML;
+            }
+            autocomplete_text_input.placeholder = "";
+        }
         
-        function copy_paste() {
+        function copy_paste(e) {
             set_selected(this);
             autocomplete_text_input.value = this.querySelector('span').innerHTML;
             // todo : check match of list text and input value for .current 
@@ -117,13 +133,15 @@ const loadScript = () => {
             e.preventDefault();
             e.stopPropagation();
             hide_list(autocomplete_content);
+            set_selectedToText();
         });
         $(document).on('click', 'body', function(event) {
             if(event) {
                 const {target} = event;
                 const targetClassName = (target.className) ? "." + target.className : "";
                 if(targetClassName !== "autocomplete" && $(autocomplete_component).find(target).length <= 0) {
-                    autocomplete_content.dataset.toggle = 'false';
+                    hide_list(autocomplete_content);
+                    set_selectedToText();
                 }
             }
         });
@@ -134,9 +152,18 @@ const Autocomplete = (props) => {
     const {dataList, elementId, title, defaultValue} = props;
     let dafaultDataDisplay = "", defaultDataValue = "";
     const onClick = (value) =>{
-        if(value && value.target && value.target.dataset && value.target.dataset.value) {
-            if(props.onChange) {
-                props.onChange(value.target.dataset.value);
+        if(value && value.target) {
+            const {target} = value;
+            let valueElement = null;
+            if(target.className === "autocomplete__itemname") {
+                valueElement = target.parentNode;
+            } else {
+                valueElement = value.target;
+            }
+            if(valueElement && valueElement.dataset && valueElement.dataset.value) {
+                if(props.onChange) {
+                    props.onChange(valueElement.dataset.value);
+                }
             }
         }
     }
@@ -159,7 +186,9 @@ const Autocomplete = (props) => {
                     <input
                         className="form-control txt autocomplete-search"
                         type="text"
+                        autoComplete="off"
                         defaultValue={dafaultDataDisplay}
+                        placeholder=""
                         id={elementId}
                         required
                     />
