@@ -26,6 +26,10 @@ const loadScript = () => {
     });
 }
 
+const updateCheckBoxUI = () => {
+    $('.multiselectlist__item input:checkbox').prop('checked',false);
+}
+
 const updateTextboxValue = (selectedValues) => {
     $(".multiselectlist").find(".multiselectlist-wrap").find("input:text").val(selectedValues.join(","));
 }
@@ -35,17 +39,24 @@ const MultiSelectList = (props) => {
     const isDefaultValueAvailable = defaultValue && defaultValue.length;
     let selectedValues = isDefaultValueAvailable ? defaultValue : [];
     const onChange = (value) =>{
-        if(value && value.target && value.target.nextElementSibling && value.target.nextElementSibling.innerText) {
-            if(value.target.checked) {
-                selectedValues.push(value.target.nextElementSibling.innerText);
+        if(value && value.target) {
+            const {target} = value;
+            if(target.nextElementSibling && target.nextElementSibling.innerText) {
+                if(value.target.checked) {
+                    selectedValues.push(value.target.nextElementSibling.innerText);
+                } else {
+                    selectedValues = selectedValues.filter(item => item.toLowerCase() !== value.target.nextElementSibling.innerText.toLowerCase())
+                }
             } else {
-                selectedValues = selectedValues.filter(item => item.toLowerCase() !== value.target.nextElementSibling.innerText.toLowerCase())
+                updateCheckBoxUI();
+                selectedValues = [];
             }
             updateTextboxValue(selectedValues);
             if(props.onChange) {
                 props.onChange(selectedValues);
             }
         }
+        
     }
     if(dataList && dataList.length) {
         loadScript();
@@ -81,7 +92,10 @@ const MultiSelectList = (props) => {
                                 })}
                             </li>
                         </ul>
-                  </div>
+                    </div>
+                    <div className="multiselectlist__btn">
+                        <button className="button button--black-outline clear-selection" onClick={onChange} >Clear</button>
+                    </div>
                 </div>
             </div>
         )
