@@ -26,9 +26,9 @@ const loadScript = () => {
             if (e.keyCode == 13) {
                 const highlightedElement = autocomplete_content.querySelector('[data-highlight="true"]');
                 set_selected(highlightedElement);
-                e.target.value = highlightedElement.querySelector('span').innerHTML
+                e.target.value = highlightedElement.querySelector('span').innerHTML;
             }
-            hide_list(autocomplete_content)
+            hide_list(autocomplete_content);
             init_list();
         });
         
@@ -39,7 +39,7 @@ const loadScript = () => {
             } else {
                 item.dataset.display = 'false';
                 item.dataset.highlight = 'false';
-                count = 0
+                count = 0;
             }
         }
         
@@ -75,11 +75,11 @@ const loadScript = () => {
         }
         
         function hide_list(ele) {
-            ele.dataset.toggle = 'false'
+            ele.dataset.toggle = 'false';
         }
         
         function show_list(ele) {
-            ele.dataset.toggle = 'true'
+            ele.dataset.toggle = 'true';
         }
         
         function key_up_down() {
@@ -113,12 +113,17 @@ const loadScript = () => {
                 }
             };
         }
+        $('.autocomplete-content .close').on('click touch', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            hide_list(autocomplete_content);
+        });
         $(document).on('click', 'body', function(event) {
             if(event) {
                 const {target} = event;
                 const targetClassName = (target.className) ? "." + target.className : "";
                 if(targetClassName !== "autocomplete" && $(autocomplete_component).find(target).length <= 0) {
-                    autocomplete_content.dataset.toggle = 'false'
+                    autocomplete_content.dataset.toggle = 'false';
                 }
             }
         });
@@ -146,7 +151,8 @@ const Autocomplete = (props) => {
             }
 
         }
-        loadScript(); 
+        loadScript();
+        //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
         return (
             <div className="autocomplete" id="autocomplete-component">
                 <div className="select-wrap">
