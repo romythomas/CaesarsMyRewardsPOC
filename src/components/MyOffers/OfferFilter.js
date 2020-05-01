@@ -101,6 +101,7 @@ const OfferFilter = (props) => {
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <Textbox 
                             textboxId = "offerCodeSearch"
+                            title="Offer Code" 
                             defaultValue = {defaultOfferCode}
                             onBlur={props.onOfferCodeChange} />
                     </li>

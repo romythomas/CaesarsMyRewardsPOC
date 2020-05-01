@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Textbox = (props) => {
-    const {defaultValue, textboxId} = props;
+    const {defaultValue, textboxId, title} = props;
     const onBlur = (value) =>{
         if(props.onBlur) {
             props.onBlur(value);
@@ -17,7 +17,7 @@ const Textbox = (props) => {
                 id={textboxId} 
                 required 
                 onBlur={onBlur} />
-            <label className="form-control-placeholder" htmlFor={textboxId}>Enter Offer Code</label>
+            <label className="form-control-placeholder" htmlFor={textboxId}>{title}</label>
         </div>
     )
 }
