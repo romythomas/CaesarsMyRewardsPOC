@@ -3,7 +3,7 @@ import SelectList from "../Common/SelectList";
 import Textbox from "../Common/Textbox";
 import MultiSelectList from "../Common/MultiSelectList";
 import Autocomplete from "../Common/Autocomplete";
-import RangeCalendar from "../Common/RangeCalendar";
+import DateRangeCalendar  from "../Common/DateRangeCalendar";
 import {getOfferFilterTypes, getOfferSortTypes} from "../../constants/configs";
 
 
@@ -84,11 +84,10 @@ const OfferFilter = (props) => {
                     </li>
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div className="date-range-filter">
-                            <RangeCalendar 
-                                width="100%"
-                                onChange={props.onDateRangeChange}
-                                defaultValue={defaultDateRange}
-                            />
+                            <DateRangeCalendar 
+                                calendarId="offer-calendar" 
+                                defaultValue={defaultDateRange} 
+                                onChange={props.onDateRangeChange} />
                         </div>
                     </li>
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">

@@ -1,0 +1,45 @@
+//daterangecalendar starts here
+.dateRangeCalendar{
+	position: relative;
+	.form-control-placeholder, .form-control.txt {
+		cursor: pointer;
+		color: transparent;
+		text-shadow: 0 0 0 #000;
+		&:focus {
+			outline: none;
+		}
+	}
+	.dateRangeCalendar-content{
+		background: $custome-white;
+		position: absolute;
+		width: 630px;
+		right: 0;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
+		display: none;
+		z-index: 99;
+		@include break-point(991px){
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+            top: 0;
+            padding: 10px;
+			z-index: 9999;
+        }
+	}
+	.close{
+		position: absolute;
+		right: 10px;
+		top: 5px;
+		display: none;
+		@include break-point(991px){
+			display: block;
+		}
+		&:before{
+			@include fontawesome;
+			content: "\f00d";
+			right: 0;
+			-webkit-text-stroke: 6px $custome-white;
+			font-size: 45px;
+		}
+	}
+}

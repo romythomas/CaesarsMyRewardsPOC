@@ -70,10 +70,10 @@ class MyOffers extends Component {
         }
 
         this.onDateRangeChange = (startDate, endDate) => {
-            if(startDate && startDate.$d && endDate && endDate.$d) {
+            if(startDate && endDate) {
                 this.filterOffers("date", {
-                    startDate: startDate.$d,
-                    endDate: endDate.$d,
+                    startDate: startDate,
+                    endDate: endDate,
                 });
             }
         }
