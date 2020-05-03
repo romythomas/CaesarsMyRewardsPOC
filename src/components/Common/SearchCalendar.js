@@ -8,24 +8,24 @@ const moment = extendMoment(originalMoment);
 
 const loadScript = () => {
     $(document).ready(function(){
-        $('.dateRangeCalendar-wrap').off('click touch').on('click touch', function(e) {
+        $('.searchCalendar-wrap').off('click touch').on('click touch', function(e) {
             e.preventDefault();
-            $(".dateRangeCalendar-content").toggle();
+            $(".searchCalendar-content").toggle();
         });
-        $('.dateRangeCalendar-wrap .txt').keypress(function(e) {
+        $('.searchCalendar-wrap .txt').keypress(function(e) {
             return false;
         });
-        $('.dateRangeCalendar .close').off('click touch').on('click touch', function(e) {
+        $('.searchCalendar .close').off('click touch').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            $(".dateRangeCalendar-content").hide();
+            $(".searchCalendar-content").hide();
         });
         $(document).off('click').on('click', 'body', function(e) {
             if(e) {
                 const {target} = e;
                 const targetClassName = (target.className) ? "." + target.className : "";
-                if(targetClassName !== "dateRangeCalendar" && $(".dateRangeCalendar").find(target).length <= 0) {
-                    $('.dateRangeCalendar-content').hide();
+                if(targetClassName !== "searchCalendar" && $(".searchCalendar").find(target).length <= 0) {
+                    $('.searchCalendar-content').hide();
                 }
             }
         });
@@ -33,18 +33,21 @@ const loadScript = () => {
 }
 
 const updateDateValueUI = (startDate, endDate) => {
-    $('.dateRangeCalendar-wrap input:text').val(new Date(startDate).toLocaleDateString() + " - " + new Date(endDate).toLocaleDateString());
+    $('.searchCalendar-wrap input:text').val(new Date(startDate).toLocaleDateString() + " - " + new Date(endDate).toLocaleDateString());
 }
 
-const DateRangeCalendar = (props)  => {
+const SearchCalendar = (props)  => {
     loadScript();
+    //month range calendar code
+    const monthRanges = [];
+    //date range calendar code
     const {defaultValue, calendarId} = props;
     let {minimumDate, maximumDate} = props;
     if(!minimumDate) {
-        minimumDate = moment();
+        minimumDate = new Date(moment());
     }
     if(!maximumDate) {
-        maximumDate = moment().add(1, 'year');
+        maximumDate = new Date(moment().add(1, 'year'));
     }
     let textToDisplay = "";
     let [defaultDateRange, setDefaultDateRange] = React.useState(null);
@@ -57,7 +60,7 @@ const DateRangeCalendar = (props)  => {
             defaultDateRange = moment.range(defaultStartDate, defaultEndDate);
         }
     }
-    const onChnage = (dateRange) =>{
+    const onDateChnage = (dateRange) =>{
         if(dateRange && dateRange.start&& dateRange.start._d && dateRange.end && dateRange.end._d) {
             const startDate = dateRange.start._d;
             const endDate = dateRange.end._d;
@@ -71,8 +74,8 @@ const DateRangeCalendar = (props)  => {
         }
     }
     return (
-        <div className="dateRangeCalendar">
-            <div className="select-wrap dateRangeCalendar-wrap">
+        <div className="searchCalendar">
+            <div className="select-wrap searchCalendar-wrap">
                 <input
                     className="form-control txt"
                     type="text"
@@ -84,11 +87,15 @@ const DateRangeCalendar = (props)  => {
                     Start date - End date
                 </label>
             </div>
-                <div className="dateRangeCalendar-content">
+                <div className="searchCalendar-content">
                     <span className="close"></span>
+                    <div className="searchCalendar-options">
+                        <button className="searchBy-Dates">Exact Date</button>
+                        <button className="searchBy-Months">Flexible Dates</button>
+                    </div>
                     <div className="dateRangeCalendar__item">
                         <DateRangePicker
-                                onSelect={onChnage}
+                                onSelect={onDateChnage}
                                 minimumDate={minimumDate}
                                 maximumDate={maximumDate}
                                 value={defaultDateRange}
@@ -96,9 +103,16 @@ const DateRangeCalendar = (props)  => {
                                 numberOfCalendars={2}
                             />
                     </div>
+                    <div className="monthRangeCalendar__item">
+                        <ul>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                </div>
+        </div>
     );
 }
 
-export default DateRangeCalendar;
+export default SearchCalendar;

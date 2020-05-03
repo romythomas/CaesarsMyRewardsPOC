@@ -1,5 +1,5 @@
-//daterangecalendar starts here
-.dateRangeCalendar{
+//SearchCalendar starts here
+.searchCalendar{
 	position: relative;
 	.form-control-placeholder, .form-control.txt {
 		cursor: pointer;
@@ -9,7 +9,7 @@
 			outline: none;
 		}
 	}
-	.dateRangeCalendar-content{
+	.searchCalendar-content{
 		background: $custome-white;
 		position: absolute;
 		width: 630px;
