@@ -39,6 +39,13 @@ const updateDateValueUI = (startDate, endDate) => {
 const DateRangeCalendar = (props)  => {
     loadScript();
     const {defaultValue, calendarId} = props;
+    let {minimumDate, maximumDate} = props;
+    if(!minimumDate) {
+        minimumDate = moment();
+    }
+    if(!maximumDate) {
+        maximumDate = moment().add(1, 'year');
+    }
     let textToDisplay = "";
     let [defaultDateRange, setDefaultDateRange] = React.useState(null);
     if(!defaultDateRange && defaultValue && defaultValue.startDate && defaultValue.endDate) {
@@ -77,18 +84,20 @@ const DateRangeCalendar = (props)  => {
                     Start date - End date
                 </label>
             </div>
-            <div className="dateRangeCalendar-content">
-                <span className="close"></span>
-                <div className="dateRangeCalendar__item">
-                    <DateRangePicker
-                            onSelect={onChnage}
-                            value={defaultDateRange}
-                            selectionType="range"
-                            numberOfCalendars={2}
-                        />
+                <div className="dateRangeCalendar-content">
+                    <span className="close"></span>
+                    <div className="dateRangeCalendar__item">
+                        <DateRangePicker
+                                onSelect={onChnage}
+                                minimumDate={minimumDate}
+                                maximumDate={maximumDate}
+                                value={defaultDateRange}
+                                selectionType="range"
+                                numberOfCalendars={2}
+                            />
+                    </div>
                 </div>
-            </div>
-        </div>
+                </div>
     );
 }
 
