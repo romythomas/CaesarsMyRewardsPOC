@@ -38,17 +38,27 @@ const updateDateValueUI = (startDate, endDate) => {
 
 const SearchCalendar = (props)  => {
     loadScript();
-    //month range calendar code
-    const monthRanges = [];
-    //date range calendar code
     const {defaultValue, calendarId} = props;
     let {minimumDate, maximumDate} = props;
     if(!minimumDate) {
-        minimumDate = new Date(moment());
+        minimumDate = moment();
     }
     if(!maximumDate) {
-        maximumDate = new Date(moment().add(1, 'year'));
+        maximumDate = moment().add(1, 'year');
     }
+
+    //month range calendar code
+    const monthRanges = [];
+    let monthRangeStartDate = minimumDate.clone();
+    while (monthRangeStartDate.isBefore(maximumDate)) {
+        if(monthRangeStartDate.month() === minimumDate.month()) {
+            monthRanges.push(monthRangeStartDate.clone());
+        } else {
+            monthRanges.push(monthRangeStartDate.clone().startOf('month'));
+        }
+        monthRangeStartDate = monthRangeStartDate.add(1, 'month');
+    }
+    //date range calendar code
     let textToDisplay = "";
     let [defaultDateRange, setDefaultDateRange] = React.useState(null);
     if(!defaultDateRange && defaultValue && defaultValue.startDate && defaultValue.endDate) {
@@ -60,16 +70,28 @@ const SearchCalendar = (props)  => {
             defaultDateRange = moment.range(defaultStartDate, defaultEndDate);
         }
     }
-    const onDateChnage = (dateRange) =>{
+    const onDateChnage = (dateRange) => {
         if(dateRange && dateRange.start&& dateRange.start._d && dateRange.end && dateRange.end._d) {
             const startDate = dateRange.start._d;
-            const endDate = dateRange.end._d;
+            const endDate = dateRange.end.endOf('day')._d;
             textToDisplay = new Date(startDate).toLocaleDateString() + " - " + new Date(endDate).toLocaleDateString();
             updateDateValueUI(startDate, endDate);
             setDefaultDateRange(moment.range(startDate, endDate));
             if(props.onChange) {
                 $(".searchCalendar-content").hide();
                 props.onChange(startDate, endDate);
+            }
+        }
+    }
+    const onMonthChange = (event) => {
+        if(event && event.target && event.target.dataset && event.target.dataset.value) {
+            const startDate = moment(event.target.dataset.value);
+            const endDate = startDate.clone().endOf('month');
+            textToDisplay = event.target.innerText;
+            $('.searchCalendar-wrap input:text').val(textToDisplay);
+            if(props.onChange) {
+                $(".searchCalendar-content").hide();
+                props.onChange(startDate._d, endDate._d);
               }
         }
     }
@@ -96,18 +118,25 @@ const SearchCalendar = (props)  => {
                     <div className="dateRangeCalendar__item">
                         <DateRangePicker
                                 onSelect={onDateChnage}
-                                minimumDate={minimumDate}
-                                maximumDate={maximumDate}
+                                minimumDate={new Date(minimumDate)}
+                                maximumDate={new Date(maximumDate)}
                                 value={defaultDateRange}
                                 selectionType="range"
                                 numberOfCalendars={2}
                             />
                     </div>
                     <div className="monthRangeCalendar__item">
-                        <ul>
-                            <li>
-
-                            </li>
+                        <ul className="monthRangeCalendar__list">
+                            {monthRanges.map((date, index) => {
+                                return(
+                                    <li key={index} 
+                                        className="month-item" 
+                                        data-value={date.format("DD-MMM-YYYY")}
+                                        onClick={onMonthChange}>
+                                            {date.format("MMM YYYY")}
+                                    </li>
+                                )
+                            })}
                         </ul>
                     </div>
                 </div>
