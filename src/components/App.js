@@ -13,6 +13,7 @@ import MyOffers from './MyOffers';
 import Reservation from './Reservations';
 import OfferDetails from './MyOffers/OfferDetails'
 import {hideWarning} from '../utilities/Helper'
+import { history} from '../store';
 import {
   LOGIN
 } from '../constants/actionTypes';
@@ -47,6 +48,15 @@ const loadScript = () => {
   
 }
 class App extends Component {
+
+  constructor() {
+    super();
+
+    const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
+    if (path) {
+        history.replace(path);
+    }
+  }
 
   componentWillMount(){
     //load common data - login, offerlist and getmarkets
