@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 const Header = (props) => {
   return (
@@ -10,22 +9,11 @@ const Header = (props) => {
     <nav className="navbar navbar-expand-lg">
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          <NavLink exact activeClassName="active" className="nav-item nav-link" to="https://www.caesars.com/myrewards/benefits-overview">
-            BENEFITS
-            <span className="sr-only">(current)</span>
-          </NavLink>
-          <NavLink exact activeClassName="active" className="nav-item nav-link" to="https://www.caesars.com/myrewards/earn-and-redeem">
-            EARN & REDEEM
-          </NavLink>
-          <NavLink exact activeClassName="active" className="nav-item nav-link" to="https://www.caesars.com/myrewards/promotions">
-            PROMOTIONS
-          </NavLink>
-          <NavLink exact activeClassName="active" className="nav-item nav-link" to="https://www.caesars.com/myrewards/partners">
-            PARTNERS
-          </NavLink>
-          <NavLink exact activeClassName="active" className="nav-item nav-link" to="https://www.caesars.com/book">
-            BOOK NOW
-          </NavLink>
+          <a className="nav-item nav-link active" href="https://www.caesars.com/myrewards/benefits-overview">BENEFITS<span className="sr-only">(current)</span></a>
+          <a className="nav-item nav-link" href="https://www.caesars.com/myrewards/earn-and-redeem">EARN & REDEEM</a>
+          <a className="nav-item nav-link" href="https://www.caesars.com/myrewards/promotions">PROMOTIONS</a>
+          <a className="nav-item nav-link" href="https://www.caesars.com/myrewards/partners">PARTNERS</a>
+          <a className="nav-item nav-link" href="https://www.caesars.com/book">BOOK NOW</a>
         </div>
       </div>
     </nav>
