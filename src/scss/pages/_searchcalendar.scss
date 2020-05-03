@@ -13,7 +13,6 @@
 		background: $custome-white;
 		position: absolute;
 		width: 630px;
-		right: 0;
 		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
 		display: none;
 		z-index: 99;
@@ -21,7 +20,8 @@
 			position: fixed;
 			width: 100%;
 			height: 100vh;
-            top: 0;
+			top: 0;
+			right: 0;
             padding: 10px;
 			z-index: 9999;
 		}
