@@ -24,7 +24,28 @@
             top: 0;
             padding: 10px;
 			z-index: 9999;
-        }
+		}
+		.searchCalendar-options {
+			text-align: center;
+			button.searchBy-Dates {
+				margin: 20px;
+			}
+		}
+		.monthRangeCalendar__item {
+			display: none;
+			.monthRangeCalendar__list {
+				padding: 0 30px;
+			}
+			li.month-item {
+				display: inline-block;
+				padding: 10px 10px;
+				margin: 20px 10px;
+				width: 120px;
+				text-align: center;
+				cursor: pointer;
+				border: 1px solid black;
+			}
+		}
 	}
 	.close{
 		position: absolute;

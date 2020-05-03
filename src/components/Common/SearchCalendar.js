@@ -12,6 +12,16 @@ const loadScript = () => {
             e.preventDefault();
             $(".searchCalendar-content").toggle();
         });
+        $('.searchCalendar-content .searchBy-Dates').off('click touch').on('click touch', function(e) {
+            e.preventDefault();
+            $(".dateRangeCalendar__item").show();
+            $(".monthRangeCalendar__item").hide();
+        });
+        $('.searchCalendar-content .searchBy-Months').off('click touch').on('click touch', function(e) {
+            e.preventDefault();
+            $(".dateRangeCalendar__item").hide();
+            $(".monthRangeCalendar__item").show();
+        });
         $('.searchCalendar-wrap .txt').keypress(function(e) {
             return false;
         });
@@ -109,37 +119,37 @@ const SearchCalendar = (props)  => {
                     Start date - End date
                 </label>
             </div>
-                <div className="searchCalendar-content">
-                    <span className="close"></span>
-                    <div className="searchCalendar-options">
-                        <button className="searchBy-Dates">Exact Date</button>
-                        <button className="searchBy-Months">Flexible Dates</button>
-                    </div>
-                    <div className="dateRangeCalendar__item">
-                        <DateRangePicker
-                                onSelect={onDateChnage}
-                                minimumDate={new Date(minimumDate)}
-                                maximumDate={new Date(maximumDate)}
-                                value={defaultDateRange}
-                                selectionType="range"
-                                numberOfCalendars={2}
-                            />
-                    </div>
-                    <div className="monthRangeCalendar__item">
-                        <ul className="monthRangeCalendar__list">
-                            {monthRanges.map((date, index) => {
-                                return(
-                                    <li key={index} 
-                                        className="month-item" 
-                                        data-value={date.format("DD-MMM-YYYY")}
-                                        onClick={onMonthChange}>
-                                            {date.format("MMM YYYY")}
-                                    </li>
-                                )
-                            })}
-                        </ul>
-                    </div>
+            <div className="searchCalendar-content">
+                <span className="close"></span>
+                <div className="searchCalendar-options">
+                    <button className="searchBy-Dates">Exact Date</button>
+                    <button className="searchBy-Months">Flexible Dates</button>
                 </div>
+                <div className="dateRangeCalendar__item">
+                    <DateRangePicker
+                            onSelect={onDateChnage}
+                            minimumDate={new Date(minimumDate)}
+                            maximumDate={new Date(maximumDate)}
+                            value={defaultDateRange}
+                            selectionType="range"
+                            numberOfCalendars={2}
+                        />
+                </div>
+                <div className="monthRangeCalendar__item">
+                    <ul className="monthRangeCalendar__list">
+                        {monthRanges.map((date, index) => {
+                            return(
+                                <li key={index} 
+                                    className="month-item" 
+                                    data-value={date.format("DD-MMM-YYYY")}
+                                    onClick={onMonthChange}>
+                                        {date.format("MMM YYYY")}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
         </div>
     );
 }
