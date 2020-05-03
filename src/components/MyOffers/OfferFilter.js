@@ -83,12 +83,10 @@ const OfferFilter = (props) => {
                             onChange={props.onLocationChange} />
                     </li>
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div className="date-range-filter">
-                            <SearchCalendar 
-                                calendarId="offer-calendar" 
-                                defaultValue={defaultDateRange} 
-                                onChange={props.onDateRangeChange} />
-                        </div>
+                        <SearchCalendar 
+                            calendarId="offer-calendar" 
+                            defaultValue={defaultDateRange} 
+                            onChange={props.onDateRangeChange} />
                     </li>
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <MultiSelectList 

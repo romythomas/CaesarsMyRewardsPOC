@@ -68,7 +68,7 @@ const SearchCalendar = (props)  => {
             updateDateValueUI(startDate, endDate);
             setDefaultDateRange(moment.range(startDate, endDate));
             if(props.onChange) {
-                $(".dateRangeCalendar-content").hide();
+                $(".searchCalendar-content").hide();
                 props.onChange(startDate, endDate);
               }
         }
