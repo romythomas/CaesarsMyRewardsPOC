@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import {getProperty, getPropertiesListByCode, getFavouriteImage} from '../../utilities/Helper'
 import {getImageUrl} from '../../constants/configs'
+import TagManager from 'react-gtm-module'
+import {isMobile} from 'react-device-detect';
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers, 
@@ -23,12 +25,43 @@ const gotoNBE = (parameter) => (event) => {
 class OfferDetails  extends Component  {       
     render(){
         const { offers, properties } = this.props;
+        
         if ((this.props.match.params) && (this.props.match.params.id)) {
             const offer = offers.filter((offer) => {
             return offer.id === this.props.match.params.id;
         });
 
         const selectedOffer = offer[0];
+        /**
+         * DataLayer logging Starts
+         */
+        const tagManagerData = {
+            dataLayer: {
+                page: 'OfferDetails',
+                L1: "MyCR",
+                L2: "MyCR: offerdetails",
+                L3: "MyCR: offerdetails",
+                nUrl: window.location,
+                offerId: selectedOffer.id,
+                pageCategory: "CR",
+                signinStatus: "signedIn",
+                view: (isMobile)? "mobile": "fullsite"
+            },
+            events: {
+              eventName: 'eventNameXYZ'
+            },
+            gtmId: 'GTM-000000',
+            // auth: '6sBOnZx1hqPcO01xPOytLK',
+            // preview: 'env-2',
+            dataLayerName: 'MyRewardsDataLayer'
+          }
+          
+          try {
+            TagManager.initialize(tagManagerData);
+          } catch (err) {
+            //ignore datalayer error
+          } 
+        /** End */
 
         if(selectedOffer && properties){
             var imageUrl = getImageUrl();

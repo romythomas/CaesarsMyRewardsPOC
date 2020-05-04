@@ -7,6 +7,8 @@ import {filterOffers, updateSelectedFilter} from '../../utilities/Filter';
 import {sortOffers} from '../../utilities/Sort';
 import {getUrlParams} from '../../utilities/Helper';
 import {getOfferSortTypes, getOfferFilterTypes} from "../../constants/configs";
+import TagManager from 'react-gtm-module'
+import {isMobile} from 'react-device-detect';
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -193,6 +195,36 @@ class MyOffers extends Component {
     
     render() {
         this.applyDefaultFilterAndSort();
+         /**
+         * DataLayer logging Starts
+         */
+        const tagManagerData = {
+            dataLayer: {
+                page: 'MyOffer',
+                L1: "MyCR",
+                L2: "MyCR: myoffers",
+                L3: "MyCR: myoffers",
+                nUrl: window.location,
+                pageCategory: "CR",
+                signinStatus: "signedIn",
+                view: (isMobile)? "mobile": "fullsite"
+            },
+            events: {
+                eventName: 'eventNameXYZ'
+            },
+            gtmId: 'GTM-000000',
+            // auth: '6sBOnZx1hqPcO01xPOytLK',
+            // preview: 'env-2',
+            dataLayerName: 'MyRewardsDataLayer'
+          }
+          
+          try {
+            TagManager.initialize(tagManagerData);
+          } catch (err) {
+            //ignore datalayer error
+          } 
+          /** End */
+
         return(
             <div className="container-fluid">
                 <OfferFilter onLocationChange={this.onLocationChange} 
