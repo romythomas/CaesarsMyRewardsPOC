@@ -61,8 +61,8 @@ class MyRewards extends Component {
           eventName: 'eventNameXYZ'
         },
         gtmId: 'GTM-M363HGQ',
-        // auth: '6sBOnZx1hqPcO01xPOytLK',
-        // preview: 'env-2',
+        auth: 'WAeUcta8vBjHD_FnBxtJKw',
+        preview: 'env-1',
         dataLayerName: 'MyRewardsDataLayer'
       }
       

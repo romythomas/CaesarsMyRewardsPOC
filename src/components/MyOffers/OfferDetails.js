@@ -50,9 +50,9 @@ class OfferDetails  extends Component  {
             events: {
               eventName: 'eventNameXYZ'
             },
-            gtmId: 'GTM-000000',
-            // auth: '6sBOnZx1hqPcO01xPOytLK',
-            // preview: 'env-2',
+            gtmId: 'GTM-M363HGQ',
+            auth: 'WAeUcta8vBjHD_FnBxtJKw',
+            preview: 'env-1',
             dataLayerName: 'MyRewardsDataLayer'
           }
           
