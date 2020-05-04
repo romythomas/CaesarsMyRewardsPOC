@@ -54,8 +54,9 @@ const loadScript = () => {
         /**
          * Closes the (date/month) range calendars upon clicking HTML body other than the (date/month) range calendars.
          */
-        $(document).off('click').on('click', 'body', function(e) {
+        $(document).on('click', 'body', function(e) {
             if(e) {
+                e.preventDefault();
                 const {target} = e;
                 const targetClassName = (target.className) ? "." + target.className : "";
                 if(targetClassName !== "searchCalendar" && $(".searchCalendar").find(target).length <= 0) {
@@ -67,12 +68,22 @@ const loadScript = () => {
 }
 
 /**
+ * Formats the start date and end date and joins the value, to display in UI
+ * @param {Date} startDate - Start date selected from range calendar.
+ * @param {Date} endDate - End date selected from range calendar.
+ * @returns {String} - Concatenated formatted date string values.
+ */
+const getDisplayValueOfDateCalendarSelection = (startDate, endDate) => {
+    return new Date(startDate).toLocaleDateString() + " - " + new Date(endDate).toLocaleDateString();
+}
+
+/**
  * Updates the input text value based on the dates selected from date range calendar.
  * @param {Date} startDate - Start date selected from range calendar.
  * @param {Date} endDate - End date selected from range calendar.
  */
 const updateDateRangeValueUI = (startDate, endDate) => {
-    $('.searchCalendar-wrap input:text').val(new Date(startDate).toLocaleDateString() + " - " + new Date(endDate).toLocaleDateString());
+    $('.searchCalendar-wrap input:text').val(getDisplayValueOfDateCalendarSelection(startDate, endDate));
 }
 
 /**
@@ -96,6 +107,7 @@ const SearchCalendar = (props)  => {
     //Values that are passed as properties to the component
     const {defaultValue, calendarId} = props;
     let {minimumDate, maximumDate} = props;
+    let defaultDateRangeSelectedValue = "";
     //Set lowest and highest calendar selectable dates, if not defined in properties
     minimumDate = minimumDate && moment(minimumDate).isValid() ? moment(minimumDate) : moment();
     maximumDate = maximumDate && moment(maximumDate).isValid() ? moment(maximumDate) : moment().add(1, 'year');
@@ -150,7 +162,7 @@ const SearchCalendar = (props)  => {
             //Validate the default values present in properties
             //If valid, Update textbot value in UI and set the local store value for calendar selection
             if(defaultStartDate.isValid() && defaultEndDate.isValid()) {
-                updateDateRangeValueUI(defaultStartDate, defaultEndDate);
+                defaultDateRangeSelectedValue = getDisplayValueOfDateCalendarSelection(defaultStartDate._d, defaultEndDate._d);
                 defaultDateRange = moment.range(defaultStartDate, defaultEndDate);
             }
         }
@@ -192,6 +204,7 @@ const SearchCalendar = (props)  => {
                         className="form-control txt"
                         type="text"
                         autoComplete="off"
+                        defaultValue={defaultDateRangeSelectedValue}
                         id={calendarId}
                         required
                     />
