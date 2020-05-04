@@ -172,53 +172,59 @@ const SearchCalendar = (props)  => {
         }
     //#endregion
 
-    return (
-        <div className="searchCalendar">
-            <div className="select-wrap searchCalendar-wrap">
-                <input
-                    className="form-control txt"
-                    type="text"
-                    autoComplete="off"
-                    id={calendarId}
-                    required
-                />
-                <label className="form-control-placeholder" htmlFor={calendarId}>
-                    Start date - End date
-                </label>
+    //#region - Render elements
+
+        /**********************************************************************************************************
+         * Don't change any element IDs, names, class names or HTML structure below, as they are related to the scripts written above.
+         ************************************************************************************************************/
+        return (
+            <div className="searchCalendar">
+                <div className="select-wrap searchCalendar-wrap">
+                    <input
+                        className="form-control txt"
+                        type="text"
+                        autoComplete="off"
+                        id={calendarId}
+                        required
+                    />
+                    <label className="form-control-placeholder" htmlFor={calendarId}>
+                        Start date - End date
+                    </label>
+                </div>
+                <div className="searchCalendar-content">
+                    <span className="close"></span>
+                    <div className="searchCalendar-options">
+                        <button className="searchBy-Dates">Exact Date</button>
+                        <button className="searchBy-Months">Flexible Dates</button>
+                    </div>
+                    <div className="dateRangeCalendar__item">
+                        <DateRangePicker
+                                onSelect={onDateChnage}
+                                minimumDate={new Date(minimumDate)}
+                                maximumDate={new Date(maximumDate)}
+                                value={defaultDateRange}
+                                selectionType="range"
+                                numberOfCalendars={2}
+                            />
+                    </div>
+                    <div className="monthRangeCalendar__item">
+                        <ul className="monthRangeCalendar__list">
+                            {monthRanges.map((date, index) => {
+                                return(
+                                    <li key={index} 
+                                        className="month-item" 
+                                        data-value={date.format("DD-MMM-YYYY")}
+                                        onClick={onMonthChange}>
+                                            {date.format("MMM YYYY")}
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div className="searchCalendar-content">
-                <span className="close"></span>
-                <div className="searchCalendar-options">
-                    <button className="searchBy-Dates">Exact Date</button>
-                    <button className="searchBy-Months">Flexible Dates</button>
-                </div>
-                <div className="dateRangeCalendar__item">
-                    <DateRangePicker
-                            onSelect={onDateChnage}
-                            minimumDate={new Date(minimumDate)}
-                            maximumDate={new Date(maximumDate)}
-                            value={defaultDateRange}
-                            selectionType="range"
-                            numberOfCalendars={2}
-                        />
-                </div>
-                <div className="monthRangeCalendar__item">
-                    <ul className="monthRangeCalendar__list">
-                        {monthRanges.map((date, index) => {
-                            return(
-                                <li key={index} 
-                                    className="month-item" 
-                                    data-value={date.format("DD-MMM-YYYY")}
-                                    onClick={onMonthChange}>
-                                        {date.format("MMM YYYY")}
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    );
+        );
+    //#endregion
 }
 
 export default SearchCalendar;
