@@ -54,8 +54,9 @@ const loadScript = () => {
         /**
          * Closes the (date/month) range calendars upon clicking HTML body other than the (date/month) range calendars.
          */
-        $(document).off('click').on('click', 'body', function(e) {
+        $(document).on('click', 'body', function(e) {
             if(e) {
+                e.preventDefault();
                 const {target} = e;
                 const targetClassName = (target.className) ? "." + target.className : "";
                 if(targetClassName !== "searchCalendar" && $(".searchCalendar").find(target).length <= 0) {

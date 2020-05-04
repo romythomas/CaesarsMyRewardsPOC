@@ -8,9 +8,12 @@ const loadScript = () => {
             $self.toggleClass('open');
         });
         $(document).on('click touch', 'body', function(e) {
-            const $dropdown = $('.selectList.dropdown');
-            if($dropdown !== e.target && !$dropdown.has(e.target).length) {
-                $dropdown.removeClass('open');
+            if(e) {
+                e.preventDefault();
+                const $dropdown = $('.selectList.dropdown');
+                if($dropdown !== e.target && !$dropdown.has(e.target).length) {
+                    $dropdown.removeClass('open');
+                }
             }
         });
         $('.selectList.selectDropdown ul li a').on('click touch', function(e) {
