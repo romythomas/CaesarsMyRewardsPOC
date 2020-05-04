@@ -6,50 +6,83 @@ import 'react-daterange-picker/dist/css/react-calendar.css';
 
 const moment = extendMoment(originalMoment);
 
+/**
+ * Defines all jQuery events used to handel the clicks and show/hide.
+ */
 const loadScript = () => {
     $(document).ready(function(){
+        const $searchCalendarContent = $(".searchCalendar-content");
+        const $dateRangeCalendarItem = $(".dateRangeCalendar__item");
+        const $monthRangeCalendarItem = $(".monthRangeCalendar__item");
+        /**
+         * Handles the click events of text input, to show/hide the (date/month) range calendars.
+         */
         $('.searchCalendar-wrap').off('click touch').on('click touch', function(e) {
             e.preventDefault();
-            $(".searchCalendar-content").toggle();
+            $searchCalendarContent.toggle();
         });
+        /**
+         * Handels the show/hide of (date/month) range calendars based on 'Exact Date' calendar button click.
+         */
         $('.searchCalendar-content .searchBy-Dates').off('click touch').on('click touch', function(e) {
             e.preventDefault();
-            $(".dateRangeCalendar__item").show();
-            $(".monthRangeCalendar__item").hide();
+            $dateRangeCalendarItem.show();
+            $monthRangeCalendarItem.hide();
         });
+        /**
+         * Handels the show/hide of (date/month) range calendars based on 'Flexible Date' calendar button click.
+         */
         $('.searchCalendar-content .searchBy-Months').off('click touch').on('click touch', function(e) {
             e.preventDefault();
-            $(".dateRangeCalendar__item").hide();
-            $(".monthRangeCalendar__item").show();
+            $dateRangeCalendarItem.hide();
+            $monthRangeCalendarItem.show();
         });
+        /**
+         * Make the keyboard entry disabled for text input.
+         */
         $('.searchCalendar-wrap .txt').keypress(function(e) {
             return false;
         });
+        /**
+         * Handels the close button click event of the (date/month) range calendars.
+         */
         $('.searchCalendar .close').off('click touch').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            $(".searchCalendar-content").hide();
+            $searchCalendarContent.hide();
         });
+        /**
+         * Closes the (date/month) range calendars upon clicking HTML body other than the (date/month) range calendars.
+         */
         $(document).off('click').on('click', 'body', function(e) {
             if(e) {
                 const {target} = e;
                 const targetClassName = (target.className) ? "." + target.className : "";
                 if(targetClassName !== "searchCalendar" && $(".searchCalendar").find(target).length <= 0) {
-                    $('.searchCalendar-content').hide();
+                    $searchCalendarContent.hide();
                 }
             }
         });
     });
 }
 
+/**
+ * Updates the input text value based on the dates selected from date range calendar.
+ */
 const updateDateRangeValueUI = (startDate, endDate) => {
     $('.searchCalendar-wrap input:text').val(new Date(startDate).toLocaleDateString() + " - " + new Date(endDate).toLocaleDateString());
 }
 
+/**
+ * Updates the input text value based on the dates selected from month range calendar.
+ */
 const updateMonthRangeValueUI = (value) => {
     $('.searchCalendar-wrap input:text').val(value);
 }
 
+/**
+ * Handels the functional component render and its properties.
+ */
 const SearchCalendar = (props)  => {
     //Load scripts to handle click/touch events
     loadScript();
