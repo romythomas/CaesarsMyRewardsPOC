@@ -74,9 +74,11 @@ const updateDateRangeValueUI = (startDate, endDate) => {
 }
 
 /**
- * Updates the input text value based on the dates selected from month range calendar.
+ * Updates the input text value and active class based on the dates selected from month range calendar.
  */
-const updateMonthRangeValueUI = (value) => {
+const updateMonthRangeValueUI = (value, event) => {
+    $(".monthRangeCalendar__item .month-item.active").removeClass("active");
+    event.target.classList.add("active");
     $('.searchCalendar-wrap input:text').val(value);
 }
 
@@ -121,8 +123,8 @@ const SearchCalendar = (props)  => {
                 const endDate = startDate.clone().endOf('month');
                 //If moment dates are valid, update UI textbox value
                 if(startDate.isValid() && endDate.isValid()) {
-                    //Update textbox UI value
-                    updateMonthRangeValueUI(target.innerText);
+                    //Update textbox UI value and active class
+                    updateMonthRangeValueUI(target.innerText, event);
                     //Pass date values to component property
                     if(props.onChange) {
                         $(".searchCalendar-content").hide();
@@ -160,8 +162,9 @@ const SearchCalendar = (props)  => {
                 //Find start date and last minute of end date
                 const startDate = start._d;
                 const endDate = end.endOf('day')._d;
-                //Update textbox UI and update range calendar state value
+                //Update textbox UI
                 updateDateRangeValueUI(startDate, endDate);
+                //Update range calendar state value
                 setDefaultDateRange(moment.range(startDate, endDate));
                 //Pass date values to component property
                 if(props.onChange) {
