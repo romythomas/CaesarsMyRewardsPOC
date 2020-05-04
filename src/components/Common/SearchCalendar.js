@@ -99,6 +99,7 @@ const updateMonthRangeValueUI = (value, event) => {
 /**
  * Handels the functional component render and its properties.
  * @param {Object} props - Property of the component.
+ * @returns {HTMLElement} - Returns HTML to be rendered.
  */
 const SearchCalendar = (props)  => {
     //Load scripts to handle click/touch events
@@ -233,7 +234,7 @@ const SearchCalendar = (props)  => {
                                 return(
                                     <li key={index} 
                                         className="month-item" 
-                                        data-value={date.format("DD-MMM-YYYY")}
+                                        data-value={date.format("MM-DD-YYYY")}
                                         onClick={onMonthChange}>
                                             {date.format("MMM YYYY")}
                                     </li>
