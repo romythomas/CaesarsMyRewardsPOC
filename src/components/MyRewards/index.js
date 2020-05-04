@@ -11,8 +11,7 @@ import ProgressBarItem from './ProgressBarItem';
 import {
   GET_PROFILE
 } from '../../constants/actionTypes';
-import TagManager from 'react-gtm-module'
-import {isMobile} from 'react-device-detect';
+import {recordMyRewardsData} from '../../utilities/Helper'
 
 const mapStateToProps = state => ({
   appName: state.common.appName,
@@ -47,33 +46,9 @@ class MyRewards extends Component {
     /**
      * DataLayer logging Starts
      */
-      const tagManagerData = {
-        dataLayer: {
-            page: 'MyRewards',
-            L1: "MyCR",
-            L2: "MyCR: myrewards",
-            L3: "MyCR: myrewards",
-            acct_balance: logininfo.tier.tierscore,
-            dom_prop: logininfo.propcode,
-            email_addr: logininfo.email,
-            nUrl: window.location,
-            pageCategory: "CR",
-            signinStatus: "signedIn",
-            tier: logininfo.tier.code,
-            cr_number: logininfo.accountid,
-            view: (isMobile)? "mobile": "fullsite"
-        },
-        events: {
-          eventName: 'eventNameXYZ'
-        },
-        gtmId: 'GTM-M363HGQ',
-        auth: 'WAeUcta8vBjHD_FnBxtJKw',
-        preview: 'env-1',
-        dataLayerName: 'MyRewardsDataLayer'
-      }
-      
       try {
-        TagManager.initialize(tagManagerData);
+        recordMyRewardsData('MyRewards', logininfo.tier.tierscore, logininfo.propcode, 
+                                logininfo.email, logininfo.tier.code, logininfo.accountid);
       } catch (err) {
         //ignore datalayer error
       } 

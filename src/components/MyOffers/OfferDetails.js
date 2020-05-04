@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import {getProperty, getPropertiesListByCode, getFavouriteImage} from '../../utilities/Helper'
+import {getProperty, getPropertiesListByCode, getFavouriteImage, recordOffersDetailsData} from '../../utilities/Helper'
 import {getImageUrl} from '../../constants/configs'
-import TagManager from 'react-gtm-module'
-import {isMobile} from 'react-device-detect';
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers, 
@@ -35,29 +33,8 @@ class OfferDetails  extends Component  {
         /**
          * DataLayer logging Starts
          */
-        const tagManagerData = {
-            dataLayer: {
-                page: 'OfferDetails',
-                L1: "MyCR",
-                L2: "MyCR: offerdetails",
-                L3: "MyCR: offerdetails",
-                nUrl: window.location,
-                offerId: selectedOffer.id,
-                pageCategory: "CR",
-                signinStatus: "signedIn",
-                view: (isMobile)? "mobile": "fullsite"
-            },
-            events: {
-              eventName: 'eventNameXYZ'
-            },
-            gtmId: 'GTM-M363HGQ',
-            auth: 'WAeUcta8vBjHD_FnBxtJKw',
-            preview: 'env-1',
-            dataLayerName: 'MyRewardsDataLayer'
-          }
-          
           try {
-            TagManager.initialize(tagManagerData);
+            recordOffersDetailsData('OfferDetails', selectedOffer.id);
           } catch (err) {
             //ignore datalayer error
           } 

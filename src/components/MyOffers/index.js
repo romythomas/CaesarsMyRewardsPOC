@@ -5,10 +5,8 @@ import OfferFilter from './OfferFilter';
 import { FILTER_SORT_OFFER } from "../../constants/actionTypes";
 import {filterOffers, updateSelectedFilter} from '../../utilities/Filter';
 import {sortOffers} from '../../utilities/Sort';
-import {getUrlParams} from '../../utilities/Helper';
+import {getUrlParams, recordMyOffersData} from '../../utilities/Helper';
 import {getOfferSortTypes, getOfferFilterTypes} from "../../constants/configs";
-import TagManager from 'react-gtm-module'
-import {isMobile} from 'react-device-detect';
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -198,28 +196,8 @@ class MyOffers extends Component {
          /**
          * DataLayer logging Starts
          */
-        const tagManagerData = {
-            dataLayer: {
-                page: 'MyOffer',
-                L1: "MyCR",
-                L2: "MyCR: myoffers",
-                L3: "MyCR: myoffers",
-                nUrl: window.location,
-                pageCategory: "CR",
-                signinStatus: "signedIn",
-                view: (isMobile)? "mobile": "fullsite"
-            },
-            events: {
-                eventName: 'eventNameXYZ'
-            },
-            gtmId: 'GTM-M363HGQ',
-            auth: 'WAeUcta8vBjHD_FnBxtJKw',
-            preview: 'env-1',
-            dataLayerName: 'MyRewardsDataLayer'
-          }
-          
           try {
-            TagManager.initialize(tagManagerData);
+            recordMyOffersData('MyOffer', this.props.offers.length );
           } catch (err) {
             //ignore datalayer error
           } 
