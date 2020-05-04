@@ -8,6 +8,10 @@ import App from './components/App';
 import './scss/bootstrap.scss';
 import './scss/main.scss';
 
+import registerServiceWorker from "./register-sw";
+
+registerServiceWorker();
+
 render((
 	<Provider store={store}>
 		<ConnectedRouter history={history}>
