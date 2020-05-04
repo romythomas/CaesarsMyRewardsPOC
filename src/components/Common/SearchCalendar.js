@@ -42,77 +42,111 @@ const loadScript = () => {
     });
 }
 
-const updateDateValueUI = (startDate, endDate) => {
+const updateDateRangeValueUI = (startDate, endDate) => {
     $('.searchCalendar-wrap input:text').val(new Date(startDate).toLocaleDateString() + " - " + new Date(endDate).toLocaleDateString());
 }
 
+const updateMonthRangeValueUI = (value) => {
+    $('.searchCalendar-wrap input:text').val(value);
+}
+
 const SearchCalendar = (props)  => {
+    //Load scripts to handle click/touch events
     loadScript();
+    //Values that are passed as properties to the component
     const {defaultValue, calendarId} = props;
     let {minimumDate, maximumDate} = props;
-    if(!minimumDate) {
-        minimumDate = moment();
-    }
-    if(!maximumDate) {
-        maximumDate = moment().add(1, 'year');
-    }
+    //Set lowest and highest calendar selectable dates, if not defined in properties
+    minimumDate = minimumDate && moment(minimumDate).isValid() ? moment(minimumDate) : moment();
+    maximumDate = maximumDate && moment(maximumDate).isValid() ? moment(maximumDate) : moment().add(1, 'year');
 
-    //month range calendar code
-    const monthRanges = [];
-    let monthRangeStartDate = minimumDate.clone();
-    while (monthRangeStartDate.isBefore(maximumDate)) {
-        if(monthRangeStartDate.month() === minimumDate.month()) {
-            monthRanges.push(monthRangeStartDate.clone());
-        } else {
-            monthRanges.push(monthRangeStartDate.clone().startOf('month'));
+    //#region - Month range calendar initialization code
+        //Create array to hold month values available for flexible date search
+        const monthRanges = [];
+        //Loop starting from minimumDate till minimumDate and store the first date of each month
+        let monthRangeStartDate = minimumDate.clone(); //use clone to avoid mutation of original variable
+        while (monthRangeStartDate.isBefore(maximumDate)) {
+            if(monthRangeStartDate.month() === minimumDate.month()) {
+                monthRanges.push(monthRangeStartDate.clone());
+            } else {
+                monthRanges.push(monthRangeStartDate.clone().startOf('month'));
+            }
+            monthRangeStartDate = monthRangeStartDate.add(1, 'month');
         }
-        monthRangeStartDate = monthRangeStartDate.add(1, 'month');
-    }
-    //date range calendar code
-    let textToDisplay = "";
-    let [defaultDateRange, setDefaultDateRange] = React.useState(null);
-    if(!defaultDateRange && defaultValue && defaultValue.startDate && defaultValue.endDate) {
-        const defaultStartDate = moment(defaultValue.startDate);
-        const defaultEndDate = moment(defaultValue.endDate);
-        if(defaultStartDate.isValid() && defaultEndDate.isValid()) {
-            textToDisplay = new Date(defaultStartDate).toLocaleDateString() + " - " + new Date(defaultEndDate).toLocaleDateString();
-            updateDateValueUI(defaultStartDate, defaultEndDate);
-            defaultDateRange = moment.range(defaultStartDate, defaultEndDate);
-        }
-    }
-    const onDateChnage = (dateRange) => {
-        if(dateRange && dateRange.start&& dateRange.start._d && dateRange.end && dateRange.end._d) {
-            const startDate = dateRange.start._d;
-            const endDate = dateRange.end.endOf('day')._d;
-            textToDisplay = new Date(startDate).toLocaleDateString() + " - " + new Date(endDate).toLocaleDateString();
-            updateDateValueUI(startDate, endDate);
-            setDefaultDateRange(moment.range(startDate, endDate));
-            if(props.onChange) {
-                $(".searchCalendar-content").hide();
-                props.onChange(startDate, endDate);
+        /**
+         * Handles the event of the month range selection.
+         * Get month value selected and find the first and last date of the slected month.
+         * Update textbot UI values and pass the startdate and enddate values to component property.
+         * @param {EventHandler} event - Click event of selected month search item
+         */
+        const onMonthChange = (event) => {
+            const {target} = event;
+            //Check if date value is presented in the slection
+            if(target && target.dataset && target.dataset.value) {
+                //Find startdate and enddate. Then convert them to moment
+                const startDate = moment(target.dataset.value);
+                const endDate = startDate.clone().endOf('month');
+                //If moment dates are valid, update UI textbox value
+                if(startDate.isValid() && endDate.isValid()) {
+                    //Update textbox UI value
+                    updateMonthRangeValueUI(target.innerText);
+                    //Pass date values to component property
+                    if(props.onChange) {
+                        $(".searchCalendar-content").hide();
+                        props.onChange(startDate._d, endDate._d);
+                    }
+                }
             }
         }
-    }
-    const onMonthChange = (event) => {
-        if(event && event.target && event.target.dataset && event.target.dataset.value) {
-            const startDate = moment(event.target.dataset.value);
-            const endDate = startDate.clone().endOf('month');
-            textToDisplay = event.target.innerText;
-            $('.searchCalendar-wrap input:text').val(textToDisplay);
-            if(props.onChange) {
-                $(".searchCalendar-content").hide();
-                props.onChange(startDate._d, endDate._d);
-              }
+    //#endregion
+
+    //#region - Date range calendar code
+        //Create local state object to hold value of calendar selection
+        let [defaultDateRange, setDefaultDateRange] = React.useState(null);
+        //Process default value received through properties, if the calendar selection value in local state is empty
+        if(!defaultDateRange && defaultValue && defaultValue.startDate && defaultValue.endDate) {
+            const defaultStartDate = moment(defaultValue.startDate);
+            const defaultEndDate = moment(defaultValue.endDate);
+            //Validate the default values present in properties
+            //If valid, Update textbot value in UI and set the local store value for calendar selection
+            if(defaultStartDate.isValid() && defaultEndDate.isValid()) {
+                updateDateRangeValueUI(defaultStartDate, defaultEndDate);
+                defaultDateRange = moment.range(defaultStartDate, defaultEndDate);
+            }
         }
-    }
+        /**
+         * Handles the event of the range calendar selection.
+         * Get the startdate and enddate selected.
+         * Update textbot UI values and pass these values to component property.
+         * @param {Object} dateRange - Date object which contains startdate and enddate
+         */
+        const onDateChnage = (dateRange) => {
+            const {start, end} = dateRange;
+            //Check if date values are present
+            if(start && start.isValid() && end && end.isValid()) {
+                //Find start date and last minute of end date
+                const startDate = start._d;
+                const endDate = end.endOf('day')._d;
+                //Update textbox UI and update range calendar state value
+                updateDateRangeValueUI(startDate, endDate);
+                setDefaultDateRange(moment.range(startDate, endDate));
+                //Pass date values to component property
+                if(props.onChange) {
+                    $(".searchCalendar-content").hide();
+                    props.onChange(startDate, endDate);
+                }
+            }
+        }
+    //#endregion
+
     return (
         <div className="searchCalendar">
             <div className="select-wrap searchCalendar-wrap">
                 <input
                     className="form-control txt"
                     type="text"
+                    autoComplete="off"
                     id={calendarId}
-                    defaultValue={textToDisplay}
                     required
                 />
                 <label className="form-control-placeholder" htmlFor={calendarId}>
