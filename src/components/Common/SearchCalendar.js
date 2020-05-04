@@ -68,6 +68,8 @@ const loadScript = () => {
 
 /**
  * Updates the input text value based on the dates selected from date range calendar.
+ * @param {Date} startDate - Start date selected from range calendar.
+ * @param {Date} endDate - End date selected from range calendar.
  */
 const updateDateRangeValueUI = (startDate, endDate) => {
     $('.searchCalendar-wrap input:text').val(new Date(startDate).toLocaleDateString() + " - " + new Date(endDate).toLocaleDateString());
@@ -75,6 +77,8 @@ const updateDateRangeValueUI = (startDate, endDate) => {
 
 /**
  * Updates the input text value and active class based on the dates selected from month range calendar.
+ * @param {String} value - Selected month range calendar value.
+ * @param {EventHandler} event - User selection event of month value.
  */
 const updateMonthRangeValueUI = (value, event) => {
     $(".monthRangeCalendar__item .month-item.active").removeClass("active");
@@ -84,6 +88,7 @@ const updateMonthRangeValueUI = (value, event) => {
 
 /**
  * Handels the functional component render and its properties.
+ * @param {Object} props - Property of the component.
  */
 const SearchCalendar = (props)  => {
     //Load scripts to handle click/touch events
