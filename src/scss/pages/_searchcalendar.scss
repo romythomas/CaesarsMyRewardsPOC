@@ -45,6 +45,9 @@
 				cursor: pointer;
 				border: 1px solid black;
 			}
+			li.month-item.active {
+				background-color: rgb(173, 31, 35);
+			}
 		}
 	}
 	.close{

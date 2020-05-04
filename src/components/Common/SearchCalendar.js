@@ -6,50 +6,90 @@ import 'react-daterange-picker/dist/css/react-calendar.css';
 
 const moment = extendMoment(originalMoment);
 
+/**
+ * Defines all jQuery events used to handel the clicks and show/hide.
+ */
 const loadScript = () => {
     $(document).ready(function(){
+        const $searchCalendarContent = $(".searchCalendar-content");
+        const $dateRangeCalendarItem = $(".dateRangeCalendar__item");
+        const $monthRangeCalendarItem = $(".monthRangeCalendar__item");
+        /**
+         * Handles the click events of text input, to show/hide the (date/month) range calendars.
+         */
         $('.searchCalendar-wrap').off('click touch').on('click touch', function(e) {
             e.preventDefault();
-            $(".searchCalendar-content").toggle();
+            $searchCalendarContent.toggle();
         });
+        /**
+         * Handels the show/hide of (date/month) range calendars based on 'Exact Date' calendar button click.
+         */
         $('.searchCalendar-content .searchBy-Dates').off('click touch').on('click touch', function(e) {
             e.preventDefault();
-            $(".dateRangeCalendar__item").show();
-            $(".monthRangeCalendar__item").hide();
+            $dateRangeCalendarItem.show();
+            $monthRangeCalendarItem.hide();
         });
+        /**
+         * Handels the show/hide of (date/month) range calendars based on 'Flexible Date' calendar button click.
+         */
         $('.searchCalendar-content .searchBy-Months').off('click touch').on('click touch', function(e) {
             e.preventDefault();
-            $(".dateRangeCalendar__item").hide();
-            $(".monthRangeCalendar__item").show();
+            $dateRangeCalendarItem.hide();
+            $monthRangeCalendarItem.show();
         });
+        /**
+         * Make the keyboard entry disabled for text input.
+         */
         $('.searchCalendar-wrap .txt').keypress(function(e) {
             return false;
         });
+        /**
+         * Handels the close button click event of the (date/month) range calendars.
+         */
         $('.searchCalendar .close').off('click touch').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            $(".searchCalendar-content").hide();
+            $searchCalendarContent.hide();
         });
+        /**
+         * Closes the (date/month) range calendars upon clicking HTML body other than the (date/month) range calendars.
+         */
         $(document).off('click').on('click', 'body', function(e) {
             if(e) {
                 const {target} = e;
                 const targetClassName = (target.className) ? "." + target.className : "";
                 if(targetClassName !== "searchCalendar" && $(".searchCalendar").find(target).length <= 0) {
-                    $('.searchCalendar-content').hide();
+                    $searchCalendarContent.hide();
                 }
             }
         });
     });
 }
 
+/**
+ * Updates the input text value based on the dates selected from date range calendar.
+ * @param {Date} startDate - Start date selected from range calendar.
+ * @param {Date} endDate - End date selected from range calendar.
+ */
 const updateDateRangeValueUI = (startDate, endDate) => {
     $('.searchCalendar-wrap input:text').val(new Date(startDate).toLocaleDateString() + " - " + new Date(endDate).toLocaleDateString());
 }
 
-const updateMonthRangeValueUI = (value) => {
+/**
+ * Updates the input text value and active class based on the dates selected from month range calendar.
+ * @param {String} value - Selected month range calendar value.
+ * @param {EventHandler} event - User selection event of month value.
+ */
+const updateMonthRangeValueUI = (value, event) => {
+    $(".monthRangeCalendar__item .month-item.active").removeClass("active");
+    event.target.classList.add("active");
     $('.searchCalendar-wrap input:text').val(value);
 }
 
+/**
+ * Handels the functional component render and its properties.
+ * @param {Object} props - Property of the component.
+ */
 const SearchCalendar = (props)  => {
     //Load scripts to handle click/touch events
     loadScript();
@@ -88,8 +128,8 @@ const SearchCalendar = (props)  => {
                 const endDate = startDate.clone().endOf('month');
                 //If moment dates are valid, update UI textbox value
                 if(startDate.isValid() && endDate.isValid()) {
-                    //Update textbox UI value
-                    updateMonthRangeValueUI(target.innerText);
+                    //Update textbox UI value and active class
+                    updateMonthRangeValueUI(target.innerText, event);
                     //Pass date values to component property
                     if(props.onChange) {
                         $(".searchCalendar-content").hide();
@@ -127,8 +167,9 @@ const SearchCalendar = (props)  => {
                 //Find start date and last minute of end date
                 const startDate = start._d;
                 const endDate = end.endOf('day')._d;
-                //Update textbox UI and update range calendar state value
+                //Update textbox UI
                 updateDateRangeValueUI(startDate, endDate);
+                //Update range calendar state value
                 setDefaultDateRange(moment.range(startDate, endDate));
                 //Pass date values to component property
                 if(props.onChange) {
@@ -139,53 +180,59 @@ const SearchCalendar = (props)  => {
         }
     //#endregion
 
-    return (
-        <div className="searchCalendar">
-            <div className="select-wrap searchCalendar-wrap">
-                <input
-                    className="form-control txt"
-                    type="text"
-                    autoComplete="off"
-                    id={calendarId}
-                    required
-                />
-                <label className="form-control-placeholder" htmlFor={calendarId}>
-                    Start date - End date
-                </label>
+    //#region - Render elements
+
+        /**********************************************************************************************************
+         * Don't change any element IDs, names, class names or HTML structure below, as they are related to the scripts written above.
+         ************************************************************************************************************/
+        return (
+            <div className="searchCalendar">
+                <div className="select-wrap searchCalendar-wrap">
+                    <input
+                        className="form-control txt"
+                        type="text"
+                        autoComplete="off"
+                        id={calendarId}
+                        required
+                    />
+                    <label className="form-control-placeholder" htmlFor={calendarId}>
+                        Start date - End date
+                    </label>
+                </div>
+                <div className="searchCalendar-content">
+                    <span className="close"></span>
+                    <div className="searchCalendar-options">
+                        <button className="searchBy-Dates">Exact Date</button>
+                        <button className="searchBy-Months">Flexible Dates</button>
+                    </div>
+                    <div className="dateRangeCalendar__item">
+                        <DateRangePicker
+                                onSelect={onDateChnage}
+                                minimumDate={new Date(minimumDate)}
+                                maximumDate={new Date(maximumDate)}
+                                value={defaultDateRange}
+                                selectionType="range"
+                                numberOfCalendars={2}
+                            />
+                    </div>
+                    <div className="monthRangeCalendar__item">
+                        <ul className="monthRangeCalendar__list">
+                            {monthRanges.map((date, index) => {
+                                return(
+                                    <li key={index} 
+                                        className="month-item" 
+                                        data-value={date.format("DD-MMM-YYYY")}
+                                        onClick={onMonthChange}>
+                                            {date.format("MMM YYYY")}
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div className="searchCalendar-content">
-                <span className="close"></span>
-                <div className="searchCalendar-options">
-                    <button className="searchBy-Dates">Exact Date</button>
-                    <button className="searchBy-Months">Flexible Dates</button>
-                </div>
-                <div className="dateRangeCalendar__item">
-                    <DateRangePicker
-                            onSelect={onDateChnage}
-                            minimumDate={new Date(minimumDate)}
-                            maximumDate={new Date(maximumDate)}
-                            value={defaultDateRange}
-                            selectionType="range"
-                            numberOfCalendars={2}
-                        />
-                </div>
-                <div className="monthRangeCalendar__item">
-                    <ul className="monthRangeCalendar__list">
-                        {monthRanges.map((date, index) => {
-                            return(
-                                <li key={index} 
-                                    className="month-item" 
-                                    data-value={date.format("DD-MMM-YYYY")}
-                                    onClick={onMonthChange}>
-                                        {date.format("MMM YYYY")}
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    );
+        );
+    //#endregion
 }
 
 export default SearchCalendar;
