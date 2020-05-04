@@ -4,7 +4,7 @@ const registerServiceWorker = () => {
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
       navigator.serviceWorker
-        .register("./sw.js")
+      .register("/sw.js")
         .then(function(registration) {
           console.log("Registration successful, scope is:", registration.scope);
         })

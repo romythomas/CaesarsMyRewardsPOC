@@ -90,7 +90,7 @@ module.exports = {
 		  }),
 
 		new InjectManifest({
-			swSrc: "./src/CustomServiceWorker.js",
+			swSrc: "./src/src-sw.js",
 			swDest: "sw.js",
 			exclude: [/test.*/]
 		  })
