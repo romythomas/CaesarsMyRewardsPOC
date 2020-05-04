@@ -16,7 +16,6 @@ const loadScript = () => {
         });
         $(document).on('click', 'body', function(e) {
             if(e) {
-                e.preventDefault();
                 const {target} = e;
                 const targetClassName = (target.className) ? "." + target.className : "";
                 if(targetClassName !== "multiselectlist" && $(".multiselectlist").find(target).length <= 0) {

@@ -137,7 +137,6 @@ const loadScript = () => {
         });
         $(document).on('click', 'body', function(event) {
             if(event) {
-                event.preventDefault();
                 const {target} = event;
                 const targetClassName = (target.className) ? "." + target.className : "";
                 if(targetClassName !== "autocomplete" && $(autocomplete_component).find(target).length <= 0) {
