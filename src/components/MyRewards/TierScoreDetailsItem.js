@@ -1,15 +1,5 @@
 import React from 'react';
 import {getTierName, getTierDetails} from '../../utilities/Helper'
-import { connect } from 'react-redux';
-
-/**
- * 
- * @param {*} state 
- */
-const mapStateToProps = state => ({
-    logininfo: state.guestProfile.logininfo,
-    feeds: state.guestProfile.feeds
-  });
   
 /**
  * 
@@ -25,4 +15,4 @@ const TierScoreDetailsItem = (props) => {
     );
 }
 
-export default connect(mapStateToProps)(TierScoreDetailsItem);
+export default (TierScoreDetailsItem);

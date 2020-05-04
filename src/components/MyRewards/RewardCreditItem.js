@@ -1,13 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
-/**
- * 
- * @param {*} state 
- */
-const mapStateToProps = state => ({
-    logininfo: state.guestProfile.logininfo
-  });
   
 /**
  * 
@@ -25,4 +16,4 @@ const RewardCreditItem = (props) => {
         </div>
     );
 }
-export default connect(mapStateToProps)(RewardCreditItem);
+export default (RewardCreditItem);

@@ -1,17 +1,7 @@
 import React from 'react';
 import {getProperty,truncate} from '../../utilities/Helper'
 import {getImageUrl} from '../../constants/configs'
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-/**
- * 
- * @param {*} state 
- */
-const mapStateToProps = state => ({    
-    offerList: state.common.offers,
-    propertyList: state.common.properties
-  });
 
 /**
  * 
@@ -19,7 +9,6 @@ const mapStateToProps = state => ({
  */
 const OfferBlurbItem = (props) => { 
     const { offerList, propertyList} = props;
-
     let imageUrl = getImageUrl();
     let propertyName = '';
     let offers = (offerList[0]== null)? '' : offerList[0];
@@ -51,4 +40,4 @@ const OfferBlurbItem = (props) => {
         </div>
     );
 }
-export default connect(mapStateToProps)(OfferBlurbItem);
+export default (OfferBlurbItem);

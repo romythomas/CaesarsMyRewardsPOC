@@ -1,30 +1,19 @@
 import React from 'react';
 import {buildEnterpriseResponse, getProperty} from '../../utilities/Helper'
 import {getImageUrl} from '../../constants/configs'
-import { connect } from 'react-redux';
 
 /**
- * 
- * @param {*} state 
+ *
+ * @param {*} props
  */
-const mapStateToProps = state => ({    
-    propertyList: state.common.properties,
-    enterpriseList: state.common.enterpriseFeed,
-    priceList: state.common.priceAlert
-  });
-
-/**
- * 
- * @param {*} props 
- */
-const PriceAlertBlurbItem = (props) => { 
+const PriceAlertBlurbItem = (props) => {
     const {propertyList, enterpriseList, priceList} = props;
 
     let rooms = [];
     let priceAlert = null;
     let lowestRate = null;
     let imageUrl = getImageUrl();
-    let propertyName = '';     
+    let propertyName = '';
 
     var enterprise = buildEnterpriseResponse(priceList.harrahs.roomtypes);
     enterpriseList.priceAlerts.map((li) => {
@@ -48,7 +37,7 @@ const PriceAlertBlurbItem = (props) => {
         }
     })
 
-    return (        
+    return (
         <div className="listing-wrap">
             <h3>My Price Alerts</h3>
             <div className="listing__img">
@@ -62,7 +51,7 @@ const PriceAlertBlurbItem = (props) => {
                 <h2>Based on availability</h2>
                 Stay for as little as
                 <span className="rate">${rooms[0].rate}</span>
-                
+
             </div>
             <div className="btn-wrap-double">
                 <button className="button">View</button>
@@ -72,4 +61,4 @@ const PriceAlertBlurbItem = (props) => {
     );
 }
 
-export default connect(mapStateToProps)(PriceAlertBlurbItem);
+export default (PriceAlertBlurbItem);

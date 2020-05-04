@@ -1,16 +1,6 @@
 import React from 'react';
 import {getProperty} from '../../utilities/Helper'
 import {getImageUrl} from '../../constants/configs'
-import { connect } from 'react-redux';
-
-/**
- * 
- * @param {*} state 
- */
-const mapStateToProps = state => ({
-    propertyList: state.common.properties,
-    reservationList: state.common.reservations
-  });
 
   /**
    * 
@@ -53,4 +43,4 @@ const ReservationBlurbItem = (props) => {
     );
 }
 
-export default connect(mapStateToProps)(ReservationBlurbItem);
+export default (ReservationBlurbItem);
