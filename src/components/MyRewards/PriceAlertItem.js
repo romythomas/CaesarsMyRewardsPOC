@@ -6,7 +6,7 @@ import {getImageUrl} from '../../constants/configs'
  *
  * @param {*} props
  */
-const PriceAlertBlurbItem = (props) => {
+const PriceAlertItem = (props) => {
     const {propertyList, enterpriseList, priceList} = props;
 
     let rooms = [];
@@ -61,4 +61,4 @@ const PriceAlertBlurbItem = (props) => {
     );
 }
 
-export default (PriceAlertBlurbItem);
+export default (PriceAlertItem);

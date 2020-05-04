@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
  * 
  * @param {*} props 
  */
-const OfferBlurbItem = (props) => { 
+const OfferItem = (props) => { 
     const { offerList, propertyList} = props;
     let imageUrl = getImageUrl();
     let propertyName = '';
@@ -40,4 +40,4 @@ const OfferBlurbItem = (props) => {
         </div>
     );
 }
-export default (OfferBlurbItem);
+export default (OfferItem);

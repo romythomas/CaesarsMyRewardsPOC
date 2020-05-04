@@ -6,7 +6,7 @@ import {getImageUrl} from '../../constants/configs'
    * 
    * @param {*} props 
    */
-const ReservationBlurbItem = (props) => { 
+const ReservationItem = (props) => { 
     const {propertyList, reservationList} = props;
 
     let imageUrl = getImageUrl();
@@ -43,4 +43,4 @@ const ReservationBlurbItem = (props) => {
     );
 }
 
-export default (ReservationBlurbItem);
+export default (ReservationItem);
