@@ -214,7 +214,7 @@ const Autocomplete = (props) => {
                 <div className="autocomplete__list">
                     <ul className="autocomplete__listwrap">
                     {dataList.map((item, index) => {
-                        const stylingClassToApply = "";
+                        let stylingClassToApply = "";
                         if(item.isStylingRequired) {
                             stylingClassToApply = stylingClass ? stylingClass : "highlight";
                         }
