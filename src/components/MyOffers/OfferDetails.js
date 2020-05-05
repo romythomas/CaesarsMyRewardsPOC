@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import {getProperty, getPropertiesListByCode, getFavouriteImage, recordOffersDetailsData} from '../../utilities/Helper'
-import {getImageUrl} from '../../constants/configs'
+import {
+    getProperty, 
+    getFavouriteImage, 
+    recordOffersDetailsData, 
+    getMarketCodeListOfPropertyCodes,
+    getStructuredMarketsPropertiesList} from '../../utilities/Helper';
+import Autocomplete from "../Common/Autocomplete";
+import {getImageUrl} from '../../constants/configs';
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers, 
-    properties: state.common.properties
+    properties: state.common.properties,
+    markets: state.common.markets
 });
 
 const gotoNBE = (parameter) => (event) => {
@@ -22,7 +29,7 @@ const gotoNBE = (parameter) => (event) => {
  */
 class OfferDetails  extends Component  {       
     render(){
-        const { offers, properties } = this.props;
+        const { offers, properties, markets } = this.props;
         
         if ((this.props.match.params) && (this.props.match.params.id)) {
             const offer = offers.filter((offer) => {
@@ -42,8 +49,12 @@ class OfferDetails  extends Component  {
 
         if(selectedOffer && properties){
             var imageUrl = getImageUrl();
+            const marketsOfProperties = getMarketCodeListOfPropertyCodes(markets, selectedOffer.propertyList);
+            let marketPropertyListData = getStructuredMarketsPropertiesList(markets);
+            marketPropertyListData = marketPropertyListData.filter((data) => {
+                return (marketsOfProperties.includes(data.value) || selectedOffer.propertyList.includes(data.value));
+            });
             var property = getProperty(properties, selectedOffer.propertyList[0]);
-            var proplist = getPropertiesListByCode(properties, new Array(selectedOffer.propertyList));
             if(property){
                 imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/m/cover";
             }
@@ -67,15 +78,22 @@ class OfferDetails  extends Component  {
                         <br/>
                         <br/>
                         <strong>Properties:</strong>
-                        <span>                   
-                            <select id="property" className="dropdown selectDropdown filled" >
-                                {proplist.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}
-                            </select>
-                            <button className="button" 
-                                onClick={gotoNBE(new Array(selectedOffer.id, new Date(selectedOffer.start).toLocaleDateString(),new Date(selectedOffer.end).toLocaleDateString()))} >
-                                Book</button> 
-                        </span>
+                        
                         <br/>  
+                    </div>
+                    <div className="propertySelect">  
+                        <ul className="row">
+                            <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                <Autocomplete 
+                                    dataList={marketPropertyListData}
+                                    stylingClass={"disabled"} 
+                                    elementId="navigate-from-offer-details" 
+                                    title="Where do you want to go?" />
+                            </li>
+                        </ul>
+                        <button className="button" 
+                            onClick={gotoNBE(new Array(selectedOffer.id, new Date(selectedOffer.start).toLocaleDateString(),new Date(selectedOffer.end).toLocaleDateString()))} >
+                            Book</button> 
                     </div>
                     <div className="fav">
                             <img src={getFavouriteImage(selectedOffer.pref)} alt="Caesars Favourite Logo"/>

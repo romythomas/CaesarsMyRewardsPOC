@@ -133,6 +133,24 @@ export const getPropertiesOfMarket = (markets, code) => {
 }
 
 /**
+ * Returns the Market Code of property
+ * @param {Object} markets - GetMarkets API call response.
+ * @param {String} propCode - Property Code
+ */
+export const getMarketCodeListOfPropertyCodes = (markets, propCodes) => {
+    const marketCodes = [];
+    markets.map((market) => {
+        const propertyIndex =  market.Properties.findIndex((property) => {
+            return propCodes.includes(property.Code);
+        });
+        if(propertyIndex >= 0) {
+            marketCodes.push(market.Code);
+        }
+    });
+    return marketCodes;
+}
+
+/**
  * Loops through the GetMarkets API response and creates an array of markets and properties suitable for Autocomplete Component.
  * @param {Object} markets - GetMarkets API call response.
  * @returns {Array} - Array of markets and properties suitable as input for Autocomplete Component.
