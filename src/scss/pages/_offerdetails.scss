@@ -1,0 +1,7 @@
+//Offer Details starts here
+.propertySelect li.autocomplete__item.highlight.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: text;
+    color: gray;
+}
