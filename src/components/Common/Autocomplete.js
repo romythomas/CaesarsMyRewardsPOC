@@ -216,7 +216,7 @@ const Autocomplete = (props) => {
                     {dataList.map((item, index) => {
                         let stylingClassToApply = "";
                         if(item.isStylingRequired) {
-                            stylingClassToApply = stylingClass ? stylingClass : "highlight";
+                            stylingClassToApply += "highlight " + (stylingClass ? stylingClass : "");
                         }
                         const isSelected = item.value.toUpperCase() === defaultDataValue.toUpperCase();
                         return (

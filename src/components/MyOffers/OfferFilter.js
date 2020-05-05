@@ -53,7 +53,6 @@ const OfferFilter = (props) => {
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <Autocomplete 
                             dataList={marketPropertyListData}
-                            stylingClass={"highlight"} 
                             elementId="market-property" 
                             title="Where do you want to go?" 
                             defaultValue={defaultLocation} 
