@@ -4,6 +4,7 @@ import Textbox from "../Common/Textbox";
 import MultiSelectList from "../Common/MultiSelectList";
 import Autocomplete from "../Common/Autocomplete";
 import SearchCalendar  from "../Common/SearchCalendar";
+import {getStructuredMarketsPropertiesList} from "../../utilities/Helper";
 import {getOfferFilterTypes, getOfferSortTypes} from "../../constants/configs";
 
 
@@ -34,34 +35,7 @@ const OfferFilter = (props) => {
         });
     }
 
-    let marketPropertyListData = [];
-    markets.map((market) => {
-        const marketName = market.Name;
-        let propertyListNames = "";
-        let parentLocation = "";
-        parentLocation += market.ParentLocation ? market.ParentLocation.Code + " , " + market.ParentLocation.Name : "";
-        parentLocation += market.ParentLocation && market.ParentLocation.ParentLocation ? " , " + market.ParentLocation.ParentLocation.Code + " , " + market.ParentLocation.ParentLocation.Name : "";
-        const propertyList = [];
-        market.Properties.map((property) => {
-            const propertyName = property.Name;
-            propertyListNames = propertyListNames + " , " + propertyName;
-            propertyList.push({
-                display: propertyName,
-                value: property.Code,
-                isStylingRequired: false,
-                isMarket: false,
-                searchdata: marketName + " , " + propertyName + " , " + parentLocation
-            });
-        });
-        marketPropertyListData.push({
-            display: marketName,
-            value: market.Code,
-            isStylingRequired: true,
-            isMarket: true,
-            searchdata: marketName + " , " + propertyListNames + " , " + parentLocation
-        });
-        marketPropertyListData = [...marketPropertyListData, ...propertyList]
-    });
+    const marketPropertyListData = getStructuredMarketsPropertiesList(markets);
 
     return (
         <div>

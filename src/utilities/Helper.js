@@ -131,6 +131,44 @@ export const getPropertiesOfMarket = (markets, code) => {
     const market = getMarketDetails(markets, code);
     return market && market.Properties && market.Properties.length ? market.Properties : [];
 }
+
+/**
+ * Loops through the GetMarkets API response and creates an array of markets and properties suitable for Autocomplete Component.
+ * @param {Object} markets - GetMarkets API call response.
+ * @returns {Array} - Array of markets and properties suitable as input for Autocomplete Component.
+ */
+export const getStructuredMarketsPropertiesList = (markets) => {
+    let marketPropertyListData = [];
+    markets.map((market) => {
+        const marketName = market.Name;
+        let propertyListNames = "";
+        let parentLocation = "";
+        parentLocation += market.ParentLocation ? market.ParentLocation.Code + " , " + market.ParentLocation.Name : "";
+        parentLocation += market.ParentLocation && market.ParentLocation.ParentLocation ? " , " + market.ParentLocation.ParentLocation.Code + " , " + market.ParentLocation.ParentLocation.Name : "";
+        const propertyList = [];
+        market.Properties.map((property) => {
+            const propertyName = property.Name;
+            propertyListNames = propertyListNames + " , " + propertyName;
+            propertyList.push({
+                display: propertyName,
+                value: property.Code,
+                isStylingRequired: false,
+                isMarket: false,
+                searchdata: marketName + " , " + propertyName + " , " + parentLocation
+            });
+        });
+        marketPropertyListData.push({
+            display: marketName,
+            value: market.Code,
+            isStylingRequired: true,
+            isMarket: true,
+            searchdata: marketName + " , " + propertyListNames + " , " + parentLocation
+        });
+        marketPropertyListData = [...marketPropertyListData, ...propertyList]
+    });
+    return marketPropertyListData;
+}
+
 /**
  * 
  * @param {*} source 
