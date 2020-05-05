@@ -5,24 +5,24 @@ const Footer = (props) => {
       <footer className="footer">
       <div className="footer-main">
         <div className="footer__logos">
-          <div className="main-logo"><a href="#"><img src="images/main-logo.png" alt="Caesars"/></a></div>
+          <div className="main-logo"><a href="#"><img src="/images/main-logo.png" alt="Caesars"/></a></div>
           <div className="logos-group">
-            <a href="#"><img src="images/lg-1.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-2.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-3.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-4.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-5.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-6.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-7.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-8.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-9.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-10.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-11.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-12.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-13.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-14.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-15.png" alt="Caesars"/></a>
-            <a href="#"><img src="images/lg-16.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-1.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-2.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-3.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-4.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-5.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-6.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-7.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-8.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-9.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-10.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-11.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-12.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-13.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-14.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-15.png" alt="Caesars"/></a>
+            <a href="#"><img src="/images/lg-16.png" alt="Caesars"/></a>
           </div>
         </div>
         <div className="icons-social">
