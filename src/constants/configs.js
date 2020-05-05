@@ -18,3 +18,7 @@ export const getOfferSortTypes = () => {
 export const getImageUrl =()=>{
     return 'http://www.caesars.com/myrewards/profile/images/tr-placeholder.jpg';
 }
+
+export const getApiRootUrl =() =>{
+    return "http://caesarspoc.s3-website.us-east-2.amazonaws.com/";
+}

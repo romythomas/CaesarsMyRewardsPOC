@@ -1,9 +1,10 @@
 import superagentPromise from "superagent-promise";
 import _superagent from "superagent";
+import {getApiRootUrl} from './constants/configs';
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
-const API_ROOT = "http://caesarspoc.s3-website.us-east-2.amazonaws.com/";
+const API_ROOT = getApiRootUrl();
 
 const encode = encodeURIComponent;
 const responseBody = (res) => res.body;
