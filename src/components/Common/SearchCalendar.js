@@ -2,7 +2,6 @@ import React from 'react';
 import originalMoment from "moment";
 import { extendMoment } from "moment-range";
 import DateRangePicker from 'react-daterange-picker';
-import 'react-daterange-picker/dist/css/react-calendar.css';
 
 const moment = extendMoment(originalMoment);
 
