@@ -3,6 +3,7 @@ import React from 'react';
 const loadScript = () => {
     $(document).ready(function() {
         let count = 1;
+        const autocomplete = document.getElementsByClassName('autocomplete')[0];
         const autocomplete_component = document.getElementById('autocomplete-component');
         const autocomplete_content = autocomplete_component.querySelector('div.autocomplete-content');
         const autocomplete_list_array = autocomplete_component.querySelectorAll('li.autocomplete__item');
@@ -17,6 +18,7 @@ const loadScript = () => {
         });
         
         autocomplete_text_input.addEventListener('click', function (e) {
+            add_mobileClass();
             change_valueToPlaceholder();
             init_list();
             show_list(autocomplete_content);
@@ -71,6 +73,14 @@ const loadScript = () => {
             }
             autocomplete_text_input.placeholder = "";
         }
+
+        function add_mobileClass() {
+            autocomplete.classList.add('autocomplete--open');
+        }
+
+        function remove_mobileClass() {
+            autocomplete.classList.remove('autocomplete--open');
+        }
         
         function copy_paste(e) {
             set_selected(this);
@@ -88,6 +98,7 @@ const loadScript = () => {
                 }
             }
             item.dataset.selected = 'true';
+            remove_mobileClass();
         }
         
         function hide_list(ele) {
@@ -129,9 +140,10 @@ const loadScript = () => {
                 }
             };
         }
-        $('.autocomplete-content .close').on('click touch', function(e) {
+        $('.autocomplete .close').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            remove_mobileClass();
             hide_list(autocomplete_content);
             set_selectedToText();
         });
@@ -140,6 +152,7 @@ const loadScript = () => {
                 const {target} = event;
                 const targetClassName = (target.className) ? "." + target.className : "";
                 if(targetClassName !== "autocomplete" && $(autocomplete_component).find(target).length <= 0) {
+                    remove_mobileClass();
                     hide_list(autocomplete_content);
                     set_selectedToText();
                 }
@@ -182,6 +195,7 @@ const Autocomplete = (props) => {
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
         return (
             <div className="autocomplete" id="autocomplete-component">
+                <span className="close"></span>
                 <div className="select-wrap">
                     <input
                         className="form-control txt autocomplete-search"
@@ -197,11 +211,13 @@ const Autocomplete = (props) => {
                     </label>
                 </div>
                 <div className="autocomplete-content" data-toggle="false">
-                <span className="close"></span>
                 <div className="autocomplete__list">
                     <ul className="autocomplete__listwrap">
                     {dataList.map((item, index) => {
-                        const stylingClassToApply = item.isStylingRequired ? stylingClass : "";
+                        const stylingClassToApply = "";
+                        if(item.isStylingRequired) {
+                            stylingClassToApply = stylingClass ? stylingClass : "highlight";
+                        }
                         const isSelected = item.value.toUpperCase() === defaultDataValue.toUpperCase();
                         return (
                             <li
