@@ -49,6 +49,7 @@ const OfferFilter = (props) => {
                 display: propertyName,
                 value: property.Code,
                 isStylingRequired: false,
+                isMarket: false,
                 searchdata: marketName + " , " + propertyName + " , " + parentLocation
             });
         });
@@ -56,6 +57,7 @@ const OfferFilter = (props) => {
             display: marketName,
             value: market.Code,
             isStylingRequired: true,
+            isMarket: true,
             searchdata: marketName + " , " + propertyListNames + " , " + parentLocation
         });
         marketPropertyListData = [...marketPropertyListData, ...propertyList]
@@ -76,7 +78,8 @@ const OfferFilter = (props) => {
                 <ul className="row">
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <Autocomplete 
-                            dataList={marketPropertyListData} 
+                            dataList={marketPropertyListData}
+                            stylingClass={"highlight"} 
                             elementId="market-property" 
                             title="Where do you want to go?" 
                             defaultValue={defaultLocation} 

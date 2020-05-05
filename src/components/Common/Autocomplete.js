@@ -149,7 +149,7 @@ const loadScript = () => {
 }
 
 const Autocomplete = (props) => {
-    const {dataList, elementId, title, defaultValue} = props;
+    const {dataList, elementId, title, defaultValue, stylingClass} = props;
     let dafaultDataDisplay = "", defaultDataValue = "";
     const onClick = (value) =>{
         if(value && value.target) {
@@ -201,12 +201,12 @@ const Autocomplete = (props) => {
                 <div className="autocomplete__list">
                     <ul className="autocomplete__listwrap">
                     {dataList.map((item, index) => {
-                        const stylingClass = item.isStylingRequired ? "highlight" : "";
+                        const stylingClassToApply = item.isStylingRequired ? stylingClass : "";
                         const isSelected = item.value.toUpperCase() === defaultDataValue.toUpperCase();
                         return (
                             <li
                                 key={index}
-                                className={"autocomplete__item " + stylingClass}
+                                className={"autocomplete__item " + stylingClassToApply}
                                 data-searchcontent={item.searchdata}
                                 data-selected={isSelected.toString()}
                                 data-display="true"
