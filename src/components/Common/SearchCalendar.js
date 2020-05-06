@@ -139,8 +139,8 @@ const SearchCalendar = (props)  => {
             //Check if date value is presented in the slection
             if(target && target.dataset && target.dataset.value) {
                 //Find startdate and enddate. Then convert them to moment
-                const startDate = moment(target.dataset.value);
-                const endDate = startDate.clone().endOf('month');
+                const startDate = moment(target.dataset.value).startOf('day');
+                const endDate = startDate.clone().endOf('month').endOf('day');
                 //If moment dates are valid, update UI textbox value
                 if(startDate.isValid() && endDate.isValid()) {
                     //Update textbox UI value and active class
@@ -160,8 +160,8 @@ const SearchCalendar = (props)  => {
         let [defaultDateRange, setDefaultDateRange] = React.useState(null);
         //Process default value received through properties, if the calendar selection value in local state is empty
         if(!defaultDateRange && defaultValue && defaultValue.startDate && defaultValue.endDate) {
-            const defaultStartDate = moment(defaultValue.startDate);
-            const defaultEndDate = moment(defaultValue.endDate);
+            const defaultStartDate = moment(defaultValue.startDate).startOf('day');
+            const defaultEndDate = moment(defaultValue.endDate).endOf('day');
             //Validate the default values present in properties
             //If valid, Update textbot value in UI and set the local store value for calendar selection
             if(defaultStartDate.isValid() && defaultEndDate.isValid()) {
@@ -180,7 +180,7 @@ const SearchCalendar = (props)  => {
             //Check if date values are present
             if(start && start.isValid() && end && end.isValid()) {
                 //Find start date and last minute of end date
-                const startDate = start._d;
+                const startDate = start.startOf('day')._d;
                 const endDate = end.endOf('day')._d;
                 //Update textbox UI
                 updateDateRangeValueUI(startDate, endDate);
