@@ -13,7 +13,7 @@ const OfferItem = (props) => {
     let offerImageUrl = "images/list-img.jpg";
     const propertyDetails = getProperty(properties, offer.propertyList[0]);
     if(propertyDetails && propertyDetails.thumbnail && propertyDetails.thumbnail.url) {
-        offerImageUrl ="http://caesars.com" + propertyDetails.thumbnail.url + "/hd/m/cover";
+        offerImageUrl =`http://caesars.com${propertyDetails.thumbnail.url}/hd/m/cover`;
     }
     
     return (

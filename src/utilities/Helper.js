@@ -82,7 +82,7 @@ export const getPropertiesListByCode = (list, codes) => {
         list.map((li) => {
             codes[0].map((code) => {
                 if (code === li.id.toUpperCase()) {
-                    propertyNamesList.push({ "id": li.id +','+li.marketCode, "name": li.name });
+                    propertyNamesList.push(li.name);
                 }
             })
         })

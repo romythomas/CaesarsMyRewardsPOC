@@ -15,7 +15,7 @@ const OfferItem = (props) => {
     if(propertyList && offers && offers && offers.propertyList[0]){
         var property = getProperty(propertyList, offers.propertyList[0]);
         if(property){
-            imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/m/cover";
+            imageUrl = `http://caesars.com${property.thumbnail.url}/hd/m/cover`;
             propertyName = property.propertyName;
         }
     }
