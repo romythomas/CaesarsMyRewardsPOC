@@ -12,7 +12,7 @@
 	.searchCalendar-content{
 		background: $custome-white;
 		position: absolute;
-		width: 630px;
+		width: 590px;
 		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
 		display: none;
 		z-index: 99999;
@@ -58,19 +58,30 @@
 		.monthRangeCalendar__item {
 			display: none;
 			.monthRangeCalendar__list {
-				padding: 0 30px;
+				padding: 20px 30px;
+				display: flex;
+				flex-wrap: wrap;
+				@include break-point(767px){
+					justify-content: center;
+				}
 			}
 			li.month-item {
-				display: inline-block;
-				padding: 10px 10px;
-				margin: 20px 10px;
+		    	padding: 6px 10px;
+				margin: 8px 6px;
 				width: 120px;
 				text-align: center;
 				cursor: pointer;
-				border: 1px solid black;
+				border: 1px solid #000;
+				text-transform: uppercase;
+				border-radius: 2px;
+				@include break-point(767px){
+					width: 45%;
+				}
 			}
 			li.month-item.active {
-				background-color: rgba(237, 84, 52, 0.75);
+				background-color: rgb(173, 31, 35);
+				color: rgb(255, 255, 255);
+				border: none;
 			}
 		}
 	}
@@ -139,25 +150,29 @@
 		left: 20px; }
 	  .DateRangePicker__PaginationArrow--next {
 		right: 20px; }
-	  .DateRangePicker__PaginationArrow:hover {
-		background-color: #ccc; }
+
 	.DateRangePicker__PaginationArrowIcon {
-	  border-bottom: 8px solid transparent;
-	  border-top: 8px solid transparent;
-	  height: 0;
 	  position: absolute;
-	  top: 10px;
+	  top: 11px;
 	  width: 0; }
 	  .DateRangePicker__PaginationArrowIcon--is-disabled {
-		opacity: .25; }
+		opacity: .25;
+	cursor: no-drop; }
 	  .DateRangePicker__PaginationArrowIcon--previous {
-		border-left: 8px solid transparent;
-		border-right: 8px solid #aaa;
-		right: 11px; }
+    right: 11px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg); }
 	  .DateRangePicker__PaginationArrowIcon--next {
-		border-left: 8px solid #aaa;
-		border-right: 8px solid transparent;
-		left: 11px; }
+			border: solid black;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 5px;
+			transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg); }
 	.DateRangePicker__Month {
 	  color: #333;
 	  display: inline-block;
@@ -167,7 +182,7 @@
 		 -moz-user-select: none;
 		  -ms-user-select: none;
 			  user-select: none;
-	  width: 275px; }
+	   }
 	.DateRangePicker__MonthHeader {
 	  color: #000;
 	  font-size: 14px;
@@ -175,7 +190,9 @@
 	  height: 35px;
 	  line-height: 35px;
 	  position: relative;
-	  text-align: center; }
+		text-align: center;
+	text-transform: uppercase; 
+	font-family: 'Montserrat Bold';}
 	.DateRangePicker__MonthHeaderLabel {
 	  display: inline-block;
 	  position: relative; }
@@ -200,7 +217,7 @@
 	.DateRangePicker__WeekdayHeading, .DateRangePicker__Date {
 	  font-size: 14px;
 	  line-height: 1;
-	  padding: 10px 0;
+	  padding: 18px 8px;
 		text-align: center;
 	 }
 	.DateRangePicker__WeekdayHeading {
@@ -228,7 +245,7 @@
 	  .DateRangePicker__Date--is-selected {
 		color: #fff; }
 	  .DateRangePicker__Date--is-highlighted {
-		color: #333; }
+		color: #fff; }
 	.DateRangePicker__CalendarDatePeriod {
 	  bottom: 0;
 	  position: absolute;
@@ -243,8 +260,9 @@
 	  bottom: 5px;
 	  left: 0;
 	  position: absolute;
-	  right: 0;
-	  top: 5px; }
+		right: 0;
+		height: 40px;
+	   }
 	  .DateRangePicker__CalendarSelection--inOtherMonth {
 		opacity: .5; }
 	  .DateRangePicker__CalendarSelection--start {
@@ -262,12 +280,11 @@
 		}
 	  .DateRangePicker__CalendarSelection--single {
 		border-radius: 5px;
-		left: 5px;
-		right: 5px; }
+	 }
 	  .DateRangePicker__CalendarSelection--is-pending {
 			color: rgb(255, 255, 255);
 			background-color: rgb(112, 115, 120) ;
-			border-radius: 6px;
+		
 		 }
 	.DateRangePicker__CalendarHighlight {
 	  background-color: rgba(255, 255, 255, 0.25);
@@ -293,11 +310,10 @@
 		border-left-width: 0;
 		border-right-width: 0; }
 	  .DateRangePicker__CalendarHighlight--single {
-		background-color: #fff;
-		border: 1px solid #eb401d;
-		border-radius: 5px;
-		left: 5px;
-		right: 5px; }
+			background-color: rgb(112, 115, 120);
+			border: none;
+			border-radius: 5px;
+ }
 	.DateRangePicker__HalfDateStates {
 	  bottom: -50px;
 	  left: -50px;
