@@ -5,7 +5,8 @@ import {
     getFavouriteImage, 
     recordOffersDetailsData, 
     getMarketCodeListOfPropertyCodes,
-    getStructuredMarketsPropertiesList} from '../../utilities/Helper';
+    getStructuredMarketsPropertiesList,
+    getPropertiesListByCode} from '../../utilities/Helper';
 import Autocomplete from "../Common/Autocomplete";
 import {getImageUrl} from '../../constants/configs';
 
@@ -28,7 +29,7 @@ const getSelectedPropertyCode = () => {
 const gotoNBE = (parameter) => (event) => {
     const propCode = getSelectedPropertyCode();
     if(propCode && parameter && parameter.length) {
-        const url = 'http://www.caesars.com/book/?view=ratecal&offerCode=' + parameter[0] + '&arrival=' + parameter[1] + '&departure=' + parameter[2] + '&propCode=' + propCode
+        const url = `http://www.caesars.com/book/?view=ratecal&offerCode=${parameter[0]}&arrival=${parameter[1]}&departure=${parameter[2]}&propCode=${propCode}`;
         window.location = url;
     }
 }
@@ -68,15 +69,17 @@ class OfferDetails  extends Component  {
                 let imageUrl = getImageUrl();
                 const property = getProperty(properties, propertyList[0]);
                 if(property){
-                    imageUrl ="http://caesars.com" + property.thumbnail.url + "/hd/m/cover";
+                    imageUrl =`http://caesars.com${property.thumbnail.url}`;
                 }
 
                 const marketsOfProperties = getMarketCodeListOfPropertyCodes(markets, propertyList);
+                
                 let marketPropertyListData = getStructuredMarketsPropertiesList(markets);
                 marketPropertyListData = marketPropertyListData.filter((data) => {
                     return (marketsOfProperties.includes(data.value) || propertyList.includes(data.value));
                 });
 
+                let proplist = getPropertiesListByCode(properties, new Array(this.offer.propertyList));
                 //GTM logging
                 try {
                     recordOffersDetailsData('OfferDetails', id);
@@ -102,17 +105,17 @@ class OfferDetails  extends Component  {
                                     <div className="details-text">
                                         <h2>{title}</h2>
                                     <div className="properties-wrap">
-                                        <h4>Harrah's Resort Southern California <a href="#">More Properties</a></h4>
-                                    <div className="properties-list">
-                                        <ul>
-                                            <li>Harrah's Resort Southern California</li>
-                                            <li>Harrah's Resort Southern California</li>
-                                            <li>Harrah's Resort Southern California</li>
-                                            <li>Harrah's Resort Southern California</li>
-                                            <li>Harrah's Resort Southern California</li>
-                                            <li>Harrah's Resort Southern California</li>
-                                        </ul>
-                                    </div>
+                                        <h4>{proplist[0]} &nbsp;
+                                            <a href="#">More Properties</a></h4>
+                                            <div className="properties-list">
+                                                {proplist.length > 0 &&
+                                                    <ul>
+                                                        {proplist.map((name, index) => {
+                                                           return <li key={index}>{name}</li>
+                                                        })}
+                                                    </ul>
+                                                }
+                                            </div>
                                     </div>
                                         <p>{description}</p>
                                         <div className="details-propertyselect">

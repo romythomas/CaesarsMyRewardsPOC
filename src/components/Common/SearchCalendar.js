@@ -60,7 +60,7 @@ const loadScript = () => {
         $(document).on('click', 'body', function(e) {
             if(e) {
                 const {target} = e;
-                const targetClassName = (target.className) ? "." + target.className : "";
+                const targetClassName = (target.className) ? `.${target.className}` : "";
                 if(targetClassName !== "searchCalendar" && $(".searchCalendar").find(target).length <= 0) {
                     $searchCalendarContent.hide();
                 }
