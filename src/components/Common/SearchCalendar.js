@@ -25,6 +25,8 @@ const loadScript = () => {
          */
         $('.searchCalendar-content .searchBy-Dates').off('click touch').on('click touch', function(e) {
             e.preventDefault();
+            $('.searchBy-Dates').addClass("selected");
+            $('.searchBy-Months').removeClass("selected");
             $dateRangeCalendarItem.show();
             $monthRangeCalendarItem.hide();
         });
@@ -33,6 +35,8 @@ const loadScript = () => {
          */
         $('.searchCalendar-content .searchBy-Months').off('click touch').on('click touch', function(e) {
             e.preventDefault();
+            $('.searchBy-Dates').removeClass("selected");
+            $('.searchBy-Months').addClass("selected");
             $dateRangeCalendarItem.hide();
             $monthRangeCalendarItem.show();
         });
@@ -214,7 +218,7 @@ const SearchCalendar = (props)  => {
                 <div className="searchCalendar-content">
                     <span className="close"></span>
                     <div className="searchCalendar-options">
-                        <button className="searchBy-Dates">Exact Date</button>
+                        <button className="searchBy-Dates selected">Exact Date</button>
                         <button className="searchBy-Months">Flexible Dates</button>
                     </div>
                     <div className="dateRangeCalendar__item">

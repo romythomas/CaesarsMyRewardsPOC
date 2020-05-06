@@ -18,11 +18,4 @@
 			margin-bottom: 10px;
 		}
 	}
-	.button{
-		@include break-point(1023px){
-			width: 100%;
-			margin-bottom: 10px;
-		}
-	}
-
 }

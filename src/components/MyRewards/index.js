@@ -73,7 +73,7 @@ class MyRewards extends Component {
                     </div>
                 </div>
                 
-                <ProgressBarItem />
+                <ProgressBarItem feeds={feeds} logininfo={logininfo}/>
                   
                 <div className="listing listing--reward">
                     <ul className="row">
