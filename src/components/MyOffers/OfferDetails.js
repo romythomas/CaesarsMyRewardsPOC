@@ -33,11 +33,29 @@ const gotoNBE = (parameter) => (event) => {
     }
 }
   
+const loadScript = () => {
+    $(document).ready(function() {
+    // properties show hide
+    $(".properties-wrap a").click(function(event){
+        event.preventDefault();
+        event.stopPropagation();
+        $(".properties-list").toggle();
+    });
+
+    $('.properties-list').click( function(event) {      
+        event.stopPropagation();       
+    });
+    $('body').click(function(){
+        $('.properties-list').hide();
+    });
+    });
+}
 /**
  * 
  */
 class OfferDetails  extends Component  {
     render(){
+        loadScript();
         const { offers, properties, markets, match } = this.props;
         if (match.params && match.params.id) {
             const offer = offers.filter((offer) => {
@@ -70,57 +88,78 @@ class OfferDetails  extends Component  {
                         <div className="title">
                             <h1>My Offer Details</h1>
                         </div> 
-                        <div className="offer-details-left-panel"> 
-                            <strong>Title:</strong>                      
-                            <span>{title}</span>
-                            <br/>          
-                            <strong>Offer Code: </strong>
-                            <span> {id} </span>
-                            <br/>          
-                            <strong>Expires: </strong>
-                            <span>{new Date(end).toLocaleDateString()}</span>
-                            <br/>
-                            <strong>Description: </strong> 
-                            <span>{description}</span>
-                            <br/>
-                            <br/>
-                            <strong>Properties:</strong>
-                            
-                            <br/>  
-                        </div>
-                        <div className="propertySelect">  
-                            <ul className="row">
-                                <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <Autocomplete 
-                                        dataList={marketPropertyListData}
-                                        stylingClass={"disabled"} 
-                                        elementId="navigate-from-offer-details" 
-                                        title="Where do you want to go?" />
-                                </li>
-                            </ul>
-                            <button className="button" 
-                                onClick={gotoNBE(new Array(id, new Date(start).toLocaleDateString(),new Date(end).toLocaleDateString()))} >
-                                Book</button> 
-                        </div>
-                        <div className="fav">
-                                <img src={getFavouriteImage(pref)} alt="Caesars Favourite Logo"/>
+                        <div className="offer-details content-box">
+                            <div className="row">
+                                <div className="col-md-4 col-sm-6">
+                                    <div className="thumb">
+                                        <img src={imageUrl} alt="offer details image" />
+                                    </div>
+                                    <div className="fav">
+                                        <img src={getFavouriteImage(pref)} alt="Caesars Favourite Logo" />
+                                    </div>
+                                </div>
+                                <div className="col-md-5 col-sm-6">
+                                    <div className="details-text">
+                                        <h2>{title}</h2>
+                                    <div className="properties-wrap">
+                                        <h4>Harrah's Resort Southern California <a href="#">More Properties</a></h4>
+                                    <div className="properties-list">
+                                        <ul>
+                                            <li>Harrah's Resort Southern California</li>
+                                            <li>Harrah's Resort Southern California</li>
+                                            <li>Harrah's Resort Southern California</li>
+                                            <li>Harrah's Resort Southern California</li>
+                                            <li>Harrah's Resort Southern California</li>
+                                            <li>Harrah's Resort Southern California</li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                        <p>{description}</p>
+                                        <div className="details-propertyselect">
+                                                <Autocomplete 
+                                                dataList={marketPropertyListData}
+                                                stylingClass={"disabled"} 
+                                                elementId="navigate-from-offer-details" 
+                                                title="Where do you want to go?" />
+                                            </div>
+                                        <button className="button" 
+                                        onClick={gotoNBE(new Array(id, new Date(start).toLocaleDateString(),new Date(end).toLocaleDateString()))} >
+                                        Book</button> 
+                                    </div>
+                                </div>
+                                <div className="col-md-3 col-sm-12 pull-right">
+                                    <div className="details-info">
+                                        <span className="offer-code">OFFER CODE: <strong>{id}</strong></span>
+                                        <span className="expires">EXPIRES: <strong>{new Date(end).toLocaleDateString()}</strong></span>
+                                        
+                                    </div>
+                                </div>
                             </div>
-                        <div id="offer-image">
-                            <img src={imageUrl} width="210" alt="offer details image" />
+                            <div className="row">
+                            <div className="col-md-12 col-sm-12">
+                                <div className="how-redeem">
+                                    <strong><h5>HOW TO REDEEM</h5></strong>
+                                    <div className="redeem-content">
+                                        <p>To redeem your offer, please follow the instructions on your mail piece or email. A print out of this page is NOT a physical coupon and cannot be used for 
+                                        redemption where a coupon is required and some offers require a physical coupon to redeem.
+                                        If this is a hotel offer and you book it online; you do not need to bring in your physical coupon when you check in.
+                                        It is always best to bring your invite or mail piece with you when you visit.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                            <div className="col-md-12 col-sm-12">
+                                <div className="terms">
+                                    <strong><h5>TERMS &amp; CONDITIONS</h5></strong>
+                                    <div className="terms-content">
+                                        <p>Caesars Rewards offers are non-transferable and non-negotiable. Offer is only valid at specified casinos. Caesars Rewards Card and valid photo ID must be presented upon redemption. Not responsible for lost or stolen vouchers or coupons.  Offers are based upon availability. Effective July 1, 2017, complimentary rooms booked will be subject to a $50 no-show fee, plus tax if the reservation is not canceled by 6pm on the day of arrival. Excludes bookings made for Caesars Windsor. Additional restrictions may apply. Please see your nearest Caesars Rewards Center for more details.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </div> 
-                        <div id="offer-links">
-                            <div id="offer-favorite-icon"><span id="fav-icon" className="favorite"></span></div>
-                        </div>
-                        <br/>
-                        <div className="offerfooter">
-                            <span><strong>HOW TO REDEEM</strong></span>
-                            <p>To redeem your offer, please follow the instructions on your mail piece or email. A print out of this page is NOT a physical coupon and cannot be used for redemption where a coupon is required and some offers require a physical coupon to redeem.</p>
-                            <p>If this is a hotel offer and you book it online; you do not need to bring in your physical coupon when you check in.</p>
-                            <p>It is always best to bring your invite or mail piece with you when you visit.</p>
-                            <span><strong>TERMS &amp; CONDITIONS</strong></span>
-                            <p>Caesars Rewards offers are non-transferable and non-negotiable. Offer is only valid at specified casinos. Caesars Rewards Card and valid photo ID must be presented upon redemption. Not responsible for lost or stolen vouchers or coupons.  Offers are based upon availability. Effective July 1, 2017, complimentary rooms booked will be subject to a $50 no-show fee, plus tax if the reservation is not canceled by 6pm on the day of arrival. Excludes bookings made for Caesars Windsor. Additional restrictions may apply. Please see your nearest Caesars Rewards Center for more details.</p>
-                        </div>  
-                    </div>  
+                    </div> 
                 );
             }
         }

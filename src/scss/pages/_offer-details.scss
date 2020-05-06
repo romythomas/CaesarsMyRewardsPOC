@@ -1,0 +1,203 @@
+//offer details  starts here
+.offer-details{
+	.thumb{
+		margin: 15px;
+		img{
+			width: 100%;
+		}
+	}
+	.fav{
+		position: absolute;
+		background: rgba(0, 0, 0, 0.62);
+		width: 43px;
+		height: 43px;
+		top: 19px;
+		right: 28px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	}
+	.how-redeem{
+		margin: 0 20px 0 15px;
+	}
+	.redeem-content{
+		margin-top: 10px;
+		text-align: justify;
+	}
+	.terms-content{
+		margin-top: 10px;
+		text-align: justify;
+	}
+	.terms{
+		margin: 0 20px 0 15px;
+	}
+	.details-text{
+		margin: 15px;
+		h2{
+			font-size: 22px;
+			margin: 0 0 5px;
+			font-family: 'Montserrat Bold';
+		}
+		h4{
+			font-size: 15px;
+			color: #666;
+			margin-bottom: 15px;
+			a{
+				color:$custome-secondary;
+				font-size: 13px;
+			}
+		}
+		.details-propertyselect{
+			width: 60%;
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+	.details-info{
+		padding: 15px 10px 15px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		height: 100%;
+		justify-content: center;
+		
+		>span{
+			margin: 0 0 5px;
+			display: block;
+			strong{
+				font-family: 'Montserrat Bold';
+			}
+		}
+	}
+	.properties-wrap{
+		position: relative;
+	}
+	.properties-list{
+		background: $custome-black;
+		color: $custome-white;
+		position: absolute;
+		width: auto;
+		box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 4px;
+		padding: 15px 20px;
+		right: 0;
+		display: none;
+		z-index: 999;
+		&:before{
+			@include fontawesome;
+			content: "\f0d8";
+			right:80px;
+			top:-28px;
+			font-size:30px;
+			color: $custome-black;
+		}
+		li{
+			padding: 0 0 10px 20px;
+			position: relative;
+			&:before{
+				width: 7px;
+				height: 7px;
+				background:$custome-white;
+				border-radius: 50%;
+				left: 0;
+				top: 6px;
+				content: "";
+				position: absolute; 
+			}
+		}
+	}
+}
+
+
+//details 2
+
+
+.offer-details-option{
+	.details-wrap{
+		justify-content: space-between;
+		display: flex;
+		flex-direction: column;
+	}
+	.thumb{
+		margin: 15px;
+		img{
+			width: 100%;
+		}
+	}
+	.details-text{
+		margin: 15px;
+		h2{
+			font-size: 22px;
+			margin: 0 0 5px;
+			font-family: 'Montserrat Bold';
+		}
+		h4{
+			font-size: 15px;
+			color: #666;
+			margin-bottom: 15px;
+			a{
+				color:$custome-secondary;
+				font-size: 13px;
+			}
+		}
+	}
+	.details-info{
+		padding: 15px 10px 15px 0;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		@include break-point(991px){
+			align-items: flex-end;
+			justify-content: space-between;
+			flex-direction: column;
+		}
+		>span{
+			margin: 0 0 5px;
+			display: block;
+			strong{
+				font-family: 'Montserrat Bold';
+				display: block;
+				@include break-point(991px){
+					display: inline;
+				}
+			}
+		}
+	}
+	.properties-wrap{
+		position: relative;
+	}
+	.properties-list{
+		background: $custome-black;
+		color: $custome-white;
+		position: absolute;
+		width: auto;
+		box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 4px;
+		padding: 15px 20px;
+		right: 0;
+		display: none;
+		z-index: 999;
+		&:before{
+			@include fontawesome;
+			content: "\f0d8";
+			right:80px;
+			top:-28px;
+			font-size:30px;
+			color: $custome-black;
+		}
+		li{
+			padding: 0 0 10px 20px;
+			position: relative;
+			&:before{
+				width: 7px;
+				height: 7px;
+				background:$custome-white;
+				border-radius: 50%;
+				left: 0;
+				top: 6px;
+				content: "";
+				position: absolute; 
+			}
+		}
+	}
+}
