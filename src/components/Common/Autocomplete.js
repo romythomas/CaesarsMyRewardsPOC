@@ -70,6 +70,8 @@ const loadScript = () => {
             const selectedElements = autocomplete_component.querySelectorAll('li.autocomplete__item[data-selected="true"]');
             if(selectedElements && selectedElements.length) {
                 autocomplete_text_input.value = selectedElements[0].querySelector('span').innerHTML;
+            } else {
+                autocomplete_text_input.value = "";
             }
             autocomplete_text_input.placeholder = "";
         }

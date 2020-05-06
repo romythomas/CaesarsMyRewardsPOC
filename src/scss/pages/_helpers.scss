@@ -509,6 +509,16 @@ select:-webkit-autofill:focus {
 	margin: 20px 0;
 }
 
-
+.fav{
+	position: absolute;
+	width: 43px;
+	height: 43px;
+	top: 5px;
+	right: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
 
 
