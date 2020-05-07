@@ -78,8 +78,27 @@
 			}
 		}
 	}
-	@include break-point(991px){
-		&.autocomplete--open{
+	&.autocomplete--open {
+		.close {
+			display: block;
+			z-index: 9;
+			cursor: pointer;
+			&:before{
+				@include fontawesome;
+				content: "\f00d";
+				right: 10px;
+				-webkit-text-stroke: 2px $custome-white;
+				font-size: 22px;
+				top: 7px;
+				@include break-point(991px){
+					font-size: 45px;
+					top: 0;
+					right: 0;
+					-webkit-text-stroke: 6px $custome-white;
+				}
+			}
+		}
+		@include break-point(991px){
 			background: #fff;
 			position: fixed;
 			top: 0;
@@ -96,13 +115,10 @@
 					box-shadow: none;
 				}
 			}
-			.select-wrap{
-				&:after{
-					display: none;
-				}
-			}
-			.close {
-				z-index: 9;
+		}
+		.select-wrap{
+			&:after{
+				display: none;
 			}
 		}
 	}
