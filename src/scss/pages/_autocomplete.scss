@@ -81,21 +81,11 @@
 	&.autocomplete--open {
 		.close {
 			display: block;
-			z-index: 9;
 			cursor: pointer;
-			&:before{
-				@include fontawesome;
-				content: "\f00d";
+			z-index: 9;
+			&:before {
 				right: 10px;
-				-webkit-text-stroke: 2px $custome-white;
-				font-size: 22px;
 				top: 7px;
-				@include break-point(991px){
-					font-size: 45px;
-					top: 0;
-					right: 0;
-					-webkit-text-stroke: 6px $custome-white;
-				}
 			}
 		}
 		@include break-point(991px){

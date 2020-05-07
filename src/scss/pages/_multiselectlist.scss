@@ -24,10 +24,15 @@
 			top: 0;
 			z-index: 9999;
 		}
+		.multiselectlist__list {
+			text-align: center;
+		}
 		ul{
+			text-align: left;
 			display: flex;
 			margin:30px 15px;
 			@include break-point(991px){
+				margin-top: 0;
 				display: block;
 			}
 			li{
@@ -53,22 +58,6 @@
 			background: #f1f1f6;
 			padding: 10px;
 			text-align: right;
-		}
-	}
-	.close{
-		position: absolute;
-		right: 10px;
-		top: 5px;
-		display: none;
-		@include break-point(991px){
-			display: block;
-		}
-		&:before{
-			@include fontawesome;
-			content: "\f00d";
-			right: 0;
-			-webkit-text-stroke: 6px $custome-white;
-			font-size: 45px;
 		}
 	}
 }
