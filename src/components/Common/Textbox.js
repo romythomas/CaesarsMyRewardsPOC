@@ -18,6 +18,7 @@ const Textbox = (props) => {
                 required 
                 onBlur={onBlur} />
             <label className="form-control-placeholder" htmlFor={textboxId}>{title}</label>
+            <a className="close" href="#"></a> 
         </div>
     )
 }

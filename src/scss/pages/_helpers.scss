@@ -301,6 +301,17 @@ select:-webkit-autofill:focus {
 
 .txt-wrap {
 	position: relative;
+	.close{
+		display: none;
+		&:before{
+			@include fontawesome;
+			content: "\f00d";
+			right: 0;
+			-webkit-text-stroke: 2px $custome-white;
+			font-size: 22px;
+			top: 5px;
+		}
+	}
 }
 
 .txt{
