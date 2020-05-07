@@ -1,22 +1,60 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
-/**
- * 
- * @param {*} state 
- */
-const mapStateToProps = state => ({
-  logininfo: state.guestProfile.logininfo
-});
-
+import {getTierName} from '../../utilities/Helper'
+import {isMobile} from 'react-device-detect';
+ 
 /**
  * 
  * @param {*} props 
  */
-const ProgressBarItem = (props) => { 
-    return (
+const ProgressBarItem = (props) => {
+  const { feeds, logininfo } = props;
+  let progressBarMessage = '';
+  let creditsNeeded = '';
+  let tierText = '';
+  let progressbarpercent = '0%';
+  let inlineStyle = '';
+
+  if (feeds && logininfo) {
+    let tierCode = logininfo.tier.code;
+    let tierName = getTierName(tierCode);
+
+    //find user's score bracket
+    let tierscore = logininfo.tier.tierscore;
+    if (tierscore == -1 || tierscore == "-1") {
+      tierscore = 0;
+    }
+    let score = parseInt(tierscore);
+    let tempScore = score;
+    let userbracket = feeds.brackets.find((t) => tempScore < parseInt(t.score));
+
+    //find GOLD tier from userbracket
+    let userbrackettier = userbracket.tiers.find((t) => t.tier === tierName);
+
+    //find marker template
+    let template = feeds.markertemplates[userbrackettier.markerTemplate];
+    progressbarpercent = `${((score - template.progressbarOrigin) / template.progressbarDivisor) * 100}%`;
+    creditsNeeded = userbrackettier.creditsMinuend - score;
+    progressBarMessage = userbrackettier.progressBarMessage;
+    tierText = userbrackettier.tierText;
+
+    const desktopStyle={
+      width : progressbarpercent
+    }
+    const mobileStyle={
+      height : progressbarpercent
+    }
+    inlineStyle = (isMobile)? mobileStyle: desktopStyle;
+  }
+
+  return (
+    <div>
+      <span className="info">
+        <strong>{creditsNeeded}</strong> {progressBarMessage}&nbsp;{tierText}
+      </span>
       <div className="reward-progress">
-        <div className="progressbar"></div>
+        <div
+          className="progressbar"
+          style={inlineStyle}></div>
         <ul>
           <li>
             <div className="progress-icon">
@@ -56,7 +94,8 @@ const ProgressBarItem = (props) => {
           </li>
         </ul>
       </div>
-    );
-}
+    </div>
+  );
+};
 
-export default connect(mapStateToProps)(ProgressBarItem);
+export default ProgressBarItem;
