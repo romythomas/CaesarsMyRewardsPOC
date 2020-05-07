@@ -215,6 +215,7 @@ const SearchCalendar = (props)  => {
                 <div className="searchCalendar-content">
                     <span className="close"></span>
                     <div className="searchCalendar-options">
+                        <h2 className="title-pop-mobile">Start date - End date</h2>
                         <button className="searchBy-Dates selected">Exact Date</button>
                         <button className="searchBy-Months">Flexible Dates</button>
                     </div>
