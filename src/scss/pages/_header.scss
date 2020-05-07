@@ -41,6 +41,21 @@ header{
 						}
 					}
 				}
+				.userImage {
+					position: relative;
+					&:before{
+						@include fontawesome;
+						right: -5px;
+						top: -10px;
+						content: "\f2be";
+						font-size: 25px;
+						font-weight: 700;
+						color: $custome-white;
+						@include break-point(991px){
+							top: -20px;
+						}
+					}
+				}
 				.username{
 					font-size:$primary-fontsize;
 					font-weight: bold;
