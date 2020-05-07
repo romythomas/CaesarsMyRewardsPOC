@@ -204,20 +204,11 @@ export const truncate = (source, size) => {
  * 
  * @param {*} pref 
  */
-export const getFavouriteImage = (pref) => {
-    let imageUrl='';
-    if(pref){
-        switch(pref){
-            case 'F':
-                imageUrl = '../images/favorate-red.png';
-                break;
-            case 'N':                
-            case 'V':               
-                imageUrl = '../images/favorate-icon.png';
-                break;
-        }
+export const getFavouriteClassName = (pref) => {
+    if(pref === "F"){
+        return "active";
     }
-    return imageUrl;
+    return "";
 }
 
 /**

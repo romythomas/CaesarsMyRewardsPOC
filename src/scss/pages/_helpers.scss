@@ -542,14 +542,25 @@ select:-webkit-autofill:focus {
 
 .fav{
 	position: absolute;
-	width: 43px;
-	height: 43px;
-	top: 5px;
-	right: 5px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
+    background: rgba(255, 255, 255, 0.4);
+    width: 35px;
+    height: 35px;
+    top: 5px;
+    right: 5px;
+	&:before{
+		@include fontawesome;
+		content: "\f08a";
+		color: #000;
+		right: 6px;
+		font-size: 22px;
+		top: 2px;
+	}
+	&.active {
+		&:before{
+			content: "\f004";
+			color: $custome-secondary;
+		}
+	}
 }
 .title-pop-mobile {
 	display: none;

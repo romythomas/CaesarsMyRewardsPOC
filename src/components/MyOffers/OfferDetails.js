@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import {
     getProperty, 
-    getFavouriteImage, 
+    getFavouriteClassName, 
     recordOffersDetailsData, 
     getMarketCodeListOfPropertyCodes,
     getStructuredMarketsPropertiesList,
@@ -96,9 +96,8 @@ class OfferDetails  extends Component  {
                                 <div className="col-md-4 col-sm-6">
                                     <div className="thumb">
                                         <img src={imageUrl} alt="offer details image" />
-                                    </div>
-                                    <div className="fav">
-                                        <img src={getFavouriteImage(pref)} alt="Caesars Favourite Logo" />
+                                        <div className={`fav ${getFavouriteClassName(pref)}`}>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-md-5 col-sm-6">

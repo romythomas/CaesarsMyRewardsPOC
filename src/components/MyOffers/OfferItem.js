@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
-import {getProperty, getFavouriteImage, truncate} from '../../utilities/Helper';
+import {getProperty, getFavouriteClassName, truncate} from '../../utilities/Helper';
 
 const mapStateToProps = (state) => ({
     properties: state.common.properties
@@ -22,8 +22,7 @@ const OfferItem = (props) => {
                 <div className="listing__detailswrap">
                     <div className="listing__img">
                         <img className="thumb" src={offerImageUrl} alt="Caesars Offer Image"/>
-                        <div className="fav">
-                            <img src={getFavouriteImage(offer.pref)} alt="Caesars Favourite Logo"/>
+                        <div className={`fav ${getFavouriteClassName(offer.pref)}`}>
                         </div>
                         <div className="img-info">
                             <h5>{truncate(offer.title, 30)}</h5>
