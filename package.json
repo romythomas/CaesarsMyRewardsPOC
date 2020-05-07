@@ -35,6 +35,7 @@
     "react-daterange-picker": "^2.0.1",
     "react-device-detect": "^1.12.1",
     "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
     "react-google-flight-datepicker": "^0.1.8",
     "react-gtm-module": "^2.0.8",
     "react-redux": "^4.4.8",
