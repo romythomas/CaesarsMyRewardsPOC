@@ -1,9 +1,6 @@
 import React from 'react';
-import originalMoment from "moment";
-import { extendMoment } from "moment-range";
+import {getMoment, getMomentRange} from "../../utilities/Helper";
 import DateRangePicker from 'react-daterange-picker';
-
-const moment = extendMoment(originalMoment);
 
 /**
  * Defines all jQuery events used to handel the clicks and show/hide.
@@ -112,8 +109,8 @@ const SearchCalendar = (props)  => {
     let {minimumDate, maximumDate} = props;
     let defaultDateRangeSelectedValue = "";
     //Set lowest and highest calendar selectable dates, if not defined in properties
-    minimumDate = minimumDate && moment(minimumDate).isValid() ? moment(minimumDate) : moment();
-    maximumDate = maximumDate && moment(maximumDate).isValid() ? moment(maximumDate) : moment().add(1, 'year');
+    minimumDate = minimumDate && getMoment(minimumDate).isValid() ? getMoment(minimumDate) : getMoment();
+    maximumDate = maximumDate && getMoment(maximumDate).isValid() ? getMoment(maximumDate) : getMoment().add(1, 'year');
 
     //#region - Month range calendar initialization code
         //Create array to hold month values available for flexible date search
@@ -139,7 +136,7 @@ const SearchCalendar = (props)  => {
             //Check if date value is presented in the slection
             if(target && target.dataset && target.dataset.value) {
                 //Find startdate and enddate. Then convert them to moment
-                const startDate = moment(target.dataset.value).startOf('day');
+                const startDate = getMoment(target.dataset.value).startOf('day');
                 const endDate = startDate.clone().endOf('month').endOf('day');
                 //If moment dates are valid, update UI textbox value
                 if(startDate.isValid() && endDate.isValid()) {
@@ -160,13 +157,13 @@ const SearchCalendar = (props)  => {
         let [defaultDateRange, setDefaultDateRange] = React.useState(null);
         //Process default value received through properties, if the calendar selection value in local state is empty
         if(!defaultDateRange && defaultValue && defaultValue.startDate && defaultValue.endDate) {
-            const defaultStartDate = moment(defaultValue.startDate).startOf('day');
-            const defaultEndDate = moment(defaultValue.endDate).endOf('day');
+            const defaultStartDate = getMoment(defaultValue.startDate).startOf('day');
+            const defaultEndDate = getMoment(defaultValue.endDate).endOf('day');
             //Validate the default values present in properties
             //If valid, Update textbot value in UI and set the local store value for calendar selection
             if(defaultStartDate.isValid() && defaultEndDate.isValid()) {
                 defaultDateRangeSelectedValue = getDisplayValueOfDateCalendarSelection(defaultStartDate._d, defaultEndDate._d);
-                defaultDateRange = moment.range(defaultStartDate, defaultEndDate);
+                defaultDateRange = getMomentRange(defaultStartDate, defaultEndDate);
             }
         }
         /**
@@ -185,7 +182,7 @@ const SearchCalendar = (props)  => {
                 //Update textbox UI
                 updateDateRangeValueUI(startDate, endDate);
                 //Update range calendar state value
-                setDefaultDateRange(moment.range(startDate, endDate));
+                setDefaultDateRange(getMomentRange(startDate, endDate));
                 //Pass date values to component property
                 if(props.onChange) {
                     $(".searchCalendar-content").hide();
