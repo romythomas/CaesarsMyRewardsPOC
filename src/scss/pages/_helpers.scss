@@ -297,6 +297,17 @@ select:-webkit-autofill:focus {
 		color: #8f9296;
 		pointer-events: none;
 	}
+	&.active {
+		&:after {
+			@include fontawesome;
+			right: 14px;
+			top: 3px;
+			content: "\f106";
+			font-size: 25px;
+			color: #8f9296;
+			pointer-events: none;
+		}
+	}
 }
 
 .txt-wrap {
