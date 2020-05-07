@@ -12,6 +12,11 @@ import {
   GET_PROFILE
 } from '../../constants/actionTypes';
 import {recordMyRewardsData} from '../../utilities/Helper'
+import ReactGA from 'react-ga';
+
+const trackingId = "165835615-1"; 
+ReactGA.initialize(trackingId);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const mapStateToProps = state => ({
   appName: state.common.appName,
