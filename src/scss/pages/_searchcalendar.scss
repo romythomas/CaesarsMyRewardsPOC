@@ -23,13 +23,22 @@
 			height: 100vh;
 			top: 0;
 			right: 0;
-      padding: 10px;
+      		padding: 10px;
 			z-index: 9999;
 			overflow: scroll;
 			text-align: center;
 		}
 		.searchCalendar-options {
 			text-align: center;
+			h2 {
+				display: none;
+				font-size: 22px;
+				text-transform: uppercase;
+				padding: 15px 0 20px;
+				@include break-point(991px){
+					display: block;
+				}
+			}
 			button{
 				background-color: #f1f1f6;
 				color: #0a0a0a;
@@ -109,6 +118,7 @@
 		position: absolute;
 		right: 10px;
 		top: 5px;
+		opacity: 0.9;
 		display: none;
 		@include break-point(991px){
 			display: block;
@@ -117,8 +127,8 @@
 			@include fontawesome;
 			content: "\f00d";
 			right: 0;
-			-webkit-text-stroke: 6px $custome-white;
-			font-size: 45px;
+			-webkit-text-stroke: 5px $custome-white;
+			font-size: 40px;
 		}
 	}
 }
