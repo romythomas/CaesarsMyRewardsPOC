@@ -332,6 +332,7 @@ select:-webkit-autofill:focus {
 	font-size: 14px;
 	color: $custome-black;
 }
+.active .txt + .form-control-placeholder,
 .txt:focus + .form-control-placeholder,
 .txt:valid + .form-control-placeholder {
 	font-size: 10px;
@@ -343,6 +344,7 @@ select:-webkit-autofill:focus {
 	border: #000 solid 1px;
 	border-radius: 4px 4px 0px 0px;
 	border-bottom-width: 2px;
+	box-shadow: none;
 }
 .form-control-placeholder {
 	position: absolute;
