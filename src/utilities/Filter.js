@@ -1,6 +1,15 @@
 import {getPropertiesOfMarket} from "./Helper";
 
 export const updateSelectedFilter = (selectedOfferFilters, newFilter) => {
+    if(newFilter.filterType === "date") {
+        selectedOfferFilters = selectedOfferFilters.filter((filter) => {
+            return filter.filterType !== "month";
+        });
+    } else if(newFilter.filterType === "month") {
+        selectedOfferFilters = selectedOfferFilters.filter((filter) => {
+            return filter.filterType !== "date";
+        });
+    }
     const existingFilterIndex = selectedOfferFilters.findIndex((filter) => {
         return filter.filterType === newFilter.filterType;
     });
@@ -35,7 +44,7 @@ export const filterOffers = (offers, selectedOfferFilters, markets) => {
                     );
                 });
             }
-            if (filterType === "date" && filterValue) {
+            if ((filterType === "date" || filterType === "month") && filterValue) {
                 filteredOffers = filteredOffers.filter((offer) => {
                     return (
                         new Date(offer.start) <= filterValue.startDate &&

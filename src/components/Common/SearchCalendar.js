@@ -86,6 +86,14 @@ const updateDateRangeValueUI = (startDate, endDate) => {
 }
 
 /**
+ * Updates the input text value based on the dates selected from month range calendar.
+ * @param {String} value - Selected month range calendar value.
+ */
+const updateMonthRangeTextValue = (value) => {
+    $('.searchCalendar-wrap input:text').val(value);
+}
+
+/**
  * Updates the input text value and active class based on the dates selected from month range calendar.
  * @param {String} value - Selected month range calendar value.
  * @param {EventHandler} event - User selection event of month value.
@@ -93,7 +101,7 @@ const updateDateRangeValueUI = (startDate, endDate) => {
 const updateMonthRangeValueUI = (value, event) => {
     $(".monthRangeCalendar__item .month-item.active").removeClass("active");
     event.target.classList.add("active");
-    $('.searchCalendar-wrap input:text').val(value);
+    updateMonthRangeTextValue(value);
 }
 
 /**
@@ -105,25 +113,44 @@ const SearchCalendar = (props)  => {
     //Load scripts to handle click/touch events
     loadScript();
     //Values that are passed as properties to the component
-    const {defaultValue, calendarId} = props;
+    const {defaultType, defaultValue, calendarId} = props;
     let {minimumDate, maximumDate} = props;
     let defaultDateRangeSelectedValue = "";
     //Set lowest and highest calendar selectable dates, if not defined in properties
     minimumDate = minimumDate && getMoment(minimumDate).isValid() ? getMoment(minimumDate) : getMoment();
     maximumDate = maximumDate && getMoment(maximumDate).isValid() ? getMoment(maximumDate) : getMoment().add(1, 'year');
 
+    //Class names for date calendar/month calendar items and their respective buttons based on default value
+    let dateCalendarActiveClass = "active";
+    let monthCalendarActiveClass = "";
+    let dateCalendarSelectButtonClass = "selected";
+    let monthCalendarSelectButtonClass = "";
+    if(defaultType === "month") {
+        dateCalendarActiveClass = "";
+        monthCalendarActiveClass = "active";
+        dateCalendarSelectButtonClass = "";
+        monthCalendarSelectButtonClass = "selected";
+    }
     //#region - Month range calendar initialization code
+        //Variable to store formatted default value of month selection
+        let defaultMonthValue = "";
         //Create array to hold month values available for flexible date search
         const monthRanges = [];
-        //Loop starting from minimumDate till minimumDate and store the first date of each month
+        //Loop starting from minimumDate till maximumDate and store the first date of each month
         let monthRangeStartDate = minimumDate.clone(); //use clone to avoid mutation of original variable
-        while (monthRangeStartDate.isBefore(maximumDate)) {
+        while (monthRangeStartDate.startOf('month').startOf('day').isBefore(maximumDate.startOf('month').startOf('day'))) {
             if(monthRangeStartDate.month() === minimumDate.month()) {
                 monthRanges.push(monthRangeStartDate.clone());
             } else {
                 monthRanges.push(monthRangeStartDate.clone().startOf('month'));
             }
             monthRangeStartDate = monthRangeStartDate.add(1, 'month');
+        }
+        //Format default value received through properties
+        if(defaultType === "month" && defaultValue && defaultValue.startDate && defaultValue.endDate) {
+            defaultMonthValue = defaultValue.startDate.format("MMM YYYY");
+            updateMonthRangeTextValue(defaultMonthValue);
+            defaultDateRangeSelectedValue = defaultMonthValue;
         }
         /**
          * Handles the event of the month range selection.
@@ -145,7 +172,7 @@ const SearchCalendar = (props)  => {
                     //Pass date values to component property
                     if(props.onChange) {
                         $(".searchCalendar-content").hide();
-                        props.onChange(startDate._d, endDate._d);
+                        props.onChange("month", startDate._d, endDate._d);
                     }
                 }
             }
@@ -156,7 +183,7 @@ const SearchCalendar = (props)  => {
         //Create local state object to hold value of calendar selection
         let [defaultDateRange, setDefaultDateRange] = React.useState(null);
         //Process default value received through properties, if the calendar selection value in local state is empty
-        if(!defaultDateRange && defaultValue && defaultValue.startDate && defaultValue.endDate) {
+        if(!defaultDateRange && defaultType !== "month" && defaultValue && defaultValue.startDate && defaultValue.endDate) {
             const defaultStartDate = getMoment(defaultValue.startDate).startOf('day');
             const defaultEndDate = getMoment(defaultValue.endDate).endOf('day');
             //Validate the default values present in properties
@@ -186,7 +213,7 @@ const SearchCalendar = (props)  => {
                 //Pass date values to component property
                 if(props.onChange) {
                     $(".searchCalendar-content").hide();
-                    props.onChange(startDate, endDate);
+                    props.onChange("date", startDate, endDate);
                 }
             }
         }
@@ -216,10 +243,10 @@ const SearchCalendar = (props)  => {
                     <span className="close"></span>
                     <div className="searchCalendar-options">
                         <h2 className="title-pop-mobile">Start date - End date</h2>
-                        <button className="searchBy-Dates selected">Exact Date</button>
-                        <button className="searchBy-Months">Flexible Dates</button>
+                        <button className={`searchBy-Dates ${dateCalendarSelectButtonClass}`}>Exact Date</button>
+                        <button className={`searchBy-Months ${monthCalendarSelectButtonClass}`}>Flexible Dates</button>
                     </div>
-                    <div className="dateRangeCalendar__item">
+                    <div className={`dateRangeCalendar__item ${dateCalendarActiveClass}`}>
                         <DateRangePicker
                                 onSelect={onDateChnage}
                                 minimumDate={new Date(minimumDate)}
@@ -229,15 +256,17 @@ const SearchCalendar = (props)  => {
                                 numberOfCalendars={2}
                             />
                     </div>
-                    <div className="monthRangeCalendar__item">
+                    <div className={`monthRangeCalendar__item ${monthCalendarActiveClass}`}>
                         <ul className="monthRangeCalendar__list">
                             {monthRanges.map((date, index) => {
+                                const valueToDisplay = date.format("MMM YYYY");
+                                const activeClassNames = defaultType === "month" && defaultMonthValue === valueToDisplay ? "active" : "";
                                 return(
                                     <li key={index} 
-                                        className="month-item" 
+                                        className={`month-item ${activeClassNames}`} 
                                         data-value={date.format("MM-DD-YYYY")}
                                         onClick={onMonthChange}>
-                                            {date.format("MMM YYYY")}
+                                            {valueToDisplay}
                                     </li>
                                 )
                             })}
