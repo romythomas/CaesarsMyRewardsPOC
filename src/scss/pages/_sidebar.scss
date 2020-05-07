@@ -52,6 +52,10 @@
 					}
 					
 					&.main-head{
+						display: none;
+						@include break-point(991px){
+							display: block;
+						}
 						font-family: OpenSans-Bold;
 						span{
 							margin: 0;
