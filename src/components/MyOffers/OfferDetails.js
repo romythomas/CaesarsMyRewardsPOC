@@ -168,8 +168,8 @@ class OfferDetails  extends Component  {
         }
         return (
             <div className="container-fluid">
-                <div className="title">
-                    <h1>No Offer Details Available</h1>
+                <div className="alert alert-danger" role="alert">
+                    <b>No Offer Details Available</b>
                 </div>
             </div>
         )

@@ -22,8 +22,8 @@ const OfferList = (props) => {
     else
     {
         return (
-            <div className="listing">
-                <h2 className="offer-error">No offers available</h2>
+            <div className="alert alert-danger" role="alert">
+                <b>No offers available</b>
             </div>
         );
     }
