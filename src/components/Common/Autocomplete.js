@@ -69,7 +69,9 @@ const loadScript = () => {
         function set_selectedToText() {
             const selectedElements = autocomplete_component.querySelectorAll('li.autocomplete__item[data-selected="true"]');
             if(selectedElements && selectedElements.length) {
-                autocomplete_text_input.value = selectedElements[0].querySelector('span').innerHTML;
+                const selectedValue = selectedElements[0].querySelector('span').innerHTML;
+                autocomplete_text_input.setAttribute("value", selectedValue);
+                autocomplete_text_input.value = selectedValue;
             } else {
                 autocomplete_text_input.value = "";
             }
@@ -77,16 +79,18 @@ const loadScript = () => {
         }
 
         function add_mobileClass() {
-            autocomplete.classList.add('autocomplete--open');
+            autocomplete.classList.add('active');
         }
 
         function remove_mobileClass() {
-            autocomplete.classList.remove('autocomplete--open');
+            autocomplete.classList.remove('active');
         }
         
         function copy_paste(e) {
             set_selected(this);
-            autocomplete_text_input.value = this.querySelector('span').innerHTML;
+            const selectedValue = this.querySelector('span').innerHTML;
+            autocomplete_text_input.setAttribute("value", selectedValue);
+            autocomplete_text_input.value = selectedValue;
             // todo : check match of list text and input value for .current 
             init_list();
             hide_list(autocomplete_content);

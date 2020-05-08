@@ -78,7 +78,7 @@
 			}
 		}
 	}
-	&.autocomplete--open {
+	&.active {
 		.close {
 			display: block;
 			cursor: pointer;
