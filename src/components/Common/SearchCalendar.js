@@ -191,16 +191,11 @@ const SearchCalendar = (props)  => {
         let defaultMonthValue = "";
         //Create array to hold month values available for flexible date search
         const monthRanges = [];
-        //Loop starting from minimumDate till maximumDate and store the first date of each month
-        let monthRangeStartDate = minimumDate.clone(); //use clone to avoid mutation of original variable
-        /********************************************************************* */
-        while (monthRangeStartDate.isSameOrBefore(maximumDate, 'day')) {
-            if(monthRangeStartDate.month() === minimumDate.month()) {
-                monthRanges.push(monthRangeStartDate.clone());
-            } else {
-                monthRanges.push(monthRangeStartDate.clone().startOf('month'));
-            }
-            monthRangeStartDate = monthRangeStartDate.add(1, 'month');
+        //Add current month to the array
+        monthRanges.push(minimumDate.clone());
+        //Loop for 11 months starting from minimumDate
+        for(let i = 1; i<= 11; i++) {
+            monthRanges.push(minimumDate.clone().add(i, 'month'))
         }
         //Format default value received through properties
         if(!defaultDateRange && defaultType === "month" && defaultValue && defaultValue.startDate && defaultValue.endDate) {
