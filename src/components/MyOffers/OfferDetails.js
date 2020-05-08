@@ -9,6 +9,11 @@ import {
     getPropertiesListByCode} from '../../utilities/Helper';
 import Autocomplete from "../Common/Autocomplete";
 import {getImageUrl} from '../../constants/configs';
+import ReactGA from 'react-ga';
+
+const trackingId = "UA-165835615-1"; 
+ReactGA.initialize(trackingId);
+ReactGA.pageview('/offerdetails');
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers, 

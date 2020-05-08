@@ -7,6 +7,11 @@ import {filterOffers, updateSelectedFilter} from '../../utilities/Filter';
 import {sortOffers} from '../../utilities/Sort';
 import {getUrlParams, recordMyOffersData, getMoment} from '../../utilities/Helper';
 import {getOfferSortTypes, getOfferFilterTypes} from "../../constants/configs";
+import ReactGA from 'react-ga';
+
+const trackingId = "UA-165835615-1"; 
+ReactGA.initialize(trackingId);
+ReactGA.pageview('/myoffers');
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
