@@ -130,7 +130,7 @@ class OfferDetails  extends Component  {
                                                 elementId="navigate-from-offer-details" 
                                                 title="Where do you want to go?" />
                                             </div>
-                                        <button className="button" 
+                                        <button className="button" id="book"
                                         onClick={gotoNBE(new Array(id, getMoment(start).format("MM/DD/YYYY"), getMoment(end).format("MM/DD/YYYY")))} >
                                         Book</button> 
                                     </div>

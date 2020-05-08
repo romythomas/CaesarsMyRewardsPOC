@@ -3,7 +3,7 @@ import Header from './Common/Header';
 import Footer from './Common/Footer';
 import SpotLight from './Common/SpotLight';
 import SideNavigation from './Common/SideNavigation';
-import React, { Component } from 'react';
+import React, { Component, Suspense, lazy } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import MyRewards from './MyRewards';
@@ -20,6 +20,13 @@ import {
 import  {config}  from  "../init-fcm"
 import * as firebase from "firebase/app";
 import "firebase/messaging";
+
+//const MyRewards = lazy(() => import(/* webpackChunkName: "MyRewards" */ './MyRewards'));
+//const MyOffers = lazy(() => import(/* webpackChunkName: "MyOffers" */ './MyOffers'));
+//const LeaderBoard = lazy(() => import(/* webpackChunkName: "LeaderBoard" */ './Leaderboard'));
+//const QuestForRewards = lazy(() => import(/* webpackChunkName: "QuestForRewards" */ './QuestForRewards'));
+//const Reservation = lazy(() => import(/* webpackChunkName: "Reservation" */ './Reservations'));
+//const OfferDetails = lazy(() => import(/* webpackChunkName: "OfferDetails" */ './MyOffers/OfferDetails'));
 
 const mapStateToProps = state => {
   return {
@@ -106,6 +113,7 @@ class App extends Component {
           <div id="page-content">
             <SpotLight appName={this.props.appName}></SpotLight>
             <div id="sub-content">
+            {/*<Suspense fallback={<div>Loading...</div>}>*/}
               <Switch>
                 <Redirect exact from="/" to="myrewards" />
                 <Route exact path="/myrewards" component={MyRewards}/>              
@@ -115,6 +123,7 @@ class App extends Component {
                 <Route exact path="/reservations" component={Reservation}/>
                 <Route exact path="/offerdetails/:id" component={OfferDetails}/>
               </Switch>
+              {/*</Suspense>*/}
             </div>
           </div>
           <Footer appName={this.props.appName}> </Footer>
