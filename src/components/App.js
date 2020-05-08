@@ -6,12 +6,12 @@ import SideNavigation from './Common/SideNavigation';
 import React, { Component, Suspense, lazy } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import MyRewards from './MyRewards';
+/*import MyRewards from './MyRewards';
 import LeaderBoard from './Leaderboard';
 import QuestForRewards from './QuestForRewards';
 import MyOffers from './MyOffers';
 import Reservation from './Reservations';
-import OfferDetails from './MyOffers/OfferDetails'
+import OfferDetails from './MyOffers/OfferDetails'*/
 import {hideWarning} from '../utilities/Helper'
 import { history} from '../store';
 import {
@@ -21,12 +21,12 @@ import  {config}  from  "../init-fcm"
 import * as firebase from "firebase/app";
 import "firebase/messaging";
 
-//const MyRewards = lazy(() => import(/* webpackChunkName: "MyRewards" */ './MyRewards'));
-//const MyOffers = lazy(() => import(/* webpackChunkName: "MyOffers" */ './MyOffers'));
-//const LeaderBoard = lazy(() => import(/* webpackChunkName: "LeaderBoard" */ './Leaderboard'));
-//const QuestForRewards = lazy(() => import(/* webpackChunkName: "QuestForRewards" */ './QuestForRewards'));
-//const Reservation = lazy(() => import(/* webpackChunkName: "Reservation" */ './Reservations'));
-//const OfferDetails = lazy(() => import(/* webpackChunkName: "OfferDetails" */ './MyOffers/OfferDetails'));
+const MyRewards = lazy(() => import(/* webpackChunkName: "MyRewards" */ './MyRewards'));
+const MyOffers = lazy(() => import(/* webpackChunkName: "MyOffers" */ './MyOffers'));
+const LeaderBoard = lazy(() => import(/* webpackChunkName: "LeaderBoard" */ './Leaderboard'));
+const QuestForRewards = lazy(() => import(/* webpackChunkName: "QuestForRewards" */ './QuestForRewards'));
+const Reservation = lazy(() => import(/* webpackChunkName: "Reservation" */ './Reservations'));
+const OfferDetails = lazy(() => import(/* webpackChunkName: "OfferDetails" */ './MyOffers/OfferDetails'));
 
 const mapStateToProps = state => {
   return {
@@ -113,7 +113,7 @@ class App extends Component {
           <div id="page-content">
             <SpotLight appName={this.props.appName}></SpotLight>
             <div id="sub-content">
-            {/*<Suspense fallback={<div>Loading...</div>}>*/}
+            <Suspense fallback={<div>Loading...</div>}>
               <Switch>
                 <Redirect exact from="/" to="myrewards" />
                 <Route exact path="/myrewards" component={MyRewards}/>              
@@ -123,7 +123,7 @@ class App extends Component {
                 <Route exact path="/reservations" component={Reservation}/>
                 <Route exact path="/offerdetails/:id" component={OfferDetails}/>
               </Switch>
-              {/*</Suspense>*/}
+              </Suspense>
             </div>
           </div>
           <Footer appName={this.props.appName}> </Footer>
