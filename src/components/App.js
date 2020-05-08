@@ -17,6 +17,9 @@ import { history} from '../store';
 import {
   LOGIN
 } from '../constants/actionTypes';
+import  {config}  from  "../init-fcm"
+import * as firebase from "firebase/app";
+import "firebase/messaging";
 
 const mapStateToProps = state => {
   return {
@@ -47,6 +50,8 @@ const loadScript = () => {
   });
   
 }
+
+
 class App extends Component {
 
   constructor() {
@@ -69,6 +74,25 @@ class App extends Component {
       agent.PriceAlert.getPriceAlert(),
       agent.Enterprise.getLowestRate()
     ]));
+  }
+
+  async componentDidMount() {
+    console.log("User Notification Permission ", Notification.permission);
+    const initializedFirebaseApp = firebase.initializeApp(config);
+    const messaging = initializedFirebaseApp.messaging();
+    
+      messaging
+      .requestPermission()
+      .then(() => {
+        return messaging.getToken();
+      })
+      .then(token => {
+        console.log("Token is ", token);
+      })
+      .catch(function(err) {
+        console.log("Unable to get permission to notify.", err);
+      }); 
+  
   }
 
   render() {
