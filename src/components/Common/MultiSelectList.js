@@ -34,7 +34,8 @@ const updateCheckBoxUI = () => {
 }
 
 const updateTextboxValue = (selectedValues) => {
-    $(".multiselectlist").find(".multiselectlist-wrap").find("input:text").val(selectedValues.join(","));
+    const $textBoxElement = $(".multiselectlist").find(".multiselectlist-wrap").find("input:text");
+    $textBoxElement.attr("value", selectedValues.join(","));
 }
 
 const MultiSelectList = (props) => {
@@ -67,7 +68,7 @@ const MultiSelectList = (props) => {
         return(
             <div className="multiselectlist">
                 <div className="select-wrap multiselectlist-wrap">
-                    <input className="form-control txt" type="text" id={selectId} defaultValue={selectedValues.join(",")} readonly />
+                    <input className="form-control txt" type="text" id={selectId} value={selectedValues.join(",")} readOnly />
                     <label className="form-control-placeholder" htmlFor={selectId}>{title}</label>
                 </div>
                 <div className="multiselectlist-content">
