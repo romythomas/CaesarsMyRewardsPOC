@@ -7,9 +7,6 @@ const loadScript = () => {
             $(".multiselectlist-wrap").toggleClass("active");
             $(".multiselectlist-content").toggle();
         });
-        $('.multiselectlist-wrap .txt').keypress(function(e) {
-            return false;
-        });
         $('.multiselectlist-content .close').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -36,6 +33,7 @@ const updateCheckBoxUI = () => {
 const updateTextboxValue = (selectedValues) => {
     const $textBoxElement = $(".multiselectlist").find(".multiselectlist-wrap").find("input:text");
     $textBoxElement.attr("value", selectedValues.join(","));
+    $textBoxElement.val(selectedValues.join(","));
 }
 
 const MultiSelectList = (props) => {
