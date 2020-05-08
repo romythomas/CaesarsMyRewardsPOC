@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
-import {getProperty, getFavouriteClassName, truncate} from '../../utilities/Helper';
+import {getProperty, getFavouriteClassName, truncate, getMoment} from '../../utilities/Helper';
 
 const mapStateToProps = (state) => ({
     properties: state.common.properties
@@ -31,7 +31,7 @@ const OfferItem = (props) => {
                     </div>
                     <div className="listing__details">
                         <h2>{offer.type}</h2>
-                        <span className="date">Valid : {new Date(offer.start).toLocaleDateString()} - {new Date(offer.end).toLocaleDateString()}</span>
+                        <span className="date">Valid : {getMoment(offer.start).format("MM/DD/YYYY")} - {getMoment(offer.end).format("MM/DD/YYYY")}</span>
                     </div>
                 </div>
                 <div className="btn-wrap">

@@ -1,4 +1,4 @@
-import {getPropertiesOfMarket} from "./Helper";
+import {getPropertiesOfMarket, getMoment} from "./Helper";
 
 export const updateSelectedFilter = (selectedOfferFilters, newFilter) => {
     if(newFilter.filterType === "date") {
@@ -46,9 +46,13 @@ export const filterOffers = (offers, selectedOfferFilters, markets) => {
             }
             if ((filterType === "date" || filterType === "month") && filterValue) {
                 filteredOffers = filteredOffers.filter((offer) => {
+                    const offerStart = getMoment(offer.start).startOf('day');
+                    const offerEnd = getMoment(offer.end).endOf('day');
+                    const filterStart = getMoment(filterValue.startDate).startOf('day');
+                    const filterEnd = getMoment(filterValue.endDate).endOf('day');
                     return (
-                        new Date(offer.start) <= filterValue.startDate &&
-                        new Date(offer.end) >= filterValue.endDate
+                        offerStart.isSameOrBefore(filterStart) &&
+                        offerEnd.isSameOrAfter(filterEnd)
                     );
                 });
             }

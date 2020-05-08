@@ -104,8 +104,8 @@ class MyOffers extends Component {
 
         this.createDefaultFilterAndSort = (searchParams) => {
             selectedOfferFilters = [];
-            let filterStartDate = new Date();
-            let filterEndDate = new Date(new Date().setDate(filterStartDate.getDate() + 30));
+            let filterStartDate = getMoment();
+            let filterEndDate = getMoment().add(1, 'month');
             selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
                 filterType: "date",
                 filterValue: {
@@ -119,14 +119,14 @@ class MyOffers extends Component {
                     const monthMoment = getMoment().month(flexiblemonth);
                     if(monthMoment.isValid()) {
                         if(monthMoment.month() === getMoment().month()) {
-                            filterStartDate = getMoment().startOf('day');
-                            filterEndDate = getMoment().endOf('month').endOf('day');
-                        } else if(monthMoment.startOf('day') < getMoment().startOf('day')) {
-                            filterStartDate = monthMoment.clone().add('years', 1).startOf('month').startOf('day');
-                            filterEndDate = monthMoment.clone().add('years', 1).endOf('month').endOf('day');
+                            filterStartDate = getMoment();
+                            filterEndDate = getMoment().endOf('month');
+                        } else if(monthMoment.isBefore(getMoment())) {
+                            filterStartDate = monthMoment.clone().add('years', 1).startOf('month');
+                            filterEndDate = monthMoment.clone().add('years', 1).endOf('month');
                         } else {
-                            filterStartDate = monthMoment.clone().startOf('month').startOf('day');
-                            filterEndDate = monthMoment.clone().endOf('month').endOf('day');
+                            filterStartDate = monthMoment.clone().startOf('month');
+                            filterEndDate = monthMoment.clone().endOf('month');
                         }
                     }
                     selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
@@ -137,15 +137,15 @@ class MyOffers extends Component {
                         }
                     });
                 } else if(startdate || enddate) {
-                    const UrlStartdate = new Date(startdate);
-                    const UrlEbdDate = new Date(enddate);
-                    if(UrlStartdate.toString() !== "Invalid Date" && UrlStartdate >= new Date()) {
-                        filterStartDate = UrlStartdate;
+                    const urlStartDate = getMoment(startdate);
+                    const urlEndDate = getMoment(enddate);
+                    if(urlStartDate.isValid() && urlStartDate.isSameOrAfter(getMoment(), 'day')) {
+                        filterStartDate = urlStartDate;
                     }
-                    if(UrlEbdDate.toString() !== "Invalid Date" && UrlEbdDate >= UrlStartdate) {
-                        filterEndDate = UrlEbdDate;
+                    if(urlEndDate.isValid() && urlEndDate.isSameOrAfter(urlStartDate, 'day')) {
+                        filterEndDate = urlEndDate;
                     } else {
-                        filterEndDate = new Date(new Date(filterStartDate).setDate(filterStartDate.getDate() + 30));
+                        filterEndDate = filterStartDate.clone().add(1, month);
                     }
                     selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
                         filterType: "date",

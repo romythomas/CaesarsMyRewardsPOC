@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import {
     getProperty, 
+    getMoment, 
     getFavouriteClassName, 
     recordOffersDetailsData, 
     getMarketCodeListOfPropertyCodes,
@@ -130,14 +131,14 @@ class OfferDetails  extends Component  {
                                                 title="Where do you want to go?" />
                                             </div>
                                         <button className="button" 
-                                        onClick={gotoNBE(new Array(id, new Date(start).toLocaleDateString(),new Date(end).toLocaleDateString()))} >
+                                        onClick={gotoNBE(new Array(id, getMoment(start).format("MM/DD/YYYY"), getMoment(end).format("MM/DD/YYYY")))} >
                                         Book</button> 
                                     </div>
                                 </div>
                                 <div className="col-md-3 col-sm-12 pull-right">
                                     <div className="details-info">
                                         <span className="offer-code">OFFER CODE: <strong>{id}</strong></span>
-                                        <span className="expires">EXPIRES: <strong>{new Date(end).toLocaleDateString()}</strong></span>
+                                        <span className="expires">EXPIRES: <strong>{getMoment(end).format("MM/DD/YYYY")}</strong></span>
                                         
                                     </div>
                                 </div>
