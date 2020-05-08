@@ -73,7 +73,7 @@ const loadScript = () => {
  * @returns {String} - Concatenated formatted date string values.
  */
 const getDisplayValueOfDateCalendarSelection = (startDate, endDate) => {
-    return startDate.format("MM-DD-YYYY") + " - " + endDate.format("MM-DD-YYYY");
+    return startDate.format("MMM D, YYYY") + " - " + endDate.format("MMM D, YYYY");
 }
 
 /**
@@ -272,7 +272,7 @@ const SearchCalendar = (props)  => {
                                 return(
                                     <li key={index} 
                                         className={`month-item ${activeClassNames}`} 
-                                        data-value={date.format("MM-DD-YYYY")}
+                                        data-value={date.format("MMM D, YYYY")}
                                         onClick={onMonthChange}>
                                             {valueToDisplay}
                                     </li>
