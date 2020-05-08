@@ -121,7 +121,8 @@ const SearchCalendar = (props)  => {
     loadScript();
     //Values that are passed as properties to the component
     const {calendarId} = props;
-    let {defaultType, defaultValue, minimumDate, maximumDate} = props;
+    let {defaultType, defaultValue, minimumDate, maximumDate, title} = props;
+    title = title ? title : "Start date - End date";
     let defaultDateRangeSelectedValue = "";
     //Set lowest and highest calendar selectable dates, if not defined in properties
     minimumDate = minimumDate && getMoment(minimumDate).isValid() ? getMoment(minimumDate) : getMoment();
@@ -244,13 +245,13 @@ const SearchCalendar = (props)  => {
                         required
                     />
                     <label className="form-control-placeholder" htmlFor={calendarId}>
-                        Start date - End date
+                        {title}
                     </label>
                 </div>
                 <div className="searchCalendar-content">
                     <span className="close"></span>
                     <div className="searchCalendar-options">
-                        <h2 className="title-pop-mobile">Start date - End date</h2>
+                        <h2 className="title-pop-mobile">{title}</h2>
                         <button className={`searchBy-Dates ${dateCalendarSelectButtonClass}`}>Exact Date</button>
                         <button className={`searchBy-Months ${monthCalendarSelectButtonClass}`}>Flexible Dates</button>
                     </div>
