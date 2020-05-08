@@ -47,6 +47,8 @@
 					width: 33.33%;
 					@include break-point(991px){
 						width: 100%;
+						margin-top: 20px;
+						font-size: 15px;
 					}
 				}
 			}
