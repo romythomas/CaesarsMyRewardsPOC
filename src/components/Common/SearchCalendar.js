@@ -139,55 +139,6 @@ const SearchCalendar = (props)  => {
         dateCalendarSelectButtonClass = "";
         monthCalendarSelectButtonClass = "selected";
     }
-    //#region - Month range calendar initialization code
-        //Variable to store formatted default value of month selection
-        let defaultMonthValue = "";
-        //Create array to hold month values available for flexible date search
-        const monthRanges = [];
-        //Loop starting from minimumDate till maximumDate and store the first date of each month
-        let monthRangeStartDate = minimumDate.clone(); //use clone to avoid mutation of original variable
-        /********************************************************************* */
-        while (monthRangeStartDate.isSameOrBefore(maximumDate, 'day')) {
-            if(monthRangeStartDate.month() === minimumDate.month()) {
-                monthRanges.push(monthRangeStartDate.clone());
-            } else {
-                monthRanges.push(monthRangeStartDate.clone().startOf('month'));
-            }
-            monthRangeStartDate = monthRangeStartDate.add(1, 'month');
-        }
-        //Format default value received through properties
-        if(defaultType === "month" && defaultValue && defaultValue.startDate && defaultValue.endDate) {
-            defaultMonthValue = defaultValue.startDate.format("MMM YYYY");
-            updateMonthRangeTextValue(defaultMonthValue);
-            defaultDateRangeSelectedValue = defaultMonthValue;
-            defaultValue = null;
-        }
-        /**
-         * Handles the event of the month range selection.
-         * Get month value selected and find the first and last date of the slected month.
-         * Update textbot UI values and pass the startdate and enddate values to component property.
-         * @param {EventHandler} event - Click event of selected month search item
-         */
-        const onMonthChange = (event) => {
-            const {target} = event;
-            //Check if date value is presented in the slection
-            if(target && target.dataset && target.dataset.value) {
-                //Find startdate and enddate. Then convert them to moment
-                const startDate = getMoment(target.dataset.value);
-                const endDate = startDate.clone().endOf('month');
-                //If moment dates are valid, update UI textbox value
-                if(startDate.isValid() && endDate.isValid()) {
-                    //Update textbox UI value and active class
-                    updateMonthRangeValueUI(target.innerText, event);
-                    //Pass date values to component property
-                    if(props.onChange) {
-                        hideCalendar();
-                        props.onChange("month", startDate, endDate);
-                    }
-                }
-            }
-        }
-    //#endregion
 
     //#region - Date range calendar code
         //Create local state object to hold value of calendar selection
@@ -224,6 +175,56 @@ const SearchCalendar = (props)  => {
                 if(props.onChange) {
                     hideCalendar();
                     props.onChange("date", start, end);
+                }
+            }
+        }
+    //#endregion
+
+    //#region - Month range calendar initialization code
+        //Variable to store formatted default value of month selection
+        let defaultMonthValue = "";
+        //Create array to hold month values available for flexible date search
+        const monthRanges = [];
+        //Loop starting from minimumDate till maximumDate and store the first date of each month
+        let monthRangeStartDate = minimumDate.clone(); //use clone to avoid mutation of original variable
+        /********************************************************************* */
+        while (monthRangeStartDate.isSameOrBefore(maximumDate, 'day')) {
+            if(monthRangeStartDate.month() === minimumDate.month()) {
+                monthRanges.push(monthRangeStartDate.clone());
+            } else {
+                monthRanges.push(monthRangeStartDate.clone().startOf('month'));
+            }
+            monthRangeStartDate = monthRangeStartDate.add(1, 'month');
+        }
+        //Format default value received through properties
+        if(!defaultDateRange && defaultType === "month" && defaultValue && defaultValue.startDate && defaultValue.endDate) {
+            defaultMonthValue = defaultValue.startDate.format("MMM YYYY");
+            updateMonthRangeTextValue(defaultMonthValue);
+            defaultDateRangeSelectedValue = defaultMonthValue;
+            defaultValue = null;
+        }
+        /**
+         * Handles the event of the month range selection.
+         * Get month value selected and find the first and last date of the slected month.
+         * Update textbot UI values and pass the startdate and enddate values to component property.
+         * @param {EventHandler} event - Click event of selected month search item
+         */
+        const onMonthChange = (event) => {
+            const {target} = event;
+            //Check if date value is presented in the slection
+            if(target && target.dataset && target.dataset.value) {
+                //Find startdate and enddate. Then convert them to moment
+                const startDate = getMoment(target.dataset.value);
+                const endDate = startDate.clone().endOf('month');
+                //If moment dates are valid, update UI textbox value
+                if(startDate.isValid() && endDate.isValid()) {
+                    //Update textbox UI value and active class
+                    updateMonthRangeValueUI(target.innerText, event);
+                    //Pass date values to component property
+                    if(props.onChange) {
+                        hideCalendar();
+                        props.onChange("month", startDate, endDate);
+                    }
                 }
             }
         }
