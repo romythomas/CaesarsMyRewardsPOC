@@ -3,6 +3,10 @@ import React from 'react';
 const Textbox = (props) => {
     const {defaultValue, textboxId, title} = props;
 
+    const closeButtonStyleToDisplay={
+        display : (defaultValue && defaultValue.length) ? "block" : "none"
+      }
+
     const onChange = (value) =>{
         const {target} = value;
         const $textboxComponent = $(".textComponent");
@@ -39,7 +43,7 @@ const Textbox = (props) => {
                 id={textboxId} 
                 onChange={onChange} />
             <label className="form-control-placeholder" htmlFor={textboxId}>{title}</label>
-            <a className="close" href="#" onClick={clearValue}></a> 
+            <a className="close" style={closeButtonStyleToDisplay} href="#" onClick={clearValue}></a> 
         </div>
     )
 }
