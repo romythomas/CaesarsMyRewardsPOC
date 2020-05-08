@@ -20,8 +20,10 @@ const Header = (props) => {
       </div>
     </nav>
     <ul className="top-menu">
-      <li className="user"> <img src="../images/user.png" alt="user"/>
-      <span className="username">Hello, TRTEST</span></li>
+      <li className="user">
+        <span className="userImage"></span>
+        <span className="username">Hello, TRTEST</span>
+      </li>
     </ul>
   </header>
   );

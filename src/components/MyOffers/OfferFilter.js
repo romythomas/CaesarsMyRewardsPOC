@@ -13,11 +13,12 @@ const OfferFilter = (props) => {
     const offerSortTypes = getOfferSortTypes();
 
     const {defaultSort,defaultFilter, markets} = props;
-    let defaultDateRange = "", defaultLocation = "", defaultType = "", defaultOfferCode = "";
+    let defaultDateSelection="date", defaultDateRange = "", defaultLocation = "", defaultType = "", defaultOfferCode = "";
     if(defaultFilter && defaultFilter.length) {
         defaultFilter.map((filter) => {
             const {filterType, filterValue} = filter;
-            if(filterType === "date") {
+            if(filterType === "date" || filterType === "month") {
+                defaultDateSelection = filterType;
                 defaultDateRange = {
                     "startDate" : filterValue.startDate,
                     "endDate": filterValue.endDate
@@ -61,6 +62,7 @@ const OfferFilter = (props) => {
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <SearchCalendar 
                             calendarId="offer-calendar" 
+                            defaultType={defaultDateSelection} 
                             defaultValue={defaultDateRange} 
                             onChange={props.onDateRangeChange} />
                     </li>

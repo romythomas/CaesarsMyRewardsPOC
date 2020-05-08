@@ -2,7 +2,19 @@
 .reward-progress{
 	background: $custome-white;
 	box-shadow: 6px 0px 13px -10px rgba(0,0,0,0.35);
+	position: relative;
 	margin-bottom: 20px;
+	.progressbar {
+		position: absolute;
+		background-color: #ad1f23;
+		height: 100%;
+		opacity: 0.1;
+		bottom: 0;
+		@include break-point(767px){
+			width: 100%;
+			top: 0;
+		}
+	}
 	ul{
 		display: flex;
 		justify-content: space-between;
@@ -15,11 +27,12 @@
 			align-items: center;
 			justify-content: center;
 			padding: 10px 0;
-			border-left: #f6f6f6 solid 1px;
+			border-left: #ccc solid 1px;
+			position: relative;
 			@include break-point(767px){
 				justify-content: left;
 				border-left: none;
-				border-bottom: #f6f6f6 solid 1px;
+				border-bottom: #ccc solid 1px;
 				padding-left: 20px;
 			}
 			&:first-child{
@@ -31,9 +44,25 @@
 		}
 		.progress-text{
 			font-size: 14px;
-			strong{
+			strong, samp{
 				font-family: 'Montserrat SemiBold';
 				display: block;
+				position: absolute;
+				bottom: 0;
+				right: -20px;
+				z-index: 9;
+				@include break-point(767px){
+					bottom: -10px;
+					right: 10px;
+				}
+			}
+			samp {
+				left: 0;
+				@include break-point(767px){
+					top: 0;
+					right: 10px;
+					left: auto;
+				}
 			}
 		}
 	}

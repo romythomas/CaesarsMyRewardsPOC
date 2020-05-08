@@ -2,13 +2,19 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import {
     getProperty, 
-    getFavouriteImage, 
+    getMoment, 
+    getFavouriteClassName, 
     recordOffersDetailsData, 
     getMarketCodeListOfPropertyCodes,
     getStructuredMarketsPropertiesList,
     getPropertiesListByCode} from '../../utilities/Helper';
 import Autocomplete from "../Common/Autocomplete";
 import {getImageUrl} from '../../constants/configs';
+import ReactGA from 'react-ga';
+
+const trackingId = "UA-165835615-1"; 
+ReactGA.initialize(trackingId);
+ReactGA.pageview('/offerdetails');
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers, 
@@ -96,9 +102,8 @@ class OfferDetails  extends Component  {
                                 <div className="col-md-4 col-sm-6">
                                     <div className="thumb">
                                         <img src={imageUrl} alt="offer details image" />
-                                    </div>
-                                    <div className="fav">
-                                        <img src={getFavouriteImage(pref)} alt="Caesars Favourite Logo" />
+                                        <div className={`fav ${getFavouriteClassName(pref)}`}>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-md-5 col-sm-6">
@@ -126,14 +131,14 @@ class OfferDetails  extends Component  {
                                                 title="Where do you want to go?" />
                                             </div>
                                         <button className="button" 
-                                        onClick={gotoNBE(new Array(id, new Date(start).toLocaleDateString(),new Date(end).toLocaleDateString()))} >
+                                        onClick={gotoNBE(new Array(id, getMoment(start).format("MM/DD/YYYY"), getMoment(end).format("MM/DD/YYYY")))} >
                                         Book</button> 
                                     </div>
                                 </div>
                                 <div className="col-md-3 col-sm-12 pull-right">
                                     <div className="details-info">
                                         <span className="offer-code">OFFER CODE: <strong>{id}</strong></span>
-                                        <span className="expires">EXPIRES: <strong>{new Date(end).toLocaleDateString()}</strong></span>
+                                        <span className="expires">EXPIRES: <strong>{getMoment(end).format("MM/DD/YYYY")}</strong></span>
                                         
                                     </div>
                                 </div>
@@ -168,8 +173,8 @@ class OfferDetails  extends Component  {
         }
         return (
             <div className="container-fluid">
-                <div className="title">
-                    <h1>No Offer Details Available</h1>
+                <div className="alert alert-danger" role="alert">
+                    <b>No Offer Details Available</b>
                 </div>
             </div>
         )

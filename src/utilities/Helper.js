@@ -1,5 +1,9 @@
 import TagManager from 'react-gtm-module'
 import {isMobile} from 'react-device-detect';
+import originalMoment from "moment";
+import { extendMoment } from "moment-range";
+
+const moment = extendMoment(originalMoment);
 
 /**
  * 
@@ -200,20 +204,11 @@ export const truncate = (source, size) => {
  * 
  * @param {*} pref 
  */
-export const getFavouriteImage = (pref) => {
-    let imageUrl='';
-    if(pref){
-        switch(pref){
-            case 'F':
-                imageUrl = '../images/favorate-red.png';
-                break;
-            case 'N':                
-            case 'V':               
-                imageUrl = '../images/favorate-icon.png';
-                break;
-        }
+export const getFavouriteClassName = (pref) => {
+    if(pref === "F"){
+        return "active";
     }
-    return imageUrl;
+    return "";
 }
 
 /**
@@ -303,4 +298,26 @@ export const recordOffersDetailsData =(pageName, offerid) =>{
         offerId: (offerid!=null)? offerid : null
     };
     recordDataLayer(dataLayer);
+}
+
+/**
+ * Returns moment format of the date value passed in.
+ * @param {String} dateValue - A date value in string format.
+ * @returns {Object} - Moment object value of the date.
+ */
+export const getMoment = (dateValue) => {
+    if(dateValue) {
+        return moment(dateValue);
+    }
+    return moment();
+}
+
+/**
+ * Returns moment range of two date values passed in.
+ * @param {String} startDate - A date value in moment format.
+ * @param {String} endDate - A date value in moment format.
+ * @returns {Object} - Moment range object of two dates.
+ */
+export const getMomentRange = (startDate, endDate) => {
+    return moment.range(startDate, endDate);
 }

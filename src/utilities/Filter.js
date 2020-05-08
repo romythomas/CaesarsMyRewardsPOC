@@ -1,6 +1,15 @@
-import {getPropertiesOfMarket} from "./Helper";
+import {getPropertiesOfMarket, getMoment} from "./Helper";
 
 export const updateSelectedFilter = (selectedOfferFilters, newFilter) => {
+    if(newFilter.filterType === "date") {
+        selectedOfferFilters = selectedOfferFilters.filter((filter) => {
+            return filter.filterType !== "month";
+        });
+    } else if(newFilter.filterType === "month") {
+        selectedOfferFilters = selectedOfferFilters.filter((filter) => {
+            return filter.filterType !== "date";
+        });
+    }
     const existingFilterIndex = selectedOfferFilters.findIndex((filter) => {
         return filter.filterType === newFilter.filterType;
     });
@@ -35,11 +44,15 @@ export const filterOffers = (offers, selectedOfferFilters, markets) => {
                     );
                 });
             }
-            if (filterType === "date" && filterValue) {
+            if ((filterType === "date" || filterType === "month") && filterValue) {
                 filteredOffers = filteredOffers.filter((offer) => {
+                    const offerStart = getMoment(offer.start).startOf('day');
+                    const offerEnd = getMoment(offer.end).endOf('day');
+                    const filterStart = getMoment(filterValue.startDate).startOf('day');
+                    const filterEnd = getMoment(filterValue.endDate).endOf('day');
                     return (
-                        new Date(offer.start) <= filterValue.startDate &&
-                        new Date(offer.end) >= filterValue.endDate
+                        offerStart.isSameOrBefore(filterStart) &&
+                        offerEnd.isSameOrAfter(filterEnd)
                     );
                 });
             }

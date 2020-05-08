@@ -4,6 +4,7 @@ const loadScript = () => {
     $(document).ready(function(){
         $('.multiselectlist-wrap').on('click touch', function(e) {
             e.preventDefault();
+            $(".multiselectlist-wrap").toggleClass("active");
             $(".multiselectlist-content").toggle();
         });
         $('.multiselectlist-wrap .txt').keypress(function(e) {
@@ -12,6 +13,7 @@ const loadScript = () => {
         $('.multiselectlist-content .close').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            $(".multiselectlist-wrap").removeClass("active");
             $(".multiselectlist-content").hide();
         });
         $(document).on('click', 'body', function(e) {
@@ -19,6 +21,7 @@ const loadScript = () => {
                 const {target} = e;
                 const targetClassName = (target.className) ? "." + target.className : "";
                 if(targetClassName !== "multiselectlist" && $(".multiselectlist").find(target).length <= 0) {
+                    $(".multiselectlist-wrap").removeClass("active");
                     $('.multiselectlist-content').hide();
                 }
             }
@@ -70,6 +73,7 @@ const MultiSelectList = (props) => {
                 <div className="multiselectlist-content">
                     <span className="close"></span>
                     <div className="multiselectlist__list">
+                        <h2 className="title-pop-mobile" >{title}</h2>
                         <ul className="multiselectlist__listwrap">
                             <li className="multiselectlist__listitem">
                                 {dataList.map((data, index) => {

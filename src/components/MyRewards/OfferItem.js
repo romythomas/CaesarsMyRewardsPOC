@@ -34,8 +34,8 @@ const OfferItem = (props) => {
                 <span className="rate">&nbsp;</span>                
             </div>
             <div className="btn-wrap-double">   
-                <Link className="button" to={`/offerdetails/${offers.id}`}> View Offer</Link>   
-                <Link className="button button-outline" to={`/myoffers`}> View All</Link>  
+                <Link className="button" id="viewoffer" to={`/offerdetails/${offers.id}`}> View Offer</Link>   
+                <Link className="button button-outline" id="viewall" to={`/myoffers`}> View All</Link>  
             </div>
         </div>
     );

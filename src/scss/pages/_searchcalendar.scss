@@ -12,7 +12,7 @@
 	.searchCalendar-content{
 		background: $custome-white;
 		position: absolute;
-		width: 590px;
+		width: 660px;
 		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
 		display: none;
 		z-index: 99999;
@@ -23,7 +23,7 @@
 			height: 100vh;
 			top: 0;
 			right: 0;
-      padding: 10px;
+      		padding: 10px;
 			z-index: 9999;
 			overflow: scroll;
 			text-align: center;
@@ -42,6 +42,9 @@
 				margin: 15px 1px;
 				min-width: 150px;
 				text-transform: uppercase;
+				&:hover {
+					box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 30px;
+				}
 				&.selected{
 					background-color: rgb(112, 115, 120);
 					color: rgb(255, 255, 255);
@@ -55,10 +58,19 @@
 				}
 			}
 		}
+		.dateRangeCalendar__item {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
 		.monthRangeCalendar__item {
 			display: none;
+			&.active {
+				display: block;
+			}
 			.monthRangeCalendar__list {
-				padding: 20px 30px;
+				padding: 16px;
 				display: flex;
 				flex-wrap: wrap;
 				@include break-point(767px){
@@ -66,14 +78,17 @@
 				}
 			}
 			li.month-item {
-		    	padding: 6px 10px;
+		    	padding: 8px 10px;
 				margin: 8px 6px;
-				width: 120px;
+				width: 145px;
 				text-align: center;
 				cursor: pointer;
 				border: 1px solid #000;
 				text-transform: uppercase;
 				border-radius: 2px;
+				&:hover {
+					box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 30px;
+				}
 				@include break-point(767px){
 					width: 45%;
 				}
@@ -82,23 +97,12 @@
 				background-color: rgb(173, 31, 35);
 				color: rgb(255, 255, 255);
 				border: none;
+				&:hover{
+					background-color: #fff;
+					border: 1px solid rgb(173, 31, 35);
+					color: rgb(173, 31, 35);
+				}
 			}
-		}
-	}
-	.close{
-		position: absolute;
-		right: 10px;
-		top: 5px;
-		display: none;
-		@include break-point(991px){
-			display: block;
-		}
-		&:before{
-			@include fontawesome;
-			content: "\f00d";
-			right: 0;
-			-webkit-text-stroke: 6px $custome-white;
-			font-size: 45px;
 		}
 	}
 }
@@ -163,14 +167,14 @@
     border: solid #000;
     border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 5px;
+    padding: 6px;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg); }
 	  .DateRangePicker__PaginationArrowIcon--next {
 			border: solid black;
 			border-width: 0 2px 2px 0;
 			display: inline-block;
-			padding: 5px;
+			padding: 6px;
 			transform: rotate(-45deg);
 			-webkit-transform: rotate(-45deg); }
 	.DateRangePicker__Month {
@@ -218,6 +222,7 @@
 	  font-size: 14px;
 	  line-height: 1;
 	  padding: 18px 8px;
+	  width: 40px;
 		text-align: center;
 	 }
 	.DateRangePicker__WeekdayHeading {

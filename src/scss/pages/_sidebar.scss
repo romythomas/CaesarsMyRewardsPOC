@@ -24,12 +24,27 @@
 			&:last-child{
 				border: none;
 			}
+			.collapse {
+				&:not(.show) {
+					display: block;
+					@include break-point(991px){
+						  display: none;
+					}
+				}
+			}
 			a{
 				text-decoration: none;
 				padding: 10px 13px;
 				display: block;
 				height: 39px;
 				font-family: OpenSans-Light;
+				&.selected{
+					background: $custome-secondary;
+					color:$custome-white;
+					i{
+						-webkit-text-stroke-color: #fff;
+					} 
+				}
 				&:hover{
 					background:$custome-secondary;
 					color:$custome-white;
@@ -52,6 +67,10 @@
 					}
 					
 					&.main-head{
+						display: none;
+						@include break-point(991px){
+							display: block;
+						}
 						font-family: OpenSans-Bold;
 						span{
 							margin: 0;
@@ -156,45 +175,36 @@
 					}
 				}
 			}
+			li{
+				position: relative;
 				li{
 					position: relative;
-					li{
-						position: relative;
-						&:hover{
-							.nav-fly{
-								display: block;
-							}
+					&:hover{
+						.nav-fly{
+							display: block;
 						}
 					}
 				}
-				.nav-fly{
-					position: absolute;
-					right: -230px;
-					width: 100%;
-					background: #eee;
-					display: none;
-					top: 0;
-					@include break-point(991px){
-						position: relative;
-						right: 0;
-						background: #ddd;
+			}
+			.nav-fly{
+				position: absolute;
+				right: -230px;
+				width: 100%;
+				background: #eee;
+				display: none;
+				top: 0;
+				@include break-point(991px){
+					position: relative;
+					right: 0;
+					background: #ddd;
+				}
+			}
+			.main-sub{
+				li{
+					>a{
+						padding-left: 30px;
 					}
 				}
-				.main-sub{
-					li{
-						>a{
-							padding-left: 30px;
-						}
-					}
-				}
-		}
-		&.selected{
-			> a{
-				background: $custome-secondary;
-				color:$custome-white;
-				i{
-					-webkit-text-stroke-color: #fff;
-				} 
 			}
 		}
 		.secondary-sub{

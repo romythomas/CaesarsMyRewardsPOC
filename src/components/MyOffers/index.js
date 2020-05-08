@@ -5,8 +5,13 @@ import OfferFilter from './OfferFilter';
 import { FILTER_SORT_OFFER } from "../../constants/actionTypes";
 import {filterOffers, updateSelectedFilter} from '../../utilities/Filter';
 import {sortOffers} from '../../utilities/Sort';
-import {getUrlParams, recordMyOffersData} from '../../utilities/Helper';
+import {getUrlParams, recordMyOffersData, getMoment} from '../../utilities/Helper';
 import {getOfferSortTypes, getOfferFilterTypes} from "../../constants/configs";
+import ReactGA from 'react-ga';
+
+const trackingId = "UA-165835615-1"; 
+ReactGA.initialize(trackingId);
+ReactGA.pageview('/myoffers');
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -69,9 +74,9 @@ class MyOffers extends Component {
             this.filterOffers("location", locationValue);
         }
 
-        this.onDateRangeChange = (startDate, endDate) => {
+        this.onDateRangeChange = (type, startDate, endDate) => {
             if(startDate && endDate) {
-                this.filterOffers("date", {
+                this.filterOffers(type ? type : "date", {
                     startDate: startDate,
                     endDate: endDate,
                 });
@@ -99,8 +104,8 @@ class MyOffers extends Component {
 
         this.createDefaultFilterAndSort = (searchParams) => {
             selectedOfferFilters = [];
-            let filterStartDate = new Date();
-            let filterEndDate = new Date(new Date().setDate(filterStartDate.getDate() + 30));
+            let filterStartDate = getMoment();
+            let filterEndDate = getMoment().add(1, 'month');
             selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
                 filterType: "date",
                 filterValue: {
@@ -109,17 +114,38 @@ class MyOffers extends Component {
                 }
             });
             if(searchParams) {
-                const {regioncode, propcode, startdate, enddate, type, offercode, defaultsort} = searchParams;
-                if(startdate || enddate) {
-                    const UrlStartdate = new Date(startdate);
-                    const UrlEbdDate = new Date(enddate);
-                    if(UrlStartdate.toString() !== "Invalid Date" && UrlStartdate >= new Date()) {
-                        filterStartDate = UrlStartdate;
+                const {regioncode, propcode, startdate, enddate, flexiblemonth, type, offercode, defaultsort} = searchParams;
+                if(flexiblemonth) {
+                    const monthMoment = getMoment().month(flexiblemonth);
+                    if(monthMoment.isValid()) {
+                        if(monthMoment.month() === getMoment().month()) {
+                            filterStartDate = getMoment();
+                            filterEndDate = getMoment().endOf('month');
+                        } else if(monthMoment.isBefore(getMoment())) {
+                            filterStartDate = monthMoment.clone().add('years', 1).startOf('month');
+                            filterEndDate = monthMoment.clone().add('years', 1).endOf('month');
+                        } else {
+                            filterStartDate = monthMoment.clone().startOf('month');
+                            filterEndDate = monthMoment.clone().endOf('month');
+                        }
                     }
-                    if(UrlEbdDate.toString() !== "Invalid Date" && UrlEbdDate >= UrlStartdate) {
-                        filterEndDate = UrlEbdDate;
+                    selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
+                        filterType: "month",
+                        filterValue: {
+                            startDate: filterStartDate,
+                            endDate: filterEndDate
+                        }
+                    });
+                } else if(startdate || enddate) {
+                    const urlStartDate = getMoment(startdate);
+                    const urlEndDate = getMoment(enddate);
+                    if(urlStartDate.isValid() && urlStartDate.isSameOrAfter(getMoment(), 'day')) {
+                        filterStartDate = urlStartDate;
+                    }
+                    if(urlEndDate.isValid() && urlEndDate.isSameOrAfter(urlStartDate, 'day')) {
+                        filterEndDate = urlEndDate;
                     } else {
-                        filterEndDate = new Date(new Date(filterStartDate).setDate(filterStartDate.getDate() + 30));
+                        filterEndDate = filterStartDate.clone().add(1, month);
                     }
                     selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
                         filterType: "date",

@@ -78,8 +78,17 @@
 			}
 		}
 	}
-	@include break-point(991px){
-		&.autocomplete--open{
+	&.autocomplete--open {
+		.close {
+			display: block;
+			cursor: pointer;
+			z-index: 9;
+			&:before {
+				right: 10px;
+				top: 7px;
+			}
+		}
+		@include break-point(991px){
 			background: #fff;
 			position: fixed;
 			top: 0;
@@ -96,13 +105,10 @@
 					box-shadow: none;
 				}
 			}
-			.select-wrap{
-				&:after{
-					display: none;
-				}
-			}
-			.close {
-				z-index: 9;
+		}
+		.select-wrap{
+			&:after{
+				display: none;
 			}
 		}
 	}
