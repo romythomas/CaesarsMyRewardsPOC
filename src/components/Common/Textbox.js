@@ -27,6 +27,7 @@ const Textbox = (props) => {
         $(".textComponent").removeClass("active");
         $(".textComponent .close").css("display", "none");
         $('.textComponent input[type="text"]').val("");
+        $('.textComponent input[type="text"]').attr("value", "");
         e.preventDefault();
         e.stopPropagation();
         if(props.onChange) {
