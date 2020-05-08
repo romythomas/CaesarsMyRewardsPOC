@@ -333,6 +333,7 @@ select:-webkit-autofill:focus {
 	color: $custome-black;
 }
 .active .txt + .form-control-placeholder,
+.txt:not([value=""]) + .form-control-placeholder,
 .txt:focus + .form-control-placeholder,
 .txt:valid + .form-control-placeholder {
 	font-size: 10px;
