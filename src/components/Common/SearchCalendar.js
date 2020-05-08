@@ -77,7 +77,7 @@ const getDisplayValueOfDateCalendarSelection = (startDate, endDate) => {
 }
 
 /**
- * Updates the input text value based on the dates selected from date range calendar.
+ * Updates the input text value and value attribute (for readOnly) based on the dates selected from date range calendar.
  * @param {Date} startDate - Start date selected from range calendar.
  * @param {Date} endDate - End date selected from range calendar.
  */
@@ -87,7 +87,7 @@ const updateDateRangeValueUI = (startDate, endDate) => {
 }
 
 /**
- * Updates the input text value based on the dates selected from month range calendar.
+ * Updates the input text value and value attribute (for readOnly) based on the dates selected from month range calendar.
  * @param {String} value - Selected month range calendar value.
  */
 const updateMonthRangeTextValue = (value) => {
