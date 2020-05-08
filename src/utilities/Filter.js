@@ -63,7 +63,9 @@ export const filterOffers = (offers, selectedOfferFilters, markets) => {
             }
             if(filterType === "code" && filterValue) {
                 filteredOffers = filteredOffers.filter((offer) => {
-                    return offer.id === filterValue;
+                    if(offer.id) {
+                        return offer.id.toUpperCase().includes(filterValue.toUpperCase());
+                    }
                 });
             }
         });
