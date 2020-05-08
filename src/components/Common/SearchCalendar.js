@@ -83,6 +83,7 @@ const getDisplayValueOfDateCalendarSelection = (startDate, endDate) => {
  */
 const updateDateRangeValueUI = (startDate, endDate) => {
     $('.searchCalendar-wrap input:text').val(getDisplayValueOfDateCalendarSelection(startDate, endDate));
+    $('.searchCalendar-wrap input:text').attr("value", getDisplayValueOfDateCalendarSelection(startDate, endDate));
 }
 
 /**
@@ -91,6 +92,7 @@ const updateDateRangeValueUI = (startDate, endDate) => {
  */
 const updateMonthRangeTextValue = (value) => {
     $('.searchCalendar-wrap input:text').val(value);
+    $('.searchCalendar-wrap input:text').attr("value", value);
 }
 
 /**
@@ -155,7 +157,8 @@ const SearchCalendar = (props)  => {
                 defaultDateRangeSelectedValue = getDisplayValueOfDateCalendarSelection(defaultStartDate, defaultEndDate);
                 defaultDateRange = getMomentRange(defaultStartDate, defaultEndDate);
             }
-            defaultValue = null;
+        } else if(defaultDateRange) {
+            defaultDateRangeSelectedValue = getDisplayValueOfDateCalendarSelection(defaultDateRange.start, defaultDateRange.end);
         }
         /**
          * Handles the event of the range calendar selection.
@@ -201,7 +204,6 @@ const SearchCalendar = (props)  => {
             defaultMonthValue = defaultValue.startDate.format("MMM YYYY");
             updateMonthRangeTextValue(defaultMonthValue);
             defaultDateRangeSelectedValue = defaultMonthValue;
-            defaultValue = null;
         }
         /**
          * Handles the event of the month range selection.
@@ -241,9 +243,9 @@ const SearchCalendar = (props)  => {
                         className="form-control txt"
                         type="text"
                         autoComplete="off"
-                        defaultValue={defaultDateRangeSelectedValue}
+                        value={defaultDateRangeSelectedValue}
                         id={calendarId}
-                        readonly
+                        readOnly
                     />
                     <label className="form-control-placeholder" htmlFor={calendarId}>
                         {title}
