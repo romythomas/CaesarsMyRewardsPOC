@@ -334,8 +334,7 @@ select:-webkit-autofill:focus {
 }
 .active .txt + .form-control-placeholder,
 .txt:not([value=""]) + .form-control-placeholder,
-.txt:focus + .form-control-placeholder,
-.txt:valid + .form-control-placeholder {
+.txt:focus + .form-control-placeholder {
 	font-size: 10px;
 	transform: translate3d(0, -30%, 0);
 	opacity: 1;

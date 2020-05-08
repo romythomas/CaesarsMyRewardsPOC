@@ -88,7 +88,7 @@ class MyOffers extends Component {
         }
 
         this.onOfferCodeChange = element => {
-            const offerCode = (element && element.target && element.target.value) ? element.target.value : "";
+            const offerCode = element ? element : "";
             this.filterOffers("code", offerCode);
         }
 

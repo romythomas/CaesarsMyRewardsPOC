@@ -79,7 +79,7 @@ const OfferFilter = (props) => {
                             textboxId = "offerCodeSearch"
                             title="Offer Code" 
                             defaultValue = {defaultOfferCode}
-                            onBlur={props.onOfferCodeChange} />
+                            onChange={props.onOfferCodeChange} />
                     </li>
                 </ul>
             </div>
