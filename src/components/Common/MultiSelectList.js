@@ -67,7 +67,7 @@ const MultiSelectList = (props) => {
         return(
             <div className="multiselectlist">
                 <div className="select-wrap multiselectlist-wrap">
-                    <input className="form-control txt" type="text" id={selectId} defaultValue={selectedValues.join(",")} required />
+                    <input className="form-control txt" type="text" id={selectId} defaultValue={selectedValues.join(",")} readonly />
                     <label className="form-control-placeholder" htmlFor={selectId}>{title}</label>
                 </div>
                 <div className="multiselectlist-content">

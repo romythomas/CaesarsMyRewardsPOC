@@ -243,7 +243,7 @@ const SearchCalendar = (props)  => {
                         autoComplete="off"
                         defaultValue={defaultDateRangeSelectedValue}
                         id={calendarId}
-                        required
+                        readonly
                     />
                     <label className="form-control-placeholder" htmlFor={calendarId}>
                         {title}

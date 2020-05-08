@@ -206,7 +206,6 @@ const Autocomplete = (props) => {
                         defaultValue={dafaultDataDisplay}
                         placeholder=""
                         id={elementId}
-                        required
                     />
                     <label className="form-control-placeholder" htmlFor={elementId}>
                         {title}
