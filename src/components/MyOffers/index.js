@@ -145,7 +145,7 @@ class MyOffers extends Component {
                     if(urlEndDate.isValid() && urlEndDate.isSameOrAfter(urlStartDate, 'day')) {
                         filterEndDate = urlEndDate;
                     } else {
-                        filterEndDate = filterStartDate.clone().add(1, month);
+                        filterEndDate = filterStartDate.clone().add(1, 'month');
                     }
                     selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {
                         filterType: "date",
