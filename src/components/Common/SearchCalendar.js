@@ -15,6 +15,7 @@ const loadScript = () => {
          */
         $('.searchCalendar-wrap').off('click touch').on('click touch', function(e) {
             e.preventDefault();
+            $(".searchCalendar-wrap").toggleClass("active");
             $searchCalendarContent.toggle();
         });
         /**
@@ -49,6 +50,7 @@ const loadScript = () => {
         $('.searchCalendar .close').off('click touch').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            $(".searchCalendar-wrap").removeClass("active");
             $searchCalendarContent.hide();
         });
         /**
@@ -59,6 +61,7 @@ const loadScript = () => {
                 const {target} = e;
                 const targetClassName = (target.className) ? `.${target.className}` : "";
                 if(targetClassName !== "searchCalendar" && $(".searchCalendar").find(target).length <= 0) {
+                    $(".searchCalendar-wrap").removeClass("active");
                     $searchCalendarContent.hide();
                 }
             }
