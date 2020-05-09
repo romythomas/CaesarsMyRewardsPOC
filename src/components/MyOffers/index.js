@@ -29,7 +29,6 @@ const mapDispatchToProps = (dispatch) => ({
 class MyOffers extends Component {
     componentWillMount() {
         this.applyDefaultFilterAndSort();
-        debugger;
         //DataLayer logging Starts
         try {
             recordMyOffersData('MyOffer', this.props.offers.length );
