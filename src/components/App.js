@@ -83,7 +83,7 @@ class App extends Component {
     ]));
   }
 
-  async componentDidMount() {
+  /* async componentDidMount() {
     console.log("User Notification Permission ", Notification.permission);
     const initializedFirebaseApp = firebase.initializeApp(config);
     const messaging = initializedFirebaseApp.messaging();
@@ -100,7 +100,7 @@ class App extends Component {
         console.log("Unable to get permission to notify.", err);
       }); 
   
-  }
+  } */
 
   render() {
     loadScript();

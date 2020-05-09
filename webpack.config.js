@@ -1,6 +1,7 @@
 const path = require('path');
 const HWP = require('html-webpack-plugin');
 const { InjectManifest } = require("workbox-webpack-plugin");
+//const nodeExternals = require('webpack-node-externals');
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 
 module.exports = {
@@ -11,6 +12,14 @@ module.exports = {
     	path: path.join(__dirname, '/dist'),
     	publicPath: '/'
 	},
+	 node: {
+		fs: "empty",
+		net: "empty",
+      	tls: "empty"
+      //	,dns: "empty"
+	  }, 
+	 // target: 'node',
+	 // externals: [ nodeExternals() ],
 	devServer: {
 		hot: true,
 		contentBase: __dirname,
@@ -21,6 +30,7 @@ module.exports = {
 		port: 4100
 	},
 	module:{
+		
 		rules:[{
 			test: /\.js$/,
 			exclude: /node_modules/,
@@ -125,8 +135,10 @@ module.exports = {
 		  }),
 
 		new InjectManifest({
-			swSrc: "./public/firebase-messaging-sw.js",
-			swDest: "firebase-messaging-sw.js",
+			//swSrc: "./public/firebase-messaging-sw.js",
+			//swDest: "firebase-messaging-sw.js",
+			swSrc: "./src/src-sw.js", 
+			swDest: "src.sw.js",
 			exclude: [/test.*/]
 		  })
 	]
