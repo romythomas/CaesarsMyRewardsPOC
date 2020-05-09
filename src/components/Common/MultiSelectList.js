@@ -2,12 +2,12 @@ import React from 'react';
 
 const loadScript = () => {
     $(document).ready(function(){
-        $('.multiselectlist-wrap').on('click touch', function(e) {
+        $('.multiselectlist-wrap').off('click touch').on('click touch', function(e) {
             e.preventDefault();
             $(".multiselectlist-wrap").toggleClass("active");
             $(".multiselectlist-content").toggle();
         });
-        $('.multiselectlist-content .close').on('click touch', function(e) {
+        $('.multiselectlist-content .close').off('click touch').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
             $(".multiselectlist-wrap").removeClass("active");
