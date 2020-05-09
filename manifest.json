@@ -1,0 +1,52 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.bc015ba8aca832d1a087a471f88a8230.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.3fda4264a9296c1a30b05e69b00e5d96.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.a24be1c792d874c37b57ab310b26c554.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_152x152.19374ab632d44b2a92ac2276275a9d48.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_144x144.d370d128d4d996638992022b763342c1.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.9b5167d60bc3e0257240ff24024bbfba.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.a6419fdf1304f08e159fabb12f788297.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_72x72.f0e97fcbd66104f85fbf8ba59a7dec8d.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ],
+  "name": "Caesars Progressive Web App",
+  "short_name": "CaesarsPWA",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "./pwa",
+  "description": "A standalone demo PWA!",
+  "background_color": "#2c2c2c",
+  "theme_color": "#2c2c2c"
+}
