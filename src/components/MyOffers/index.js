@@ -27,6 +27,17 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class MyOffers extends Component {
+    componentWillMount() {
+        this.applyDefaultFilterAndSort();
+        debugger;
+        //DataLayer logging Starts
+        try {
+            recordMyOffersData('MyOffer', this.props.offers.length );
+          } catch (err) {
+            //ignore datalayer error
+          } 
+    }
+
     constructor() {
         super();
         this.selectedOfferFilters = [];
@@ -218,17 +229,6 @@ class MyOffers extends Component {
     }
     
     render() {
-        this.applyDefaultFilterAndSort();
-         /**
-         * DataLayer logging Starts
-         */
-          try {
-            recordMyOffersData('MyOffer', this.props.offers.length );
-          } catch (err) {
-            //ignore datalayer error
-          } 
-          /** End */
-
         return(
             <div className="container-fluid">
                 <OfferFilter onLocationChange={this.onLocationChange} 
