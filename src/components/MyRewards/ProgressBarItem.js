@@ -1,6 +1,5 @@
 import React from 'react';
 import {getTierName} from '../../utilities/Helper'
-import {isMobile} from 'react-device-detect';
  
 /**
  * 
@@ -44,7 +43,7 @@ const ProgressBarItem = (props) => {
     const mobileStyle={
       height : progressbarpercent
     }
-    inlineStyle = (isMobile)? mobileStyle: desktopStyle;
+    inlineStyle = (window.innerWidth > 767)? desktopStyle: mobileStyle;
   }
 
   return (

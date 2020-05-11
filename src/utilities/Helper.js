@@ -14,6 +14,7 @@ export const getTierName = (code) => {
     if(code){
         switch(code){
                 case 'GLD':
+                case 'G':
                     tiername = 'GOLD';
                     break;
                 case 'PLT':

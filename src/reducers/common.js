@@ -6,6 +6,7 @@ const defaultState = {
   appName: 'Caesars MyRewards',
   accountID: null,
   token: null,
+  loginInfo: [],
   offers: [],
   markets: [],
   properties: [],
@@ -20,9 +21,8 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         accountID: action.error ? null : action.payload[0].logininfo.accountid,
-        firstName: action.error ? null : action.payload[0].logininfo.firstname,
-        lastName: action.error ? null : action.payload[0].logininfo.lastname,
         token: action.error ? null : action.payload[0].logininfo.token,
+        loginInfo: action.error ? null : action.payload[0].logininfo,
         offers: action.error ? [] : action.payload[1].offers,
         markets: action.error ? [] : action.payload[2].GetMarketsResult,
         properties: action.error? [] : action.payload[3],

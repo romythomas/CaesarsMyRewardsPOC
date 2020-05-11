@@ -32,7 +32,7 @@ const mapStateToProps = state => {
   return {
     appLoaded: state.common.appLoaded,
     appName: state.common.appName,
-    currentUser: state.common.currentUser,
+    loginInfo: state.common.loginInfo,
     redirectTo: state.common.redirectTo,
     offers: state.common.offers,
     markets: state.common.markets,
@@ -104,11 +104,11 @@ class App extends Component {
 
   render() {
     loadScript();
-    const {offers, markets, properties, reservations, enterpriseFeed, priceAlert} = this.props;
-    if(markets && markets.length && offers && offers.length && properties && reservations && priceAlert && enterpriseFeed) {
+    const {offers, markets, properties, reservations, enterpriseFeed, priceAlert, loginInfo} = this.props;
+    if(markets && markets.length && offers && offers.length && properties && reservations && priceAlert && enterpriseFeed && loginInfo) {
       return (
         <div>
-          <Header appName={this.props.appName} currentUser={this.props.currentUser} />
+          <Header appName={this.props.appName} loginInfo={this.props.loginInfo} />
           <SideNavigation appName={this.props.appName}></SideNavigation>
           <div id="page-content">
             <SpotLight appName={this.props.appName}></SpotLight>
@@ -132,7 +132,7 @@ class App extends Component {
     } else {
       return (
         <div>
-          <Header appName={this.props.appName} currentUser={this.props.currentUser} />
+          <Header appName={this.props.appName} loginInfo={this.props.loginInfo} />
           <h2>Page Loading</h2>
           <Footer appName={this.props.appName}> </Footer>
         </div>

@@ -77,6 +77,109 @@ header{
 			}
 		}
 	}
+	.user-panel{
+		position: absolute;
+		background: $custome-white;
+		border-radius: 5px;
+		padding: 20px;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px;
+		top: calc(100% + 12px);
+		min-width: 400px;
+		right: 50%;
+		background-image: url(/images/user-panel-bg.png);
+		background-size: 33%;
+		background-repeat: no-repeat;
+		font-family: OpenSans-Regular;
+		color: $custome-primary;
+		display: none;
+		@include break-point(991px){
+			position: fixed;
+			height: 100vh;
+			border-radius: 0;
+			right: 0;
+			top: 0;
+			min-width: 320px;
+		}
+		&:before{
+			@include fontawesome;
+			content: "\f0d8";
+			font-size:16px;
+			color: $custome-white;
+			right: 57px;
+			top: -34px;
+			font-size: 36px;
+		}
+		.user-panel__logo{
+			padding-top: 64px;
+			text-align: center;
+			margin-bottom: 15px;
+			img{
+				width: 176px;
+				height: 59px;
+			}
+		}
+		.user-panel__name{
+			text-align: center;
+			font-size: 16px;
+			margin-bottom: 15px;
+			strong{
+				font-family: OpenSans-Bold;
+			}
+		}
+		.user-panel__credits{
+			text-align: center;
+			font-size: 14px;
+			margin-bottom: 15px;
+			strong{
+				font-size: 30px;
+				font-family: OpenSans-Semibold;
+				display: block;
+			}
+		}
+		.user-panel__item{
+			display: flex;
+			flex-direction: column;
+			li{
+				display: flex;
+				justify-content: space-between;
+				padding: 8px 0;
+				border-block-end: #ccc solid 1px;
+				font-size: 16px;
+				&:last-child{
+					border: none;
+				}
+				strong{
+					font-family: OpenSans-Bold;
+					text-transform: uppercase;
+				}
+			}
+		}
+		.btn-wrap{
+			display: flex;
+			flex-direction: column;
+			.button{
+				margin-bottom: 8px;
+				&:hover{
+					background-color: rgb(103, 18, 21);
+					border-color: rgb(103, 18, 21);
+					color: $custome-white;
+				}
+			}
+		}
+		.user-panel__number{
+			display: flex;
+			justify-content: space-between;
+			font-size: 14px;
+			span{
+				max-width: 165px;
+			}
+			.add{
+				color: $custome-secondary;
+				font-size: 12px;
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 
