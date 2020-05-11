@@ -167,6 +167,11 @@ const loadScript = () => {
     });
 }
 
+const clearDefaultData = () => {
+    $('.autocomplete .select-wrap input:text').val("");
+    $('.autocomplete .select-wrap input:text').attr("value", "");
+}
+
 const Autocomplete = (props) => {
     const {dataList, elementId, title, defaultValue, stylingClass} = props;
     let dafaultDataDisplay = "", defaultDataValue = "";
@@ -195,7 +200,8 @@ const Autocomplete = (props) => {
                 dafaultDataDisplay = dafaultData.display;
                 defaultDataValue = dafaultData.value;
             }
-
+        } else {
+            clearDefaultData();
         }
         loadScript();
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
@@ -207,7 +213,7 @@ const Autocomplete = (props) => {
                         className="form-control txt autocomplete-search"
                         type="text"
                         autoComplete="off"
-                        value={dafaultDataDisplay}
+                        defaultValue={dafaultDataDisplay}
                         placeholder=""
                         id={elementId}
                     />
