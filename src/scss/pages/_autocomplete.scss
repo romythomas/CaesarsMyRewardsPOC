@@ -1,5 +1,10 @@
 //autocomplete starts here
 .autocomplete {
+	.close{
+		@include break-point(991px){
+			display: none;
+		}
+	}
 	.form-control-placeholder, .form-control.txt {
 		cursor: default;
 	}

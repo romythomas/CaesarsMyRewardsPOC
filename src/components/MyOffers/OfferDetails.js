@@ -92,82 +92,132 @@ class OfferDetails  extends Component  {
                 } catch (err) {
                     //ignore datalayer error
                 } 
-                return ( 
-                    <div className="container-fluid">
-                        <div className="title">
-                            <h1>My Offer Details</h1>
-                        </div> 
-                        <div className="offer-details content-box">
-                            <div className="row">
-                                <div className="col-md-4 col-sm-6">
-                                    <div className="thumb">
-                                        <img src={imageUrl} alt="offer details image" />
-                                        <div className={`fav ${getFavouriteClassName(pref)}`}>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-5 col-sm-6">
-                                    <div className="details-text">
-                                        <h2>{title}</h2>
-                                    <div className="properties-wrap">
-                                        <h4>{proplist[0]} &nbsp;
-                                            <a href="#">More Properties</a></h4>
-                                            <div className="properties-list">
-                                                {proplist.length > 0 &&
-                                                    <ul>
-                                                        {proplist.map((name, index) => {
-                                                           return <li key={index}>{name}</li>
-                                                        })}
-                                                    </ul>
-                                                }
-                                            </div>
-                                    </div>
-                                        <p>{description}</p>
-                                        <div className="details-propertyselect">
-                                                <Autocomplete 
-                                                dataList={marketPropertyListData}
-                                                stylingClass={"disabled"} 
-                                                elementId="navigate-from-offer-details" 
-                                                title="Where do you want to go?" />
-                                            </div>
-                                        <button className="button" id="book"
-                                        onClick={gotoNBE(new Array(id, getMoment(start).format("MM/DD/YYYY"), getMoment(end).format("MM/DD/YYYY")))} >
-                                        Book</button> 
-                                    </div>
-                                </div>
-                                <div className="col-md-3 col-sm-12 pull-right">
-                                    <div className="details-info">
-                                        <span className="offer-code">OFFER CODE: <strong>{id}</strong></span>
-                                        <span className="expires">EXPIRES: <strong>{getMoment(end).format("MM/DD/YYYY")}</strong></span>
-                                        
-                                    </div>
-                                </div>
+                return (
+                  <div className="container-fluid">
+                    <div className="title">
+                      <h1>My Offer Details</h1>
+                    </div>
+                    <div className="offer-details content-box">
+                      <div className="row">
+                        <div className="col-md-4 col-sm-6">
+                          <div className="thumb">
+                            <img src={imageUrl} alt="offer details image" />
+                            <div
+                              className={`fav ${getFavouriteClassName(pref)}`}
+                            ></div>
+                          </div>
+                        </div>
+                        <div className="col-md-5 col-sm-6">
+                          <div className="details-text">
+                            <h2>{title}</h2>
+                            <div className="properties-wrap">
+                              <h4>
+                                {proplist[0]} &nbsp;
+                                <a href="#">More Properties</a>
+                              </h4>
+                              <div className="properties-list">
+                                {proplist.length > 0 && (
+                                  <ul>
+                                    {proplist.map((name, index) => {
+                                      return <li key={index}>{name}</li>;
+                                    })}
+                                  </ul>
+                                )}
+                              </div>
                             </div>
-                            <div className="row">
-                            <div className="col-md-12 col-sm-12">
-                                <div className="how-redeem">
-                                    <strong><h5>HOW TO REDEEM</h5></strong>
-                                    <div className="redeem-content">
-                                        <p>To redeem your offer, please follow the instructions on your mail piece or email. A print out of this page is NOT a physical coupon and cannot be used for 
-                                        redemption where a coupon is required and some offers require a physical coupon to redeem.
-                                        If this is a hotel offer and you book it online; you do not need to bring in your physical coupon when you check in.
-                                        It is always best to bring your invite or mail piece with you when you visit.</p>
-                                    </div>
-                                </div>
-                                </div>
+                            <p>{description}</p>
+                          </div>
+                        </div>
+                        <div className="col-md-3 col-sm-12 pull-right">
+                          <div className="details-info">
+                            <span className="offer-code">
+                              OFFER CODE: <strong>{id}</strong>
+                            </span>
+                            <span className="expires">
+                              EXPIRES:{" "}
+                              <strong>
+                                {getMoment(end).format("MM/DD/YYYY")}
+                              </strong>
+                            </span>
+                          </div>
+                        </div>
+                        <div className="col-sm-6 col-xs-12">
+                          <div className="details-propertyselect">
+                            <Autocomplete
+                              dataList={marketPropertyListData}
+                              stylingClass={"disabled"}
+                              elementId="navigate-from-offer-details"
+                              title="Where do you want to go?"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-sm-6 col-xs-12">
+                          <button
+                            className="button"
+                            id="book"
+                            onClick={gotoNBE(
+                              new Array(
+                                id,
+                                getMoment(start).format("MM/DD/YYYY"),
+                                getMoment(end).format("MM/DD/YYYY")
+                              )
+                            )}
+                          >
+                            Book
+                          </button>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col-md-12 col-sm-12">
+                          <div className="how-redeem">
+                            <strong>
+                              <h5>HOW TO REDEEM</h5>
+                            </strong>
+                            <div className="redeem-content">
+                              <p>
+                                To redeem your offer, please follow the
+                                instructions on your mail piece or email. A
+                                print out of this page is NOT a physical coupon
+                                and cannot be used for redemption where a coupon
+                                is required and some offers require a physical
+                                coupon to redeem. If this is a hotel offer and
+                                you book it online; you do not need to bring in
+                                your physical coupon when you check in. It is
+                                always best to bring your invite or mail piece
+                                with you when you visit.
+                              </p>
                             </div>
-                            <div className="row">
-                            <div className="col-md-12 col-sm-12">
-                                <div className="terms">
-                                    <strong><h5>TERMS &amp; CONDITIONS</h5></strong>
-                                    <div className="terms-content">
-                                        <p>Caesars Rewards offers are non-transferable and non-negotiable. Offer is only valid at specified casinos. Caesars Rewards Card and valid photo ID must be presented upon redemption. Not responsible for lost or stolen vouchers or coupons.  Offers are based upon availability. Effective July 1, 2017, complimentary rooms booked will be subject to a $50 no-show fee, plus tax if the reservation is not canceled by 6pm on the day of arrival. Excludes bookings made for Caesars Windsor. Additional restrictions may apply. Please see your nearest Caesars Rewards Center for more details.</p>
-                                    </div>
-                                </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col-md-12 col-sm-12">
+                          <div className="terms">
+                            <strong>
+                              <h5>TERMS &amp; CONDITIONS</h5>
+                            </strong>
+                            <div className="terms-content">
+                              <p>
+                                Caesars Rewards offers are non-transferable and
+                                non-negotiable. Offer is only valid at specified
+                                casinos. Caesars Rewards Card and valid photo ID
+                                must be presented upon redemption. Not
+                                responsible for lost or stolen vouchers or
+                                coupons. Offers are based upon availability.
+                                Effective July 1, 2017, complimentary rooms
+                                booked will be subject to a $50 no-show fee,
+                                plus tax if the reservation is not canceled by
+                                6pm on the day of arrival. Excludes bookings
+                                made for Caesars Windsor. Additional
+                                restrictions may apply. Please see your nearest
+                                Caesars Rewards Center for more details.
+                              </p>
                             </div>
-                            </div>
-                        </div> 
-                    </div> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 );
             }
         }
