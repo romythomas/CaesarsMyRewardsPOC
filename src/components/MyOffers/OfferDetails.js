@@ -57,6 +57,15 @@ const loadScript = () => {
  * 
  */
 class OfferDetails  extends Component  {
+    componentWillMount() {
+        //DataLayer & Google Analytics logging Starts
+        try {
+          recordOffersDetailsData('OfferDetails', id);
+          recordGAData('offerdetails');
+        } catch (err) {
+            //ignore datalayer error
+        }
+    }
     render(){
         loadScript();
         const { offers, properties, markets, match } = this.props;
@@ -81,17 +90,13 @@ class OfferDetails  extends Component  {
                     return (marketsOfProperties.includes(data.value) || propertyList.includes(data.value));
                 });
 
-                let proplist = getPropertiesListByCode(properties, new Array(this.offer.propertyList));
-                /**
-                 * DataLayer & Google Analytics logging Starts
-                 */
-                  try {
-                      recordOffersDetailsData('OfferDetails', id);
-                      recordGAData('offerdetails');
-                  } catch (err) {
-                      //ignore datalayer error
-                  } 
-                /** End */
+                let defaultSelectedProperty = "";
+                const firstProperty = marketPropertyListData.find((item) => {
+                  return !item.isMarket
+                });
+                if(firstProperty && firstProperty.value) {
+                  defaultSelectedProperty = firstProperty.value;
+                }
                 return (
                   <div className="container-fluid">
                     <div className="title">
@@ -131,6 +136,7 @@ class OfferDetails  extends Component  {
                             <Autocomplete
                               dataList={marketPropertyListData}
                               stylingClass={"disabled"}
+                              defaultValue={defaultSelectedProperty} 
                               elementId="navigate-from-offer-details"
                               title="Where do you want to go?"
                             />
