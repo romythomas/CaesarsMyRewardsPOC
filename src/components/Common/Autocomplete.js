@@ -26,13 +26,15 @@ const loadScript = () => {
         });
         
         autocomplete_text_input.addEventListener('keypress', function (e) {
-            if (e.keyCode == 13) {
-                const highlightedElement = autocomplete_content.querySelector('[data-highlight="true"]');
-                set_selected(highlightedElement);
-                e.target.value = highlightedElement.querySelector('span').innerHTML;
+            const highlightedElement = autocomplete_content.querySelector('[data-highlight="true"]');
+            if(!highlightedElement.classList.contains("disabled")) {
+                if (e.keyCode == 13) {
+                    set_selected(highlightedElement);
+                    e.target.value = highlightedElement.querySelector('span').innerHTML;
+                }
+                hide_list(autocomplete_content);
+                init_list();
             }
-            hide_list(autocomplete_content);
-            init_list();
         });
         
         function matching(item) {
