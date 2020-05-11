@@ -33,8 +33,8 @@ const Header = (props) => {
           <span className="bar1"></span>
           <span className="bar2"></span> <span className="bar3"></span>{" "}
         </div>
-        <a href="#">
-          <img src="../images/logo.png" alt="Caesars Entertainment Logo" />
+        <a>
+          <img src="/images/logo.png" alt="Caesars Entertainment Logo" />
         </a>
       </div>
       <nav className="navbar navbar-expand-lg">
@@ -79,8 +79,8 @@ const Header = (props) => {
           <span className="username">Hello, {loginInfo.firstname}</span>
           <div className="user-panel">
             <div className="user-panel__logo">
-              <a href="#">
-                <img src="images/caesars-rewards-logo.png" alt="user" />
+              <a>
+                <img src="/images/caesars-rewards-logo.png" alt="user" />
               </a>
             </div>
             <div className="user-panel__name">
