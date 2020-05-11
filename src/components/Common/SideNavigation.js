@@ -7,7 +7,20 @@ const loadScript = () => {
             $(".sidebar__toggle").unbind().click(function(e) {
                 $(this).toggleClass("open");
                 $(".main").toggleClass("sidebar__active");
-            });	
+            });
+            //scroll top
+            const $scrollButton = $(".scroll-top");
+            $(window).scroll(function(){            
+                if($(this).scrollTop()>500) {
+                    $scrollButton.fadeIn("slow");
+                } else {
+                    $scrollButton.fadeOut("slow");
+                };
+            });
+            $scrollButton.unbind().click(function(){
+                $("html, body").animate({scrollTop: 0}, 800);
+                return false;
+            });
         } 
         $(window).resize(checkWidth);
     });
