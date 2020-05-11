@@ -374,7 +374,7 @@ select:-webkit-autofill:focus {
 .checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
     content: '';
     background: #fff;
-    border: 1px solid $custome-black;
+    border: 1px solid $custome-secondary;
     display: inline-block;
     vertical-align: middle;
     width: 20px;
@@ -385,14 +385,15 @@ select:-webkit-autofill:focus {
 }
 
 .checkbox-custom:checked + .checkbox-custom-label:before {
-    content: "\f00d";
+    content: "\f00c";
     font-family: 'FontAwesome';
-	color: $custome-black;
-	-webkit-text-stroke: 1px $custome-white;
-	font-size: 19px;
+	color: $custome-white;
+	-webkit-text-stroke: 1px $custome-secondary;
+	font-size: 17px;
 	line-height: 12px;
 	padding-left: 0;
 	border-width: 2px;
+	background: $custome-secondary;
 }
 
 .radio-custom + .radio-custom-label:before {
@@ -402,7 +403,7 @@ select:-webkit-autofill:focus {
 .radio-custom:checked + .radio-custom-label:before {
     content: "\f111";
     font-family: 'FontAwesome';
-	color: $custome-black;
+	color: $custome-secondary;
     font-size: 12px;
 	line-height: 12px;
 	border-width: 2px;
