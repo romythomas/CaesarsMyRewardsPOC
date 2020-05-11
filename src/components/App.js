@@ -83,25 +83,6 @@ class App extends Component {
     ]));
   }
 
-  /* async componentDidMount() {
-    console.log("User Notification Permission ", Notification.permission);
-    const initializedFirebaseApp = firebase.initializeApp(config);
-    const messaging = initializedFirebaseApp.messaging();
-    
-      messaging
-      .requestPermission()
-      .then(() => {
-        return messaging.getToken();
-      })
-      .then(token => {
-        console.log("Token is ", token);
-      })
-      .catch(function(err) {
-        console.log("Unable to get permission to notify.", err);
-      }); 
-  
-  } */
-
   render() {
     loadScript();
     const {offers, markets, properties, reservations, enterpriseFeed, priceAlert, loginInfo} = this.props;
