@@ -1,36 +1,31 @@
-import React from "react";
-import { getTierName } from "../../utilities/Helper";
+import React from 'react';
+import {getTierName} from '../../utilities/Helper'
 
 const loadScript = () => {
-  $(document).ready(function () {
-    $(".userImage, .username")
-      .off("click touch")
-      .on("click touch", function (e) {
-        e.preventDefault();
-        $(".user-panel").toggle();
-      });
-    $(".close")
-      .off("click touch")
-      .on("click touch", function (e) {
-        e.preventDefault();
-        $(".user-panel").hide();
-      });
-    $(document).on("click", "body", function (e) {
-      if (e) {
-        const { target } = e;
+  $(document).ready(function() {
+    $(".userImage, .username").off('click touch').on('click touch',function (e){
+      e.preventDefault();
+      $(".user-panel").toggle();
+    });
+    $(".close").off('click touch').on('click touch', function(e){
+      e.preventDefault();
+      $(".user-panel").hide();
+    });
+    $(document).on('click','body', function(e){
+      if(e){
+        const {target} = e;
         const classlist = target.classList;
-        if (
-          !classlist.contains("user") &&
-          $(".user").find(target).length <= 0
-        ) {
-          $(".user-panel").hide();
+        if(!classlist.contains('user') && $('.user').find(target).length <= 0)
+        {
+            $('.user-panel').hide();
         }
       }
     });
   });
-};
+}
 
 class Header extends React.Component {
+
   constructor() {
     super();
     this.state = { installButton: null };
@@ -55,6 +50,7 @@ class Header extends React.Component {
       });
     };
   }
+
 
   componentDidMount() {
     console.log("Listening for Install prompt inside header ");
@@ -103,8 +99,8 @@ class Header extends React.Component {
             <span className="bar1"></span>
             <span className="bar2"></span> <span className="bar3"></span>{" "}
           </div>
-          <a href="#">
-            <img src="../images/logo.png" alt="Caesars Entertainment Logo" />
+          <a>
+            <img src="/images/logo.png" alt="Caesars Entertainment Logo" />
           </a>
         </div>
         <nav className="navbar navbar-expand-lg">
@@ -149,8 +145,8 @@ class Header extends React.Component {
             <span className="username">Hello, {loginInfo.firstname}</span>
             <div className="user-panel">
               <div className="user-panel__logo">
-                <a href="#">
-                  <img src="images/caesars-rewards-logo.png" alt="user" />
+                <a>
+                  <img src="/images/caesars-rewards-logo.png" alt="user" />
                 </a>
               </div>
               <div className="user-panel__name">
@@ -167,7 +163,7 @@ class Header extends React.Component {
                 </li>
                 <li>
                   <span>Rewards Credit</span>
-                  <strong>{loginInfo.accountbalance}</strong>
+                    <strong>{loginInfo.accountbalance}</strong>
                 </li>
                 <li>
                   <span>Rewards #</span>
@@ -189,5 +185,6 @@ class Header extends React.Component {
     );
   }
 }
+
 
 export default Header;

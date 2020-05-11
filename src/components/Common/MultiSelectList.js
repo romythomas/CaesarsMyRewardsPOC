@@ -84,7 +84,7 @@ const MultiSelectList = (props) => {
                                                 onChange={onChange} 
                                                 className="checkbox-custom" 
                                                 name={selectId + "-chk-" + index} 
-                                                defaultChecked={isChecked}
+                                                checked={isChecked}
                                                 type="checkbox" />
                                             <label 
                                                 htmlFor={selectId + "-chk-" + index} 

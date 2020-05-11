@@ -37,24 +37,6 @@
 				font-size: 13px;
 			}
 		}
-		.details-propertyselect{
-			position: relative;
-			width: 60%;
-			display: inline-block;
-			margin-right: 10px;
-			@include break-point(991px){
-				width: 70%;
-			}
-		}
-		li.autocomplete__item.highlight.disabled {
-			pointer-events: none;
-			opacity: 0.6;
-			cursor: text;
-			color: gray;
-		}
-		.button {
-			bottom: 5px;
-		}
 	}
 	.details-info{
 		padding: 15px 10px 15px 0;
@@ -115,13 +97,19 @@
     		margin: 10px 15px;
 		}
 	}
-	.details-propertyselect{
+	.details-propertyselect {
 		margin: 0 15px;
-		.close{
+		.close {
 			right:27px;
 			@include break-point(767px){
 				right:10px;
 			}
+		}
+		.autocomplete .autocomplete-content li.autocomplete__item.highlight.disabled {
+			pointer-events: none;
+			opacity: 0.6;
+			cursor: text;
+			color: gray;
 		}
 	}
 }

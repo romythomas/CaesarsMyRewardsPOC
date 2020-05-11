@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import SelectList from "../Common/SelectList";
 import Textbox from "../Common/Textbox";
 import MultiSelectList from "../Common/MultiSelectList";
@@ -7,6 +8,9 @@ import SearchCalendar  from "../Common/SearchCalendar";
 import {getStructuredMarketsPropertiesList} from "../../utilities/Helper";
 import {getOfferFilterTypes, getOfferSortTypes} from "../../constants/configs";
 
+const mapStateToProps = (state) => ({
+    defaultFilter: state.offers.appliedFilters
+});
 
 const OfferFilter = (props) => {
     const offerTypes = getOfferFilterTypes();
@@ -87,4 +91,4 @@ const OfferFilter = (props) => {
     );
 };
 
-export default OfferFilter;
+export default connect(mapStateToProps)(OfferFilter);

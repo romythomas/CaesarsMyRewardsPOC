@@ -14,10 +14,11 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    getFilteredSortedOffers: (filteredSortedOffers) =>
+    getFilteredSortedOffers: (filteredSortedOffers, selectedOfferFilters) =>
         dispatch({
             type: FILTER_SORT_OFFER,
-            filteredSortedOffers
+            filteredSortedOffers,
+            selectedOfferFilters
         }),
 });
 
@@ -35,7 +36,6 @@ class MyOffers extends Component {
 
     constructor() {
         super();
-        this.selectedOfferFilters = [];
         this.selectedOfferSort = "";
 
         let selectedOfferFilters = [];
@@ -45,10 +45,9 @@ class MyOffers extends Component {
             const {offers, markets, getFilteredSortedOffers} = this.props;
             selectedOfferSort = selectedOfferSort ? selectedOfferSort : this.getDefaultSortValue();
             this.selectedOfferSort = selectedOfferSort;
-            this.selectedOfferFilters = selectedOfferFilters;
             let filteredSortedOffers = filterOffers(offers, selectedOfferFilters, markets);
             filteredSortedOffers = sortOffers(filteredSortedOffers, selectedOfferSort);
-            getFilteredSortedOffers(filteredSortedOffers);
+            getFilteredSortedOffers(filteredSortedOffers, selectedOfferFilters);
         }
 
         this.filterOffers = (type, value) => {
@@ -106,6 +105,10 @@ class MyOffers extends Component {
                 sortValue = this.getDefaultSortValue();
             }
             this.sortOffers(sortValue);
+        }
+
+        this.clearFilter = () => {
+            this.applyDefaultFilterAndSort(true);
         }
 
         this.createDefaultFilterAndSort = (searchParams) => {
@@ -215,10 +218,10 @@ class MyOffers extends Component {
             }
         }
 
-        this.applyDefaultFilterAndSort = () => {
+        this.applyDefaultFilterAndSort = (isAllFiltersCleared) => {
             const {location} = this.props;
             const searchParams = getUrlParams(location ? location.search : "");
-            this.createDefaultFilterAndSort(searchParams);
+            this.createDefaultFilterAndSort(isAllFiltersCleared ? "" : searchParams);
             this.updateOfferList();
         }
     }
@@ -232,9 +235,8 @@ class MyOffers extends Component {
                     onSortingChange={this.onSortingChange} 
                     onOfferCodeChange={this.onOfferCodeChange}
                     markets={this.props.markets}
-                    defaultSort={this.selectedOfferSort}
-                    defaultFilter={this.selectedOfferFilters}/>
-                <OfferList/>
+                    defaultSort={this.selectedOfferSort} />
+                <OfferList clearFilter={this.clearFilter}/>
             </div>
         );
     }
