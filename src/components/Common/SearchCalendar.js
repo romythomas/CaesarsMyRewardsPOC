@@ -195,7 +195,7 @@ const SearchCalendar = (props)  => {
         monthRanges.push(minimumDate.clone());
         //Loop for 11 months starting from minimumDate
         for(let i = 1; i<= 11; i++) {
-            monthRanges.push(minimumDate.clone().add(i, 'month'))
+            monthRanges.push(minimumDate.clone().add(i, 'month').startOf('month'));
         }
         //Format default value received through properties
         if(!defaultDateRange && defaultType === "month" && defaultValue && defaultValue.startDate && defaultValue.endDate) {
