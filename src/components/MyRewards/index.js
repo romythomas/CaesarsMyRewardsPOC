@@ -11,13 +11,9 @@ import ProgressBarItem from './ProgressBarItem';
 import {
   GET_PROFILE
 } from '../../constants/actionTypes';
-import {recordMyRewardsData} from '../../utilities/Helper'
-import ReactGA from 'react-ga';
+import {recordMyRewardsData,recordGAData} from '../../utilities/Helper'
 
-const trackingId = "UA-165835615-1"; 
-ReactGA.initialize(trackingId);
 
-ReactGA.pageview('/myrewards');
 
 const mapStateToProps = state => ({
   appName: state.common.appName,
@@ -50,11 +46,12 @@ class MyRewards extends Component {
     const {logininfo,feeds, properties, offers, enterpriseFeed, priceAlert, reservations} = this.props;
     if(logininfo && feeds && properties){
     /**
-     * DataLayer logging Starts
+     * DataLayer & Google Analytics logging Starts
      */
       try {
         recordMyRewardsData('MyRewards', logininfo.tier.tierscore, logininfo.propcode, 
                                 logininfo.email, logininfo.tier.code, logininfo.accountid);
+        recordGAData('myrewards');
       } catch (err) {
         //ignore datalayer error
       } 

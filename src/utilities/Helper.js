@@ -2,6 +2,7 @@ import TagManager from 'react-gtm-module'
 import {isMobile} from 'react-device-detect';
 import originalMoment from "moment";
 import { extendMoment } from "moment-range";
+import ReactGA from 'react-ga';
 
 const moment = extendMoment(originalMoment);
 
@@ -301,6 +302,16 @@ export const recordOffersDetailsData =(pageName, offerid) =>{
     recordDataLayer(dataLayer);
 }
 
+/**
+ * 
+ * @param {*} pageName 
+ */
+export const recordGAData =(pageName) =>{
+    //Google Analytics tracking Id
+    const trackingId = "UA-165835615-1"; 
+    ReactGA.initialize(trackingId);
+    ReactGA.pageview(`/${pageName}`);
+}
 /**
  * Returns moment format of the date value passed in.
  * @param {String} dateValue - A date value in string format.

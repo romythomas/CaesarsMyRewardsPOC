@@ -5,13 +5,8 @@ import OfferFilter from './OfferFilter';
 import { FILTER_SORT_OFFER } from "../../constants/actionTypes";
 import {filterOffers, updateSelectedFilter} from '../../utilities/Filter';
 import {sortOffers} from '../../utilities/Sort';
-import {getUrlParams, recordMyOffersData, getMoment} from '../../utilities/Helper';
+import {getUrlParams, recordMyOffersData, getMoment, recordGAData} from '../../utilities/Helper';
 import {getOfferSortTypes, getOfferFilterTypes} from "../../constants/configs";
-import ReactGA from 'react-ga';
-
-const trackingId = "UA-165835615-1"; 
-ReactGA.initialize(trackingId);
-ReactGA.pageview('/myoffers');
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -29,9 +24,10 @@ const mapDispatchToProps = (dispatch) => ({
 class MyOffers extends Component {
     componentWillMount() {
         this.applyDefaultFilterAndSort();
-        //DataLayer logging Starts
+        //DataLayer & Google Analytics logging Starts
         try {
             recordMyOffersData('MyOffer', this.props.offers.length );
+            recordGAData('myoffers');
           } catch (err) {
             //ignore datalayer error
           } 

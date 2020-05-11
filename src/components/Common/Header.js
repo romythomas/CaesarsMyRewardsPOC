@@ -3,19 +3,23 @@ import {getTierName} from '../../utilities/Helper'
 
 const loadScript = () => {
   $(document).ready(function() {
-    $(".user").click(function(event){
-      event.preventDefault();
-      event.stopPropagation();
+    $(".userImage, .username").off('click touch').on('click touch',function (e){
+      e.preventDefault();
       $(".user-panel").toggle();
     });
-    $(".close").click(function(){
+    $(".close").off('click touch').on('click touch', function(e){
+      e.preventDefault();
       $(".user-panel").hide();
     });
-    $('.user-panel').click( function(event) {      
-      event.stopPropagation();       
-    });
-    $('body').click(function(){
-      $('.user-panel').hide();
+    $(document).on('click','body', function(e){
+      if(e){
+        const {target} = e;
+        const classlist = target.classList;
+        if(!classlist.contains('user') && $('.user').find(target).length <= 0)
+        {
+            $('.user-panel').hide();
+        }
+      }
     });
   });
 }

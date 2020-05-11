@@ -7,14 +7,10 @@ import {
     recordOffersDetailsData, 
     getMarketCodeListOfPropertyCodes,
     getStructuredMarketsPropertiesList,
-    getPropertiesListByCode} from '../../utilities/Helper';
+    getPropertiesListByCode,
+    recordGAData} from '../../utilities/Helper';
 import Autocomplete from "../Common/Autocomplete";
 import {getImageUrl} from '../../constants/configs';
-import ReactGA from 'react-ga';
-
-const trackingId = "UA-165835615-1"; 
-ReactGA.initialize(trackingId);
-ReactGA.pageview('/offerdetails');
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers, 
@@ -86,12 +82,16 @@ class OfferDetails  extends Component  {
                 });
 
                 let proplist = getPropertiesListByCode(properties, new Array(this.offer.propertyList));
-                //GTM logging
-                try {
-                    recordOffersDetailsData('OfferDetails', id);
-                } catch (err) {
-                    //ignore datalayer error
-                } 
+                /**
+                 * DataLayer & Google Analytics logging Starts
+                 */
+                  try {
+                      recordOffersDetailsData('OfferDetails', id);
+                      recordGAData('offerdetails');
+                  } catch (err) {
+                      //ignore datalayer error
+                  } 
+                /** End */
                 return (
                   <div className="container-fluid">
                     <div className="title">
