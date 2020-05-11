@@ -207,7 +207,7 @@ const Autocomplete = (props) => {
                         className="form-control txt autocomplete-search"
                         type="text"
                         autoComplete="off"
-                        defaultValue={dafaultDataDisplay}
+                        value={dafaultDataDisplay}
                         placeholder=""
                         id={elementId}
                     />

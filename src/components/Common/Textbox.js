@@ -40,7 +40,7 @@ const Textbox = (props) => {
             <input 
                 className="form-control txt" 
                 type="text" 
-                defaultValue = {defaultValue} 
+                value = {defaultValue} 
                 id={textboxId} 
                 onChange={onChange} />
             <label className="form-control-placeholder" htmlFor={textboxId}>{title}</label>

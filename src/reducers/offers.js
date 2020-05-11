@@ -5,6 +5,7 @@ import {
 
 const defaultState = {
   offers: [],
+  appliedFilters: []
 };
 
 export default (state = defaultState, action) => {
@@ -17,7 +18,8 @@ export default (state = defaultState, action) => {
     case FILTER_SORT_OFFER:
       return {
         ...state,
-        offers: action.filteredSortedOffers
+        offers: action.filteredSortedOffers,
+        appliedFilters: action.selectedOfferFilters
       };
     default:
       return state;

@@ -1,25 +1,12 @@
 import {getPropertiesOfMarket, getMoment} from "./Helper";
 
 export const updateSelectedFilter = (selectedOfferFilters, newFilter) => {
-    if(newFilter.filterType === "date") {
-        selectedOfferFilters = selectedOfferFilters.filter((filter) => {
-            return filter.filterType !== "month";
-        });
-    } else if(newFilter.filterType === "month") {
-        selectedOfferFilters = selectedOfferFilters.filter((filter) => {
-            return filter.filterType !== "date";
-        });
-    }
-    const existingFilterIndex = selectedOfferFilters.findIndex((filter) => {
-        return filter.filterType === newFilter.filterType;
+    const isDateUpdate = newFilter.filterType === "date" || newFilter.filterType === "month";
+    const updatedOffers = selectedOfferFilters.filter((filter) => {
+        return filter.filterType != newFilter.filterType || (isDateUpdate && (filter.filterType === "date" || filter.filterType === "month"))
     });
-    if (existingFilterIndex >= 0) {
-        selectedOfferFilters[existingFilterIndex].filterValue =
-            newFilter.filterValue;
-    } else {
-        selectedOfferFilters.push(newFilter);
-    }
-    return selectedOfferFilters;
+    updatedOffers.push(newFilter);
+    return updatedOffers || [];
 };
 
 export const filterOffers = (offers, selectedOfferFilters, markets) => {
