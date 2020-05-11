@@ -89,7 +89,7 @@ const ProgressBarItem = (props) => {
           </li>
           <li>
             <div className="progress-icon">
-              <img src="images/icon-gold.png" alt="Caesars" />
+              <img src="images/star.png" alt="Caesars" />
             </div>
             <div className="progress-text">
               <span>Seven Star</span>
