@@ -110,21 +110,6 @@ class OfferDetails  extends Component  {
                         <div className="col-md-5 col-sm-6">
                           <div className="details-text">
                             <h2>{title}</h2>
-                            <div className="properties-wrap">
-                              <h4>
-                                {proplist[0]} &nbsp;
-                                <a href="#">More Properties</a>
-                              </h4>
-                              <div className="properties-list">
-                                {proplist.length > 0 && (
-                                  <ul>
-                                    {proplist.map((name, index) => {
-                                      return <li key={index}>{name}</li>;
-                                    })}
-                                  </ul>
-                                )}
-                              </div>
-                            </div>
                             <p>{description}</p>
                           </div>
                         </div>
