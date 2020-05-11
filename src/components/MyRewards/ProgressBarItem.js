@@ -13,6 +13,7 @@ const ProgressBarItem = (props) => {
   let tierText = '';
   let progressbarpercent = '0%';
   let inlineStyle = '';
+  let score = '';
 
   if (feeds && logininfo) {
     let tierCode = logininfo.tier.code;
@@ -23,7 +24,7 @@ const ProgressBarItem = (props) => {
     if (tierscore == -1 || tierscore == "-1") {
       tierscore = 0;
     }
-    let score = parseInt(tierscore);
+    score = parseInt(tierscore);
     let tempScore = score;
     let userbracket = feeds.brackets.find((t) => tempScore < parseInt(t.score));
 
@@ -47,14 +48,16 @@ const ProgressBarItem = (props) => {
   }
 
   return (
-    <div>
+    <div className="reward-progress-wrap">
       <span className="info">
         <strong>{creditsNeeded}</strong> {progressBarMessage}&nbsp;{tierText}
       </span>
       <div className="reward-progress">
         <div
           className="progressbar"
-          style={inlineStyle}></div>
+          style={inlineStyle}>
+            <span>{score}</span>
+          </div>
         <ul>
           <li>
             <div className="progress-icon">

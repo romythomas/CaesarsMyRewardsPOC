@@ -20,5 +20,5 @@ export const getImageUrl =()=>{
 }
 
 export const getApiRootUrl =() =>{
-    return "http://caesarspoc.s3-website.us-east-2.amazonaws.com/";
+    return "https://caesarspoc.s3.us-east-2.amazonaws.com/";
 }
