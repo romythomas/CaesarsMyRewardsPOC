@@ -242,7 +242,7 @@ const SearchCalendar = (props)  => {
                         <ul className="monthRangeCalendar__list">
                             {monthRanges.map((date, index) => {
                                 const valueToDisplay = date.format("MMM YYYY");
-                                const activeClassNames = defaultType === "month" && defaultMonthRange === valueToDisplay ? "active" : "";
+                                const activeClassNames = defaultMonthRange === valueToDisplay ? "active" : "";
                                 return(
                                     <li key={index} 
                                         className={`month-item ${activeClassNames}`} 
