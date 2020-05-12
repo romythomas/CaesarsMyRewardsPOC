@@ -61,12 +61,12 @@ class Header extends React.Component {
       e.preventDefault();
       console.log("Install Prompt fired ");
       this.installPrompt = e;
-      if(window.location.search.includes("pwa=true")){
+      /* if(window.location.search.includes("pwa=true")){
         document.querySelector('.add-to').style.display =  'block';
       }
       else{
         document.querySelector('.add-to').style.display =  'none';
-      }
+      } */
      // document.querySelector('.add-to').style.display =  'block';
       // See if the app is already installed, in that case, do nothing
       if (
