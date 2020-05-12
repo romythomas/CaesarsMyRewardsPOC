@@ -25,8 +25,8 @@ const loadScript = () => {
             e.preventDefault();
             $('.searchBy-Dates').addClass("selected");
             $('.searchBy-Months').removeClass("selected");
-            $dateRangeCalendarItem.show();
-            $monthRangeCalendarItem.hide();
+            $dateRangeCalendarItem.addClass("active");
+            $monthRangeCalendarItem.removeClass("active");
         });
         /**
          * Handels the show/hide of (date/month) range calendars based on 'Flexible Date' calendar button click.
@@ -35,8 +35,8 @@ const loadScript = () => {
             e.preventDefault();
             $('.searchBy-Dates').removeClass("selected");
             $('.searchBy-Months').addClass("selected");
-            $dateRangeCalendarItem.hide();
-            $monthRangeCalendarItem.show();
+            $dateRangeCalendarItem.removeClass("active");
+            $monthRangeCalendarItem.addClass("active");
         });
         /**
          * Make the keyboard entry disabled for text input.
