@@ -2,7 +2,7 @@ import React from 'react';
 
 const loadScript = () => {
     $(document).ready(function(){
-        $('.selectList.dropdown > span').on('click touch', function(e) {
+        $('.selectList.dropdown > span').off('click touch').on('click touch', function(e) {
             e.preventDefault();
             const $self = $(this).parent();
             $self.toggleClass('open');
