@@ -157,7 +157,8 @@ const SearchCalendar = (props)  => {
                 //Update textbot value in UI and set the local store value for calendar selection
                 defaultDateRangeSelectedValue = getDisplayValueOfDateCalendarSelection(startDate, endDate);
                 //Update the local state value for the date calendar
-                setDefaultDateRange(getMomentRange(startDate, endDate));
+                //start of day is required to make the date selected in calendar by default
+                setDefaultDateRange(getMomentRange(startDate.startOf('day'), endDate));
             }
         } else if(defaultDateRange) {
             defaultDateRangeSelectedValue = getDisplayValueOfDateCalendarSelection(defaultDateRange.start, defaultDateRange.end);
