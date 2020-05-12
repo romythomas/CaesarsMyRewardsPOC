@@ -34,10 +34,11 @@ class Header extends React.Component {
 
     this.installApp = async () => {
       if (!this.installPrompt) return false;
-      document.querySelector('.button-add-to-btn').style.display =  'none';
+     // document.querySelector('.button-add-to-btn').style.display =  'none';
       this.installPrompt.prompt();
       let outcome = await this.installPrompt.userChoice;
       if (outcome.outcome == "accepted") {
+        document.querySelector('.add-to').style.display =  'none';
         console.log("App Installed");
       } else {
         console.log("App not installed");
@@ -51,7 +52,6 @@ class Header extends React.Component {
     };
   }
 
-
   componentDidMount() {
     console.log("Listening for Install prompt inside header ");
 
@@ -61,7 +61,13 @@ class Header extends React.Component {
       e.preventDefault();
       console.log("Install Prompt fired ");
       this.installPrompt = e;
-      document.querySelector('.add-to').style.display =  'block';
+      if(window.location.search.includes("pwa=true")){
+        document.querySelector('.add-to').style.display =  'block';
+      }
+      else{
+        document.querySelector('.add-to').style.display =  'none';
+      }
+     // document.querySelector('.add-to').style.display =  'block';
       // See if the app is already installed, in that case, do nothing
       if (
         (window.matchMedia &&
@@ -167,7 +173,7 @@ class Header extends React.Component {
           </li>
         </ul>
         <div className="add-to">
-        <button className="button button-add-to-btn" onClick={this.installApp}>
+        <button className="button" onClick={this.installApp}>
           Add to home screen
         </button>
         </div>

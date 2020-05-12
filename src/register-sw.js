@@ -45,9 +45,7 @@ const registerServiceWorker = () => {
         userVisibleOnly: true,
             applicationServerKey: urlBase64ToUint8Array(
                 publicVapidKey)
-    });
-    console.log("subscription is ");
-    console.log(subscription);
+    });  
     console.log("Push Regsitered... ");
     
     //send Push Notification
