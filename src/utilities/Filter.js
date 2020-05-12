@@ -1,15 +1,21 @@
 import {getPropertiesOfMarket, getMoment} from "./Helper";
 
 export const updateSelectedFilter = (selectedOfferFilters, newFilter) => {
-    const isDateUpdate = newFilter.filterType === "date" || newFilter.filterType === "month";
+    const newFilterType = newFilter.filterType;
     const updatedOffers = selectedOfferFilters.filter((filter) => {
-        if(isDateUpdate) {
-            return (filter.filterType != "date" && filter.filterType != "month");
-        } else {
-            return (filter.filterType != newFilter.filterType);
-        }
+        return (filter.filterType != newFilterType);
     });
     updatedOffers.push(newFilter);
+    if(newFilterType === "date" || newFilterType === "month") {
+        updatedOffers.map((filter) => {
+            if(filter.filterType === "date") {
+                filter.isLatest = newFilterType === "date";
+            }
+            if(filter.filterType === "month") {
+                filter.isLatest = newFilterType === "month";
+            }
+        });
+    }
     return updatedOffers || [];
 };
 
@@ -22,7 +28,7 @@ export const filterOffers = (offers, selectedOfferFilters, markets) => {
         selectedOfferFilters.length
     ) {
         selectedOfferFilters.map((filter) => {
-            const { filterType, filterValue } = filter;
+            const { filterType, filterValue, isLatest } = filter;
             if (filterType === "location" && filterValue) {
                 let propertiesToFilter = [filterValue];
                 const propertiesList = getPropertiesOfMarket(markets, filterValue);
@@ -35,7 +41,7 @@ export const filterOffers = (offers, selectedOfferFilters, markets) => {
                     );
                 });
             }
-            if ((filterType === "date" || filterType === "month") && filterValue) {
+            if (((filterType === "date" && isLatest) || (filterType === "month" && isLatest)) && filterValue) {
                 filteredOffers = filteredOffers.filter((offer) => {
                     const offerStart = getMoment(offer.start).startOf('day');
                     const offerEnd = getMoment(offer.end).endOf('day');
