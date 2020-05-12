@@ -95,8 +95,8 @@ const SearchCalendar = (props)  => {
     //Load scripts to handle click/touch events
     loadScript();
     //Values that are passed as properties to the component
-    const {calendarId} = props;
-    let {defaultType, defaultValue, minimumDate, maximumDate, title} = props;
+    const {defaultType, defaultValue, calendarId} = props;
+    let {minimumDate, maximumDate, title} = props;
     title = title ? title : "Start date - End date";
     let defaultDateRangeSelectedValue = "";
     //Set lowest and highest calendar selectable dates, if not defined in properties
