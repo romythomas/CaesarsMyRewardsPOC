@@ -166,8 +166,8 @@ class Header extends React.Component {
             </div>
           </li>
         </ul>
-        <div class="add-to">
-        <button class="button button-add-to-btn" onClick={this.installApp}>
+        <div className="add-to">
+        <button className="button button-add-to-btn" onClick={this.installApp}>
           Add to home screen
         </button>
         </div>
