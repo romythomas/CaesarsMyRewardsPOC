@@ -158,11 +158,15 @@ const SearchCalendar = (props)  => {
     //#region - Month range calendar initialization code
         //Create array to hold month values available for flexible date search
         const monthRanges = [];
-        //Add current month to the array
-        monthRanges.push(minimumDate.clone());
-        //Loop for 11 months starting from minimumDate
-        for(let i = 1; i<= 11; i++) {
-            monthRanges.push(minimumDate.clone().add(i, 'month').startOf('month'));
+        //Loops through mininum date till maximum date and collects all valid first dates of each month
+        let startOfDateValue = minimumDate.clone().startOf('month').startOf('day');
+        while(startOfDateValue.isBefore(maximumDate.clone().startOf('month').startOf('day'))) {
+            if(startOfDateValue.isBefore(getMoment().clone().startOf('day'))) {
+                monthRanges.push(getMoment().clone());
+            } else {
+                monthRanges.push(startOfDateValue);
+            }
+            startOfDateValue = startOfDateValue.clone().add(1, 'month');
         }
         //Create local state object to hold value of month calendar selection
         let [defaultMonthRange, setDefaultMonthRange] = React.useState("");
