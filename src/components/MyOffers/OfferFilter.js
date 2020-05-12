@@ -17,13 +17,20 @@ const OfferFilter = (props) => {
     const offerSortTypes = getOfferSortTypes();
 
     const {defaultSort,defaultFilter, markets} = props;
-    let defaultDateSelection="date", defaultDateRange = "", defaultLocation = "", defaultType = "", defaultOfferCode = "";
+    let defaultCalendarSelection="date", defaultDateRange = "", defaultMonthRange="", defaultLocation = "", defaultType = "", defaultOfferCode = "";
     if(defaultFilter && defaultFilter.length) {
         defaultFilter.map((filter) => {
-            const {filterType, filterValue} = filter;
-            if(filterType === "date" || filterType === "month") {
-                defaultDateSelection = filterType;
+            const {filterType, filterValue, isLatest} = filter;
+            if(filterType === "date") {
+                defaultCalendarSelection = isLatest ? "date" : "month";
                 defaultDateRange = {
+                    "startDate" : filterValue.startDate,
+                    "endDate": filterValue.endDate
+                };
+            }
+            if(filterType === "month") {
+                defaultCalendarSelection = isLatest ? "month" : "date";
+                defaultMonthRange = {
                     "startDate" : filterValue.startDate,
                     "endDate": filterValue.endDate
                 };
@@ -66,8 +73,9 @@ const OfferFilter = (props) => {
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <SearchCalendar 
                             calendarId="offer-calendar" 
-                            defaultType={defaultDateSelection} 
-                            defaultValue={defaultDateRange} 
+                            defaultType={defaultCalendarSelection} 
+                            defaultDateValue={defaultDateRange} 
+                            defaultMonthValue={defaultMonthRange}
                             onChange={props.onDateRangeChange} />
                     </li>
                     <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">

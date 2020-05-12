@@ -95,7 +95,7 @@ const SearchCalendar = (props)  => {
     //Load scripts to handle click/touch events
     loadScript();
     //Values that are passed as properties to the component
-    const {defaultType, defaultValue, calendarId} = props;
+    const {defaultType, defaultDateValue, defaultMonthValue, calendarId} = props;
     let {minimumDate, maximumDate, title} = props;
     title = title ? title : "Start date - End date";
     let defaultDateRangeSelectedValue = "";
@@ -128,13 +128,16 @@ const SearchCalendar = (props)  => {
         startOfDateValue = startOfDateValue.clone().add(1, 'month');
     }
 
-    const {startDate, endDate} = defaultValue;
-    if(startDate && startDate.isValid() && endDate && endDate.isValid()) {
-        if(defaultType === "date") {
-            //Set the local store value for calendar selection
+    if(defaultDateValue && defaultType === "date") {
+        const {startDate, endDate} = defaultDateValue;
+        if(startDate && startDate.isValid() && endDate && endDate.isValid()) {
+            //Set variable value to be displayed in the textbox.
             defaultDateRangeSelectedValue = getDisplayValueOfDateCalendarSelection(startDate, endDate);
-        } else {
-            //Set the local store value for month calendar selection
+        }
+    } else if(defaultMonthValue && defaultType === "month") {
+        const {startDate, endDate} = defaultMonthValue;
+        if(startDate && startDate.isValid() && endDate && endDate.isValid()) {
+            //Set variable value to be displayed in the textbox.
             defaultDateRangeSelectedValue = startDate.format("MMM YYYY");
         }
     }
@@ -211,7 +214,7 @@ const SearchCalendar = (props)  => {
                             onSelect={onDateChnage}
                             minimumDate={new Date(minimumDate)}
                             maximumDate={new Date(maximumDate)}
-                            value={getMomentRange(defaultValue.startDate, defaultValue.endDate)}
+                            value={getMomentRange(defaultDateValue.startDate, defaultDateValue.endDate)}
                             selectionType="range"
                             numberOfCalendars={2}
                         />
@@ -220,7 +223,7 @@ const SearchCalendar = (props)  => {
                     <ul className="monthRangeCalendar__list">
                         {monthRanges.map((date, index) => {
                             const valueToDisplay = date.format("MMM YYYY");
-                            const activeClassNames = defaultValue.startDate.format("MMM YYYY") === valueToDisplay ? "active" : "";
+                            const activeClassNames = (defaultMonthValue && defaultMonthValue.startDate.format("MMM YYYY") === valueToDisplay) ? "active" : "";
                             return(
                                 <li key={index} 
                                     className={`month-item ${activeClassNames}`} 
