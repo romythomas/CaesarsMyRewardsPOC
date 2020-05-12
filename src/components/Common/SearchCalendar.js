@@ -39,12 +39,6 @@ const loadScript = () => {
             $monthRangeCalendarItem.addClass("active");
         });
         /**
-         * Make the keyboard entry disabled for text input.
-         */
-        $('.searchCalendar-wrap .txt').keypress(function(e) {
-            return false;
-        });
-        /**
          * Handels the close button click event of the (date/month) range calendars.
          */
         $('.searchCalendar .close').off('click touch').on('click touch', function(e) {
