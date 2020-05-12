@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {getMoment, getMomentRange} from "../../utilities/Helper";
 import DateRangePicker from 'react-daterange-picker';
 
