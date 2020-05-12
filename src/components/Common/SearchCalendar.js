@@ -80,36 +80,6 @@ const getDisplayValueOfDateCalendarSelection = (startDate, endDate) => {
 }
 
 /**
- * Updates the input text value and value attribute (for readOnly) based on the dates selected from date range calendar.
- * @param {Date} startDate - Start date selected from range calendar.
- * @param {Date} endDate - End date selected from range calendar.
- */
-const updateDateRangeValueUI = (startDate, endDate) => {
-    $('.searchCalendar-wrap input:text').val(getDisplayValueOfDateCalendarSelection(startDate, endDate));
-    $('.searchCalendar-wrap input:text').attr("value", getDisplayValueOfDateCalendarSelection(startDate, endDate));
-}
-
-/**
- * Updates the input text value and value attribute (for readOnly) based on the dates selected from month range calendar.
- * @param {String} value - Selected month range calendar value.
- */
-const updateMonthRangeTextValue = (value) => {
-    $('.searchCalendar-wrap input:text').val(value);
-    $('.searchCalendar-wrap input:text').attr("value", value);
-}
-
-/**
- * Updates the input text value and active class based on the dates selected from month range calendar.
- * @param {String} value - Selected month range calendar value.
- * @param {EventHandler} event - User selection event of month value.
- */
-const updateMonthRangeValueUI = (value, event) => {
-    $(".monthRangeCalendar__item .month-item.active").removeClass("active");
-    event.target.classList.add("active");
-    updateMonthRangeTextValue(value);
-}
-
-/**
  * Hides the month/date selection UI.
  */
 const hideCalendar = () => {
@@ -173,8 +143,6 @@ const SearchCalendar = (props)  => {
             const {start, end} = dateRange;
             //Check if date values are present
             if(start && start.isValid() && end && end.isValid()) {
-                //Update textbox UI
-                updateDateRangeValueUI(start, end);
                 //Update range calendar state value
                 setDefaultDateRange(getMomentRange(start, end));
                 //Pass date values to component property
@@ -200,7 +168,6 @@ const SearchCalendar = (props)  => {
         //Format default value received through properties
         if(!defaultDateRange && defaultType === "month" && defaultValue && defaultValue.startDate && defaultValue.endDate) {
             defaultMonthValue = defaultValue.startDate.format("MMM YYYY");
-            updateMonthRangeTextValue(defaultMonthValue);
             defaultDateRangeSelectedValue = defaultMonthValue;
         }
         /**
@@ -218,8 +185,6 @@ const SearchCalendar = (props)  => {
                 const endDate = startDate.clone().endOf('month');
                 //If moment dates are valid, update UI textbox value
                 if(startDate.isValid() && endDate.isValid()) {
-                    //Update textbox UI value and active class
-                    updateMonthRangeValueUI(target.innerText, event);
                     //Pass date values to component property
                     if(props.onChange) {
                         hideCalendar();
