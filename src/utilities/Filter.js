@@ -3,7 +3,11 @@ import {getPropertiesOfMarket, getMoment} from "./Helper";
 export const updateSelectedFilter = (selectedOfferFilters, newFilter) => {
     const isDateUpdate = newFilter.filterType === "date" || newFilter.filterType === "month";
     const updatedOffers = selectedOfferFilters.filter((filter) => {
-        return filter.filterType != newFilter.filterType || (isDateUpdate && (filter.filterType === "date" || filter.filterType === "month"))
+        if(isDateUpdate) {
+            return (filter.filterType != "date" && filter.filterType != "month");
+        } else {
+            return (filter.filterType != newFilter.filterType);
+        }
     });
     updatedOffers.push(newFilter);
     return updatedOffers || [];
