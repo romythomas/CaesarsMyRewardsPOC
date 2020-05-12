@@ -34,7 +34,7 @@ class Header extends React.Component {
 
     this.installApp = async () => {
       if (!this.installPrompt) return false;
-      document.querySelector('.add-to').style.display =  'none';
+      document.querySelector('.button-add-to-btn').style.display =  'none';
       this.installPrompt.prompt();
       let outcome = await this.installPrompt.userChoice;
       if (outcome.outcome == "accepted") {
@@ -54,19 +54,9 @@ class Header extends React.Component {
 
   componentDidMount() {
     console.log("Listening for Install prompt inside header ");
-    window.addEventListener("load", () => {
-      document.querySelector('.add-to').style.display =  'none';
-      
-      if (navigator.standalone) {
-        console.log("Launched: Installed (iOS)");
-      } else if (matchMedia("(display-mode: standalone)").matches) {
-        console.log("Launched: Installed");
-      } else {
-        console.log("Launched: Browser Tab");
-      }
-    });
 
     window.addEventListener("beforeinstallprompt", (e) => {
+      console.log("beforeinstallprompt fired");
       // For older browsers
       e.preventDefault();
       console.log("Install Prompt fired ");
@@ -177,7 +167,7 @@ class Header extends React.Component {
           </li>
         </ul>
         <div class="add-to">
-        <button class="add-to-btn" onClick={this.installApp}>
+        <button class="button button-add-to-btn" onClick={this.installApp}>
           Add to home screen
         </button>
         </div>

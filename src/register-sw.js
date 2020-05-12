@@ -16,6 +16,20 @@ const registerServiceWorker = () => {
     }
     if ("serviceWorker" in navigator ) {
       send().catch(err => console.log(err));
+
+      window.addEventListener("load", () => {
+        console.log("Load fired");
+        //document.querySelector('.add-to').style.display =  'none';
+        
+        if (navigator.standalone) {
+          console.log("Launched: Installed (iOS)");
+        } else if (matchMedia("(display-mode: standalone)").matches) {
+          console.log("Launched: Installed");
+        } else {
+          console.log("Launched: Browser Tab");
+        }
+      });
+      
     }
       async function send(){
         //Regsiter Service Worker
