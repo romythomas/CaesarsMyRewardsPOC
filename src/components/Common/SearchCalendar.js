@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {getMoment, getMomentRange} from "../../utilities/Helper";
 import DateRangePicker from 'react-daterange-picker';
 
@@ -117,7 +117,7 @@ const SearchCalendar = (props)  => {
 
     //#region - Date range calendar code
         //Create local state object to hold value of calendar selection
-        let [defaultDateRange, setDefaultDateRange] = React.useState("");
+        let [defaultDateRange, setDefaultDateRange] = useState("");
         //Process default value received through properties, if the calendar selection value in local state is empty
         if(!defaultDateRange && defaultType !== "month" && defaultValue && defaultValue.startDate && defaultValue.endDate) {
             let {startDate, endDate} = defaultValue;
@@ -169,7 +169,7 @@ const SearchCalendar = (props)  => {
             startOfDateValue = startOfDateValue.clone().add(1, 'month');
         }
         //Create local state object to hold value of month calendar selection
-        let [defaultMonthRange, setDefaultMonthRange] = React.useState("");
+        let [defaultMonthRange, setDefaultMonthRange] = useState("");
         //Format default value received through properties
         if(!defaultMonthRange && defaultType === "month" && defaultValue && defaultValue.startDate && defaultValue.endDate) {
             //Update the local state value for the month calendar
