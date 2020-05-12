@@ -1,25 +1,39 @@
-importScripts("/precache-manifest.44cbaa1ee70c820a8819f2ba27dc1d05.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("/precache-manifest.be29d0036b2c307361c2d89d07f03d35.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
-
-console.log('Service worker Loaded ');
+importScripts(
+  "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+);
+console.log("Service worker Loaded ");
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
 
-self.addEventListener('push', e => {
-    console.log('Inside Push ');
-const data =  e.data.json();
-//const data =  e.data;
-console.log('Push Received15 ');
-console.log(data);
-    /* self.registration.showNotification(data.title,{
-        body : " Sucess "
-    }); */
-    self.registration.showNotification(data.data.title,{
-        body : " Sucess "
-    });
+self.addEventListener("push", (e) => {
+  const data = e.data.json();
+  //const data =  e.data;
+  console.log("Push Received ");
+  console.log(data);
+  const { title, id, status, start, end } = data.data;
+  const notificationTitle = "New Offer : " + id + " Title : " + title;
+  const body =
+    "Start Date : " + formatDate(start) + " End Date : " + formatDate(end);
+
+  e.waitUntil(
+    self.registration.showNotification(notificationTitle, {
+      body: body
+    })
+  );
 });
 
-self.addEventListener('install', () => self.skipWaiting());
-self.addEventListener('activate', () => self.clients.claim());
+//self.addEventListener('install', () => self.skipWaiting());
+//self.addEventListener('activate', () => self.clients.claim());
 
-
+const formatDate = (dateToFormat) => {
+  try {
+    let formattedDate = new Date(dateToFormat);
+    formattedDate = moment(formattedDate).format("MMM-DD-YYYY");
+    return formattedDate;
+  } catch (e) {
+    console.log("Error in date conversion is " + e);
+    throw e;
+  }
+};
 

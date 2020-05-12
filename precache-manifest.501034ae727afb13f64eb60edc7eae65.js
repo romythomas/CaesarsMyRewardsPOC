@@ -68,31 +68,31 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/98177d163f74efb869322b05fca4997b.woff"
   },
   {
-    "revision": "834837d0535ae159e885",
+    "revision": "902188607611f7114b14",
     "url": "/LeaderBoard.chunk.js"
   },
   {
-    "revision": "1c2700e3ddc35aea7807",
+    "revision": "32b957a6c3cfedf87087",
     "url": "/MyOffers.chunk.js"
   },
   {
-    "revision": "fc450d993fe78b752819",
+    "revision": "2b69f12bf62e035506be",
     "url": "/MyRewards.chunk.js"
   },
   {
-    "revision": "74a0f4c22b3e375c557d",
+    "revision": "18cab68f0492bcdfee71",
     "url": "/OfferDetails.chunk.js"
   },
   {
-    "revision": "cf15758aae3a3e7f860c",
+    "revision": "0776fd6e35effcd4fadf",
     "url": "/QuestForRewards.chunk.js"
   },
   {
-    "revision": "16f11d15d1f3526b0f76",
+    "revision": "3d3ed021c94718ad787d",
     "url": "/Reservation.chunk.js"
   },
   {
-    "revision": "caad8f8cbbc58d22f59c",
+    "revision": "d240436e2abbcb17ded0",
     "url": "/bundle.js"
   },
   {
@@ -144,7 +144,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/icon_96x96.a6419fdf1304f08e159fabb12f788297.png"
   },
   {
-    "revision": "d332b8130ba532a4101611e7f5ec73a8",
+    "revision": "16e99da6602d92f43a191dc1f38458da",
     "url": "/index.html"
   },
   {
@@ -152,11 +152,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/manifest.json"
   },
   {
-    "revision": "2bb2c425207197fbbe51",
+    "revision": "acd7aaa1e88e2b84567b",
     "url": "/vendors~MyOffers.chunk.js"
-  },
-  {
-    "revision": "646b0a95abe1e896b1d7",
-    "url": "/vendors~MyOffers~MyRewards~OfferDetails.chunk.js"
   }
 ]);
