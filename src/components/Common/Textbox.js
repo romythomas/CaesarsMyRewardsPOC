@@ -2,11 +2,14 @@ import React from 'react';
 
 const Textbox = (props) => {
     const {defaultValue, textboxId, title} = props;
+    const isDefaultValueAvailable = defaultValue && defaultValue.length;
 
     const closeButtonStyleToDisplay={
-        display : (defaultValue && defaultValue.length) ? "block" : "none"
-      }
+        display : isDefaultValueAvailable ? "block" : "none"
+    }
 
+    const componentContainerActiveClass = isDefaultValueAvailable ? "active" : "";
+    
     const onChange = (value) =>{
         const {target} = value;
         const $textboxComponent = $(".textComponent");
@@ -36,7 +39,7 @@ const Textbox = (props) => {
     }
 
     return(
-        <div className="txt-wrap textComponent">
+        <div className={`txt-wrap textComponent ${componentContainerActiveClass}`} >
             <input 
                 className="form-control txt" 
                 type="text" 
