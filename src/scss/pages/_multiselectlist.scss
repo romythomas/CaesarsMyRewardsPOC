@@ -60,6 +60,13 @@
 			background: #f1f1f6;
 			padding: 10px;
 			text-align: right;
+			.apply-selection {
+				display: none;
+				@include break-point(991px){
+					display: inline-block;
+					margin-left: 10px;
+				}
+			}
 		}
 	}
 }

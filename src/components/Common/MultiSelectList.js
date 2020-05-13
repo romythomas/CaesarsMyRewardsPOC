@@ -40,7 +40,7 @@ const MultiSelectList = (props) => {
     const {title, dataList, selectId, defaultValue} = props;
     const isDefaultValueAvailable = defaultValue && defaultValue.length;
     let selectedValues = isDefaultValueAvailable ? defaultValue : [];
-    const onChange = (value) =>{
+    const onChange = (value) => {
         if(value && value.target) {
             const {target} = value;
             if(target.nextElementSibling && target.nextElementSibling.innerText) {
@@ -49,17 +49,28 @@ const MultiSelectList = (props) => {
                 } else {
                     selectedValues = selectedValues.filter(item => item.toLowerCase() !== value.target.nextElementSibling.innerText.toLowerCase())
                 }
-            } else {
-                updateCheckBoxUI();
-                selectedValues = [];
-            }
-            updateTextboxValue(selectedValues);
-            if(props.onChange) {
-                props.onChange(selectedValues);
+                updateTextboxValue(selectedValues);
+                if(props.onChange) {
+                    props.onChange(selectedValues);
+                }
             }
         }
-        
     }
+    
+    const onClear = () => {
+        const selectedValues = [];
+        updateCheckBoxUI();
+        updateTextboxValue(selectedValues);
+        if(props.onChange) {
+            props.onChange(selectedValues);
+        }
+    }
+
+    const onClose = () => {
+        $(".multiselectlist-wrap").removeClass("active");
+        $(".multiselectlist-content").hide();
+    }
+
     if(dataList && dataList.length) {
         loadScript();
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
@@ -98,7 +109,8 @@ const MultiSelectList = (props) => {
                         </ul>
                     </div>
                     <div className="multiselectlist__btn">
-                        <button className="button button--black-outline clear-selection" onClick={onChange} >Clear</button>
+                        <button className="button button--black-outline clear-selection" onClick={onClear} >Clear</button>
+                        <button className="button button--black apply-selection"  onClick={onClose}>Apply</button>
                     </div>
                 </div>
             </div>
