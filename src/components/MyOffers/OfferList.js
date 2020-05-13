@@ -23,7 +23,7 @@ const OfferList = (props) => {
     {
         return (
             <div className="alert alert-danger" role="alert">
-                No offers available for your selection. <a class="alert-link" onClick={props.clearFilter}>Clear Filters</a>
+                No offers available for your selection. <a className="alert-link" onClick={props.clearFilter}>Clear Filters</a>
             </div>
         );
     }
