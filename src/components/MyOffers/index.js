@@ -52,7 +52,8 @@ class MyOffers extends Component {
     updateOfferList() {
         let {selectedOfferFilters, selectedOfferSort} = this;
         const {offers, markets, getFilteredSortedOffers} = this.props;
-        this.selectedOfferSort = selectedOfferSort ? selectedOfferSort : this.getDefaultSortValue();
+        selectedOfferSort = selectedOfferSort ? selectedOfferSort : this.getDefaultSortValue();
+        this.selectedOfferSort = selectedOfferSort;
         let filteredSortedOffers = filterOffers(offers, selectedOfferFilters, markets);
         filteredSortedOffers = sortOffers(filteredSortedOffers, selectedOfferSort);
         this.selectedOfferFilters = selectedOfferFilters;
