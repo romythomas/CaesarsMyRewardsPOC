@@ -11,8 +11,7 @@ import ProgressBarItem from './ProgressBarItem';
 import {
   GET_PROFILE
 } from '../../constants/actionTypes';
-import {recordMyRewardsData,recordGAData} from '../../utilities/Helper'
-
+import {recordMyRewardsData,recordGAData, recordHotJar} from '../../utilities/Helper'
 
 
 const mapStateToProps = state => ({
@@ -40,23 +39,23 @@ class MyRewards extends Component {
       agent.Profile.getGuestProfile(this.props.accountID),
       agent.Profile.getFeeds()
     ]));
-  }
-
-  render() {
-    const {logininfo,feeds, properties, offers, enterpriseFeed, priceAlert, reservations} = this.props;
-    if(logininfo && feeds && properties){
     /**
-     * DataLayer & Google Analytics logging Starts
+     * DataLayer, HotJar & Google Analytics logging Starts
      */
       try {
         recordMyRewardsData('MyRewards', logininfo.tier.tierscore, logininfo.propcode, 
                                 logininfo.email, logininfo.tier.code, logininfo.accountid);
         recordGAData('myrewards');
+        recordHotJar('myrewards');
       } catch (err) {
         //ignore datalayer error
       } 
-      /** End */
+    /** End */
+  }
 
+  render() {
+    const {logininfo,feeds, properties, offers, enterpriseFeed, priceAlert, reservations} = this.props;
+    if(logininfo && feeds && properties){
       return (
         <div className="container-fluid">
           <div className="title">

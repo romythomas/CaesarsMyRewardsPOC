@@ -8,7 +8,8 @@ import {
     getMarketCodeListOfPropertyCodes,
     getStructuredMarketsPropertiesList,
     getPropertiesListByCode,
-    recordGAData} from '../../utilities/Helper';
+    recordGAData,
+    recordHotJar} from '../../utilities/Helper';
 import Autocomplete from "../Common/Autocomplete";
 import {getImageUrl} from '../../constants/configs';
 
@@ -58,10 +59,11 @@ const loadScript = () => {
  */
 class OfferDetails  extends Component  {
     componentWillMount() {
-        //DataLayer & Google Analytics logging Starts
+        //DataLayer, HotJar & Google Analytics logging Starts
         try {
           recordOffersDetailsData('OfferDetails', id);
           recordGAData('offerdetails');
+          recordHotJar('offerdetails');
         } catch (err) {
             //ignore datalayer error
         }

@@ -3,6 +3,7 @@ import {isMobile} from 'react-device-detect';
 import originalMoment from "moment";
 import { extendMoment } from "moment-range";
 import ReactGA from 'react-ga';
+import { hotjar } from 'react-hotjar';
 
 const moment = extendMoment(originalMoment);
 
@@ -311,6 +312,10 @@ export const recordGAData =(pageName) =>{
     const trackingId = "UA-165835615-1"; 
     ReactGA.initialize(trackingId);
     ReactGA.pageview(`/${pageName}`);
+}
+
+export const recordHotJar =(pageName)=>{
+    hotjar.initialize('1810261', '6');
 }
 /**
  * Returns moment format of the date value passed in.

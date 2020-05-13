@@ -5,7 +5,7 @@ import OfferFilter from './OfferFilter';
 import { FILTER_SORT_OFFER } from "../../constants/actionTypes";
 import {filterOffers, updateSelectedFilter} from '../../utilities/Filter';
 import {sortOffers} from '../../utilities/Sort';
-import {getUrlParams, recordMyOffersData, getMoment, recordGAData} from '../../utilities/Helper';
+import {getUrlParams, recordMyOffersData, getMoment, recordGAData, recordHotJar} from '../../utilities/Helper';
 import {getOfferSortTypes, getOfferFilterTypes} from "../../constants/configs";
 
 const mapStateToProps = (state) => ({
@@ -29,6 +29,7 @@ class MyOffers extends Component {
         try {
             recordMyOffersData('MyOffer', this.props.offers.length );
             recordGAData('myoffers');
+            recordHotJar('myoffers');
           } catch (err) {
             //ignore datalayer error
           } 
