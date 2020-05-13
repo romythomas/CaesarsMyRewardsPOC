@@ -88,28 +88,61 @@ const hideCalendar = () => {
 const SearchCalendar = (props)  => {
     //Load scripts to handle click/touch events
     loadScript();
+
     //Values that are passed as properties to the component
     const {defaultType, defaultDateValue, defaultMonthValue, calendarId} = props;
     let {minimumDate, maximumDate, title} = props;
     title = title ? title : "Start date - End date";
-    let defaultDateRangeSelectedValue = "";
     //Set lowest and highest calendar selectable dates, if not defined in properties
     minimumDate = minimumDate && getMoment(minimumDate).isValid() ? getMoment(minimumDate) : getMoment();
     maximumDate = maximumDate && getMoment(maximumDate).isValid() ? getMoment(maximumDate) : getMoment().add(1, 'year');
 
-    //Active class names for date calendar/month calendar items and their respective buttons based on default value
-    let dateCalendarActiveClass = "active";
-    let monthCalendarActiveClass = "";
-    let dateCalendarSelectButtonClass = "selected";
-    let monthCalendarSelectButtonClass = "";
-    if(defaultType === "month") {
-        dateCalendarActiveClass = "";
-        monthCalendarActiveClass = "active";
-        dateCalendarSelectButtonClass = "";
-        monthCalendarSelectButtonClass = "selected";
+    //Variables to hold values of date calendar and month calendar
+    let dateCalendarStartDate = null, dateCalendarEndDate = null, monthCalendarValue=null;
+    //Variable that holds the value to be displayed in the textbox in UI
+    let selectedDateValue = "";
+
+    //Flag to see if selected calendar is date or month
+    const isDefaultDateCalendar = defaultType === "date";
+
+    //Set class names for UI elements to show/hide corresponding HTML elements
+    const dateCalendarActiveClass = isDefaultDateCalendar ? "active" : "";
+    const monthCalendarActiveClass = isDefaultDateCalendar ? "" : "active";
+    const dateCalendarSelectButtonClass = isDefaultDateCalendar ? "selected" : "";
+    const monthCalendarSelectButtonClass = isDefaultDateCalendar ? "" : "selected";
+
+    //If default value for date calendar is present and valid, convert it to moment and store in respective variables
+    //Also update varialbe that holds the value to be displayed in the textbox in UI, if needed
+    if(defaultDateValue) {
+        const {startDate, endDate} = defaultDateValue;
+        const startDateMoment = getMoment(startDate);
+        const endDateMoment = getMoment(endDate);
+        if(startDateMoment.isValid() && endDateMoment.isValid()) {
+            dateCalendarStartDate = startDateMoment.startOf('day');
+            dateCalendarEndDate = endDateMoment.endOf("day");
+            //If default calendar is date calendar, update variable value to be displayed in the textbox in UI
+            if(isDefaultDateCalendar) {
+                selectedDateValue = getDisplayValueOfDateCalendarSelection(startDate, endDate);
+            }
+        }
     }
 
-    //Create array to hold month values available for flexible date search
+    //If default value for month calendar is present and valid, convert it to moment format and store in corresponding variable
+    //Also update varialbe that holds the value to be displayed in the textbox in UI, if needed
+    if(defaultMonthValue) {
+        const {startDate, endDate} = defaultMonthValue;
+        const startDateMoment = getMoment(startDate);
+        const endDateMoment = getMoment(endDate);
+        if(startDateMoment.isValid() && endDateMoment.isValid()) {
+            monthCalendarValue = startDate.format("MMM YYYY");
+            //If default calendar is not date calendar, update variable value to be displayed in the textbox in UI
+            if(!isDefaultDateCalendar) {
+                selectedDateValue = monthCalendarValue;
+            }
+        }
+    }
+    
+    //Create array to hold month values available for flexible date calendar.
     const monthRanges = [];
     //Loops through mininum date till maximum date and collects all valid first dates of each month
     let startOfDateValue = minimumDate.clone().startOf('month').startOf('day');
@@ -122,20 +155,6 @@ const SearchCalendar = (props)  => {
         startOfDateValue = startOfDateValue.clone().add(1, 'month');
     }
 
-    if(defaultDateValue && defaultType === "date") {
-        const {startDate, endDate} = defaultDateValue;
-        if(startDate && startDate.isValid() && endDate && endDate.isValid()) {
-            //Set variable value to be displayed in the textbox.
-            defaultDateRangeSelectedValue = getDisplayValueOfDateCalendarSelection(startDate, endDate);
-        }
-    } else if(defaultMonthValue && defaultType === "month") {
-        const {startDate, endDate} = defaultMonthValue;
-        if(startDate && startDate.isValid() && endDate && endDate.isValid()) {
-            //Set variable value to be displayed in the textbox.
-            defaultDateRangeSelectedValue = startDate.format("MMM YYYY");
-        }
-    }
-
     /**
      * Handles the event of the range calendar selection.
      * Get the startdate and enddate selected.
@@ -144,13 +163,10 @@ const SearchCalendar = (props)  => {
      */
     const onDateChnage = (dateRange) => {
         const {start, end} = dateRange;
-        //Check if date values are present
-        if(start && start.isValid() && end && end.isValid()) {
-            //Pass date values to component property
-            if(props.onChange) {
-                hideCalendar();
-                props.onChange("date", start, end);
-            }
+        //If callback event is present in props and date values are valid, pass values to component property
+        if(props.onChange && start && start.isValid() && end && end.isValid()) {
+            hideCalendar();
+            props.onChange("date", start, end);
         }
     }
         
@@ -167,13 +183,10 @@ const SearchCalendar = (props)  => {
             //Find startdate and enddate. Then convert them to moment
             const startDate = getMoment(target.dataset.value);
             const endDate = startDate.clone().endOf('month');
-            //If moment dates are valid, update UI textbox value
-            if(startDate.isValid() && endDate.isValid()) {
-                //Pass date values to component property
-                if(props.onChange) {
-                    hideCalendar();
-                    props.onChange("month", startDate, endDate);
-                }
+            //If callback event is present in props and date values are valid, pass values to component property
+            if(props.onChange && startDate.isValid() && endDate.isValid()) {
+                hideCalendar();
+                props.onChange("month", startDate, endDate);
             }
         }
     }
@@ -188,7 +201,7 @@ const SearchCalendar = (props)  => {
                     className="form-control txt"
                     type="text"
                     autoComplete="off"
-                    value={defaultDateRangeSelectedValue}
+                    value={selectedDateValue}
                     id={calendarId}
                     readOnly
                 />
@@ -208,7 +221,7 @@ const SearchCalendar = (props)  => {
                             onSelect={onDateChnage}
                             minimumDate={new Date(minimumDate)}
                             maximumDate={new Date(maximumDate)}
-                            value={getMomentRange(defaultDateValue.startDate, defaultDateValue.endDate)}
+                            value={getMomentRange(dateCalendarStartDate, dateCalendarEndDate)}
                             selectionType="range"
                             numberOfCalendars={2}
                         />
@@ -217,7 +230,7 @@ const SearchCalendar = (props)  => {
                     <ul className="monthRangeCalendar__list">
                         {monthRanges.map((date, index) => {
                             const valueToDisplay = date.format("MMM YYYY");
-                            const activeClassNames = (defaultMonthValue && defaultMonthValue.startDate.format("MMM YYYY") === valueToDisplay) ? "active" : "";
+                            const activeClassNames = monthCalendarValue === valueToDisplay ? "active" : "";
                             return(
                                 <li key={index} 
                                     className={`month-item ${activeClassNames}`} 
