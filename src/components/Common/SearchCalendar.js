@@ -41,7 +41,7 @@ const loadScript = () => {
         /**
          * Handels the close button click event of the (date/month) range calendars.
          */
-        $('.searchCalendar .close').off('click touch').on('click touch', function(e) {
+        $('.searchCalendar .close').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
             $(".searchCalendar-wrap").removeClass("active");

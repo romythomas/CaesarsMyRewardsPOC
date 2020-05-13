@@ -7,7 +7,7 @@ const loadScript = () => {
       e.preventDefault();
       $(".user-panel").toggle();
     });
-    $(".close").off('click touch').on('click touch', function(e){
+    $(".close").on('click touch', function(e){
       e.preventDefault();
       $(".user-panel").hide();
     });

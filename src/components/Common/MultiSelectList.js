@@ -7,7 +7,7 @@ const loadScript = () => {
             $(".multiselectlist-wrap").toggleClass("active");
             $(".multiselectlist-content").toggle();
         });
-        $('.multiselectlist-content .close').off('click touch').on('click touch', function(e) {
+        $('.multiselectlist-content .close').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
             $(".multiselectlist-wrap").removeClass("active");
