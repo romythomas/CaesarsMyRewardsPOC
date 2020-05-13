@@ -14,6 +14,7 @@ import {
 import {recordMyRewardsData,recordGAData, recordHotJar} from '../../utilities/Helper'
 
 
+
 const mapStateToProps = state => ({
   appName: state.common.appName,
   token: state.common.token,
@@ -39,6 +40,11 @@ class MyRewards extends Component {
       agent.Profile.getGuestProfile(this.props.accountID),
       agent.Profile.getFeeds()
     ]));
+  }
+
+  render() {
+    const {logininfo,feeds, properties, offers, enterpriseFeed, priceAlert, reservations} = this.props;
+    if(logininfo && feeds && properties){
     /**
      * DataLayer, HotJar & Google Analytics logging Starts
      */
@@ -50,12 +56,8 @@ class MyRewards extends Component {
       } catch (err) {
         //ignore datalayer error
       } 
-    /** End */
-  }
+      /** End */
 
-  render() {
-    const {logininfo,feeds, properties, offers, enterpriseFeed, priceAlert, reservations} = this.props;
-    if(logininfo && feeds && properties){
       return (
         <div className="container-fluid">
           <div className="title">
