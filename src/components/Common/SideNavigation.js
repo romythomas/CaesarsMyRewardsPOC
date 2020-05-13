@@ -2,28 +2,6 @@ import React from 'react';
 import {NavLink} from 'react-router-dom'
 
 const loadScript = () => {
-    $(document).ready(function checkWidth() {
-        if ($(window).width() <= 991) {  
-            $(".sidebar__toggle").unbind().click(function(e) {
-                $(this).toggleClass("open");
-                $(".main").toggleClass("sidebar__active");
-            });
-            //scroll top
-            const $scrollButton = $(".scroll-top");
-            $(window).scroll(function(){            
-                if($(this).scrollTop()>500) {
-                    $scrollButton.fadeIn("slow");
-                } else {
-                    $scrollButton.fadeOut("slow");
-                };
-            });
-            $scrollButton.unbind().click(function(){
-                $("html, body").animate({scrollTop: 0}, 800);
-                return false;
-            });
-        } 
-        $(window).resize(checkWidth);
-    });
     $(document).ready(function(){
         var allPanels = $('.nav-drop').hide();   
         $('.item-nav > a').unbind().click(function() {
@@ -32,7 +10,10 @@ const loadScript = () => {
             $(".sidebar__toggle").toggleClass("open");
             $(".main").toggleClass("sidebar__active");
         });
-        
+        $(".sidebar__toggle").unbind().click(function(e) {
+            $(this).toggleClass("open");
+            $(".main").toggleClass("sidebar__active");
+        });
     });
 }
 const SideNavigation = (props) => {
