@@ -7,6 +7,7 @@ import {filterOffers, updateSelectedFilter} from '../../utilities/Filter';
 import {sortOffers} from '../../utilities/Sort';
 import {getUrlParams, recordMyOffersData, getMoment, recordGAData, recordHotJar} from '../../utilities/Helper';
 import {getOfferSortTypes, getOfferFilterTypes} from "../../constants/configs";
+import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -242,6 +243,10 @@ class MyOffers extends Component {
     render() {
         return(
             <div className="container-fluid">
+                <ScrollUpButton
+                    style={{width: 40, height: 40, backgroundColor: "#ad1f23", fill: "#fff"}}
+                    ShowAtPosition={500} />
+
                 <OfferFilter onLocationChange={this.onLocationChange} 
                     onDateRangeChange={this.onDateRangeChange} 
                     onOfferTypeChange={this.onOfferTypeChange} 
