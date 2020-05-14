@@ -7,7 +7,7 @@ const loadScript = () => {
       e.preventDefault();
       $(".user-panel").toggle();
     });
-    $(".close").on('click touch', function(e){
+    $(".user-panel .close").on('click touch', function(e){
       e.preventDefault();
       $(".user-panel").hide();
     });
@@ -140,6 +140,7 @@ class Header extends React.Component {
             <span className="userImage"></span>
             <span className="username">Hello, {loginInfo.firstname}</span>
             <div className="user-panel">
+              <span class="close"></span>
               <div className="user-panel__logo">
                 <a>
                   <img src="/images/caesars-rewards-logo.png" alt="user" />
