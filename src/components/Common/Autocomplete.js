@@ -168,8 +168,6 @@ const Autocomplete = (props) => {
 
     let dafaultDataDisplay = "", defaultDataValue = "";
 
-    const $autocomplete = $(".autocomplete");
-
     if(dataList && dataList.length) {
         if(defaultValue) {
             const dafaultData = dataList.find((data) => {
