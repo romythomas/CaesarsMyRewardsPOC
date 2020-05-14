@@ -11,12 +11,6 @@
 	.form-control.txt:focus {
 		cursor: text;
 	}
-	.autocomplete-content[data-toggle="false"] {
-		display : none;
-	}
-	.autocomplete-content[data-toggle="true"] {
-		display : block;
-	}
 	.autocomplete-content {
 		background: $custome-white;
 		position: absolute;
@@ -86,6 +80,9 @@
 		}
 	}
 	&.active {
+		.autocomplete-content {
+			display: block;
+		}
 		.close {
 			display: block;
 			cursor: pointer;
