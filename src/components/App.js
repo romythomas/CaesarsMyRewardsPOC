@@ -91,8 +91,7 @@ class App extends Component {
             <div id="sub-content">
             <Suspense fallback={<div>Loading...</div>}>
               <Switch>
-                <Route exact path="/" component={() => <Redirect to="/myrewards" />}/>
-                <Route exact path="/index.html" component={() => <Redirect to="/myrewards" />}/>
+                <Redirect exact from="/" to="myrewards" />
                 <Route exact path="/myrewards" component={MyRewards}/>              
                 <Route exact path="/myoffers" component={MyOffers}/>
                 <Route exact path="/leaderboard" component={LeaderBoard}/>
