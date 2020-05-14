@@ -2,7 +2,7 @@ importScripts(
   "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
 );
 console.log("Service worker Loaded ");
-workbox.precaching.precacheAndRoute(self.__precacheManifest);
+//workbox.precaching.precacheAndRoute(self.__precacheManifest);
 
 self.addEventListener("push", (e) => {
   const data = e.data.json();
