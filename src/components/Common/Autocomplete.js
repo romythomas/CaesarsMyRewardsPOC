@@ -143,7 +143,6 @@ const loadScript = () => {
             e.preventDefault();
             e.stopPropagation();
             remove_activeClass();
-            hide_list(autocomplete_content);
             set_selectedToText();
         });
         $(document).on('click', 'body', function(event) {
