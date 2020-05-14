@@ -6,7 +6,6 @@ console.log("Service worker Loaded ");
 
 self.addEventListener("push", (e) => {
   const data = e.data.json();
-  //const data =  e.data;
   console.log("Push Received ");
   console.log(data);
   const { title, id, status, start, end } = data.data;
@@ -20,9 +19,6 @@ self.addEventListener("push", (e) => {
     })
   );
 });
-
-//self.addEventListener('install', () => self.skipWaiting());
-//self.addEventListener('activate', () => self.clients.claim());
 
 const formatDate = (dateToFormat) => {
   try {

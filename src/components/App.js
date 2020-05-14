@@ -6,20 +6,11 @@ import SideNavigation from './Common/SideNavigation';
 import React, { Component, Suspense, lazy } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, Redirect } from 'react-router-dom';
-/*import MyRewards from './MyRewards';
-import LeaderBoard from './Leaderboard';
-import QuestForRewards from './QuestForRewards';
-import MyOffers from './MyOffers';
-import Reservation from './Reservations';
-import OfferDetails from './MyOffers/OfferDetails'*/
 import {hideWarning} from '../utilities/Helper'
 import { history} from '../store';
 import {
   LOGIN
 } from '../constants/actionTypes';
-import  {config}  from  "../init-fcm"
-import * as firebase from "firebase/app";
-import "firebase/messaging";
 
 const MyRewards = lazy(() => import(/* webpackChunkName: "MyRewards" */ './MyRewards'));
 const MyOffers = lazy(() => import(/* webpackChunkName: "MyOffers" */ './MyOffers'));
@@ -57,7 +48,6 @@ const loadScript = () => {
   });
   
 }
-
 
 class App extends Component {
 
@@ -121,9 +111,5 @@ class App extends Component {
     }
   }
 }
-
-// App.contextTypes = {
-//   router: PropTypes.object.isRequired
-// };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
