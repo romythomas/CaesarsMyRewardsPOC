@@ -63,11 +63,6 @@ class App extends Component {
 
   constructor() {
     super();
-
-    const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
-    if (path) {
-        history.replace(path);
-    }
   }
 
   componentWillMount(){
