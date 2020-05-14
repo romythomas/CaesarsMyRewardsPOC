@@ -26,43 +26,32 @@ const loadScript = () => {
     });
 }
 
-const updateCheckBoxUI = () => {
-    $('.multiselectlist__item input:checkbox').prop('checked',false);
-}
-
-const updateTextboxValue = (selectedValues) => {
-    const $textBoxElement = $(".multiselectlist").find(".multiselectlist-wrap").find("input:text");
-    $textBoxElement.attr("value", selectedValues.join(","));
-    $textBoxElement.val(selectedValues.join(","));
-}
-
 const MultiSelectList = (props) => {
-    const {title, dataList, selectId, defaultValue} = props;
+    const {dataList, defaultValue} = props;
+    let {title, selectId} = props;
+    title = title ? title : "Select Filters";
+    selectId = selectId ? selectId : "chk-filter"
     const isDefaultValueAvailable = defaultValue && defaultValue.length;
     let selectedValues = isDefaultValueAvailable ? defaultValue : [];
+    
     const onChange = (value) => {
-        if(value && value.target) {
-            const {target} = value;
-            if(target.nextElementSibling && target.nextElementSibling.innerText) {
-                if(value.target.checked) {
-                    selectedValues.push(value.target.nextElementSibling.innerText);
-                } else {
-                    selectedValues = selectedValues.filter(item => item.toLowerCase() !== value.target.nextElementSibling.innerText.toLowerCase())
-                }
-                updateTextboxValue(selectedValues);
-                if(props.onChange) {
-                    props.onChange(selectedValues);
-                }
+        const {target} = value;
+        if(target && target.nextElementSibling && target.nextElementSibling.innerText) {
+            const targetText = target.nextElementSibling.innerText;
+            if(target.checked) {
+                selectedValues.push(targetText);
+            } else {
+                selectedValues = selectedValues.filter(item => item.toLowerCase() !== targetText.toLowerCase());
+            }
+            if(props.onChange) {
+                props.onChange(selectedValues);
             }
         }
     }
     
     const onClear = () => {
-        const selectedValues = [];
-        updateCheckBoxUI();
-        updateTextboxValue(selectedValues);
         if(props.onChange) {
-            props.onChange(selectedValues);
+            props.onChange([]);
         }
     }
 
