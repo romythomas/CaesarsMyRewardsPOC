@@ -29,21 +29,23 @@ const loadScript = () => {
 const MultiSelectList = (props) => {
     const {dataList, defaultValue} = props;
     let {title, selectId} = props;
+
     title = title ? title : "Select Filters";
-    selectId = selectId ? selectId : "chk-filter"
+    selectId = selectId ? selectId : "chk-filter";
+
     const isDefaultValueAvailable = defaultValue && defaultValue.length;
     let selectedValues = isDefaultValueAvailable ? defaultValue : [];
     
     const onChange = (value) => {
-        const {target} = value;
-        if(target && target.nextElementSibling && target.nextElementSibling.innerText) {
-            const targetText = target.nextElementSibling.innerText;
-            if(target.checked) {
-                selectedValues.push(targetText);
-            } else {
-                selectedValues = selectedValues.filter(item => item.toLowerCase() !== targetText.toLowerCase());
-            }
-            if(props.onChange) {
+        if(props.onChange) {
+            const {target} = value;
+            if(target && target.nextElementSibling && target.nextElementSibling.innerText) {
+                const targetText = target.nextElementSibling.innerText;
+                if(target.checked) {
+                    selectedValues.push(targetText);
+                } else {
+                    selectedValues = selectedValues.filter(item => item.toLowerCase() !== targetText.toLowerCase());
+                }
                 props.onChange(selectedValues);
             }
         }
