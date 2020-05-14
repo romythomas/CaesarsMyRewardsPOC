@@ -142,7 +142,7 @@ const loadScript = () => {
         $('.autocomplete .close').on('click touch', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            remove_mobileClass();
+            remove_activeClass();
             hide_list(autocomplete_content);
             set_selectedToText();
         });
