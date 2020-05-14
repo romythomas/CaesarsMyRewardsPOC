@@ -84,7 +84,7 @@ module.exports = {
 			orientation: "portrait",
 			display: "standalone",
 			filename: "manifest.json",
-			start_url: "./pwa",
+			start_url: "./",
 			short_name: "CaesarsPWA",
 			description: "A standalone demo PWA!",
 			background_color: "#2c2c2c",
