@@ -1,36 +1,26 @@
 import React from 'react';
 
 const Textbox = (props) => {
-    const {defaultValue, textboxId, title} = props;
+    const {defaultValue} = props;
+    let {textboxId, title} = props;
+
+    textboxId = textboxId ? textboxId : "txt-input";
+    title = title ? title : "Enter text";
     const isDefaultValueAvailable = defaultValue && defaultValue.length;
 
     const closeButtonStyleToDisplay={
         display : isDefaultValueAvailable ? "block" : "none"
     }
-
     const componentContainerActiveClass = isDefaultValueAvailable ? "active" : "";
     
     const onChange = (value) =>{
-        const {target} = value;
-        const $textboxComponent = $(".textComponent");
-        const $close = $(".textComponent .close");
-        if(target && target.value && target.value.length > 0) {
-            $textboxComponent.addClass("active");
-            $close.css("display", "block");
-        } else {
-            $textboxComponent.removeClass("active");
-            $close.css("display", "none");
-        }
         if(props.onChange) {
-            props.onChange(target.value);
+            const {target} = value;
+            props.onChange(target && target.value ? target.value : "");
         }
     }
 
     const clearValue = (e) =>{
-        $(".textComponent").removeClass("active");
-        $(".textComponent .close").css("display", "none");
-        $('.textComponent input[type="text"]').val("");
-        $('.textComponent input[type="text"]').attr("value", "");
         e.preventDefault();
         e.stopPropagation();
         if(props.onChange) {
