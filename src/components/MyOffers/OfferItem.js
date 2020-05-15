@@ -31,7 +31,8 @@ const OfferItem = (props) => {
                     </div>
                     <div className="listing__details">
                         <h2>{offer.type}</h2>
-                        <span className="date">Valid : {getMoment(offer.start).format("MM/DD/YYYY")} - {getMoment(offer.end).format("MM/DD/YYYY")}</span>
+                        <span className="date">Valid From : {getMoment(offer.start).format("MM/DD/YYYY")}</span>
+                        <span className="date">Valid To : {getMoment(offer.end).format("MM/DD/YYYY")}</span>
                     </div>
                 </div>
                 <div className="btn-wrap">
