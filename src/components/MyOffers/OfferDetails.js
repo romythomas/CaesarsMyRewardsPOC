@@ -9,7 +9,8 @@ import {
 } from "../../utilities/Helper";
 import Autocomplete from "../Common/Autocomplete";
 import { getImageUrl } from "../../constants/configs";
-import {recordOffersDetailsData} from '../../utilities/Gtm-Module'
+import {recordOffersDetailsData} from '../../utilities/Gtm-Module';
+import ErrorMessage from "../Common/ErrorMessage";
 
 const mapStateToProps = (state) => ({
   offers: state.common.offers,
@@ -222,11 +223,8 @@ class OfferDetails extends Component {
       }
     }
     return (
-      <div className="container-fluid">
-        <div className="alert alert-danger" role="alert">
-          <b>No Offer Details Available</b>
-        </div>
-      </div>
+      <ErrorMessage 
+        errorText="No offer details available." />
     );
   }
 }

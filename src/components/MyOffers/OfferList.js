@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import OfferItem from "./OfferItem";
+import ErrorMessage from "../Common/ErrorMessage";
 
 const mapStateToProps = (state) => ({
     filteredSortedOffers: state.offers.offers,
@@ -22,12 +23,12 @@ const OfferList = (props) => {
     else
     {
         return (
-            <div className="alert alert-danger" role="alert">
-                No offers available for your selection. <a className="alert-link" onClick={props.clearFilter}>Clear Filters</a>
-            </div>
-        );
+            <ErrorMessage 
+                errorText="No offers available for your selection."
+                linkText="Clear Filters" 
+                clearFilter={props.clearFilter} />
+        )
     }
-    
 };
 
 export default connect(mapStateToProps)(OfferList);
