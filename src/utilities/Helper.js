@@ -1,5 +1,3 @@
-import TagManager from "react-gtm-module";
-import { isMobile } from "react-device-detect";
 import originalMoment from "moment";
 import { extendMoment } from "moment-range";
 
@@ -247,77 +245,6 @@ export const hideWarning = (...warnings) => {
   ) {
     ("");
   }
-};
-/**
- *
- * @param {*} dataLayer
- */
-const recordDataLayer = (dataLayer) => {
-  const tagManagerData = {
-    dataLayer: dataLayer,
-    events: {
-      eventName: "eventNameXYZ"
-    },
-    gtmId: "GTM-M363HGQ",
-    auth: "WAeUcta8vBjHD_FnBxtJKw",
-    preview: "env-1",
-    dataLayerName: "MyRewardsDataLayer"
-  };
-  TagManager.initialize(tagManagerData);
-};
-
-export const recordMyRewardsData = (
-  pageName,
-  tierscore,
-  propcode,
-  email,
-  tierCode,
-  accountid
-) => {
-  const dataLayer = {
-    page: pageName != null ? pageName : "MyRewards",
-    L1: "MyCR",
-    L2: "MyCR: " + (pageName != null) ? pageName : "MyRewards",
-    L3: "MyCR: " + (pageName != null) ? pageName : "MyRewards",
-    acct_balance: tierscore != null ? tierscore : null,
-    dom_prop: propcode != null ? propcode : null,
-    email_addr: email != null ? email : null,
-    nUrl: window.location,
-    pageCategory: "CR",
-    signinStatus: "signedIn",
-    tier: tierCode != null ? tierCode : null,
-    cr_number: accountid != null ? accountid : null,
-    view: isMobile ? "mobile" : "fullsite"
-  };
-  recordDataLayer(dataLayer);
-};
-export const recordMyOffersData = (pageName, offers) => {
-  const dataLayer = {
-    page: pageName != null ? pageName : "MyRewards",
-    L1: "MyCR",
-    L2: "MyCR: " + (pageName != null) ? pageName : "MyRewards",
-    L3: "MyCR: " + (pageName != null) ? pageName : "MyRewards",
-    nUrl: window.location,
-    pageCategory: "CR",
-    signinStatus: "signedIn",
-    view: isMobile ? "mobile" : "fullsite",
-    offers: offers != null ? offers : null
-  };
-  recordDataLayer(dataLayer);
-};
-export const recordOffersDetailsData = (pageName, offerid) => {
-  const dataLayer = {
-    page: pageName != null ? pageName : "MyRewards",
-    L1: "MyCR",
-    L2: "MyCR: " + (pageName != null) ? pageName : "MyRewards",
-    L3: "MyCR: " + (pageName != null) ? pageName : "MyRewards",
-    nUrl: window.location,
-    pageCategory: "CR",
-    signinStatus: "signedIn",
-    view: isMobile ? "mobile" : "fullsite",
-    offerId: offerid != null ? offerid : null
-  };
-  recordDataLayer(dataLayer);
 };
 
 /**

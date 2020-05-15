@@ -4,12 +4,12 @@ import {
   getProperty,
   getMoment,
   getFavouriteClassName,
-  recordOffersDetailsData,
   getMarketCodeListOfPropertyCodes,
   getStructuredMarketsPropertiesList
 } from "../../utilities/Helper";
 import Autocomplete from "../Common/Autocomplete";
 import { getImageUrl } from "../../constants/configs";
+import {recordOffersDetailsData} from '../../utilities/Gtm-Module'
 
 const mapStateToProps = (state) => ({
   offers: state.common.offers,

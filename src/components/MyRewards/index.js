@@ -9,7 +9,7 @@ import ReservationItem from "./ReservationItem";
 import PriceAlertItem from "./PriceAlertItem";
 import ProgressBarItem from "./ProgressBarItem";
 import { GET_PROFILE } from "../../constants/actionTypes";
-import { recordMyRewardsData } from "../../utilities/Helper";
+import { recordMyRewardsData } from "../../utilities/Gtm-Module";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
 const mapStateToProps = (state) => ({

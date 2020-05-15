@@ -7,7 +7,6 @@ import { filterOffers, updateSelectedFilter } from "../../utilities/Filter";
 import { sortOffers } from "../../utilities/Sort";
 import {
   getUrlParams,
-  recordMyOffersData,
   getMoment
 } from "../../utilities/Helper";
 import {
@@ -15,6 +14,7 @@ import {
   getOfferFilterTypes
 } from "../../constants/configs";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
+import {recordMyOffersData} from '../../utilities/Gtm-Module'
 
 const mapStateToProps = (state) => ({
   offers: state.common.offers,
