@@ -7,6 +7,7 @@ import React, { Component, Suspense, lazy } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import {hideWarning, scrollPageToBanner} from '../utilities/Helper'
+import LoadingSpinner from './Common/LoadingSpinner';
 import { history} from '../store';
 import {
   LOGIN
@@ -82,7 +83,7 @@ class App extends Component {
           <div id="page-content">
             <SpotLight appName={this.props.appName}></SpotLight>
             <div id="sub-content">
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
               <Switch>
                 <Redirect exact from="/" to="myrewards" />
                 <Route exact path="/myrewards" component={MyRewards}/>              

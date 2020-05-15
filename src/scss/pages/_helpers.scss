@@ -605,3 +605,8 @@ select:-webkit-autofill:focus {
 		top: -14px !important;
 	}
 }
+.loading-spinner-container {
+    width: 100%;
+    text-align: center;
+    color: $custome-secondary;
+}
