@@ -1,3 +1,6 @@
+const caesarsDomain = "http://www.caesars.com";
+const staticFilesDomain = "https://caesarspoc.s3.us-east-2.amazonaws.com";
+
 export const getOfferFilterTypes = () => {
     return ["Hotel", "Cash", "Gaming", "Entertainment", "Events", "Dining", "Other", "Package", "Favorite"];
 }
@@ -16,9 +19,9 @@ export const getOfferSortTypes = () => {
 }
 
 export const getImageUrl =()=>{
-    return 'http://www.caesars.com/myrewards/profile/images/tr-placeholder.jpg';
+    return caesarsDomain + '/myrewards/profile/images/tr-placeholder.jpg';
 }
 
 export const getApiRootUrl =() =>{
-    return "https://caesarspoc.s3.us-east-2.amazonaws.com/";
+    return staticFilesDomain + "/stubs/";
 }
