@@ -5,7 +5,8 @@ import {
   getMoment,
   getFavouriteClassName,
   getMarketCodeListOfPropertyCodes,
-  getStructuredMarketsPropertiesList
+  getStructuredMarketsPropertiesList,
+  scrollPageToBanner
 } from "../../utilities/Helper";
 import Autocomplete from "../Common/Autocomplete";
 import { getImageUrl } from "../../constants/configs";
@@ -67,6 +68,9 @@ class OfferDetails extends Component {
     } catch (err) {
       //ignore datalayer error
     }
+  }
+  componentDidMount() {
+    scrollPageToBanner();
   }
   render() {
     loadScript();

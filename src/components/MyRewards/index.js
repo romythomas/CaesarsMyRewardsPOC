@@ -11,6 +11,7 @@ import ProgressBarItem from "./ProgressBarItem";
 import { GET_PROFILE } from "../../constants/actionTypes";
 import { recordMyRewardsData } from "../../utilities/Gtm-Module";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
+import { scrollPageToBanner } from "../../utilities/Helper";
 
 const mapStateToProps = (state) => ({
   appName: state.common.appName,
@@ -37,6 +38,10 @@ class MyRewards extends Component {
         agent.Profile.getFeeds()
       ])
     );
+  }
+
+  componentDidMount() {
+    scrollPageToBanner();
   }
 
   render() {

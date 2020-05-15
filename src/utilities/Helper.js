@@ -223,6 +223,12 @@ export const getFavouriteClassName = (pref) => {
   return "";
 };
 
+export const scrollPageToBanner = () => {
+    if($('#sub-content').length) {
+        $('html, body').animate({ scrollTop: $('#sub-content').offset().top - 80}, 1);
+    }
+}
+
 /**
  *  * @param  {...any} warnings
  *  hide componentWillMount, componentWillUpdate, componentWillReceiveProps warnings

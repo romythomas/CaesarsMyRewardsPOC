@@ -7,7 +7,8 @@ import { filterOffers, updateSelectedFilter } from "../../utilities/Filter";
 import { sortOffers } from "../../utilities/Sort";
 import {
   getUrlParams,
-  getMoment
+  getMoment,
+  scrollPageToBanner
 } from "../../utilities/Helper";
 import {
   getOfferSortTypes,
@@ -39,6 +40,10 @@ class MyOffers extends Component {
     } catch (err) {
       //ignore datalayer error
     }
+  }
+
+  componentDidMount() {
+    scrollPageToBanner();
   }
 
   constructor() {

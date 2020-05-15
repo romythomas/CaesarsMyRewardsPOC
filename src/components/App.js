@@ -6,7 +6,7 @@ import SideNavigation from './Common/SideNavigation';
 import React, { Component, Suspense, lazy } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import {hideWarning} from '../utilities/Helper'
+import {hideWarning, scrollPageToBanner} from '../utilities/Helper'
 import { history} from '../store';
 import {
   LOGIN
@@ -42,9 +42,7 @@ hideWarning();
 
 const loadScript = () => {
   $(document).ready(function () {
-    if($('#sub-content').length){
-       $('html, body').animate({ scrollTop: $('#sub-content').offset().top - 80}, 1);
-    }
+    scrollPageToBanner();
   });
   
 }
