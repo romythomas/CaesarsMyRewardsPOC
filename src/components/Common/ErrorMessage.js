@@ -6,7 +6,6 @@ const ErrorMessage = (props) => {
     errorText = errorText ? errorText : "Sorry!!! Please try again later."
 
     useEffect(() => {
-        debugger;
         //DataLayer
         try {
             recordErrorData(errorText);
