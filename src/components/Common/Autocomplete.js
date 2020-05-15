@@ -29,7 +29,7 @@ const loadScript = () => {
             if(highlightedElement && !highlightedElement.classList.contains("disabled")) {
                 if (e.keyCode == 13) {
                     set_selected(highlightedElement);
-                    e.target.value = highlightedElement.querySelector('span').innerHTML;
+                    e.target.value = highlightedElement.querySelector('span').innerText;
                 }
                 remove_activeClass();
                 init_list();
@@ -70,7 +70,7 @@ const loadScript = () => {
         function set_selectedToText() {
             const selectedElements = autocomplete_component.querySelectorAll('li.autocomplete__item[data-selected="true"]');
             if(selectedElements && selectedElements.length) {
-                const selectedValue = selectedElements[0].querySelector('span').innerHTML;
+                const selectedValue = selectedElements[0].querySelector('span').innerText;
                 autocomplete_text_input.setAttribute("value", selectedValue);
                 autocomplete_text_input.value = selectedValue;
             } else {
@@ -89,7 +89,7 @@ const loadScript = () => {
         
         function copy_paste(e) {
             set_selected(this);
-            const selectedValue = this.querySelector('span').innerHTML;
+            const selectedValue = this.querySelector('span').innerText;
             autocomplete_text_input.setAttribute("value", selectedValue);
             autocomplete_text_input.value = selectedValue;
             // todo : check match of list text and input value for .current 
