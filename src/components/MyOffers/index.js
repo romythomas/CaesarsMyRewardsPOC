@@ -284,12 +284,7 @@ class MyOffers extends Component {
     return (
       <div className="container-fluid">
         <ScrollUpButton
-          style={{
-            width: 40,
-            height: 40,
-            backgroundColor: "#ad1f23",
-            fill: "#fff"
-          }}
+          ContainerClassName='scroll-top'
           ShowAtPosition={500}
         />
 

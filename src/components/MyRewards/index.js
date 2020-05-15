@@ -10,6 +10,7 @@ import PriceAlertItem from "./PriceAlertItem";
 import ProgressBarItem from "./ProgressBarItem";
 import { GET_PROFILE } from "../../constants/actionTypes";
 import { recordMyRewardsData } from "../../utilities/Helper";
+import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
 const mapStateToProps = (state) => ({
   appName: state.common.appName,
@@ -65,6 +66,10 @@ class MyRewards extends Component {
 
       return (
         <div className="container-fluid">
+          <ScrollUpButton
+            ContainerClassName='scroll-top'
+            ShowAtPosition={500}
+          />
           <div className="title">
             <h1>My Rewards</h1>
           </div>
