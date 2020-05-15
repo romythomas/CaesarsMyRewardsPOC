@@ -83,3 +83,22 @@ export const recordOffersDetailsData =(pageName, offerid) =>{
     };
     recordDataLayer(dataLayer);
 }
+/**
+ * 
+ * @param {*} pageName 
+ * @param {*} offers 
+ */
+export const recordErrorData =(errorText) =>{
+    const dataLayer = {
+        page: "Error Message",
+        L1: "MyCR",
+        L2: "MyCR: Error Message",
+        L3: "MyCR: Error Message",
+        nUrl: window.location,
+        pageCategory: "CR",
+        signinStatus: "signedIn",
+        view: (isMobile)? "mobile": "fullsite",
+        errorText: errorText
+    };
+    recordDataLayer(dataLayer);
+}
