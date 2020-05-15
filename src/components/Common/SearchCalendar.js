@@ -10,6 +10,15 @@ const loadScript = () => {
         const $searchCalendarContent = $(".searchCalendar-content");
         const $dateRangeCalendarItem = $(".dateRangeCalendar__item");
         const $monthRangeCalendarItem = $(".monthRangeCalendar__item");
+
+        /**
+         * Handles the touchstart event of date cell of date calendar and prevents firing click event while scrolling in mobile.
+         */
+        $dateRangeCalendarItem.on("touchstart", ".DateRangePicker__Date" , function(event) {
+            if(event && event.cancelable) {
+                event.stopPropagation();
+            }
+        });
         /**
          * Handles the click events of text input, to show/hide the (date/month) range calendars.
          */
