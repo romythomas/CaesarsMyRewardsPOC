@@ -20,5 +20,5 @@ export const getImageUrl =()=>{
 }
 
 export const getApiRootUrl =() =>{
-    return "http://serviceresponse.s3.us-east-1.amazonaws.com/stubs/";
+    return "https://caesarspoc.s3.us-east-2.amazonaws.com/";
 }

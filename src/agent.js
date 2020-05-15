@@ -35,41 +35,41 @@ const requests = {
 
 const Auth = {
   login: () =>
-    requests.get('accountinfobyToken.json?callback=foo'),
+    requests.get('stubs/accountinfobyToken.json?callback=foo'),
 };
 
 const Offers = {
   getOfferList: (winnetid) =>
     requests.get(
-      `getofferlist.json?winnetid=${encode(winnetid)}&callback=foo`
+      `stubs/getofferlist.json?winnetid=${encode(winnetid)}&callback=foo`
     ),
 };
 
 const Properties = {
-  getProperties: () => requests.get("properties.json?callback=foo"),
+  getProperties: () => requests.get("stubs/properties.json?callback=foo"),
 };
 
 const Reservations = {
-  getReservation: () => requests.get("getreservation.json?callback=foo"),
+  getReservation: () => requests.get("stubs/getreservation.json?callback=foo"),
 };
 const Enterprise = {
   getLowestRate: () =>
-    requests.get("lowest_rate_enterprise.json?callback=foo"),
+    requests.get("stubs/lowest_rate_enterprise.json?callback=foo"),
 };
 
 const PriceAlert = {
-  getPriceAlert: () => requests.get("getprice.json?callback=foo"),
+  getPriceAlert: () => requests.get("stubs/getprice.json?callback=foo"),
 };
 
 const Markets = {
-  getMarkets: () => requests.get(`getmarkets.json?callback=foo`),
+  getMarkets: () => requests.get(`stubs/getmarkets.json?callback=foo`),
 };
 
 const Profile = {
   getGuestProfile:(winnetid) =>
-    requests.get(`getguestprofile.json?winnetid=${encode(winnetid)}&callback=foo`),
+    requests.get(`stubs/getguestprofile.json?winnetid=${encode(winnetid)}&callback=foo`),
   getFeeds:() =>
-    requests.get(`crwtiersprogress.json?callback=foo`)
+    requests.get(`stubs/crwtiersprogress.json?callback=foo`)
 };
 
 export default {
