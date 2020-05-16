@@ -48,9 +48,6 @@ const OfferFilter = (props) => {
     }
 
     const marketPropertyListData = getStructuredMarketsPropertiesList(markets);
-    if(!defaultLocation && marketPropertyListData && marketPropertyListData.length) {
-        defaultLocation = marketPropertyListData[0].value;
-    }
     
     return (
         <div>
