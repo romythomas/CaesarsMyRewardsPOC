@@ -1,5 +1,5 @@
 //multiselectlist starts here
-.multiselectlist{
+.multiselectlist {
 	position: relative;
 	.form-control-placeholder, .form-control.txt {
 		cursor: pointer;
@@ -9,7 +9,7 @@
 			outline: none;
 		}
 	}
-	.multiselectlist-content{
+	.multiselectlist-content {
 		background: $custome-white;
 		position: absolute;
 		width: 450px;
@@ -67,6 +67,11 @@
 					margin-left: 10px;
 				}
 			}
+		}
+	}
+	&.active {
+		.multiselectlist-content {
+			display: block;
 		}
 	}
 }
