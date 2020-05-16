@@ -88,7 +88,7 @@ const SearchCalendar = (props) => {
         //If callback event is present in props and date values are valid, pass values to component property
         if (props.onChange && start && start.isValid() && end && end.isValid()) {
             //Update local state value to hide the calendar component
-            setIsActiveState(false);
+            setIsActiveState((isActiveState) => false);
             props.onChange("date", start, end);
         }
     };
@@ -110,7 +110,7 @@ const SearchCalendar = (props) => {
             //If callback event is present in props and date values are valid, pass values to component property
             if (props.onChange && startDate.isValid() && endDate.isValid()) {
                 //Update local state value to hide the calendar component
-                setIsActiveState(false);
+                setIsActiveState((isActiveState) => false);
                 props.onChange("month", startDate, endDate);
             }
         }
@@ -125,9 +125,9 @@ const SearchCalendar = (props) => {
         const { target } = event;
         if (target) {
             if (target.classList.contains("searchBy-Dates")) {
-                setDefaultCalendar("date");
+                setDefaultCalendar((defaultCalendar) => "date");
             } else {
-                setDefaultCalendar("month");
+                setDefaultCalendar((defaultCalendar) => "month");
             }
         }
     };
@@ -145,8 +145,8 @@ const SearchCalendar = (props) => {
      * Update state value to close the calendar component.
      */
     const onClose = () => {
-        setDefaultCalendar(defaultType);
-        setIsActiveState(false);
+        setDefaultCalendar((defaultCalendar) => defaultType);
+        setIsActiveState((isActiveState) => false);
     };
 
     /**
