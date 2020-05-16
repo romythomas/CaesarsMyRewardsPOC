@@ -13,8 +13,6 @@ const MultiSelectList = (props) => {
   const isDefaultValueAvailable = defaultValue && defaultValue.length;
   let selectedValues = isDefaultValueAvailable ? defaultValue : [];
 
-  const activeClassName = isActiveState ? "active" : "";
-
   const onChange = (value) => {
     if (props.onChange) {
       const { target } = value;
@@ -54,8 +52,12 @@ const MultiSelectList = (props) => {
     //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
     return (
       <ClickAwayListener onClickAway={onClose}>
-        <div className={`multiselectlist ${activeClassName}`}>
-          <div className="select-wrap multiselectlist-wrap">
+        <div className={`multiselectlist ${isActiveState ? "open" : ""}`}>
+          <div
+            className={`select-wrap multiselectlist-wrap ${
+              isActiveState ? "active" : ""
+            }`}
+          >
             <input
               className="form-control txt"
               type="text"
