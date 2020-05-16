@@ -4,30 +4,11 @@ import DateRangePicker from "react-daterange-picker";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 /**
- * Defines all jQuery events used to handel the clicks and show/hide.
- */
-const loadScript = () => {
-    $(document).ready(function () {
-        /**
-         * Handles the touchstart event of date cell of date calendar and prevents firing click event while scrolling in mobile.
-         */
-        $(".dateRangeCalendar__item").on("touchstart", ".DateRangePicker__Date", function (event) {
-            if (event && event.cancelable) {
-                event.stopPropagation();
-            }
-        });
-    });
-};
-
-/**
  * Handels the functional component render and its properties.
  * @param {Object} props - Property of the component.
  * @returns {HTMLElement} - Returns HTML to be rendered.
  */
 const SearchCalendar = (props) => {
-    //Load scripts to handle click/touch events
-    loadScript();
-
     //Values that are passed as properties to the component
     const { defaultType, defaultDateValue, defaultMonthValue, calendarId } = props;
     let { minimumDate, maximumDate, title } = props;
@@ -167,6 +148,16 @@ const SearchCalendar = (props) => {
         setDefaultCalendar(defaultType);
         setIsActiveState(false);
     };
+
+    /**
+     * To fix an issue with the npm package.
+     * Handles the touchstart event of date cell of date calendar and prevents firing click event while scrolling in mobile.
+     */
+    $(".dateRangeCalendar__item").on("touchstart", ".DateRangePicker__Date", function (event) {
+        if (event && event.cancelable) {
+            event.stopPropagation();
+        }
+    });
 
     /**********************************************************************************************************
      * Don't change any element IDs, names, class names or HTML structure below, as they are related to the scripts written above.
