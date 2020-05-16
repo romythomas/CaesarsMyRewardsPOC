@@ -11,30 +11,27 @@ const Textbox = (props) => {
     const closeButtonStyleToDisplay = {
         display: isDefaultValueAvailable ? "block" : "none"
     };
-    const componentContainerActiveClass = isDefaultValueAvailable ? "active" : "";
 
-    const onChange = (value) => {
+    const onChange = (event) => {
         if (props.onChange) {
-            const { target } = value;
+            const { target } = event;
             props.onChange(target && target.value ? target.value : "");
         }
     };
 
-    const clearValue = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+    const clearValue = () => {
         if (props.onChange) {
             props.onChange("");
         }
     };
 
     return (
-        <div className={`txt-wrap textComponent ${componentContainerActiveClass}`}>
+        <div className={`txt-wrap textComponent ${isDefaultValueAvailable ? "active" : ""}`}>
             <input className="form-control txt" type="text" value={defaultValue} id={textboxId} onChange={onChange} />
             <label className="form-control-placeholder" htmlFor={textboxId}>
                 {title}
             </label>
-            <a className="close" style={closeButtonStyleToDisplay} href="#" onClick={clearValue}></a>
+            <a className="close" style={closeButtonStyleToDisplay} onClick={clearValue}></a>
         </div>
     );
 };
