@@ -1,67 +1,67 @@
-import React from 'react';
+import React from "react";
 
 const loadScript = () => {
-    $(document).ready(function() {
+    $(document).ready(function () {
         let count = 1;
-        const autocomplete = document.getElementsByClassName('autocomplete')[0];
-        const autocomplete_component = document.getElementById('autocomplete-component');
-        const autocomplete_content = autocomplete_component.querySelector('div.autocomplete-content');
-        const autocomplete_list_array = autocomplete_component.querySelectorAll('li.autocomplete__item');
-        let autocomplete_text_input = autocomplete_component.getElementsByClassName('autocomplete-search')[0];
-        
-        autocomplete_text_input.addEventListener('input', function (e) {
+        const autocomplete = document.getElementsByClassName("autocomplete")[0];
+        const autocomplete_component = document.getElementById("autocomplete-component");
+        const autocomplete_content = autocomplete_component.querySelector("div.autocomplete-content");
+        const autocomplete_list_array = autocomplete_component.querySelectorAll("li.autocomplete__item");
+        let autocomplete_text_input = autocomplete_component.getElementsByClassName("autocomplete-search")[0];
+
+        autocomplete_text_input.addEventListener("input", function (e) {
             for (let i = 0; i < autocomplete_list_array.length; i++) {
-                matching(autocomplete_list_array[i])
+                matching(autocomplete_list_array[i]);
             }
             add_activeClass();
             key_up_down();
         });
-        
-        autocomplete_text_input.addEventListener('click', function (e) {
+
+        autocomplete_text_input.addEventListener("click", function (e) {
             add_activeClass();
             change_valueToPlaceholder();
             init_list();
             key_up_down();
         });
-        
-        autocomplete_text_input.addEventListener('keypress', function (e) {
+
+        autocomplete_text_input.addEventListener("keypress", function (e) {
             const highlightedElement = autocomplete_content.querySelector('[data-highlight="true"]');
-            if(highlightedElement && !highlightedElement.classList.contains("disabled")) {
+            if (highlightedElement && !highlightedElement.classList.contains("disabled")) {
                 if (e.keyCode == 13) {
                     set_selected(highlightedElement);
-                    e.target.value = highlightedElement.querySelector('span').innerText;
+                    e.target.value = highlightedElement.querySelector("span").innerText;
                 }
                 remove_activeClass();
                 init_list();
             }
         });
-        
+
         function matching(item) {
-            let str = new RegExp(autocomplete_text_input.value, 'gi');
+            let str = new RegExp(autocomplete_text_input.value, "gi");
             if (item.dataset.searchcontent.match(str)) {
-                item.dataset.display = 'true'
+                item.dataset.display = "true";
             } else {
-                item.dataset.display = 'false';
-                item.dataset.highlight = 'false';
+                item.dataset.display = "false";
+                item.dataset.highlight = "false";
                 count = 0;
             }
         }
-        
+
         function init_list() {
             count = 0;
             for (let i = 0; i < autocomplete_list_array.length; i++) {
                 init_item(autocomplete_list_array[i]);
-                autocomplete_list_array[i].addEventListener('click', copy_paste);
+                autocomplete_list_array[i].addEventListener("click", copy_paste);
             }
         }
-        
+
         function init_item(item) {
-            item.dataset.display = 'true';
-            item.dataset.highlight = 'false';
+            item.dataset.display = "true";
+            item.dataset.highlight = "false";
         }
 
         function change_valueToPlaceholder() {
-            if(autocomplete_text_input.value) {
+            if (autocomplete_text_input.value) {
                 autocomplete_text_input.placeholder = autocomplete_text_input.value;
             }
             autocomplete_text_input.value = "";
@@ -69,8 +69,8 @@ const loadScript = () => {
 
         function set_selectedToText() {
             const selectedElements = autocomplete_component.querySelectorAll('li.autocomplete__item[data-selected="true"]');
-            if(selectedElements && selectedElements.length) {
-                const selectedValue = selectedElements[0].querySelector('span').innerText;
+            if (selectedElements && selectedElements.length) {
+                const selectedValue = selectedElements[0].querySelector("span").innerText;
                 autocomplete_text_input.setAttribute("value", selectedValue);
                 autocomplete_text_input.value = selectedValue;
             } else {
@@ -80,99 +80,99 @@ const loadScript = () => {
         }
 
         function add_activeClass() {
-            autocomplete.classList.add('active');
+            autocomplete.classList.add("active");
         }
 
         function remove_activeClass() {
-            autocomplete.classList.remove('active');
+            autocomplete.classList.remove("active");
         }
-        
+
         function copy_paste(e) {
             set_selected(this);
-            const selectedValue = this.querySelector('span').innerText;
+            const selectedValue = this.querySelector("span").innerText;
             autocomplete_text_input.setAttribute("value", selectedValue);
             autocomplete_text_input.value = selectedValue;
-            // todo : check match of list text and input value for .current 
+            // todo : check match of list text and input value for .current
             init_list();
             remove_activeClass();
         }
 
         function set_selected(item) {
             const selectedElements = autocomplete_component.querySelectorAll('li.autocomplete__item[data-selected="true"]');
-            if(selectedElements && selectedElements.length) {
+            if (selectedElements && selectedElements.length) {
                 for (let i = 0; i < selectedElements.length; i++) {
-                    selectedElements[i].dataset.selected = 'false';
+                    selectedElements[i].dataset.selected = "false";
                 }
             }
-            item.dataset.selected = 'true';
+            item.dataset.selected = "true";
             remove_activeClass();
         }
-        
+
         function key_up_down() {
             let items = autocomplete_component.querySelectorAll('li.autocomplete__item[data-display="true"]');
             let last = items[items.length - 1];
             let first = items[0];
-            
+
             autocomplete_text_input.onkeydown = function (e) {
                 if (e.keyCode === 38) {
                     count--;
                     count = count <= 0 ? items.length : count;
-                    items[count - 1].dataset.highlight = items[count - 1] ? 'true' : 'false';
+                    items[count - 1].dataset.highlight = items[count - 1] ? "true" : "false";
                     if (items[count]) {
-                        items[count].dataset.highlight = 'false';
+                        items[count].dataset.highlight = "false";
+                    } else {
+                        first.dataset.highlight = "false";
                     }
-                    else {
-                        first.dataset.highlight = 'false';
-                    }
-                } 
-                
+                }
+
                 if (e.keyCode === 40) {
-                    items[count].dataset.highlight = items[count] ? 'true' : 'false';
+                    items[count].dataset.highlight = items[count] ? "true" : "false";
                     if (items[count - 1]) {
-                        items[count - 1].dataset.highlight = 'false';
-                    }
-                    else {
-                        last.dataset.highlight = 'false';
+                        items[count - 1].dataset.highlight = "false";
+                    } else {
+                        last.dataset.highlight = "false";
                     }
                     count++;
                     count = count >= items.length ? 0 : count;
                 }
             };
         }
-        $('.autocomplete .close').on('click touch', function(e) {
+        $(".autocomplete .close").on("click touch", function (e) {
             e.preventDefault();
             e.stopPropagation();
             remove_activeClass();
             set_selectedToText();
         });
-        $(document).on('click', 'body', function(event) {
-            if(event) {
-                const {target} = event;
-                const targetClassName = (target.className) ? "." + target.className : "";
-                if(targetClassName !== "autocomplete" && $(autocomplete_component).find(target).length <= 0) {
+        $(document).on("click", "body", function (event) {
+            if (event) {
+                const { target } = event;
+                const targetClassName = target.className ? "." + target.className : "";
+                if (targetClassName !== "autocomplete" && $(autocomplete_component).find(target).length <= 0) {
                     remove_activeClass();
                     set_selectedToText();
                 }
             }
         });
     });
-}
+};
 
 const Autocomplete = (props) => {
-    const {dataList, defaultValue, stylingClass} = props;
-    let {elementId, title} = props;
+    const { dataList, defaultValue, stylingClass } = props;
+    let { elementId, title } = props;
 
     elementId = elementId ? elementId : "autocomplete-lst-component";
     title = title ? title : "Select Value";
 
-    let dafaultDataDisplay = "", defaultDataValue = "", valueSelectedClassName = "";
+    let dafaultDataDisplay = "",
+        defaultDataValue = "",
+        valueSelectedClassName = "";
 
-    if(dataList && dataList.length) {
-        if(defaultValue) {
+    if (dataList && dataList.length) {
+        if (defaultValue) {
             const dafaultData = dataList.find((data) => {
                 return data.value.toUpperCase() === defaultValue.toUpperCase();
             });
-            if(dafaultData) {
+            if (dafaultData) {
                 dafaultDataDisplay = dafaultData.display;
                 defaultDataValue = dafaultData.value;
                 valueSelectedClassName = "value-selected";
@@ -180,16 +180,16 @@ const Autocomplete = (props) => {
         }
 
         const onClick = (value) => {
-            if(props.onChange) {
-                const {target} = value;
-                if(target) {
+            if (props.onChange) {
+                const { target } = value;
+                if (target) {
                     let valueElement = target.className === "autocomplete__itemname" ? target.parentNode : target;
-                    if(valueElement && valueElement.dataset && valueElement.dataset.value) {
+                    if (valueElement && valueElement.dataset && valueElement.dataset.value) {
                         props.onChange(valueElement.dataset.value);
                     }
                 }
             }
-        }
+        };
 
         loadScript();
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
@@ -210,35 +210,35 @@ const Autocomplete = (props) => {
                     </label>
                 </div>
                 <div className="autocomplete-content">
-                <div className="autocomplete__list">
-                    <ul className="autocomplete__listwrap">
-                    {dataList.map((item, index) => {
-                        let stylingClassToApply = "";
-                        if(item.isStylingRequired) {
-                            stylingClassToApply += "highlight " + (stylingClass ? stylingClass : "");
-                        }
-                        const isSelected = item.value.toUpperCase() === defaultDataValue.toUpperCase();
-                        return (
-                            <li
-                                key={index}
-                                className={"autocomplete__item " + stylingClassToApply}
-                                data-searchcontent={item.searchdata}
-                                data-selected={isSelected.toString()}
-                                data-display="true"
-                                data-value={item.value}
-                                data-highlight="false"
-                                onClick={onClick}
-                            >
-                                <span className="autocomplete__itemname">{item.display}</span>
-                            </li>
-                        );
-                    })}
-                    </ul>
-                </div>
+                    <div className="autocomplete__list">
+                        <ul className="autocomplete__listwrap">
+                            {dataList.map((item, index) => {
+                                let stylingClassToApply = "";
+                                if (item.isStylingRequired) {
+                                    stylingClassToApply += "highlight " + (stylingClass ? stylingClass : "");
+                                }
+                                const isSelected = item.value.toUpperCase() === defaultDataValue.toUpperCase();
+                                return (
+                                    <li
+                                        key={index}
+                                        className={"autocomplete__item " + stylingClassToApply}
+                                        data-searchcontent={item.searchdata}
+                                        data-selected={isSelected.toString()}
+                                        data-display="true"
+                                        data-value={item.value}
+                                        data-highlight="false"
+                                        onClick={onClick}
+                                    >
+                                        <span className="autocomplete__itemname">{item.display}</span>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
                 </div>
             </div>
         );
     }
-}
+};
 
 export default Autocomplete;
