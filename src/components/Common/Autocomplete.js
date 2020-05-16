@@ -165,7 +165,7 @@ const Autocomplete = (props) => {
     elementId = elementId ? elementId : "autocomplete-lst-component";
     title = title ? title : "Select Value";
 
-    let dafaultDataDisplay = "", defaultDataValue = "";
+    let dafaultDataDisplay = "", defaultDataValue = "", valueSelectedClassName = "";
 
     if(dataList && dataList.length) {
         if(defaultValue) {
@@ -175,6 +175,7 @@ const Autocomplete = (props) => {
             if(dafaultData) {
                 dafaultDataDisplay = dafaultData.display;
                 defaultDataValue = dafaultData.value;
+                valueSelectedClassName = "value-selected";
             }
         }
 
@@ -193,7 +194,7 @@ const Autocomplete = (props) => {
         loadScript();
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
         return (
-            <div className="autocomplete" id="autocomplete-component">
+            <div className={`autocomplete ${valueSelectedClassName}`} id="autocomplete-component">
                 <span className="close"></span>
                 <div className="select-wrap">
                     <input
@@ -208,7 +209,7 @@ const Autocomplete = (props) => {
                         {title}
                     </label>
                 </div>
-                <div className="autocomplete-content" data-toggle="false">
+                <div className="autocomplete-content">
                 <div className="autocomplete__list">
                     <ul className="autocomplete__listwrap">
                     {dataList.map((item, index) => {
