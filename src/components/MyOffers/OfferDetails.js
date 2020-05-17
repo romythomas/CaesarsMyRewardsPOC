@@ -152,7 +152,7 @@ class OfferDetails extends Component {
                                 </div>
                             </div>
                             <div className="col-sm-6 col-xs-12">
-                                <button className="button" id="book" onClick={this.gotoBookingWebsite}>
+                                <button className="button" id="btn_goto_booking_website" onClick={this.gotoBookingWebsite}>
                                     Book
                                 </button>
                             </div>
