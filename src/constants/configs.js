@@ -3,7 +3,7 @@ const staticFilesDomain = "https://caesarspoc.s3.us-east-2.amazonaws.com";
 
 export const getOfferFilterTypes = () => {
     return ["Hotel", "Cash", "Gaming", "Entertainment", "Events", "Dining", "Other", "Package", "Favorite"];
-}
+};
 
 export const getOfferSortTypes = () => {
     return [
@@ -16,12 +16,16 @@ export const getOfferSortTypes = () => {
             name: "Preference"
         }
     ];
-}
+};
 
-export const getImageUrl =()=>{
-    return caesarsDomain + '/myrewards/profile/images/tr-placeholder.jpg';
-}
+export const getCaesarsDomain = () => {
+    return caesarsDomain;
+};
 
-export const getApiRootUrl =() =>{
+export const getImageUrl = () => {
+    return caesarsDomain + "/myrewards/profile/images/tr-placeholder.jpg";
+};
+
+export const getApiRootUrl = () => {
     return staticFilesDomain + "/stubs/";
-}
+};
