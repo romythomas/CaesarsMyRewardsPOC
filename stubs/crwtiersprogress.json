@@ -1,0 +1,346 @@
+{
+  "timestamp": "01-22-2020 11:30:00 AM",
+  "note": "The order of objects in this list is important",
+  "markertemplates": [
+    {
+      "index": "0",
+      "progressbarDivisor": "15000",
+      "progressbarOrigin": "0",
+      "marker": [
+        {
+          "displayPosition": "0%",
+          "markerText": "GOLD"
+        },
+        {
+          "displayPosition": "33.3%",
+          "markerText": "PLATINUM",
+          "tierAmount": "5,000"
+        },
+        {
+          "displayPosition": "100%",
+          "markerText": "DIAMOND",
+          "tierAmount": "15,000",
+          "markerClass": "last"
+        }
+      ]
+    },
+    {
+      "index": "1",
+      "progressbarDivisor": "135000",
+      "progressbarOrigin": "15000",
+      "marker": [
+        {
+          "displayPosition": "0%",
+          "markerText": "DIAMOND",
+          "tierAmount": "15,000"
+        },
+        {
+          "displayPosition": "7.4%",
+          "markerText": "DIAMOND PLUS",
+          "tierAmount": "25,000"
+        },
+        {
+          "displayPosition": "37%",
+          "markerText": "DIAMOND ELITE",
+          "tierAmount": "75,000"
+        },
+        {
+          "displayPosition": "100%",
+          "markerText": "SEVEN STARS",
+          "tierAmount": "150,000",
+          "markerClass": "last"
+        }
+      ]
+    },
+    {
+      "index": "2",
+      "progressbarDivisor": "50000",
+      "progressbarOrigin": "0",
+      "marker": [
+        {
+          "displayPosition": "100%",
+          "markerText": "EXPERIENCE CREDIT",
+          "tierAmount": "SIGNATURE",
+          "markerClass": "last"
+        }
+      ]
+    }
+  ],
+  "tiers": [
+    {
+      "description": "<p>Receive personalized offers and comps, including free or discounted hotel rooms.</p><p>Plus, you can turn Reward Credits into free play! <a href='https://www.caesars.com/content/cet-global/caesars-com/myrewards/benefits-overview.html'>SEE FULL BENEFITS</a></p>",
+      "name": "GOLD",
+      "mobiledescription": "Receive personalized offers and comps, including free or discounted hotel rooms. Plus, you can turn Reward Credits into free play!",
+      "cardImageUrl": "/content/dam/caesars-rewards/card/cr-gold-card.png"
+    },
+    {
+      "description": "<p>With your Platinum status, enjoy additional benefits like one free night in Las Vegas or Atlantic City, free valet and self-parking, extra discounts at casino gift shops, and a complimentary stay at Atlantis, Paradise Island. <a href='https://www.caesars.com/content/cet-global/caesars-com/myrewards/benefits-overview.html'>SEE FULL BENEFITS</a></p>",
+      "name": "PLATINUM",
+      "mobiledescription": "With your Platinum status, enjoy additional benefits like one free night in Las Vegas or Atlantic City, free valet and self-parking, extra discounts at casino gift shops, and a complimentary stay at Atlantis, Paradise Island.",
+      "cardImageUrl": "/content/dam/caesars-rewards/card/cr-platinum-card.png"
+    },
+    {
+      "description": "<p>Enjoy even more benefits with your Diamond status. No resort fees on any hotel stay, a $100 Celebration Dinner, as well as access to Laurel Lounges and priority lines at hotel check-in, restaurants and casino cages. <a href='https://www.caesars.com/content/cet-global/caesars-com/myrewards/benefits-overview.html'>SEE FULL BENEFITS</a></p>",
+      "name": "DIAMOND",
+      "mobiledescription": "Enjoy even more benefits with your Diamond status. No resort fees on any hotel stay, a $100 Celebration Dinner, as well as access to Laurel Lounges and priority lines at hotel check-in, restaurants and casino cages.",
+      "cardImageUrl": "/content/dam/caesars-rewards/card/cr-diamond-card.png"
+    },
+    {
+      "description": "<p>Enjoy complimentary Laurel Lounge access with your Diamond Plus status, along with your favorite Diamond benefits like no resort fees on any hotel stay and priority lines at hotel check-in, restaurants and casino cages. <a href='https://www.caesars.com/content/cet-global/caesars-com/myrewards/benefits-overview.html'>SEE FULL BENEFITS</a></p>",
+      "name": "DIAMOND PLUS",
+      "mobiledescription": "Enjoy complimentary Laurel Lounge access with your Diamond Plus status, along with your favorite Diamond benefits like no resort fees on any hotel stay and priority lines at hotel check-in, restaurants and casino cages.",
+      "cardImageUrl": "/content/dam/caesars-rewards/card/cr-diamond-plus.png"
+    },
+    {
+      "description": "<p>Take advantage of a $600 airfare credit to Las Vegas with your Diamond Elite status, as well as complimentary Laurel Lounge access, no resort fees on any hotel stay, and more. <a href='https://www.caesars.com/content/cet-global/caesars-com/myrewards/benefits-overview.html'>SEE FULL BENEFITS</a></p>",
+      "name": "DIAMOND ELITE",
+      "mobiledescription": "Take advantage of a $600 airfare credit to Las Vegas with your Diamond Elite status, as well as complimentary Laurel Lounge access, no resort fees on any hotel stay, and more.",
+      "cardImageUrl": "/content/dam/caesars-rewards/card/cr-diamond-elite.png"
+    },
+    {
+      "description": "<p>As a Seven Stars member, you receive VIP treatment through and through, from unforgettable trips to access like no other. <a href='https://www.caesars.com/content/cet-global/caesars-com/myrewards/sevenstars.html'>SEE FULL BENEFITS</a></p><p>Surpass the threshold of Seven Stars status and unlock one-of-a-kind Signature Experiences. <a href='/content/cet-global/caesars-com/myrewards/sevenstars/signature-experiences.html'>LEARN MORE</a></p>",
+      "name": "SEVEN STARS",
+      "mobiledescription": "As a Seven Stars member, you receive VIP treatment through and through, from unforgettable trips to access like no other.",
+      "cardImageUrl": "/content/dam/caesars-rewards/card/cr-seven-stars.png"
+    }
+  ],
+  "brackets": [
+    {
+      "score": "5000",
+      "tiers": [
+        {
+          "tier": "GOLD",
+          "creditsMinuend": "5000",
+          "progressBarMessage": "Tier Credits needed this calendar year to reach",
+          "tierText": "Platinum Status",
+          "markerTemplate": "0"
+        },
+        {
+          "tier": "PLATINUM",
+          "creditsMinuend": "5000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Platinum Status",
+          "markerTemplate": "0"
+        },
+        {
+          "tier": "DIAMOND",
+          "creditsMinuend": "15000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Diamond Status",
+          "markerTemplate": "0"
+        },
+        {
+          "tier": "DIAMOND PLUS",
+          "creditsMinuend": "25000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Diamond Plus Status",
+          "markerTemplate": "0"
+        },
+        {
+          "tier": "DIAMOND ELITE",
+          "creditsMinuend": "75000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Diamond Elite Status",
+          "markerTemplate": "0"
+        },
+        {
+          "tier": "SEVEN STARS",
+          "creditsMinuend": "150000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Seven Stars Status",
+          "markerTemplate": "0"
+        }
+      ]
+    },
+    {
+      "score": "15000",
+      "tiers": [
+        {
+          "tier": "GOLD",
+          "hide": "true"
+        },
+        {
+          "tier": "PLATINUM",
+          "creditsMinuend": "15000",
+          "progressBarMessage": "Tier Credits needed this calendar year to reach",
+          "tierText": "Diamond Status",
+          "markerTemplate": "0"
+        },
+        {
+          "tier": "DIAMOND",
+          "creditsMinuend": "15000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Diamond Status",
+          "markerTemplate": "0"
+        },
+        {
+          "tier": "DIAMOND PLUS",
+          "creditsMinuend": "25000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Diamond Plus Status",
+          "markerTemplate": "0"
+        },
+        {
+          "tier": "DIAMOND ELITE",
+          "creditsMinuend": "75000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Diamond Elite Status",
+          "markerTemplate": "0"
+        },
+        {
+          "tier": "SEVEN STARS",
+          "creditsMinuend": "150000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Seven Stars Status",
+          "markerTemplate": "0"
+        }
+      ]
+    },
+    {
+      "score": "25000",
+      "tiers": [
+        {
+          "tier": "GOLD",
+          "hide": "true"
+        },
+        {
+          "tier": "PLATINUM",
+          "hide": "true"
+        },
+        {
+          "tier": "DIAMOND",
+          "creditsMinuend": "25000",
+          "progressBarMessage": "Tier Credits needed this calendar year to be eligible for",
+          "tierText": "Diamond Plus Status",
+          "markerTemplate": "1"
+        },
+        {
+          "tier": "DIAMOND PLUS",
+          "creditsMinuend": "25000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Diamond Plus Status",
+          "markerTemplate": "1"
+        },
+        {
+          "tier": "DIAMOND ELITE",
+          "creditsMinuend": "75000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Diamond Elite Status",
+          "markerTemplate": "1"
+        },
+        {
+          "tier": "SEVEN STARS",
+          "creditsMinuend": "150000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Seven Stars Status",
+          "markerTemplate": "1"
+        }
+      ]
+    },
+    {
+      "score": "75000",
+      "tiers": [
+        {
+          "tier": "GOLD",
+          "hide": "true"
+        },
+        {
+          "tier": "PLATINUM",
+          "hide": "true"
+        },
+        {
+          "tier": "DIAMOND",
+          "hide": "true"
+        },
+        {
+          "tier": "DIAMOND PLUS",
+          "creditsMinuend": "75000",
+          "progressBarMessage": "Tier Credits needed this calendar year to be eligible for",
+          "tierText": "Diamond Elite Status",
+          "markerTemplate": "1"
+        },
+        {
+          "tier": "DIAMOND ELITE",
+          "creditsMinuend": "75000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Diamond Elite Status",
+          "markerTemplate": "1"
+        },
+        {
+          "tier": "SEVEN STARS",
+          "creditsMinuend": "150000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Seven Stars Status",
+          "markerTemplate": "1"
+        }
+      ]
+    },
+    {
+      "score": "150000",
+      "tiers": [
+        {
+          "tier": "GOLD",
+          "hide": "true"
+        },
+        {
+          "tier": "PLATINUM",
+          "hide": "true"
+        },
+        {
+          "tier": "DIAMOND",
+          "hide": "true"
+        },
+        {
+          "tier": "DIAMOND PLUS",
+          "hide": "true"
+        },
+        {
+          "tier": "DIAMOND ELITE",
+          "creditsMinuend": "150000",
+          "progressBarMessage": "Tier Credits needed this calendar year to be eligible for",
+          "tierText": "Seven Stars Status",
+          "markerTemplate": "1"
+        },
+        {
+          "tier": "SEVEN STARS",
+          "creditsMinuend": "150000",
+          "progressBarMessage": "Tier Credits needed this calendar year to maintain",
+          "tierText": "Seven Stars Status",
+          "markerTemplate": "1"
+        }
+      ]
+    },
+    {
+      "score": "100000000",
+      "tiers": [
+        {
+          "tier": "GOLD",
+          "hide": "true"
+        },
+        {
+          "tier": "PLATINUM",
+          "hide": "true"
+        },
+        {
+          "tier": "DIAMOND",
+          "hide": "true"
+        },
+        {
+          "tier": "DIAMOND PLUS",
+          "hide": "true"
+        },
+        {
+          "tier": "DIAMOND ELITE",
+          "hide": "true"
+        },
+        {
+          "tier": "SEVEN STARS",
+          "progressBarMessage": "Tier Credits needed this calendar year to reach your next",
+          "tierText": "Seven Stars Signature Experience Credit",
+          "tierTextHref": "/myrewards/sevenstars/signature-experiences",
+          "markerTemplate": "2"
+        }
+      ]
+    }
+  ]
+}

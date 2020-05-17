@@ -1,0 +1,23 @@
+{
+  "header": {
+    "status": "SUCCESS"
+  },
+  "offers": [
+    {
+      "id": "1K3VWA060H44",
+      "displayid": "1K3VWA060H44",
+      "title": "Up to 4 Nts\/wk-APR Sun-Thurs",
+      "description": "Get up to 4 free nights Sunday-Thursday per week at Harrah's Resort SoCal valid 04\/01-05\/07\/20. For reservations, book now at caesars.com using the Book It button or call 1-888-215-4318 and mention offer code RIN2K7Z.",
+      "start": "2020-04-01T00:00:00",
+      "end": "2020-05-07T23:59:59",
+      "source": "pdb",
+      "status": "Bookable",
+      "pref": "N",
+      "ruleId": "1K3VWA060H44",
+      "propertyList": [
+        "RIN"
+      ],
+      "type": "Hotel"
+    }
+]
+}

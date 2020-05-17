@@ -1,0 +1,19 @@
+{
+  "logininfo": {
+    "token": "*8Yen0SfiPAOIMLRwFEtN4ohp5Lys3suakwvy*C1RTCWlA3AssoI3BxKqqy1Pmz6AOleTH95nI7aFonS7yvxCE*kbjuGeYyb60AlH54G43l43JbpYPVbW2/Ex7MMJkt3vjc9TUl*CWRehLePNEaYYDicwlqttCdzXEUszhJL9dRgjvZfowcjyXrZCZeJ4gljjEWyvxQ3MN4MUtAB*3YQxBLt1eovumG95QYj6SESmYfc7LCWBCbPyTeBBSdhNd5SeDtw2fMOv035NATkQT4wmVA==",
+    "oauthtoken": "db7d420a-a767-44ac-a9ae-dbca8abeaf9f",
+    "accountid": "11503550945",
+    "tier": "G",
+    "firstname": "TRTEST",
+    "lastname": "TEST",
+    "accountbalance": "3947",
+    "zip": "94945",
+    "domprop": "CLV",
+    "dob": "-817585200000",
+    "username": "PRODUCTIONTR",
+    "restrictedstatus": "",
+    "source": "TRAS",
+    "expires": "1585144692069",
+    "tierscore": "1053"
+  }
+}

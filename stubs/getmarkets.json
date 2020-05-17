@@ -1,0 +1,845 @@
+{
+  "GetMarketsResult": [
+    {
+      "Act": true,
+      "Code": "LVM",
+      "ContentLink": "",
+      "Description": " The fabulous Las Vegas Market",
+      "GeoLocation": {
+        "City": null,
+        "Id": 0,
+        "Latitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "Longitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "State": null
+      },
+      "Id": 4,
+      "Msg": null,
+      "Name": "Las Vegas",
+      "ParentLocation": {
+        "Act": true,
+        "Code": "NV",
+        "ContentLink": "",
+        "Description": "The state of NV",
+        "Id": 3,
+        "Msg": null,
+        "Name": "NV",
+        "ParentLocation": {
+          "Act": true,
+          "Code": "USA",
+          "ContentLink": "",
+          "Description": "Nifty, Fifty United States",
+          "Id": 2,
+          "Msg": null,
+          "Name": "United States",
+          "ParentLocation": {
+            "Act": true,
+            "Code": "Earth",
+            "ContentLink": "",
+            "Description": "Third Rock from the sun",
+            "Id": 1,
+            "Msg": null,
+            "Name": "Earth"
+          }
+        }
+      },
+      "Properties": [
+        {
+          "Act": true,
+          "Code": "CLV",
+          "Description": "The fabulous CLV Property of the Las Vegas Market",
+          "Id": 5,
+          "Msg": null,
+          "Name": "Caesars Palace",
+          "LMSPropCode": "CLV",
+          "PropertyId": 167
+        },
+        {
+          "Act": true,
+          "Code": "CL1",
+          "ContentLink": "",
+          "Description": "The fabulous CL1 Property of the Las Vegas Market",
+          "Id": 6,
+          "Msg": null,
+          "Name": "Nobu Hotel at Caesars Palace",
+          "LMSPropCode": "CLV",
+          "PropertyId": 167
+        },
+        {
+          "Act": true,
+          "Code": "PHV",
+          "Description": "The fabulous PHV Property of the Las Vegas Market",
+          "Id": 7,
+          "Msg": null,
+          "Name": "Planet Hollywood",
+          "LMSPropCode": "PHV",
+          "PropertyId": 112
+        },
+        {
+          "Act": true,
+          "Code": "RLV",
+          "Description": "The fabulous RLV Property of the Las Vegas Market",
+          "Id": 8,
+          "Msg": null,
+          "Name": "Rio All-Suite Hotel & Casino",
+          "LMSPropCode": "RLV",
+          "PropertyId": 170
+        },
+        {
+          "Act": true,
+          "Code": "LAS",
+          "Description": "The fabulous LAS Property of the Las Vegas Market",
+          "Id": 9,
+          "Msg": null,
+          "Name": "Harrah's Las Vegas",
+          "LMSPropCode": "LAS",
+          "PropertyId": 104
+        },
+        {
+          "Act": true,
+          "Code": "PLV",
+          "Description": "The fabulous PLV Property of the Las Vegas Market",
+          "Id": 10,
+          "Msg": null,
+          "Name": "Paris Las Vegas",
+          "LMSPropCode": "PLV",
+          "PropertyId": 176
+        },
+        {
+          "Act": true,
+          "Code": "FLV",
+          "Description": "The fabulous FLV Property of the Las Vegas Market",
+          "Id": 11,
+          "Msg": null,
+          "Name": "Flamingo Las Vegas",
+          "LMSPropCode": "FLV",
+          "PropertyId": 159
+        },
+        {
+          "Act": true,
+          "Code": "BLV",
+          "Description": "The fabulous BLV Property of the Las Vegas Market",
+          "Id": 12,
+          "Msg": null,
+          "Name": "Bally's Las Vegas",
+          "LMSPropCode": "BLV",
+          "PropertyId": 175
+        },
+        {
+          "Act": true,
+          "Code": "ILV",
+          "Description": "The fabulousThe LINQ Hotel & Casino of the Las Vegas Market",
+          "Id": 13,
+          "Msg": null,
+          "Name": "The LINQ Hotel & Casino",
+          "LMSPropCode": "ILV",
+          "PropertyId": 110
+        },
+        {
+          "Act": true,
+          "Code": "DLV",
+          "Description": "Signature luxury boutique experience ",
+          "Id": 67,
+          "Msg": null,
+          "Name": "The Cromwell",
+          "LMSPropCode": "DLV",
+          "PropertyId": 103
+        }
+      ],
+      "Venues": null
+    },
+    {
+      "Act": true,
+      "Code": "ACM",
+      "Description": " The fabulous Atlantic City Market",
+      "GeoLocation": {
+        "City": null,
+        "Id": 0,
+        "Latitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "Longitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "State": null
+      },
+      "Id": 15,
+      "Msg": "none",
+      "Name": "Atlantic City",
+      "ParentLocation": {
+        "Act": true,
+        "Code": "NJ",
+        "ContentLink": "",
+        "Description": "The state of NJ",
+        "Id": 14,
+        "Msg": null,
+        "Name": "NJ",
+        "ParentLocation": {
+          "Act": true,
+          "Code": "USA",
+          "ContentLink": "",
+          "Description": "Nifty, Fifty United States",
+          "Id": 2,
+          "Msg": null,
+          "Name": "United States",
+          "ParentLocation": {
+            "Act": true,
+            "Code": "Earth",
+            "ContentLink": "",
+            "Description": "Third Rock from the sun",
+            "Id": 1,
+            "Msg": null,
+            "Name": "Earth"
+          }
+        }
+      },
+      "Properties": [
+        {
+          "Act": true,
+          "Code": "ATL",
+          "Description": "The fabulous ATL Property of the Atlantic City Market",
+          "Id": 16,
+          "Msg": null,
+          "Name": "Harrah's Resort Atlantic City",
+          "LMSPropCode": "ATL",
+          "PropertyId": 157
+        },
+        {
+          "Act": true,
+          "Code": "CAC",
+          "Description": "The fabulous CAC Property of the Atlantic City Market",
+          "Id": 17,
+          "Msg": null,
+          "Name": "Caesars Atlantic City",
+          "LMSPropCode": "CAC",
+          "PropertyId": 168
+        },
+        {
+          "Act": true,
+          "Code": "BAC",
+          "Description": "The fabulous BAC Property of the Atlantic City Market",
+          "Id": 19,
+          "Msg": null,
+          "Name": "Bally's Atlantic City",
+          "LMSPropCode": "BAC",
+          "PropertyId": 177
+        }
+      ],
+      "Venues": null
+    },
+    {
+      "Act": true,
+      "Code": "RNO",
+      "ContentLink": "",
+      "Description": " The fabulous Reno\/Tahoe Market",
+      "GeoLocation": {
+        "City": null,
+        "Id": 0,
+        "Latitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "Longitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "State": null
+      },
+      "Id": 20,
+      "Msg": null,
+      "Name": "Reno\/Tahoe",
+      "ParentLocation": {
+        "Act": true,
+        "Code": "NV",
+        "ContentLink": "",
+        "Description": "The state of NV",
+        "Id": 3,
+        "Msg": null,
+        "Name": "NV",
+        "ParentLocation": {
+          "Act": true,
+          "Code": "USA",
+          "ContentLink": "",
+          "Description": "Nifty, Fifty United States",
+          "Id": 2,
+          "Msg": null,
+          "Name": "United States",
+          "ParentLocation": {
+            "Act": true,
+            "Code": "Earth",
+            "ContentLink": "",
+            "Description": "Third Rock from the sun",
+            "Id": 1,
+            "Msg": null,
+            "Name": "Earth"
+          }
+        }
+      },
+      "Properties": [
+        {
+          "Act": true,
+          "Code": "TAH",
+          "Description": "The fabulous TAH Property of the Reno\/Tahoe Market",
+          "Id": 21,
+          "Msg": null,
+          "Name": "Harrah's Lake Tahoe",
+          "LMSPropCode": "TAH",
+          "PropertyId": 114
+        },
+        {
+          "Act": true,
+          "Code": "HLT",
+          "Description": "The fabulous HLT Property of the Reno\/Tahoe Market",
+          "Id": 22,
+          "Msg": null,
+          "Name": "Harveys Lake Tahoe",
+          "LMSPropCode": "HLT",
+          "PropertyId": 142
+        },
+        {
+          "Act": true,
+          "Code": "REN",
+          "Description": "The fabulous REN Property of the Reno\/Tahoe Market",
+          "Id": 23,
+          "Msg": null,
+          "Name": "Harrah's Reno",
+          "LMSPropCode": "REN",
+          "PropertyId": 115
+        }
+      ],
+      "Venues": null
+    },
+    {
+      "Act": true,
+      "Code": "NMM",
+      "ContentLink": "",
+      "Description": " The fabulous Tunica Market",
+      "GeoLocation": {
+        "City": null,
+        "Id": 0,
+        "Latitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "Longitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "State": null
+      },
+      "Id": 25,
+      "Msg": null,
+      "Name": "Tunica",
+      "ParentLocation": {
+        "Act": true,
+        "Code": "MS",
+        "ContentLink": "",
+        "Description": "The state of MS",
+        "Id": 24,
+        "Msg": null,
+        "Name": "MS",
+        "ParentLocation": {
+          "Act": true,
+          "Code": "USA",
+          "ContentLink": "",
+          "Description": "Nifty, Fifty United States",
+          "Id": 2,
+          "Msg": null,
+          "Name": "United States",
+          "ParentLocation": {
+            "Act": true,
+            "Code": "Earth",
+            "ContentLink": "",
+            "Description": "Third Rock from the sun",
+            "Id": 1,
+            "Msg": null,
+            "Name": "Earth"
+          }
+        }
+      },
+      "Properties": [
+        {
+          "Act": true,
+          "Code": "UTU",
+          "Description": "The fabulous UTU Property of the Tunica Market",
+          "Id": 27,
+          "Msg": null,
+          "Name": "Horseshoe Tunica",
+          "LMSPropCode": "UTU",
+          "PropertyId": 152
+        }
+      ],
+      "Venues": null
+    },
+    {
+      "Act": true,
+      "Code": "GCM",
+      "ContentLink": "",
+      "Description": " The fabulous New Orleans\/Biloxi Market",
+      "GeoLocation": {
+        "City": null,
+        "Id": 0,
+        "Latitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "Longitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "State": null
+      },
+      "Id": 30,
+      "Msg": null,
+      "Name": "New Orleans\/Biloxi",
+      "ParentLocation": {
+        "Act": true,
+        "Code": "LA",
+        "ContentLink": "",
+        "Description": "The state of LA",
+        "Id": 29,
+        "Msg": null,
+        "Name": "LA",
+        "ParentLocation": {
+          "Act": true,
+          "Code": "USA",
+          "ContentLink": "",
+          "Description": "Nifty, Fifty United States",
+          "Id": 2,
+          "Msg": null,
+          "Name": "United States",
+          "ParentLocation": {
+            "Act": true,
+            "Code": "Earth",
+            "ContentLink": "",
+            "Description": "Third Rock from the sun",
+            "Id": 1,
+            "Msg": null,
+            "Name": "Earth"
+          }
+        }
+      },
+      "Properties": [
+        {
+          "Act": true,
+          "Code": "NOR",
+          "Description": "The fabulous NOR Property of the New Orleans\/Biloxi Market",
+          "Id": 31,
+          "Msg": null,
+          "Name": "Harrah's New Orleans",
+          "LMSPropCode": "NOR",
+          "PropertyId": 122
+        },
+        {
+          "Act": true,
+          "Code": "GBI",
+          "Description": "The fabulous GBI Property of the New Orleans\/Biloxi Market",
+          "Id": 32,
+          "Msg": null,
+          "Name": "Harrah's Gulf Coast",
+          "LMSPropCode": "GBI",
+          "PropertyId": 183
+        }
+      ],
+      "Venues": null
+    },
+    {
+      "Act": true,
+      "Code": "IAM",
+      "ContentLink": "",
+      "Description": " The fabulous Council Bluffs Market",
+      "GeoLocation": {
+        "City": null,
+        "Id": 0,
+        "Latitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "Longitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "State": null
+      },
+      "Id": 34,
+      "Msg": null,
+      "Name": "Council Bluffs",
+      "ParentLocation": {
+        "Act": true,
+        "Code": "IA",
+        "ContentLink": "",
+        "Description": "The state of IA",
+        "Id": 33,
+        "Msg": null,
+        "Name": "IA",
+        "ParentLocation": {
+          "Act": true,
+          "Code": "USA",
+          "ContentLink": "",
+          "Description": "Nifty, Fifty United States",
+          "Id": 2,
+          "Msg": null,
+          "Name": "United States",
+          "ParentLocation": {
+            "Act": true,
+            "Code": "Earth",
+            "ContentLink": "",
+            "Description": "Third Rock from the sun",
+            "Id": 1,
+            "Msg": null,
+            "Name": "Earth"
+          }
+        }
+      },
+      "Properties": [
+        {
+          "Act": true,
+          "Code": "COU",
+          "Description": "The fabulous COU Property of the Council Bluffs Market",
+          "Id": 35,
+          "Msg": null,
+          "Name": "Harrah's Council Bluffs",
+          "LMSPropCode": "COU",
+          "PropertyId": 136
+        },
+        {
+          "Act": true,
+          "Code": "HBR",
+          "Description": "The fabulous HBR Property of the Council Bluffs Market",
+          "Id": 36,
+          "Msg": null,
+          "Name": "Horseshoe Council Bluffs",
+          "LMSPropCode": "HBR",
+          "PropertyId": 141
+        }
+      ],
+      "Venues": null
+    },
+    {
+      "Act": true,
+      "Code": "BOS",
+      "ContentLink": "",
+      "Description": " The fabulous Bossier Market",
+      "GeoLocation": {
+        "City": null,
+        "Id": 0,
+        "Latitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "Longitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "State": null
+      },
+      "Id": 37,
+      "Msg": null,
+      "Name": "Bossier",
+      "ParentLocation": {
+        "Act": true,
+        "Code": "LA",
+        "ContentLink": "",
+        "Description": "The state of LA",
+        "Id": 29,
+        "Msg": null,
+        "Name": "LA",
+        "ParentLocation": {
+          "Act": true,
+          "Code": "USA",
+          "ContentLink": "",
+          "Description": "Nifty, Fifty United States",
+          "Id": 2,
+          "Msg": null,
+          "Name": "United States",
+          "ParentLocation": {
+            "Act": true,
+            "Code": "Earth",
+            "ContentLink": "",
+            "Description": "Third Rock from the sun",
+            "Id": 1,
+            "Msg": null,
+            "Name": "Earth"
+          }
+        }
+      },
+      "Properties": [
+        {
+          "Act": true,
+          "Code": "LAD",
+          "ContentLink": "",
+          "Description": "The fabulous LAD Property of the Bossier Market",
+          "Id": 38,
+          "Msg": null,
+          "Name": "Harrah's Louisiana Downs",
+          "LMSPropCode": "LAD",
+          "PropertyId": 140
+        },
+        {
+          "Act": true,
+          "Code": "UBC",
+          "Description": "The fabulous UBC Property of the Bossier Market",
+          "Id": 39,
+          "Msg": null,
+          "Name": "Horseshoe Bossier City",
+          "LMSPropCode": "UBC",
+          "PropertyId": 150
+        }
+      ],
+      "Venues": null
+    },
+    {
+      "Act": true,
+      "Code": "OTH",
+      "ContentLink": "",
+      "Description": "",
+      "GeoLocation": {
+        "City": null,
+        "Id": 0,
+        "Latitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "Longitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "State": null
+      },
+      "Id": 46,
+      "Msg": null,
+      "Name": "Other",
+      "Properties": [
+        {
+          "Act": true,
+          "Code": "WCL",
+          "ContentLink": "",
+          "Description": "The fabulous WCL Property of the Other Market",
+          "Id": 45,
+          "Msg": null,
+          "Name": "Caesars Windsor",
+          "LMSPropCode": "WCL",
+          "PropertyId": 144
+        },
+        {
+          "Act": true,
+          "Code": "CHE",
+          "ContentLink": "",
+          "Description": "The fabulous CHE Property of the Other Market",
+          "Id": 48,
+          "Msg": null,
+          "Name": "Harrah's Cherokee",
+          "LMSPropCode": "CHE",
+          "PropertyId": 107
+        },
+        {
+          "Act": true,
+          "Code": "JOL",
+          "ContentLink": "",
+          "Description": "The fabulous JOL Property of the Other Market",
+          "Id": 50,
+          "Msg": null,
+          "Name": "Harrah's Joliet",
+          "LMSPropCode": "JOL",
+          "PropertyId": 131
+        },
+        {
+          "Act": true,
+          "Code": "LAU",
+          "Description": "The fabulous LAU Property of the Other Market",
+          "Id": 51,
+          "Msg": null,
+          "Name": "Harrah's Laughlin",
+          "LMSPropCode": "LAU",
+          "PropertyId": 118
+        },
+        {
+          "Act": true,
+          "Code": "CCR",
+          "Description": "The fabulous CCR Property of the Other Market",
+          "Id": 53,
+          "Msg": null,
+          "Name": "Harrah's Philadelphia",
+          "LMSPropCode": "CCR",
+          "PropertyId": 139
+        },
+        {
+          "Act": true,
+          "Code": "MET",
+          "ContentLink": "",
+          "Description": "The fabulous MET Property of the Other Market",
+          "Id": 54,
+          "Msg": null,
+          "Name": "Harrah's Metropolis",
+          "LMSPropCode": "MET",
+          "PropertyId": 134
+        },
+        {
+          "Act": true,
+          "Code": "NKC",
+          "Description": "The fabulous NKC Property of the Other Market",
+          "Id": 56,
+          "Msg": null,
+          "Name": "Harrah's North Kansas City",
+          "LMSPropCode": "NKC",
+          "PropertyId": 121
+        },
+        {
+          "Act": true,
+          "Code": "AKC",
+          "ContentLink": "",
+          "Description": "The fabulous AKC Property of the Other Market",
+          "Id": 58,
+          "Msg": null,
+          "Name": "Harrah's Ak-Chin",
+          "LMSPropCode": "AKC",
+          "PropertyId": 126
+        },
+        {
+          "Act": true,
+          "Code": "RIN",
+          "Description": "Come out and play at Harrah's Resort Southern California, the fun, friendly San Diego casino and AAA Four Diamond Award winning San Diego hotel.",
+          "Id": 60,
+          "Msg": null,
+          "Name": "Harrah's Resort Southern California",
+          "LMSPropCode": "RIN",
+          "PropertyId": 135
+        },
+        {
+          "Act": true,
+          "Code": "UHA",
+          "Description": "The fabulous UHA Property of the Other Market",
+          "Id": 62,
+          "Msg": null,
+          "Name": "Horseshoe Hammond",
+          "LMSPropCode": "UHA",
+          "PropertyId": 151
+        },
+        {
+          "Act": true,
+          "Code": "UEL",
+          "Description": "The fabulous UEL Property of the Other Market",
+          "Id": 63,
+          "Msg": null,
+          "Name": "Caesars Southern Indiana",
+          "LMSPropCode": "UEL",
+          "PropertyId": 154
+        },
+        {
+          "Act": true,
+          "Code": "CVR",
+          "Description": "The fabulous CVR Property of the Other Market",
+          "Id": 101,
+          "Msg": null,
+          "Name": "Harrah's Cherokee Valley River",
+          "LMSPropCode": "CVR",
+          "PropertyId": 171
+        }
+      ],
+      "Venues": null
+    },
+    {
+      "Act": true,
+      "Code": "BAM",
+      "Description": "Baltimore Market",
+      "GeoLocation": {
+        "City": null,
+        "Id": 0,
+        "Latitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "Longitude": {
+          "Degress": 0,
+          "Direction": 0,
+          "Minutes": 0,
+          "Seconds": 0
+        },
+        "State": null
+      },
+      "Id": 99,
+      "Msg": null,
+      "Name": "Baltimore",
+      "ParentLocation": {
+        "Act": true,
+        "Code": "MD",
+        "Description": "State of Maryland",
+        "Id": 97,
+        "Msg": null,
+        "Name": "MD",
+        "ParentLocation": {
+          "Act": true,
+          "Code": "USA",
+          "ContentLink": "",
+          "Description": "Nifty, Fifty United States",
+          "Id": 2,
+          "Msg": null,
+          "Name": "United States",
+          "ParentLocation": {
+            "Act": true,
+            "Code": "Earth",
+            "ContentLink": "",
+            "Description": "Third Rock from the sun",
+            "Id": 1,
+            "Msg": null,
+            "Name": "Earth"
+          }
+        }
+      },
+      "Properties": [
+        {
+          "Act": true,
+          "Code": "UBA",
+          "Description": "Baltimore Hotel and Casino",
+          "Id": 98,
+          "Msg": null,
+          "Name": "Horseshoe Baltimore",
+          "LMSPropCode": "UBA",
+          "PropertyId": 153
+        }
+      ],
+      "Venues": null
+    }
+  ]
+}

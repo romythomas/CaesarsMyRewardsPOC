@@ -1,0 +1,93 @@
+{
+  "logininfo": {
+    "dateofbirth": "02/04/1944",
+    "firstname": "TRTEST",
+    "addresses": {
+      "address": [
+        {
+          "zipcode": "94945",
+          "country": "USA",
+          "apartmentnumber": "",
+          "address2": "STE 124",
+          "city": "NOVATO",
+          "address1": "1234 BUSINESS ST",
+          "location": "Business",
+          "stateprovince": "CA"
+        },
+        {
+          "zipcode": "94945",
+          "country": "USA",
+          "apartmentnumber": "",
+          "address2": "STE 124",
+          "city": "NOVATO",
+          "address1": "1234 BUSINESS ST",
+          "location": "Home",
+          "stateprovince": "CA"
+        }
+      ],
+      "preferred": "Business"
+    },
+    "preferences": {
+      "emailpreferences": {
+        "sendoffersbyemail": "Y",
+        "email": "testperson123@gmail.com",
+        "emailoffersfrequency": "WEEKLY"
+      },
+      "hotelpreferences": {
+        "specialrequest": "",
+        "smoking": "N",
+        "bedtype": "KING",
+        "companionid": "",
+        "specialinstruction": ""
+      },
+      "payments": [
+        {
+          "payment": {
+            "cctype": "VISA",
+            "lastfour": "5354",
+            "savedpaymentavailable": "true",
+            "ccexp": "2020-07-31"
+          }
+        }
+      ]
+    },
+    "phonenumbers": [{ "phonenumber": "1234567890", "location": "Home" }],
+    "type": "P",
+    "userid": "11503550945",
+    "token": "*pvAy2d0UjRRYWV5OFQJQPl/umAzhhSO6eUfBeUSI3YgxlC/eUhOtY/padWsXFJn/qTTbmKSD9lt1ScSD5jIfCqhIVN*XN/w1aj3OZpXEEUqsnAI*2Nm0o0zaIoiyR1LUiA5c*3djFaPXp6maFj9xilrklUWXqunGMAbEDzho83kQ3sl5hEhiNnCWFLrhkhbWnasO0h2PH7EyRK1ugoacAWdeFrY9CgkppF0lZq/bCwWRyKupbo0ZgBr21/1VCaELFucdn6fDj8LCBwGuWzbffA==",
+    "lastname": "TEST",
+    "accountid": "11503550945",
+    "tier": {
+      "previousassigneddate": "03/28/2019",
+      "previoustierscore": 100,
+      "code": "GLD",
+      "asofdate": "01/30/2020",
+      "assigneddate": "02/01/2020",
+      "previouscode": "DIAMOND",
+      "tiercreditbalances": {
+        "earnedhospitality": 0,
+        "promogaming": 1053,
+        "earned": 0,
+        "gaming": 1053,
+        "hospitality": 0,
+        "promohospitality": 0,
+        "earnedgaming": 0,
+        "totalbalance": 1053,
+        "promotion": 1053
+      },
+      "expirationdate": "12/31/1899",
+      "extendedcode": "GLD",
+      "tierscore": 1053
+    },
+    "rewardcredits": {
+      "asofdate": "03/03/2020",
+      "balance": 3947,
+      "lastearned": "03/03/2020",
+      "expirationdate": "09/03/2020"
+    },
+    "propcode": "CLV",
+    "editrestricted": "false",
+    "email": "testperson123@gmail.com"
+  },
+  "userid": "PRODUCTIONTR"
+}

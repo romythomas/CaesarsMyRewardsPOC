@@ -1,0 +1,487 @@
+{
+  "harrahs": {
+     "timestamp": "2020-04-17 08:10:29 -07:00",  
+     "roomtypes": [
+          {
+            "propCode": "RLV",
+            "roomtype": {
+                "rateSet": "MCLA",
+                "skuId": "51023",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "29.00",
+                "savings": "0.00",
+                "access": "false",
+                "firstDate": "2020-06-21",
+                "amount": "29.00"
+             }
+          } ,
+          {
+            "propCode": "DLV",
+            "roomtype": {
+                "rateSet": "GCLA",
+                "skuId": "30927",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "89.00",
+                "savings": "0.00",
+                "access": "false",
+                "firstDate": "2020-05-16",
+                "amount": "89.00"
+             }
+          } ,
+          {
+            "propCode": "CLV",
+            "roomtype": {
+                "rateSet": "FT",
+                "skuId": "129",
+                "displayRank": "30",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "132.00",
+                "savings": "33.00",
+                "access": "false",
+                "firstDate": "2020-05-01",
+                "amount": "99.00"
+             }
+          } ,
+          {
+            "propCode": "BAC",
+            "roomtype": {
+                "rateSet": "BDLXD",
+                "skuId": "31088",
+                "displayRank": "3",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "65.00",
+                "savings": "13.00",
+                "access": "false",
+                "firstDate": "2020-05-20",
+                "amount": "52.00"
+             }
+          } ,
+          {
+            "propCode": "CL1",
+            "roomtype": {
+                "rateSet": "NDLX",
+                "skuId": "3",
+                "displayRank": "101",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "172.00",
+                "savings": "43.00",
+                "access": "false",
+                "firstDate": "2020-05-01",
+                "amount": "129.00"
+             }
+          } ,
+          {
+            "propCode": "ATL",
+            "roomtype": {
+                "rateSet": "LWA9",
+                "skuId": "130115",
+                "displayRank": "10",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "73.33",
+                "savings": "18.33",
+                "access": "false",
+                "firstDate": "2020-05-17",
+                "amount": "55.00"
+             }
+          } ,
+          {
+            "propCode": "LAS",
+            "roomtype": {
+                "rateSet": "HTD1",
+                "skuId": "130033",
+                "displayRank": "2",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "35.00",
+                "savings": "0.00",
+                "access": "false",
+                "firstDate": "2020-05-17",
+                "amount": "35.00"
+             }
+          } ,
+          {
+            "propCode": "FLV",
+            "roomtype": {
+                "rateSet": "GDLX",
+                "skuId": "85",
+                "displayRank": "7",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "46.67",
+                "savings": "11.67",
+                "access": "false",
+                "firstDate": "2020-05-03",
+                "amount": "35.00"
+             }
+          } ,
+          {
+            "propCode": "TAH",
+            "roomtype": {
+                "rateSet": "VALUE",
+                "skuId": "30878",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "86.25",
+                "savings": "17.25",
+                "access": "false",
+                "firstDate": "2020-05-04",
+                "amount": "69.00"
+             }
+          } ,
+          {
+            "propCode": "REN",
+            "roomtype": {
+                "rateSet": "ECL",
+                "skuId": "218",
+                "displayRank": "2",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "58.67",
+                "savings": "14.67",
+                "access": "false",
+                "firstDate": "2020-05-04",
+                "amount": "44.00"
+             }
+          } ,
+          {
+            "propCode": "PHV",
+            "roomtype": {
+                "rateSet": "CLA",
+                "skuId": "54350",
+                "displayRank": "35",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "65.33",
+                "savings": "16.33",
+                "access": "false",
+                "firstDate": "2020-05-03",
+                "amount": "49.00"
+             }
+          } ,
+          {
+            "propCode": "CAC",
+            "roomtype": {
+                "rateSet": "OLUX",
+                "skuId": "150",
+                "displayRank": "9",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "75.00",
+                "savings": "15.00",
+                "access": "false",
+                "firstDate": "2020-05-20",
+                "amount": "60.00"
+             }
+          } ,
+          {
+            "propCode": "UTU",
+            "roomtype": {
+                "rateSet": "ADLX",
+                "skuId": "233",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "52.00",
+                "savings": "13.00",
+                "access": "false",
+                "firstDate": "2020-05-04",
+                "amount": "39.00"
+             }
+          } ,
+          {
+            "propCode": "COU",
+            "roomtype": {
+                "rateSet": "DLX",
+                "skuId": "299",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "98.75",
+                "savings": "19.75",
+                "access": "false",
+                "firstDate": "2020-05-04",
+                "amount": "79.00"
+             }
+          } ,
+          {
+            "propCode": "HBR",
+            "roomtype": {
+                "rateSet": "ZBDLX",
+                "skuId": "293",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "199.99",
+                "savings": "0.00",
+                "access": "false",
+                "firstDate": "2020-05-03",
+                "amount": "199.99"
+             }
+          } ,
+          {
+            "propCode": "NOR",
+            "roomtype": {
+                "rateSet": "ZZHD",
+                "skuId": "129614",
+                "displayRank": "25",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "139.00",
+                "savings": "0.00",
+                "access": "false",
+                "firstDate": "2020-06-08",
+                "amount": "139.00"
+             }
+          } ,
+          {
+            "propCode": "HLT",
+            "roomtype": {
+                "rateSet": "CTC1",
+                "skuId": "130104",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "65.33",
+                "savings": "16.33",
+                "access": "false",
+                "firstDate": "2020-05-03",
+                "amount": "49.00"
+             }
+          } ,
+          {
+            "propCode": "GBI",
+            "roomtype": {
+                "rateSet": "BDLX",
+                "skuId": "268",
+                "displayRank": "5",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "86.67",
+                "savings": "21.67",
+                "access": "false",
+                "firstDate": "2020-04-20",
+                "amount": "65.00"
+             }
+          } ,
+          {
+            "propCode": "BLV",
+            "roomtype": {
+                "rateSet": "RTC1",
+                "skuId": "129699",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "46.67",
+                "savings": "11.67",
+                "access": "false",
+                "firstDate": "2020-05-03",
+                "amount": "35.00"
+             }
+          } ,
+          {
+            "propCode": "UBC",
+            "roomtype": {
+                "rateSet": "AAL1",
+                "skuId": "125345",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "86.67",
+                "savings": "21.67",
+                "access": "false",
+                "firstDate": "2020-05-03",
+                "amount": "65.00"
+             }
+          } ,
+          {
+            "propCode": "PLV",
+            "roomtype": {
+                "rateSet": "VVC3",
+                "skuId": "84467",
+                "displayRank": "4",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "55.00",
+                "savings": "0.00",
+                "access": "false",
+                "firstDate": "2020-06-07",
+                "amount": "55.00"
+             }
+          } ,
+          {
+            "propCode": "CHE",
+            "roomtype": {
+                "rateSet": "MTD1",
+                "skuId": "129672",
+                "displayRank": "44",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "149.00",
+                "savings": "0.00",
+                "access": "false",
+                "firstDate": "2020-05-18",
+                "amount": "149.00"
+             }
+          } ,
+          {
+            "propCode": "CVR",
+            "roomtype": {
+                "rateSet": "RLUX",
+                "skuId": "31198",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "99.00",
+                "savings": "0.00",
+                "access": "false",
+                "firstDate": "2020-05-18",
+                "amount": "99.00"
+             }
+          } ,
+          {
+            "propCode": "WCL",
+            "roomtype": {
+                "rateSet": "WDLX",
+                "skuId": "464",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "189.00",
+                "savings": "0.00",
+                "access": "false",
+                "firstDate": "2020-06-01",
+                "amount": "189.00"
+             }
+          } ,
+          {
+            "propCode": "AKC",
+            "roomtype": {
+                "rateSet": "STC1",
+                "skuId": "129978",
+                "displayRank": "39",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "79.99",
+                "savings": "0.00",
+                "access": "false",
+                "firstDate": "2020-05-04",
+                "amount": "79.99"
+             }
+          } ,
+          {
+            "propCode": "MET",
+            "roomtype": {
+                "rateSet": "MDLX",
+                "skuId": "390",
+                "displayRank": "5",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "70.00",
+                "savings": "14.00",
+                "access": "false",
+                "firstDate": "2020-05-03",
+                "amount": "56.00"
+             }
+          } ,
+          {
+            "propCode": "ILV",
+            "roomtype": {
+                "rateSet": "DLX2",
+                "skuId": "31189",
+                "displayRank": "2",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "46.67",
+                "savings": "11.67",
+                "access": "false",
+                "firstDate": "2020-05-01",
+                "amount": "35.00"
+             }
+          } ,
+          {
+            "propCode": "RIN",
+            "roomtype": {
+                "rateSet": "NDKN",
+                "skuId": "30683",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "119.00",
+                "savings": "23.80",
+                "access": "false",
+                "firstDate": "2020-05-04",
+                "amount": "95.20"
+             }
+          } ,
+          {
+            "propCode": "JOL",
+            "roomtype": {
+                "rateSet": "NPR",
+                "skuId": "359",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "93.75",
+                "savings": "18.75",
+                "access": "false",
+                "firstDate": "2020-05-03",
+                "amount": "75.00"
+             }
+          } ,
+          {
+            "propCode": "NKC",
+            "roomtype": {
+                "rateSet": "NLX",
+                "skuId": "404",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "86.25",
+                "savings": "17.25",
+                "access": "false",
+                "firstDate": "2020-04-25",
+                "amount": "69.00"
+             }
+          } ,
+          {
+            "propCode": "UEL",
+            "roomtype": {
+                "rateSet": "CDX",
+                "skuId": "462",
+                "displayRank": "1",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "92.00",
+                "savings": "23.00",
+                "access": "false",
+                "firstDate": "2020-05-04",
+                "amount": "69.00"
+             }
+          } ,
+          {
+            "propCode": "LAU",
+            "roomtype": {
+                "rateSet": "NCL",
+                "skuId": "375",
+                "displayRank": "13",
+                "ratePlanType": "",
+                "lowest": "Y",
+                "originalrate": "25.33",
+                "savings": "6.33",
+                "access": "false",
+                "firstDate": "2020-05-04",
+                "amount": "19.00"
+             }
+          }
+        ]
+    }   
+}

@@ -1,0 +1,4467 @@
+[
+  {
+    "id": "bac",
+    "marketCode": "acm",
+    "brand": "ballys",
+    "checkIn": "4:00 PM",
+    "checkOut": "12:00 PM",
+    "isBookable": true,
+    "preferenceId": "13026",
+    "url": "https://www.caesars.com/ballys-ac",
+    "mapUrl": "http://www.caesars.com/ballys-ac/ballys-atlantic-city-map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "1900 Pacific Ave.",
+      "city": "Atlantic City",
+      "state": "NJ",
+      "zip": "08401"
+    },
+    "phone": "(609) 340-2000",
+    "social": {
+      "twitter": "BallysAC"
+    },
+    "hotel": "/api/v1/properties/bac/hotel",
+    "facts": {
+      "body": "<p>• Family fun center<br>\n• Indoor Pool<br>\n• The Spa at Bally’s<br>\n</p>\n",
+      "list": [
+        {
+          "number": "13",
+          "type": "restaurants"
+        },
+        {
+          "number": "4",
+          "type": "bars, lounges, and nightclubs"
+        },
+        {
+          "number": "6",
+          "type": "shops"
+        },
+        {
+          "number": "220000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "92269",
+    "name": "Bally's Atlantic City",
+    "propertyName": "Bally's Atlantic City",
+    "property": "bac",
+    "market": "acm",
+    "propertyRank": 31,
+    "marketRank": 14,
+    "summary": "Located at the famed intersection of Park Place and The Boardwalk, Bally's Atlantic City Hotel and Casino is the ideal place to be when you DO AC.",
+    "location": {
+      "latitude": 39.357742,
+      "longitude": -74.433457,
+      "minLatitude": 39.355795,
+      "maxLatitude": 39.357504,
+      "minLongitude": -74.431247,
+      "maxLongitude": -74.43439
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlzX2F0bGFudGljX2NpdHkvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "blv",
+    "marketCode": "lvm",
+    "brand": "ballys",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13021",
+    "url": "https://www.caesars.com/ballys-las-vegas",
+    "mapUrl": "https://www.caesars.com/ballys-las-vegas/ballys-las-vegas-map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "3645 Las Vegas Boulevard South",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89109"
+    },
+    "phone": "(877) 603-4390",
+    "social": {
+      "twitter": "ballysvegas",
+      "massRelevanceHashTags": "#BallysVegas",
+      "massRelevanceStreamId": "http://tweetriver.com/CaesarsMR/13-masterlasvegas-allhashtags.json"
+    },
+    "hotel": "/api/v1/properties/blv/hotel",
+    "facts": {
+      "body": "<p>• Heated pool<br>\n• Spa<br>\n• Salon<br>\n• Shopping</p>\n",
+      "list": [
+        {
+          "number": "11",
+          "type": "restaurants"
+        },
+        {
+          "number": "3",
+          "type": "bars, lounges and nightclubs"
+        },
+        {
+          "number": "4",
+          "type": "shows"
+        },
+        {
+          "number": "67000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNTE",
+        "title": "Grand Bazaar Shops at Bally's Las Vegas"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg",
+        "title": "Blu Pool"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOA"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "121312",
+    "name": "Bally's Las Vegas",
+    "propertyName": "Bally's Las Vegas",
+    "property": "blv",
+    "market": "lvm",
+    "propertyRank": 11,
+    "marketRank": 5,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvZmVhdHVyZWRJbWFnZQ"
+    },
+    "summary": "Look inside Bally’s Las Vegas hotel to find a great room in the center of the action on the Las Vegas Strip.",
+    "location": {
+      "latitude": 36.113534,
+      "longitude": -115.168408,
+      "minLatitude": 36.113159,
+      "maxLatitude": 36.114542,
+      "minLongitude": -115.165944,
+      "maxLongitude": -115.172693
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9iYWxseXMvZW4vYmFsbHlfc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "cac",
+    "marketCode": "acm",
+    "brand": "caesars",
+    "checkIn": "4:00 PM",
+    "checkOut": "12:00 PM",
+    "isBookable": true,
+    "preferenceId": "13038",
+    "url": "https://www.caesars.com/caesars-ac",
+    "mapUrl": "http://www.caesars.com/caesars-ac/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL21hcA"
+    },
+    "address": {
+      "street": "2100 Pacific Avenue",
+      "city": "Atlantic City",
+      "state": "NJ",
+      "zip": "08401"
+    },
+    "phone": "(609) 348-4411",
+    "social": {
+      "twitter": "CaesarsAC"
+    },
+    "hotel": "/api/v1/properties/cac/hotel",
+    "facts": {
+      "body": "<p>• QUA Baths &amp; Spa<br>\n• Rooftop pool<br>\n• Gym<br>\n• Bellezza Salon<br>\n• Basic Wifi for two devices per room per day<br>\n• Unlimited local calls<br>\n• A $5 voucher toward self-parking</p>\n",
+      "list": [
+        {
+          "number": "13",
+          "type": "restaurants"
+        },
+        {
+          "number": "4",
+          "type": "bars, lounges and nightclubs"
+        },
+        {
+          "number": "9",
+          "type": "shows"
+        },
+        {
+          "number": "145000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "75",
+          "type": "shops at The Pier Shops"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczM"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczU"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczUx"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2liZUhlYWRlckltYWdl"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1kYXJr"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtZGFyaw"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1saWdodA"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtbGlnaHQ"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "92274",
+    "name": "Caesars Atlantic City",
+    "propertyName": "Caesars Atlantic City",
+    "property": "cac",
+    "market": "acm",
+    "propertyRank": 28,
+    "marketRank": 9,
+    "summary": "We believe that every guest should be treated as a Caesar, and you’ll get treatment fit for an emperor at the iconic Caesars Atlantic City Hotel and Casino.",
+    "location": {
+      "latitude": 39.35687,
+      "longitude": -74.435772,
+      "minLatitude": 39.355314,
+      "maxLatitude": 39.356509,
+      "minLongitude": -74.433392,
+      "maxLongitude": -74.436976
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfYXRsYW50aWNfY2l0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ltYWdl"
+    }
+  },
+  {
+    "id": "clv",
+    "marketCode": "lvm",
+    "brand": "caesars",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13049",
+    "url": "https://www.caesars.com/caesars-palace",
+    "mapUrl": "http://www.caesars.com/caesars-palace/caesars-palace-map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL21hcA"
+    },
+    "address": {
+      "street": "3570 Las Vegas Boulevard South",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89109"
+    },
+    "phone": "(866) 227-5938",
+    "social": {
+      "twitter": "CaesarsPalace",
+      "massRelevanceHashTags": "#CaesarsPalace",
+      "massRelevanceStreamId": "http://tweetriver.com/CaesarsMR/13-masterlasvegas-allhashtags.json"
+    },
+    "hotel": "/api/v1/properties/clv/hotel",
+    "facts": {
+      "body": "<p>• QUA Baths &amp; Spa<br>\n• COLOR Salon by Michael Boychuck</p>\n",
+      "list": [
+        {
+          "number": "13",
+          "type": "restaurants"
+        },
+        {
+          "number": "7",
+          "type": "pools"
+        },
+        {
+          "number": "8",
+          "type": "shows"
+        },
+        {
+          "number": "170",
+          "type": "shops & restaurants at The Forum Shops"
+        },
+        {
+          "number": "127000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczIx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczM"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczU"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczUx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczY"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczc"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczk"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczEw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczEx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczEy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczEz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE0"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE1"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE2"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE3"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE4"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE5"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczIw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczIy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczIz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI0"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI1"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI2"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI3"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI4"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI5"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczMw"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2liZUhlYWRlckltYWdl"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1kYXJr"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtZGFyaw"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1saWdodA"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtbGlnaHQ"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "91762",
+    "name": "Caesars Palace ",
+    "propertyName": "Caesars Palace ",
+    "property": "clv",
+    "market": "lvm",
+    "propertyRank": 1,
+    "marketRank": 1,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ZlYXR1cmVkSW1hZ2U"
+    },
+    "summary": "From the moment you walk through the doors of Caesars Palace, you’ll understand why this iconic Las Vegas hotel sets the standard for opulent details, impeccable service and lavish Las Vegas accommodations.",
+    "location": {
+      "latitude": 36.11517,
+      "longitude": -115.173969,
+      "minLatitude": 36.11484,
+      "maxLatitude": 36.11825,
+      "minLongitude": -115.17304,
+      "maxLongitude": -115.17987
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfcGFsYWNlL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ltYWdl"
+    },
+    "youtubeVideos": [
+      "https://www.youtube.com/embed/TlCX1ri5JDA",
+      "https://www.youtube.com/embed/lJ7w58JzWig",
+      "https://www.youtube.com/embed/247YOSLPdMI",
+      "https://www.youtube.com/embed/zvD4XSVGdFI"
+    ]
+  },
+  {
+    "id": "uel",
+    "marketCode": "oth",
+    "brand": "caesars",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13051",
+    "url": "https://www.caesars.com/caesars-southern-indiana",
+    "mapUrl": "https://www.caesars.com/caesars-southern-indiana/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "11999 Casino Center Drive",
+      "city": "Elizabeth",
+      "state": "IN",
+      "zip": "47117"
+    },
+    "phone": "(866) 676-7463",
+    "social": {
+      "twitter": "HorseshoeSI"
+    },
+    "hotel": "/api/v1/properties/uel/hotel",
+    "facts": {
+      "body": "<p>• Limited engagements and special appearances at The Showroom<br>\n• Indoor pool and hot tub<br>\n• Fitness center<br>\n• Indulge The Spa<br>\n• Shopping</p>\n",
+      "list": [
+        {
+          "number": "3",
+          "type": "bars"
+        },
+        {
+          "number": "6",
+          "type": "restaurants"
+        },
+        {
+          "number": "93000",
+          "type": "sq. ft. of gaming space in three distinct casino environments"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNDE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNQ"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false,
+      "title": "Welcome to Caesars Southern Indiana",
+      "description": "Important Notice: Caesars Southern Indiana has recently made changes to the deposit policy on all hotel reservations. Guests must present a valid credit card upon check-in, to be authorized for incidental deposit in the amount of $75, plus room and taxes if applicable. Any unused funds will be released upon check-out by your Financial Institute (Timing of release varies and may take up to 30 days). The cardholder must be present with valid picture ID. Cash deposits will no longer accepted at Caesars Southern Indiana after January 1, 2019."
+    },
+    "tripAdvisorId": "240182",
+    "name": "Caesars Southern Indiana Hotel and Casino",
+    "propertyName": "Caesars Southern Indiana Hotel and Casino",
+    "property": "uel",
+    "market": "oth",
+    "propertyRank": 41,
+    "marketRank": 25,
+    "summary": "With a picturesque riverfront setting on the Ohio River and convenient access from Louisville, Evansville and Indianapolis, accommodations at Caesars Southern Indiana Hotel are a sure bet. Play and stay where gamblers belong: Caesars.",
+    "location": {
+      "latitude": 38.180003,
+      "longitude": -85.903924,
+      "minLatitude": 38.178417,
+      "maxLatitude": 38.180382,
+      "minLongitude": -85.903736,
+      "maxLongitude": -85.906101
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3NvdXRoZXJuX2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "wcl",
+    "marketCode": "oth",
+    "brand": "caesars",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13033",
+    "url": "https://www.caesars.com/caesars-windsor",
+    "mapUrl": "https://www.caesars.com/caesars-windsor/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "377 Riverside Drive East (Hotel, Casino and Valet Entrance: McDougall Ave. and Pitt St.)",
+      "city": "Windsor, ON",
+      "state": "CA",
+      "zip": "N9A 7H7"
+    },
+    "phone": "(800) 991-7777",
+    "social": {
+      "twitter": "caesarswindsor"
+    },
+    "hotel": "/api/v1/properties/wcl/hotel",
+    "facts": {
+      "body": "<p>• Indoor pool<br>\n• Gym &amp; sauna<br>\n• Shopping at Caesar’s Essentials, Landau, &amp; Augustus Boutique<br>\n• Estetica Spa</p>\n",
+      "list": [
+        {
+          "number": "2",
+          "type": "lounges & bars"
+        },
+        {
+          "number": "6",
+          "type": "restaurants"
+        },
+        {
+          "number": "100000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM0"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM1"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false,
+      "description": "\n"
+    },
+    "tripAdvisorId": "272598",
+    "name": "Caesars Windsor",
+    "propertyName": "Caesars Windsor",
+    "property": "wcl",
+    "market": "oth",
+    "propertyRank": 34,
+    "marketRank": 20,
+    "summary": "Step into Caesars Windsor and discover the essence of indulgence, comfort and luxury in our masterfully-appointed guestrooms and suites.",
+    "location": {
+      "latitude": 42.320895,
+      "longitude": -83.034227,
+      "minLatitude": 42.319701,
+      "maxLatitude": 42.321033,
+      "minLongitude": -83.031932,
+      "maxLongitude": -83.036975
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jYWVzYXJzL2VuL2NhZXNhcnNfd2luZHNvci9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "flv",
+    "marketCode": "lvm",
+    "brand": "flamingo",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13041",
+    "url": "https://www.caesars.com/flamingo-las-vegas",
+    "mapUrl": "http://www.caesars.com/flamingo-las-vegas/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "3555 Las Vegas Boulevard South",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89109"
+    },
+    "phone": "(702) 733-3111",
+    "social": {
+      "twitter": "flamingovegas",
+      "massRelevanceHashTags": "#FlamingoVegas",
+      "massRelevanceStreamId": "http://tweetriver.com/CaesarsMR/13-masterlasvegas-allhashtags.json"
+    },
+    "hotel": "/api/v1/properties/flv/hotel",
+    "facts": {
+      "list": [
+        {
+          "number": "77000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "2",
+          "type": "pools"
+        },
+        {
+          "number": "4",
+          "type": "bars, lounges, and nightclubs"
+        },
+        {
+          "number": "15000",
+          "type": "sq. ft. margaritaville casino"
+        },
+        {
+          "number": "7",
+          "type": "shows"
+        },
+        {
+          "number": "10",
+          "type": "restaurants"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg",
+        "title": "Flamingo Room"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNDE",
+        "title": "Flamingo Room"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNQ",
+        "title": "Flamingo Ballroom"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNTE",
+        "title": "Flamingo Ballroom"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNg",
+        "title": "Flamingo Ballroom"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNw",
+        "title": "Bugsy Siegel Memorial"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNzE",
+        "title": "Fitness Center"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOA",
+        "title": "Salon"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "91844",
+    "name": "Flamingo Las Vegas",
+    "propertyName": "Flamingo Las Vegas",
+    "property": "flv",
+    "market": "lvm",
+    "propertyRank": 4,
+    "marketRank": 16,
+    "summary": "Stay center strip at the forever fabulous Flamingo Las Vegas Hotel and Casino. Now featuring newly renovated Flamingo Rooms that have a mix of classic Vegas with up-to-date style.",
+    "location": {
+      "latitude": 36.11569,
+      "longitude": -115.171394,
+      "minLatitude": 36.115218,
+      "maxLatitude": 36.117372,
+      "minLongitude": -115.16868,
+      "maxLongitude": -115.172741
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9mbGFtaW5nby9lbi9mbGFtaW5nb19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "akc",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13019",
+    "url": "https://www.caesars.com/harrahs-ak-chin",
+    "mapUrl": "http://www.caesars.com/harrahs-ak-chin/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "15406 Maricopa Road",
+      "city": "Maricopa",
+      "state": "AZ",
+      "zip": "85139"
+    },
+    "phone": "(480)802-5000",
+    "social": {
+      "twitter": "Harrahs_AkChin"
+    },
+    "hotel": "/api/v1/properties/akc/hotel",
+    "facts": {
+      "body": "<p><span style=\"font-family: Arial; font-size: 10px;\">• Outdoor Pool</span><br style=\"font-family: Arial; font-size: 10px;\">\n<span style=\"font-family: Arial; font-size: 10px;\">• Shows and touring acts at The Oasis Lounge</span><br style=\"font-family: Arial; font-size: 10px;\">\n<span style=\"font-family: Arial; font-size: 10px;\">• Gift shop</span></p>\n",
+      "list": [
+        {
+          "number": "2",
+          "type": "lounges"
+        },
+        {
+          "number": "4",
+          "type": "restaurants"
+        },
+        {
+          "number": "40000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM0"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM1"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM2"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM2MQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM3"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM4"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM5"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMg"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "217205",
+    "name": "Harrah's Ak-Chin Hotel And Casino",
+    "propertyName": "Harrah's Ak-Chin Hotel And Casino",
+    "property": "akc",
+    "market": "oth",
+    "propertyRank": 29,
+    "marketRank": 30,
+    "summary": "Harrah's Ak-Chin is more than just a casino. From exciting gaming to fine dining and everything in between, Harrah's Ak-Chin is a destination to satisfy every taste.",
+    "location": {
+      "latitude": 33.024111,
+      "longitude": -112.050548,
+      "minLatitude": 33.022666,
+      "maxLatitude": 33.024641,
+      "minLongitude": -112.049464,
+      "maxLongitude": -112.051808
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYWtfY2hpbi9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "che",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13013",
+    "url": "https://www.caesars.com/harrahs-cherokee",
+    "mapUrl": "//www.caesars.com/harrahs-cherokee/maps",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "777 Casino Drive",
+      "city": "Cherokee",
+      "state": "NC",
+      "zip": "28719"
+    },
+    "phone": "(828) 497-7777",
+    "social": {
+      "twitter": "HarrahsCherokee"
+    },
+    "hotel": "/api/v1/properties/che/hotel",
+    "facts": {
+      "body": "<p><span style=\"font-family: Arial; font-size: 10px;\">• Shows and touring acts at Harrah’s Events Center</span><br style=\"font-family: Arial; font-size: 10px;\">\n<span style=\"font-family: Arial; font-size: 10px;\">• Indoor pool</span><br style=\"font-family: Arial; font-size: 10px;\">\n<span style=\"font-family: Arial; font-size: 10px;\">• Gym&nbsp;</span><br style=\"font-family: Arial; font-size: 10px;\">\n<span style=\"font-family: Arial; font-size: 10px;\">• River Shops</span></p>\n",
+      "list": [
+        {
+          "number": "1",
+          "type": "lounge"
+        },
+        {
+          "number": "160000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "10",
+          "type": "restaurants"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "250313",
+    "name": "Harrah's Cherokee Casino Resort",
+    "propertyName": "Harrah's Cherokee Casino Resort",
+    "property": "che",
+    "market": "oth",
+    "propertyRank": 13,
+    "marketRank": 23,
+    "summary": "Located in the beautiful Great Smoky Mountains, Harrah’s Cherokee Casino Resort brings the casino action to Western North Carolina.  Our resort is complete with premier rooms, exceptional dining, live entertainment and a vibrant casino floor!",
+    "location": {
+      "latitude": 35.469878,
+      "longitude": -83.299504,
+      "minLatitude": 35.468613,
+      "maxLatitude": 35.469478,
+      "minLongitude": -83.298525,
+      "maxLongitude": -83.299689
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY2hlcm9rZWUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "cvr",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13017",
+    "url": "https://www.caesars.com/harrahs-cherokee-valley-river",
+    "mapUrl": "//maps.google.com/?q=35.110879,-83.981209",
+    "address": {
+      "street": "777 Casino Parkway",
+      "city": "Murphy",
+      "state": "NC",
+      "zip": "28906"
+    },
+    "phone": "(828) 422-7777",
+    "social": {
+      
+    },
+    "hotel": "/api/v1/properties/cvr/hotel",
+    "facts": {
+      "list": [
+        
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczEx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczM"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczQ"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2liZUhlYWRlckltYWdl"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1kYXJr"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtZGFyaw"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1saWdodA"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtbGlnaHQ"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "8666155",
+    "name": "Harrah's Cherokee Valley River",
+    "propertyName": "Harrah's Cherokee Valley River",
+    "property": "cvr",
+    "market": "oth",
+    "propertyRank": 100,
+    "marketRank": 30,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ZlYXR1cmVkSW1hZ2U"
+    },
+    "summary": "Welcome to Harrah's Cherokee Valley River Casino and Hotel, located in Murphy, North Carolina. Here you can enjoy 50,000 square-foot casino with over 1,000 slots and 70 table games, a five-outlet Food Market, UltraStar MultiTainment Center and a 300-room, full-service hotel.",
+    "location": {
+      "latitude": 35.110879,
+      "longitude": -83.981209,
+      "minLatitude": 35.100879,
+      "maxLatitude": 35.129173,
+      "minLongitude": -83.965209,
+      "maxLongitude": -83.994392
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHMtY2hlcm9rZWUtdmFsbGV5LXJpdmVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ltYWdl"
+    }
+  },
+  {
+    "id": "gbi",
+    "marketCode": "gcm",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13023",
+    "url": "https://www.caesars.com/harrahs-gulf-coast",
+    "mapUrl": "http://www.caesars.com/harrahs-gulf-coast/harrahs-gulf-coast-map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "280 Beach Boulevard",
+      "city": "Biloxi",
+      "state": "MS",
+      "zip": "39530"
+    },
+    "phone": "(800) 946-2946",
+    "social": {
+      "twitter": "harrahsgc"
+    },
+    "hotel": "/api/v1/properties/gbi/hotel",
+    "facts": {
+      "list": [
+        {
+          "number": "1",
+          "type": "Outdoor Pool"
+        },
+        {
+          "number": "3",
+          "type": "Bars"
+        },
+        {
+          "number": "5",
+          "type": "Restaurants"
+        },
+        {
+          "number": "33000",
+          "type": "Sq. Ft. Casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM0"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM1"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM1MQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM2"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM4"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM5"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxNA"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "280454",
+    "name": "Harrah's Gulf Coast",
+    "propertyName": "Harrah's Gulf Coast",
+    "property": "gbi",
+    "market": "gcm",
+    "propertyRank": 35,
+    "marketRank": 26,
+    "summary": "Located in the heart of the Mississippi Gulf Coast, Harrah's Gulf Coast Casino, Hotel & Spa is an ideal destination to escape for exciting gaming, fine dining and the luxury of a full-service spa.",
+    "location": {
+      "latitude": 30.392499,
+      "longitude": -88.866022,
+      "minLatitude": 30.392654,
+      "maxLatitude": 30.393579,
+      "minLongitude": -88.864331,
+      "maxLongitude": -88.867571
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfZ3VsZl9jb2FzdC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "hhp",
+    "marketCode": "oth",
+    "brand": "market",
+    "isBookable": false,
+    "preferenceId": "32669",
+    "url": "https://www.caesars.com/harrahs-hoosier-park",
+    "mapUrl": "https://www.caesars.com/harrahs-hoosier-park/map",
+    "address": {
+      "street": "4500 Dan Patch Circle",
+      "city": "Anderson",
+      "state": "IN",
+      "zip": "46013"
+    },
+    "phone": "(800) 526-7223",
+    "social": {
+      "twitter": "HoosierPark"
+    },
+    "facts": {
+      "list": [
+        
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfaG9vc2llcl9wYXJrL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfaG9vc2llcl9wYXJrL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1kYXJr"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfaG9vc2llcl9wYXJrL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtZGFyaw"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfaG9vc2llcl9wYXJrL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1saWdodA"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfaG9vc2llcl9wYXJrL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtbGlnaHQ"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "name": "Harrah's Hoosier Park",
+    "propertyName": "Harrah's Hoosier Park",
+    "property": "hhp",
+    "market": "oth",
+    "propertyRank": 100,
+    "marketRank": 30,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfaG9vc2llcl9wYXJrL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ZlYXR1cmVkSW1hZ2U"
+    },
+    "summary": "Excitement never sleeps at Hoosier Park. The high-energy casino features slots,  e-table games and action-packed racing events. Enjoy several restaurants, bars and big-name concerts.",
+    "location": {
+      "latitude": 40.06821,
+      "longitude": -85.64414,
+      "minLatitude": 40.06821,
+      "maxLatitude": 40.06821,
+      "minLongitude": -85.64414,
+      "maxLongitude": -85.64414
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfaG9vc2llcl9wYXJrL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ltYWdl"
+    }
+  },
+  {
+    "id": "jol",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13016",
+    "url": "https://www.caesars.com/harrahs-joliet",
+    "mapUrl": "//maps.google.com/?q=41.525618,-88.084538",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL21hcA"
+    },
+    "address": {
+      "street": "151 N. Joliet Street",
+      "city": "Joliet",
+      "state": "IL",
+      "zip": "60432"
+    },
+    "phone": "(815) 740-7800",
+    "social": {
+      "twitter": "harrahsjoliet"
+    },
+    "hotel": "/api/v1/properties/jol/hotel",
+    "facts": {
+      "body": "<p>• Local music on Stage 151<br>\n• Gift shop</p>\n",
+      "list": [
+        {
+          "number": "2",
+          "type": "lounges & bars"
+        },
+        {
+          "number": "5",
+          "type": "restaurants"
+        },
+        {
+          "number": "40000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczQx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczU"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczUx"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2liZUhlYWRlckltYWdl"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1kYXJr"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtZGFyaw"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1saWdodA"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtbGlnaHQ"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "225515",
+    "name": "Harrah's Joliet",
+    "propertyName": "Harrah's Joliet",
+    "property": "jol",
+    "market": "oth",
+    "propertyRank": 25,
+    "marketRank": 30,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ZlYXR1cmVkSW1hZ2U"
+    },
+    "summary": "Win big all day and sleep in luxurious comfort at night! After a big day or evening on the gaming floor treat yourself to a night of luxury in one of our fabulous hotel rooms.",
+    "location": {
+      "latitude": 41.525618,
+      "longitude": -88.084538,
+      "minLatitude": 41.524981,
+      "maxLatitude": 41.525809,
+      "minLongitude": -88.084425,
+      "maxLongitude": -88.085563
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfam9saWV0L19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ltYWdl"
+    }
+  },
+  {
+    "id": "nkc",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13028",
+    "url": "https://www.caesars.com/harrahs-kansas-city",
+    "mapUrl": "http://www.caesars.com/harrahs-kansas-city/harrahs-kansas-city-map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "One Riverboat Drive",
+      "city": "North Kansas City",
+      "state": "MO",
+      "zip": "64116"
+    },
+    "phone": "(816) 472-7777",
+    "social": {
+      "twitter": "HarrahsNKC"
+    },
+    "hotel": "/api/v1/properties/nkc/hotel",
+    "facts": {
+      "body": "<p><span style=\"font-family: Arial; font-size: 10px;\">• Touring entertainers and nightlife at VooDoo Lounge</span></p>\n",
+      "list": [
+        {
+          "number": "3",
+          "type": "bars, lounges and nightclubs"
+        },
+        {
+          "number": "6",
+          "type": "restaurants"
+        },
+        {
+          "number": "60000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMy",
+        "title": "Hotel Exterior"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx",
+        "title": "Hotel Lobby"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMyMQ",
+        "title": "Casino Mini Baccarat"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz",
+        "title": "Casino Floor "
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM0",
+        "title": "Casino Poker Room"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM1",
+        "title": "'37 Steak Main Dining Area"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM2",
+        "title": "'37 Steak Bar"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM2MQ",
+        "title": "The Buffet"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM3",
+        "title": "Royal Noodle Bar"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM4",
+        "title": "VooDoo"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM5",
+        "title": "Windsor Room"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMA",
+        "title": "Kansas City Standard King Room"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMg",
+        "title": "Kansas City VIP Suite"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMw",
+        "title": "Kansas City VIP Suite"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxNA",
+        "title": "Rio Suite"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxNQ",
+        "title": "Rio Suite"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxNg",
+        "title": "Las Vegas Jr Suite"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxNw",
+        "title": "Las Vegas Standard King "
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "96913",
+    "name": "Harrah's Kansas City",
+    "propertyName": "Harrah's Kansas City",
+    "property": "nkc",
+    "market": "oth",
+    "propertyRank": 27,
+    "marketRank": 30,
+    "summary": "Right at the heart of America, Harrah's Kansas City Hotel gives you a friendly world of mouth-watering Kansas City restaurants, nightlife and live entertainment.",
+    "location": {
+      "latitude": 39.142498,
+      "longitude": -94.545871,
+      "minLatitude": 39.140845,
+      "maxLatitude": 39.143749,
+      "minLongitude": -94.542997,
+      "maxLongitude": -94.546591
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbl9rYW5zYXNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "tah",
+    "marketCode": "rno",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "12:00 PM",
+    "isBookable": true,
+    "preferenceId": "13025",
+    "url": "https://www.caesars.com/harrahs-tahoe",
+    "mapUrl": "//maps.google.com/?q=38.959538,-119.941279",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "15 Highway 50",
+      "city": "Stateline",
+      "state": "NV",
+      "zip": "89449"
+    },
+    "phone": "(800) 427-7247",
+    "social": {
+      "twitter": "HarrahsTahoe"
+    },
+    "hotel": "/api/v1/properties/tah/hotel",
+    "facts": {
+      "body": "<p>• Shows and touring acts at the historic South Shore Room<br>\n• Pool<br>\n• Shopping</p>\n",
+      "list": [
+        {
+          "number": "65000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "3",
+          "type": "lounges & bars"
+        },
+        {
+          "number": "7",
+          "type": "restaurants"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM0"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM1"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "256427",
+    "name": "Harrah's Lake Tahoe",
+    "propertyName": "Harrah's Lake Tahoe",
+    "property": "tah",
+    "market": "rno",
+    "propertyRank": 8,
+    "marketRank": 17,
+    "summary": "At Harrah’s Lake Tahoe Hotel, you can come out, play and stay in the most welcoming accommodations around Lake Tahoe, a spot that’s been entertaining guests in style since 1955.",
+    "location": {
+      "latitude": 38.959538,
+      "longitude": -119.941279,
+      "minLatitude": 38.958199,
+      "maxLatitude": 38.961269,
+      "minLongitude": -119.940442,
+      "maxLongitude": -119.940459
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "las",
+    "marketCode": "lvm",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13027",
+    "url": "https://www.caesars.com/harrahs-las-vegas",
+    "mapUrl": "https://www.caesars.com/harrahs-las-vegas/harrahs-las-vegas-map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "3475 Las Vegas Boulevard South",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89109"
+    },
+    "phone": "(800) 214-9110",
+    "social": {
+      "twitter": "harrahsvegas",
+      "massRelevanceHashTags": "#HarrahsVegas",
+      "massRelevanceStreamId": "http://tweetriver.com/CaesarsMR/13-masterlasvegas-allhashtags.json"
+    },
+    "hotel": "/api/v1/properties/las/hotel",
+    "facts": {
+      "list": [
+        {
+          "number": "1",
+          "type": "pool"
+        },
+        {
+          "number": "4",
+          "type": "bars, lounges and nightclubs"
+        },
+        {
+          "number": "5",
+          "type": "shows"
+        },
+        {
+          "number": "9",
+          "type": "restaurants"
+        },
+        {
+          "number": "87000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTI"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTM"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTU"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTY"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTc"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTk"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjI"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjM"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjU"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjY"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjc"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjk"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMzA"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "114889",
+    "name": "Harrah's Las Vegas",
+    "propertyName": "Harrah's Las Vegas",
+    "property": "las",
+    "market": "lvm",
+    "propertyRank": 14,
+    "marketRank": 8,
+    "summary": "Come out and play and stay at Harrah's Las Vegas. It's not just a Las Vegas Strip hotel, it's right at the heart of the most fabulous city on earth!",
+    "location": {
+      "latitude": 36.1193,
+      "longitude": -115.1705,
+      "minLatitude": 36.118888,
+      "maxLatitude": 36.120175,
+      "minLongitude": -115.168701,
+      "maxLongitude": -115.172301
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaF9sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    },
+    "youtubeVideos": [
+      "https://www.youtube.com/embed/d_-pZrfr15w",
+      "https://www.youtube.com/embed/CO3OlSP1QuE",
+      "https://www.youtube.com/embed/x1O3uNhd8jM"
+    ]
+  },
+  {
+    "id": "lau",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13011",
+    "url": "https://www.caesars.com/harrahs-laughlin",
+    "mapUrl": "https://www.caesars.com/harrahs-laughlin/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "2900 South Casino Drive",
+      "city": "Laughlin",
+      "state": "NV",
+      "zip": "89029"
+    },
+    "phone": "(702) 298-4600",
+    "social": {
+      "twitter": "HarrahsLaughlin"
+    },
+    "hotel": "/api/v1/properties/lau/hotel",
+    "facts": {
+      "body": "<p>• Shows and touring acts at the Fiesta Showroom and Rio Vista Outdoor Amphitheater<br>\n• Private beach</p>\n",
+      "list": [
+        {
+          "number": "2",
+          "type": "pools"
+        },
+        {
+          "number": "4",
+          "type": "lounges & bars"
+        },
+        {
+          "number": "6",
+          "type": "restaurants"
+        },
+        {
+          "number": "47000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMzE"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "91994",
+    "name": "Harrah's Laughlin",
+    "propertyName": "Harrah's Laughlin",
+    "property": "lau",
+    "market": "oth",
+    "propertyRank": 21,
+    "marketRank": 30,
+    "summary": "Harrah's Laughlin is equipped with everything you'll need to make your stay memorable, including several hotel floors for our non-smoking guests.",
+    "location": {
+      "latitude": 35.143908,
+      "longitude": -114.579537,
+      "minLatitude": 35.143218,
+      "maxLatitude": 35.145924,
+      "minLongitude": -114.575933,
+      "maxLongitude": -114.577205
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbGF1Z2hsaW4vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "lad",
+    "marketCode": "bos",
+    "brand": "harrahs",
+    "isBookable": false,
+    "preferenceId": "13020",
+    "url": "https://www.caesars.com/harrahs-louisiana-downs",
+    "mapUrl": "https://www.caesars.com/harrahs-louisiana-downs/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "8000 East Texas Street",
+      "city": "Bossier City",
+      "state": "LA",
+      "zip": "71111"
+    },
+    "phone": "(318) 742-5555",
+    "social": {
+      "twitter": "HarrahsLADowns"
+    },
+    "facts": {
+      "body": "<p>• Local festival events</p>\n",
+      "list": [
+        {
+          "number": "4",
+          "type": "restaurants"
+        },
+        {
+          "number": "150000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "268820",
+    "name": "Harrah's Louisiana Downs",
+    "propertyName": "Harrah's Louisiana Downs",
+    "property": "lad",
+    "market": "bos",
+    "propertyRank": 30,
+    "marketRank": 30,
+    "summary": "Harrah's Louisiana Downs is your best bet for thrilling racing, heart-pumping gaming and more fun than you can imagine, all served up with our untiring commitment to world-class service!",
+    "location": {
+      "latitude": 32.549879,
+      "longitude": -93.629749,
+      "minLatitude": 32.546063,
+      "maxLatitude": 32.548084,
+      "minLongitude": -93.623643,
+      "maxLongitude": -93.62654
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbG91aXNpYW5hX2Rvd24vX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "met",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13018",
+    "url": "https://www.caesars.com/harrahs-metropolis",
+    "mapUrl": "https://www.caesars.com/harrahs-metropolis/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "100 East Front Street",
+      "city": "Metropolis",
+      "state": "IL",
+      "zip": "62960"
+    },
+    "phone": "(618) 524-2628",
+    "social": {
+      "twitter": "HarrahsMET"
+    },
+    "hotel": "/api/v1/properties/met/hotel",
+    "facts": {
+      "body": "<p>• Shows and touring acts at the Riverfront Event Center</p>\n",
+      "list": [
+        {
+          "number": "4",
+          "type": "restaurants"
+        },
+        {
+          "number": "36000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM0"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false,
+      "title": "Important Notice:",
+      "description": "As of 6AM on Monday, February 18th, rising water levels on the Ohio River will force Harrah’s Metropolis to close. \n\nWe will continue to monitor the water levels; however, the frequently changing river forecast makes it difficult to accurately determine the date and time we will reopen the hotel and casino. It is in the best interest and safety of our guests and employees that we remain closed until further notice.\n\nAs always, please check the Harrah’s Metropolis website, as well as our Facebook & Twitter pages for the most updated information."
+    },
+    "tripAdvisorId": "617591",
+    "name": "Harrah's Metropolis ",
+    "propertyName": "Harrah's Metropolis ",
+    "property": "met",
+    "market": "oth",
+    "propertyRank": 32,
+    "marketRank": 30,
+    "summary": "Whether business or pleasure, check in to our newly remodeled hotel rooms for easy access to all of the fun. Don’t just Come Out and Play, stay here and you’re just steps away from the excitement. Vegas-style gaming, exceptional dining and entertainment are at your fingertips.",
+    "location": {
+      "latitude": 37.148429,
+      "longitude": -88.734317,
+      "minLatitude": 37.146019,
+      "maxLatitude": 37.147289,
+      "minLongitude": -88.734024,
+      "maxLongitude": -88.735194
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbWV0cm9wb2xpcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "nor",
+    "marketCode": "gcm",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13037",
+    "url": "https://www.caesars.com/harrahs-new-orleans",
+    "mapUrl": "www.caesars.com/harrahs-new-orleans/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "228 Poydras Street",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "phone": "(800) 427-7247",
+    "social": {
+      "twitter": "harrahsnola"
+    },
+    "hotel": "/api/v1/properties/nor/hotel",
+    "facts": {
+      "body": "<p>• Shows and touring acts at the Theater at Harrah’s New Orleans</p>\n",
+      "list": [
+        {
+          "number": "2",
+          "type": "bars"
+        },
+        {
+          "number": "115000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "9",
+          "type": "restaurants"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNzE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTI"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTM"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTU"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTY"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTc"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTk"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "284441",
+    "name": "Harrah's New Orleans",
+    "propertyName": "Harrah's New Orleans",
+    "property": "nor",
+    "market": "gcm",
+    "propertyRank": 11,
+    "marketRank": 20,
+    "summary": "You won’t want to leave Harrah's New Orleans, with the spectacular views of the Mississippi River, New Orleans' skyline and just steps from the French Quarter, there is no better place to stay in New Orleans.",
+    "location": {
+      "latitude": 29.948744,
+      "longitude": -90.065565,
+      "minLatitude": 29.947186,
+      "maxLatitude": 29.950654,
+      "minLongitude": -90.065382,
+      "maxLongitude": -90.065832
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbmV3X29ybGVhbnMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "hbv",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "isBookable": false,
+    "preferenceId": "13019",
+    "url": "https://www.caesars.com/harrahs-northern-california",
+    "mapUrl": "//maps.google.com/?q=38.274115,-120.917446",
+    "address": {
+      "street": "4640 Coal Mine Road",
+      "city": "Ione",
+      "state": "CA",
+      "zip": "95640"
+    },
+    "phone": "866-915-0777",
+    "social": {
+      "twitter": "harrahsnorcal"
+    },
+    "facts": {
+      "list": [
+        
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbm9ydGhlcm5fY2FsaWZvcm5pYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbm9ydGhlcm5fY2FsaWZvcm5pYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbm9ydGhlcm5fY2FsaWZvcm5pYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbm9ydGhlcm5fY2FsaWZvcm5pYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbm9ydGhlcm5fY2FsaWZvcm5pYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbm9ydGhlcm5fY2FsaWZvcm5pYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "name": "Harrah's Northern California",
+    "propertyName": "Harrah's Northern California",
+    "property": "hbv",
+    "market": "oth",
+    "propertyRank": 29,
+    "marketRank": 30,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbm9ydGhlcm5fY2FsaWZvcm5pYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9mZWF0dXJlZEltYWdl"
+    },
+    "summary": "Harrah's Northern California is more than just a casino. From exciting gaming to fine dining and everything in between, Harrah's Northern California is a destination to satisfy every taste.",
+    "location": {
+      "latitude": 38.274115,
+      "longitude": -120.917446,
+      "minLatitude": 38.274115,
+      "maxLatitude": 38.274115,
+      "minLongitude": -120.917446,
+      "maxLongitude": -120.917446
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfbm9ydGhlcm5fY2FsaWZvcm5pYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "ccr",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "isBookable": false,
+    "preferenceId": "13010",
+    "url": "https://www.caesars.com/harrahs-philly",
+    "mapUrl": "http://www.caesars.com/harrahs-philly/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL21hcA"
+    },
+    "address": {
+      "street": "777 Harrah's Blvd",
+      "city": "Chester",
+      "state": "PA",
+      "zip": "19013"
+    },
+    "phone": "(800) 480-8020",
+    "social": {
+      "twitter": "harrahsphl"
+    },
+    "facts": {
+      "body": "<p>• Shows and touring acts at Harrah’s Events Center<br>\n• Indoor pool<br>\n• Gym<br>\n• Shops</p>\n",
+      "list": [
+        {
+          "number": "1",
+          "type": "lounge"
+        },
+        {
+          "number": "100000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "10",
+          "type": "restaurants"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczEx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczM"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczQ"
+      }
+    ],
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1kYXJr"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtZGFyaw"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1saWdodA"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtbGlnaHQ"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "640354",
+    "name": "Harrah's Philadelphia Casino and Racetrack",
+    "propertyName": "Harrah's Philadelphia Casino and Racetrack",
+    "property": "ccr",
+    "market": "oth",
+    "propertyRank": 18,
+    "marketRank": 22,
+    "summary": "Come out and play at Harrah’s Philadelphia Casino and Racetrack, with the city’s hottest casino action 24/7 and race simulcasting every day.",
+    "location": {
+      "latitude": 39.851083,
+      "longitude": -75.348298,
+      "minLatitude": 39.849617,
+      "maxLatitude": 39.852063,
+      "minLongitude": -75.346191,
+      "maxLongitude": -75.351169
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcGhpbGFkZWxwaGlhL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ltYWdl"
+    }
+  },
+  {
+    "id": "ren",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13024",
+    "url": "https://www.caesars.com/harrahs-reno",
+    "mapUrl": "//maps.google.com/?q=39.527729,-119.812549",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "219 North Center Street",
+      "city": "Reno",
+      "state": "NV",
+      "zip": "89501"
+    },
+    "phone": "775-786-3232",
+    "social": {
+      "twitter": "northernnevada"
+    },
+    "hotel": "/api/v1/properties/ren/hotel",
+    "facts": {
+      "body": "<p>• Spa &amp; salon<br>\n• Outdoor pool</p>\n",
+      "list": [
+        {
+          "number": "1",
+          "type": "lounge"
+        },
+        {
+          "number": "24000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "7",
+          "type": "restaurants"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM0"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "97989",
+    "name": "Harrah's Reno",
+    "propertyName": "Harrah's Reno",
+    "property": "ren",
+    "market": "oth",
+    "propertyRank": 10,
+    "marketRank": 19,
+    "summary": "Harrah's Reno Casino, with seven fabulous restaurants, a 60,000 square foot, 24-hour casino, the hottest revues and amazing headline entertainment, has what it takes to show everyone a great time.",
+    "location": {
+      "latitude": 39.527729,
+      "longitude": -119.812549,
+      "minLatitude": 39.527195,
+      "maxLatitude": 39.528341,
+      "minLongitude": -119.811782,
+      "maxLongitude": -119.813612
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmVuby9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "atl",
+    "marketCode": "acm",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "12:00 PM",
+    "isBookable": true,
+    "preferenceId": "13022",
+    "url": "https://www.caesars.com/harrahs-ac",
+    "mapUrl": "http://www.caesars.com/harrahs-ac/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "777 Harrah's Blvd",
+      "city": "Atlantic City",
+      "state": "NJ",
+      "zip": "08401"
+    },
+    "phone": "(609) 441-5000",
+    "social": {
+      "twitter": "harrahsresort"
+    },
+    "hotel": "/api/v1/properties/atl/hotel",
+    "facts": {
+      "body": "<p>• Free nightly music at Eden Lounge<br>\n• Shows and touring acts at the concert venue<br>\n• Pool<br>\n• Basic Wifi for two devices per room per day<br>\n• Unlimited local calls<br>\n• A $5 voucher toward self-parking</p>\n",
+      "list": [
+        {
+          "number": "6",
+          "type": "bars, lounges, and nightclubs"
+        },
+        {
+          "number": "9",
+          "type": "restaurants"
+        },
+        {
+          "number": "175000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM0"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM1"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "98423",
+    "name": "Harrah's Resort Atlantic City",
+    "propertyName": "Harrah's Resort Atlantic City",
+    "property": "atl",
+    "market": "acm",
+    "propertyRank": 11,
+    "marketRank": 14,
+    "summary": "With its sophisticated marina setting and an infinite roster of world-class resort amenities, Harrah's Atlantic City Resort has become the premier Atlantic City hotel destination.",
+    "location": {
+      "latitude": 39.384016,
+      "longitude": -74.426749,
+      "minLatitude": 39.383763,
+      "maxLatitude": 39.385363,
+      "minLongitude": -74.425249,
+      "maxLongitude": -74.430399
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfYXRsYW50aWNfY2l0eS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "rin",
+    "marketCode": "oth",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13012",
+    "url": "https://www.caesars.com/harrahs-socal",
+    "mapUrl": "https://www.caesars.com/harrahs-socal/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL21hcA"
+    },
+    "address": {
+      "street": "777 Harrah's Rincon Way",
+      "city": "Funner",
+      "state": "CA",
+      "zip": "92082"
+    },
+    "phone": "(760) 751-3100",
+    "social": {
+      "twitter": "HarrahsSoCal"
+    },
+    "hotel": "/api/v1/properties/rin/hotel",
+    "facts": {
+      "body": "<p>• Concerts and Comedy shows at The Events Center<br>\n• World-class Spa<br>\n• Two gift shops</p>\n",
+      "list": [
+        {
+          "number": "1700",
+          "type": "slots"
+        },
+        {
+          "number": "1",
+          "type": "Swim-up Bar"
+        },
+        {
+          "number": "2",
+          "type": "Pool"
+        },
+        {
+          "number": "3",
+          "type": "lounges & bars"
+        },
+        {
+          "number": "8",
+          "type": "restaurants"
+        },
+        {
+          "number": "60",
+          "type": "tables"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE",
+        "title": "Harrahs So Cal North Tower"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczEx",
+        "title": "Harrahs So Cal Concert"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczQ",
+        "title": "Harrahs So Cal Diamond Lounge"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczU",
+        "title": "Harrahs SoCal Diamond Lounge"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczY",
+        "title": "Harrahs So Cal At Night"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczc",
+        "title": "Harrahs So Cal Pool"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczg",
+        "title": "Harrahs So Cal Deluxe King"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2liZUhlYWRlckltYWdl"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1kYXJr"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtZGFyaw"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1saWdodA"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtbGlnaHQ"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "280237",
+    "name": "Harrah's Resort Southern California",
+    "propertyName": "Harrah's Resort Southern California",
+    "property": "rin",
+    "market": "oth",
+    "propertyRank": 7,
+    "marketRank": 15,
+    "summary": "At Harrah’s Resort Southern California, our home is your home. This beautiful San Diego hotel features 1087 spacious rooms throughout three hotel towers including 152 suites.",
+    "location": {
+      "latitude": 33.266788,
+      "longitude": -116.954178,
+      "minLatitude": 33.266178,
+      "maxLatitude": 33.268582,
+      "minLongitude": -116.953872,
+      "maxLongitude": -116.957628
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfcmluY29uL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ltYWdl"
+    }
+  },
+  {
+    "id": "cou",
+    "marketCode": "iam",
+    "brand": "harrahs",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13015",
+    "url": "https://www.caesars.com/harrahs-council-bluffs",
+    "mapUrl": "http://www.caesars.com/harrahs-council-bluffs/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "One Harrahs Blvd",
+      "city": "Council Bluffs",
+      "state": "IA",
+      "zip": "51501"
+    },
+    "phone": "(712) 329-6000",
+    "social": {
+      "twitter": "HarrahsIowa"
+    },
+    "hotel": "/api/v1/properties/cou/hotel",
+    "facts": {
+      "body": "<p>• Shows and touring acts at Stir Concert Cove<br>\n• Gym</p>\n",
+      "list": [
+        {
+          "number": "1",
+          "type": "lounge"
+        },
+        {
+          "number": "5",
+          "type": "restaurants"
+        },
+        {
+          "number": "100000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM0"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "281098",
+    "name": "Harrah’s Council Bluffs Hotel and Casino",
+    "propertyName": "Harrah’s Council Bluffs Hotel and Casino",
+    "property": "cou",
+    "market": "iam",
+    "propertyRank": 15,
+    "marketRank": 29,
+    "summary": "Whether you're staying at Harrah's Council Bluffs for business or pleasure, we have what you're looking for. With luxurious accommodations in our exquisite suites and deluxe rooms!",
+    "location": {
+      "latitude": 41.251309,
+      "longitude": -95.910599,
+      "minLatitude": 41.250322,
+      "maxLatitude": 41.251702,
+      "minLongitude": -95.913745,
+      "maxLongitude": -95.917044
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJyYWhzL2VuL2hhcnJhaHNfY291bmNpbGJsdWZmcy9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "hlt",
+    "marketCode": "rno",
+    "brand": "harveys",
+    "checkIn": "4:00 PM",
+    "checkOut": "12:00 PM",
+    "isBookable": true,
+    "preferenceId": "13046",
+    "url": "https://www.caesars.com/harveys-tahoe",
+    "mapUrl": "//maps.google.com/?q=38.959191,-119.942068",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "Highway 50 at Stateline Avenue",
+      "city": "Lake Tahoe",
+      "state": "NV",
+      "zip": "89449"
+    },
+    "phone": "(775) 588-6611",
+    "social": {
+      "twitter": "harveystahoe"
+    },
+    "hotel": "/api/v1/properties/hlt/hotel",
+    "facts": {
+      "body": "<p>• Touring comedians at The Improv<br>\n• Music under the stars at the Summer Concert Series<br>\n• Pool<br>\n• Fitness center, whirlpool and sauna<br>\n• Shopping</p>\n",
+      "list": [
+        {
+          "number": "52000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "5",
+          "type": "lounges & bars"
+        },
+        {
+          "number": "8",
+          "type": "restaurants"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMyMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "142236",
+    "name": "Harveys Lake Tahoe",
+    "propertyName": "Harveys Lake Tahoe",
+    "property": "hlt",
+    "market": "rno",
+    "propertyRank": 33,
+    "marketRank": 18,
+    "summary": "Your adventure begins at Harveys Lake Tahoe! These Lake Tahoe accommodations give you access to four seasons of fun from the original Lake Tahoe hotel and casino.",
+    "location": {
+      "latitude": 38.959191,
+      "longitude": -119.942068,
+      "minLatitude": 38.959296,
+      "maxLatitude": 38.960869,
+      "minLongitude": -119.9421,
+      "maxLongitude": -119.943296
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9oYXJ2ZXlzL2VuL2hhcnZleXNfbGFrZV90YWhvZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "uba",
+    "marketCode": "bam",
+    "brand": "horseshoe",
+    "isBookable": false,
+    "preferenceId": "13044",
+    "url": "https://www.caesars.com/horseshoe-baltimore",
+    "mapUrl": "//maps.google.com/?q=39.290385,-76.612189",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2JhbHRpbW9yZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "1525 Russell Street",
+      "city": "Baltimore",
+      "state": "MD",
+      "zip": "21230"
+    },
+    "phone": "(844) 777-SHOE",
+    "social": {
+      "twitter": "horseshoebmore"
+    },
+    "facts": {
+      "list": [
+        {
+          "number": "2",
+          "type": "bars"
+        },
+        {
+          "number": "4",
+          "type": "restaurants"
+        },
+        {
+          "number": "2100",
+          "type": "slots"
+        },
+        {
+          "number": "96000",
+          "type": "sq. ft. of gambling space"
+        },
+        {
+          "number": "65",
+          "type": "table games"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2JhbHRpbW9yZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2JhbHRpbW9yZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2JhbHRpbW9yZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2JhbHRpbW9yZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2JhbHRpbW9yZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2JhbHRpbW9yZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2JhbHRpbW9yZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "6433888",
+    "name": "Horseshoe Baltimore",
+    "propertyName": "Horseshoe Baltimore",
+    "property": "uba",
+    "market": "bam",
+    "propertyRank": 24,
+    "marketRank": 12,
+    "summary": "Horseshoe Baltimore features slots, table games and a World Series of Poker (WSOP) room as well as three premier restaurant, authentic Charm City food outlets and several bars and lounges.",
+    "location": {
+      "latitude": 39.290385,
+      "longitude": -76.612189,
+      "minLatitude": 41.497618,
+      "maxLatitude": 41.498775,
+      "minLongitude": -81.692013,
+      "maxLongitude": -81.693542
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2JhbHRpbW9yZS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "ubc",
+    "marketCode": "oth",
+    "brand": "horseshoe",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13427",
+    "url": "https://www.caesars.com/horseshoe-bossier-city",
+    "mapUrl": "http://www.caesars.com/horseshoe-bossier-city/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "711 Horseshoe Boulevard",
+      "city": "Bossier City",
+      "state": "LA",
+      "zip": "71111"
+    },
+    "phone": "(800) 895-0711",
+    "social": {
+      "twitter": "horseshoe_bc"
+    },
+    "hotel": "/api/v1/properties/ubc/hotel",
+    "facts": {
+      "body": "<p>• Limited engagements and special appearances at the Riverdome<br>\n• Indulge day spa and salon<br>\n• Gym</p>\n",
+      "list": [
+        {
+          "number": "2",
+          "type": "bars & restaurants"
+        },
+        {
+          "number": "4",
+          "type": "restaurants"
+        },
+        {
+          "number": "6",
+          "type": "shops"
+        },
+        {
+          "number": "29900",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "169783",
+    "name": "Horseshoe Bossier City",
+    "propertyName": "Horseshoe Bossier City",
+    "property": "ubc",
+    "market": "oth",
+    "propertyRank": 36,
+    "marketRank": 27,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvZmVhdHVyZWRJbWFnZQ"
+    },
+    "summary": "From the moment you enter our hotel lobby, you'll see that Horseshoe Bossier City has placed luxury and comfort at the top of our priority list with the trademark of a world-class destination.",
+    "location": {
+      "latitude": 32.515291,
+      "longitude": -93.737341,
+      "minLatitude": 32.514294,
+      "maxLatitude": 32.516638,
+      "minLongitude": -93.736682,
+      "maxLongitude": -93.739364
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2Jvc3NpZXJfY2kvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "hbr",
+    "marketCode": "iam",
+    "brand": "horseshoe",
+    "isBookable": true,
+    "preferenceId": "13036",
+    "url": "https://www.caesars.com/horseshoe-council-bluffs",
+    "mapUrl": "http://www.caesars.com/horseshoe-council-bluffs/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "2701 23rd Avenue",
+      "city": "Council Bluffs",
+      "state": "IA",
+      "zip": "51501"
+    },
+    "phone": "(712) 323-2500",
+    "social": {
+      "twitter": "HorseshoeIowa"
+    },
+    "hotel": "/api/v1/properties/hbr/hotel",
+    "facts": {
+      "body": "<p>• Limited engagements and special appearances at the Whiskey Roadhouse<br>\n• Bluffs Run RV Park</p>\n",
+      "list": [
+        {
+          "number": "1",
+          "type": "lounge"
+        },
+        {
+          "number": "5",
+          "type": "restaurants"
+        },
+        {
+          "number": "68000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMzE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "4115589",
+    "name": "Horseshoe Council Bluffs Casino",
+    "propertyName": "Horseshoe Council Bluffs Casino",
+    "property": "hbr",
+    "market": "iam",
+    "propertyRank": 37,
+    "marketRank": 28,
+    "summary": "Horseshoe Council Bluffs is home of the best odds, highest limits and biggest jackpots with more than 1,700 slots and over 60 table games to choose from.",
+    "location": {
+      "latitude": 41.237721,
+      "longitude": -95.886848,
+      "minLatitude": 41.234881,
+      "maxLatitude": 41.238165,
+      "minLongitude": -95.884928,
+      "maxLongitude": -95.887942
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2NvdW5jaWxfYmwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "uha",
+    "marketCode": "oth",
+    "brand": "horseshoe",
+    "isBookable": false,
+    "preferenceId": "13039",
+    "url": "https://www.caesars.com/horseshoe-hammond",
+    "mapUrl": "https://www.caesars.com/horseshoe-hammond/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "777 Casino Center Drive",
+      "city": "Hammond",
+      "state": "IN",
+      "zip": "46320"
+    },
+    "phone": "(866) 711-SHOE/7463",
+    "social": {
+      "twitter": "ChiHorseshoe"
+    },
+    "facts": {
+      "body": "<p>• Limited engagements and special concert appearances at The Venue<br>\n• Gift Shop</p>\n",
+      "list": [
+        {
+          "number": "100",
+          "type": "table games"
+        },
+        {
+          "number": "1",
+          "type": "nightclub"
+        },
+        {
+          "number": "2",
+          "type": "bars and lounges"
+        },
+        {
+          "number": "6",
+          "type": "restaurants"
+        },
+        {
+          "number": "3000",
+          "type": "slots"
+        },
+        {
+          "number": "108000",
+          "type": "sq. ft. of casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNQ"
+      }
+    ],
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "258332",
+    "name": "Horseshoe Hammond",
+    "propertyName": "Horseshoe Hammond",
+    "property": "uha",
+    "market": "oth",
+    "propertyRank": 39,
+    "marketRank": 24,
+    "summary": "Located just 20 minutes from downtown Chicago, Horseshoe Hammond Casino is the premier entertainment and gambling destination in the Midwest.",
+    "location": {
+      "latitude": 41.693536,
+      "longitude": -87.508083,
+      "minLatitude": 41.692423,
+      "maxLatitude": 41.695643,
+      "minLongitude": -87.505889,
+      "maxLongitude": -87.509172
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX2hhbW1vbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "utu",
+    "marketCode": "nmm",
+    "brand": "horseshoe",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13047",
+    "url": "https://www.caesars.com/horseshoe-tunica",
+    "mapUrl": "https://www.caesars.com/horseshoe-tunica/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3R1bmljYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "1021 Casino Center Drive",
+      "city": "Robinsonville",
+      "state": "MS",
+      "zip": "38664"
+    },
+    "phone": "(800) 303-7463",
+    "social": {
+      "twitter": "Horseshoetunica"
+    },
+    "hotel": "/api/v1/properties/utu/hotel",
+    "facts": {
+      "body": "<p>• Outdoor pool<br>\n• Gym<br>\n• Limited engagements and special appearances at Bluesville<br>\n• Nightly entertainment at the Stage Bar</p>\n",
+      "list": [
+        {
+          "number": "65000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "5",
+          "type": "restaurants"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3R1bmljYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3R1bmljYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3R1bmljYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3R1bmljYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3R1bmljYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3R1bmljYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3R1bmljYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3R1bmljYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "114831",
+    "name": "Horseshoe Tunica",
+    "propertyName": "Horseshoe Tunica",
+    "property": "utu",
+    "market": "nmm",
+    "propertyRank": 38,
+    "marketRank": 30,
+    "summary": "East and west of the Mississippi have nothing on us. The Horseshoe Tunica is the hottest casino hotel on the Mississippi!",
+    "location": {
+      "latitude": 34.847216,
+      "longitude": -90.330534,
+      "minLatitude": 34.849241,
+      "maxLatitude": 34.846538,
+      "minLongitude": -90.330341,
+      "maxLongitude": -90.330952
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ob3JzZXNob2UvZW4vaG9yc2VzaG9lX3R1bmljYS9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "uin",
+    "marketCode": "oth",
+    "brand": "market",
+    "isBookable": false,
+    "preferenceId": "32670",
+    "url": "https://www.caesars.com/indiana-grand",
+    "mapUrl": "//maps.google.com/?q=39.58903,-85.825245",
+    "address": {
+      "street": "4300 N. Michigan Road",
+      "city": "Shelbyville",
+      "state": "IN",
+      "zip": "46176"
+    },
+    "phone": "(877) 386-4463",
+    "social": {
+      "twitter": "https://twitter.com/IndianaGrand"
+    },
+    "facts": {
+      "list": [
+        
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9pbmRpYW5hX2dyYW5kL2VuL2luZGlhbmFfZ3JhbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9pbmRpYW5hX2dyYW5kL2VuL2luZGlhbmFfZ3JhbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9pbmRpYW5hX2dyYW5kL2VuL2luZGlhbmFfZ3JhbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9pbmRpYW5hX2dyYW5kL2VuL2luZGlhbmFfZ3JhbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9pbmRpYW5hX2dyYW5kL2VuL2luZGlhbmFfZ3JhbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "name": "Indiana Grand, Shelbyville",
+    "propertyName": "Indiana Grand, Shelbyville",
+    "property": "uin",
+    "market": "oth",
+    "propertyRank": 100,
+    "marketRank": 30,
+    "summary": "You can bet Indiana Grand Racing and Casino delivers all the energy. Home to the Indiana Derby, the bustling casino offers wire-to-wire horse racing, slots and e-table games. Enjoy savory dining options and live music.",
+    "location": {
+      "latitude": 39.58903,
+      "longitude": -85.825245,
+      "minLatitude": 39.58903,
+      "maxLatitude": 39.58903,
+      "minLongitude": -85.825245,
+      "maxLongitude": -85.825245
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9pbmRpYW5hX2dyYW5kL2VuL2luZGlhbmFfZ3JhbmQvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "xmc",
+    "marketCode": "iam",
+    "brand": "midamerica_center",
+    "isBookable": false,
+    "preferenceId": "13034",
+    "url": "https://www.caesars.com/mid-america-center",
+    "mapUrl": "http://www.caesars.com/mid-america-center/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9taWRfYW1lcmljYV9jZW50ZXIvZW4vbWlkX2FtZXJpY2FfY2VudGVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL21hcA"
+    },
+    "address": {
+      "street": "One Arena Way",
+      "city": "Council Bluffs",
+      "state": "IA",
+      "zip": "51501"
+    },
+    "phone": "712.323.0536",
+    "social": {
+      "twitter": "mac_center"
+    },
+    "facts": {
+      "list": [
+        
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9taWRfYW1lcmljYV9jZW50ZXIvZW4vbWlkX2FtZXJpY2FfY2VudGVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9taWRfYW1lcmljYV9jZW50ZXIvZW4vbWlkX2FtZXJpY2FfY2VudGVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3doaXRlbG9nbw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9taWRfYW1lcmljYV9jZW50ZXIvZW4vbWlkX2FtZXJpY2FfY2VudGVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3doaXRlbG9nbw"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9taWRfYW1lcmljYV9jZW50ZXIvZW4vbWlkX2FtZXJpY2FfY2VudGVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9taWRfYW1lcmljYV9jZW50ZXIvZW4vbWlkX2FtZXJpY2FfY2VudGVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "name": "Mid-America Center",
+    "propertyName": "Mid-America Center",
+    "property": "xmc",
+    "market": "iam",
+    "propertyRank": 20,
+    "marketRank": 25,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9taWRfYW1lcmljYV9jZW50ZXIvZW4vbWlkX2FtZXJpY2FfY2VudGVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ZlYXR1cmVkSW1hZ2U"
+    },
+    "summary": "The Mid-America Center is the Heartland's premier entertainment and convention center. The multi-purpose facility is the metro area's link to the ultimate in live entertainment and sporting events. From rock shows to family shows and much more.",
+    "location": {
+      "latitude": 36.11517,
+      "longitude": -115.173969
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9taWRfYW1lcmljYV9jZW50ZXIvZW4vbWlkX2FtZXJpY2FfY2VudGVyL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ltYWdl"
+    }
+  },
+  {
+    "id": "cl1",
+    "marketCode": "lvm",
+    "brand": "nobu",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13045",
+    "url": "https://www.caesars.com/nobu-caesars-palace/",
+    "mapUrl": "/content/cet-global/caesars-com/nobu-caesars-palace/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "3570 Las Vegas Boulevard South",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89109"
+    },
+    "phone": "(800) 727-4923",
+    "social": {
+      "twitter": "CaesarsPalace",
+      "massRelevanceHashTags": "#NobuHotel",
+      "massRelevanceStreamId": "http://tweetriver.com/CaesarsMR/13-masterlasvegas-allhashtags.json"
+    },
+    "hotel": "/api/v1/properties/cl1/hotel",
+    "facts": {
+      "body": "<p>• QUA Baths &amp; Spa<br>\n• COLOR Salon by Michael Boychuck</p>\n",
+      "list": [
+        
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMjE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOTE"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "3907285",
+    "name": "NOBU Hotel",
+    "propertyName": "NOBU Hotel",
+    "property": "cl1",
+    "market": "lvm",
+    "propertyRank": 19,
+    "marketRank": 10,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvZmVhdHVyZWRJbWFnZQ"
+    },
+    "summary": "Immerse yourself in luxury that emerges at every turn, every texture, and every amenity!",
+    "location": {
+      "latitude": 36.11517,
+      "longitude": -115.173969,
+      "minLatitude": 36.11626,
+      "maxLatitude": 36.11647,
+      "minLongitude": -115.174779,
+      "maxLongitude": -115.175042
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9ub2J1L2VuL25vYnUvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "plv",
+    "marketCode": "lvm",
+    "brand": "paris",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13050",
+    "url": "https://www.caesars.com/paris-las-vegas",
+    "mapUrl": "//maps.google.com/?q=36.111957,-115.17129",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "3655 Las Vegas Boulevard South",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89109"
+    },
+    "phone": "(877) 796-2096",
+    "social": {
+      "twitter": "ParisVegas",
+      "massRelevanceHashTags": "#ParisVegas",
+      "massRelevanceStreamId": "http://tweetriver.com/CaesarsMR/13-masterlasvegas-allhashtags.json"
+    },
+    "hotel": "/api/v1/properties/plv/hotel",
+    "facts": {
+      "body": "<p>• Heated pool<br>\n• Spa by Mandara<br>\n• Salon<br>\n• Eiffel Tower Ride</p>\n",
+      "list": [
+        {
+          "number": "12",
+          "type": "restaurants"
+        },
+        {
+          "number": "4",
+          "type": "shows"
+        },
+        {
+          "number": "6",
+          "type": "bars, lounges and nightclubs"
+        },
+        {
+          "number": "85000",
+          "type": " sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNDE",
+        "title": "Cocktails At Le Central Bar"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNQ",
+        "title": "Le Central Bar Area"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTA"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "143336",
+    "name": "Paris Las Vegas",
+    "propertyName": "Paris Las Vegas",
+    "property": "plv",
+    "market": "lvm",
+    "propertyRank": 10,
+    "marketRank": 7,
+    "summary": "Give in to your every desire at Paris Las Vegas Hotel and Casino, whether you crave decadent dining, world-class entertainment or thrilling nightlife.",
+    "location": {
+      "latitude": 36.111957,
+      "longitude": -115.17129,
+      "minLatitude": 36.111435,
+      "maxLatitude": 36.113081,
+      "minLongitude": -115.167682,
+      "maxLongitude": -115.172725
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wYXJpcy9lbi9wYXJpc19sYXNfdmVnYXMvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "phv",
+    "marketCode": "lvm",
+    "brand": "planet_hollywood",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13035",
+    "url": "https://www.caesars.com/planet-hollywood",
+    "mapUrl": "http://www.caesars.com/planet-hollywood/map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "3667 Las Vegas Boulevard South",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89109"
+    },
+    "phone": "(866) 919-7472",
+    "social": {
+      "twitter": "phvegas",
+      "massRelevanceHashTags": "#PlanetHollywood",
+      "massRelevanceStreamId": "http://tweetriver.com/CaesarsMR/13-masterlasvegas-allhashtags.json"
+    },
+    "hotel": "/api/v1/properties/phv/hotel",
+    "facts": {
+      "body": "<p>• Planet Hollywood Spa by Mandara<br>\n• Salon</p>\n",
+      "list": [
+        {
+          "number": "2",
+          "type": "pools"
+        },
+        {
+          "number": "3",
+          "type": "shows"
+        },
+        {
+          "number": "6",
+          "type": "bars, lounges and nightclubs"
+        },
+        {
+          "number": "100000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "9",
+          "type": "restaurants"
+        },
+        {
+          "number": "160",
+          "type": "stores & restaurants at Miracle Mile Shops"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNDE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNw"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false,
+      "title": "We’re Building You A Better Resort",
+      "description": "We’re remodeling our guest rooms to make Planet Hollywood Resort & Casino even more elegant and exciting! We apologize for any inconvenience that construction may cause during your stay. Thanks in advance for your patience as we work to improve Las Vegas’ most electrifying resort. Our newly renovated Ultra Hip rooms are available now. Book today, and you’ll be among the first to guests to enjoy our all-new look."
+    },
+    "tripAdvisorId": "91687",
+    "name": "Planet Hollywood",
+    "propertyName": "Planet Hollywood",
+    "property": "phv",
+    "market": "lvm",
+    "propertyRank": 9,
+    "marketRank": 4,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvZmVhdHVyZWRJbWFnZQ"
+    },
+    "summary": "Everybody’s PHamous at Planet Hollywood Las Vegas; when you stay in a Planet Hollywood hotel room, the celebrity lifestyle is yours for the living, and fame lies around every corner.",
+    "location": {
+      "latitude": 36.109747,
+      "longitude": -115.172414,
+      "minLatitude": 36.108253,
+      "maxLatitude": 36.111222,
+      "minLongitude": -115.167714,
+      "maxLongitude": -115.172773
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9wbGFuZXRfaG9sbHl3b29kL2VuL3BsYW5ldF9ob2xseXdvb2QvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "rlv",
+    "marketCode": "lvm",
+    "brand": "rio",
+    "checkIn": "3:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13048",
+    "url": "https://www.caesars.com/rio-las-vegas",
+    "mapUrl": "https://www.caesars.com/rio-las-vegas/rio-las-vegas-map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbWFw"
+    },
+    "address": {
+      "street": "3700 W. Flamingo Road",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89103"
+    },
+    "phone": "(866) 746-7671",
+    "social": {
+      "twitter": "riovegas",
+      "massRelevanceHashTags": "#RioVegas",
+      "massRelevanceStreamId": "http://tweetriver.com/CaesarsMR/13-masterlasvegas-allhashtags.json"
+    },
+    "hotel": "/api/v1/properties/rlv/hotel",
+    "facts": {
+      "body": "<p>• Rio Spa and Salon</p>\n",
+      "list": [
+        {
+          "number": "12",
+          "type": "restaurants"
+        },
+        {
+          "number": "2",
+          "type": "pools"
+        },
+        {
+          "number": "6",
+          "type": "bars, lounges and nightclubs"
+        },
+        {
+          "number": "100000",
+          "type": "sq. ft. casino"
+        },
+        {
+          "number": "8",
+          "type": "shows"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nbw"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNDE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzNw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzOTE"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTI"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvc2xpZGVzMTM"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaWJlSGVhZGVySW1hZ2U"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWRhcms"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1kYXJr"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvc3F1YXJlLWxpZ2h0"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvbG9nb3Mvd2lkZS1saWdodA"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "91673",
+    "name": "Rio All-Suite Hotel & Casino",
+    "propertyName": "Rio All-Suite Hotel & Casino",
+    "property": "rlv",
+    "market": "lvm",
+    "propertyRank": 12,
+    "marketRank": 6,
+    "summary": "Temptation awaits at the all-suite Rio Las Vegas Hotel and Casino, the most wild and uninhibited resort hotel in Las Vegas.",
+    "location": {
+      "latitude": 36.116384,
+      "longitude": -115.18723,
+      "minLatitude": 36.115101,
+      "maxLatitude": 36.120942,
+      "minLongitude": -115.185192,
+      "maxLongitude": -115.189891
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9yaW8vZW4vcmlvX2FsbF9zdWl0ZXNfaG90ZWwvX2pjcl9jb250ZW50L2NhcmRzL2NhcmQvaW1hZ2U"
+    }
+  },
+  {
+    "id": "dlv",
+    "marketCode": "lvm",
+    "brand": "cromwell",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13032",
+    "url": "https://www.caesars.com/cromwell",
+    "mapUrl": "http://www.caesars.com/cromwell/the-cromwell-map",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9tYXA"
+    },
+    "address": {
+      "street": "3595 Las Vegas Blvd South",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89109"
+    },
+    "phone": "(702) 777-3777",
+    "social": {
+      "twitter": "cromwellvegas",
+      "massRelevanceHashTags": "#TheCromwell,#CromwellLife",
+      "massRelevanceStreamId": "http://tweetriver.com/CaesarsMR/13-masterlasvegas-allhashtags.json"
+    },
+    "hotel": "/api/v1/properties/dlv/hotel",
+    "facts": {
+      "list": [
+        {
+          "number": "1",
+          "type": "pools"
+        },
+        {
+          "number": "4",
+          "type": "bars, lounges, and nightclubs"
+        },
+        {
+          "number": "40000",
+          "type": "sq. ft. casino"
+        }
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dv"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM0"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM1"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM2"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM3"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM4"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXM5"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMA"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMQ"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9zbGlkZXMxMw"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pYmVIZWFkZXJJbWFnZQ"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtZGFyaw"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWRhcms"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy9zcXVhcmUtbGlnaHQ"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9sb2dvcy93aWRlLWxpZ2h0"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "6537691",
+    "name": "The Cromwell",
+    "propertyName": "The Cromwell",
+    "property": "dlv",
+    "market": "lvm",
+    "propertyRank": 2,
+    "marketRank": 2,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9mZWF0dXJlZEltYWdl"
+    },
+    "summary": "The Cromwell presents the Strip’s first Las Vegas boutique hotel. Bold. Sophisticated. Enticing. Welcome to The Cromwell.",
+    "location": {
+      "latitude": 36.115105,
+      "longitude": -115.17185,
+      "minLatitude": 36.114758,
+      "maxLatitude": 36.115324,
+      "minLongitude": -115.170973,
+      "maxLongitude": -115.172722
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy9jcm9td2VsbC9lbi9jcm9td2VsbC9famNyX2NvbnRlbnQvY2FyZHMvY2FyZC9pbWFnZQ"
+    }
+  },
+  {
+    "id": "ilv",
+    "marketCode": "lvm",
+    "brand": "the_quad",
+    "checkIn": "4:00 PM",
+    "checkOut": "11:00 AM",
+    "isBookable": true,
+    "preferenceId": "13030",
+    "url": "https://www.caesars.com/linq",
+    "mapUrl": "http://www.caesars.com/linq/the-linq-map.html",
+    "propertyMap": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL21hcA"
+    },
+    "address": {
+      "street": "3535 Las Vegas Blvd South",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89109"
+    },
+    "phone": "1-800-634-6441",
+    "social": {
+      "twitter": "thelinq",
+      "massRelevanceHashTags": "#TheLINQ"
+    },
+    "hotel": "/api/v1/properties/ilv/hotel",
+    "facts": {
+      "body": "<p>&nbsp;&nbsp;</p>\n",
+      "list": [
+        
+      ]
+    },
+    "logo": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ28"
+    },
+    "images": [
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczI"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczM"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczU"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczY"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczYx"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczc"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczg"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczk"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczEw"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczEy"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczEz"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE0"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczE",
+        "title": "Linq Hotel"
+      },
+      {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL3NsaWRlczkx",
+        "title": "Linq Bar"
+      }
+    ],
+    "ibeHeaderImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2liZUhlYWRlckltYWdl"
+    },
+    "logos": {
+      "darkSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1kYXJr"
+      },
+      "darkWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtZGFyaw"
+      },
+      "lightSquare": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3NxdWFyZS1saWdodA"
+      },
+      "lightWide": {
+        "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2xvZ29zL3dpZGUtbGlnaHQ"
+      }
+    },
+    "outage": {
+      "isAlways": false
+    },
+    "tripAdvisorId": "186114",
+    "name": "The LINQ Hotel + Experience",
+    "propertyName": "The LINQ Hotel + Experience",
+    "property": "ilv",
+    "market": "lvm",
+    "propertyRank": 3,
+    "marketRank": 3,
+    "featuredImage": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ZlYXR1cmVkSW1hZ2U"
+    },
+    "summary": "The LINQ Hotel + Experience is redefining the iconic Las Vegas skyline. Stay center strip just steps away from The LINQ Promenade, which is anchored by the world's tallest observation wheel, known as the High Roller.",
+    "location": {
+      "latitude": 36.118045,
+      "longitude": -115.171894,
+      "minLatitude": 36.117365,
+      "maxLatitude": 36.118366,
+      "minLongitude": -115.168613,
+      "maxLongitude": -115.172701
+    },
+    "thumbnail": {
+      "url": "/api/v1/image/L2NvbnRlbnQvc2NhZmZvbGRfcGFnZXMvcHJvcGVydGllcy90aGVfcXVhZC9lbi9saW5xL19qY3JfY29udGVudC9jYXJkcy9jYXJkL2ltYWdl"
+    }
+  }
+]

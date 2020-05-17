@@ -1,5 +1,4 @@
 const caesarsDomain = "http://www.caesars.com";
-const staticFilesDomain = "https://caesarspoc.s3.us-east-2.amazonaws.com";
 
 export const getOfferFilterTypes = () => {
     return ["Hotel", "Cash", "Gaming", "Entertainment", "Events", "Dining", "Other", "Package", "Favorite"];
@@ -27,5 +26,5 @@ export const getImageUrl = () => {
 };
 
 export const getApiRootUrl = () => {
-    return staticFilesDomain + "/stubs/";
+    return "/stubs/";
 };
