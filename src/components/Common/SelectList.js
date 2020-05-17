@@ -1,70 +1,54 @@
-import React from "react";
-
-const loadScript = () => {
-    $(document).ready(function () {
-        $(".selectList.dropdown > span")
-            .off("click touch")
-            .on("click touch", function (e) {
-                e.preventDefault();
-                const $self = $(this).parent();
-                $self.toggleClass("open");
-            });
-        $(document).on("click touch", "body", function (e) {
-            if (e) {
-                const $dropdown = $(".selectList.dropdown");
-                if ($dropdown !== e.target && !$dropdown.has(e.target).length) {
-                    $dropdown.removeClass("open");
-                }
-            }
-        });
-        $(".selectList.selectDropdown ul li a").on("click touch", function (e) {
-            e.preventDefault();
-            const $this = $(this);
-            const $parent = $this.parent();
-            const $dropdown = $parent.parent().parent();
-            const active = $parent.hasClass("active");
-            const label = $this.text();
-            $dropdown.find("ul li").removeClass("active");
-            $dropdown.toggleClass("filled", !active);
-            $dropdown.children("span").text(label);
-            if (!active) {
-                $parent.addClass("active");
-            }
-            $dropdown.removeClass("open");
-        });
-    });
-};
+import React, { useState } from "react";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const SelectList = (props) => {
     const { dataList, defaultValue } = props;
-    const onClick = (value) => {
-        if (props.onClick) {
+
+    const [isActiveState, setIsActiveState] = useState(false);
+    const [selectedSort, setSelectedSort] = useState(defaultValue);
+
+    const onSpanClick = () => {
+        setIsActiveState((isActiveState) => !isActiveState);
+    };
+
+    const onClose = () => {
+        setIsActiveState((isActiveState) => false);
+    };
+
+    const onClick = (event) => {
+        const { target } = event;
+        if (props.onClick && target && target.attributes && target.attributes.length && target.attributes[0].value) {
+            const value = target.attributes[0].value;
+            setSelectedSort((selectedSort) => value);
+            setIsActiveState((isActiveState) => false);
             props.onClick(value);
         }
     };
     if (dataList && dataList.length) {
-        loadScript();
-        let valueToDisplay = defaultValue;
+        let valueToDisplay = selectedSort ? selectedSort : "";
+
         return (
-            <div className="selectList dropdown selectDropdown filled">
-                <ul>
-                    {dataList.map((data, index) => {
-                        let isSelected = false;
-                        if (defaultValue && data && data.value && data.value.toLowerCase() === defaultValue.toLowerCase()) {
-                            isSelected = true;
-                            valueToDisplay = data.name;
-                        }
-                        return (
-                            <li className={isSelected ? "active" : ""} key={index}>
-                                <a onClick={onClick} value={data.value} key={index}>
-                                    {data.name}
-                                </a>
-                            </li>
-                        );
-                    })}
-                </ul>
-                <span>{valueToDisplay}</span>
-            </div>
+            <ClickAwayListener onClickAway={onClose}>
+                <div className={`selectList dropdown selectDropdown filled ${isActiveState ? "open" : ""}`}>
+                    <ul>
+                        {dataList.map((data, index) => {
+                            let isSelected = false;
+                            if (data && data.value && data.value.toLowerCase() === valueToDisplay.toLowerCase()) {
+                                isSelected = true;
+                                valueToDisplay = data.name;
+                            }
+                            return (
+                                <li className={isSelected ? "active" : ""} key={index}>
+                                    <a onClick={onClick} value={data.value} key={index}>
+                                        {data.name}
+                                    </a>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                    <span onClick={onSpanClick}>{valueToDisplay}</span>
+                </div>
+            </ClickAwayListener>
         );
     }
 };
