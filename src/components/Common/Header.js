@@ -1,33 +1,10 @@
 import React from "react";
-import { getTierName } from "../../utilities/Helper";
-
-const loadScript = () => {
-    $(document).ready(function () {
-        $(".userImage, .username")
-            .off("click touch")
-            .on("click touch", function (e) {
-                e.preventDefault();
-                $(".user-panel").toggle();
-            });
-        $(".user-panel .close").on("click touch", function (e) {
-            e.preventDefault();
-            $(".user-panel").hide();
-        });
-        $(document).on("click", "body", function (e) {
-            if (e) {
-                const { target } = e;
-                const classlist = target.classList;
-                if (!classlist.contains("user") && $(".user").find(target).length <= 0) {
-                    $(".user-panel").hide();
-                }
-            }
-        });
-    });
-};
+import HeaderUserOverlay from "./HeaderUserOverlay";
 
 class Header extends React.Component {
     constructor() {
         super();
+
         this.state = { installButton: null };
 
         this.installPrompt = null;
@@ -54,7 +31,6 @@ class Header extends React.Component {
 
     componentDidMount() {
         console.log("Listening for Install prompt inside header ");
-
         window.addEventListener("beforeinstallprompt", (e) => {
             console.log("beforeinstallprompt fired");
             // For older browsers
@@ -79,7 +55,6 @@ class Header extends React.Component {
 
     render() {
         const { loginInfo } = this.props;
-        loadScript();
         return (
             <header className="header fixed-top">
                 <div className="logo">
@@ -114,40 +89,7 @@ class Header extends React.Component {
                 </nav>
                 <ul className="top-menu">
                     <li className="user">
-                        <span className="userImage"></span>
-                        <span className="username">Hello, {loginInfo.firstname}</span>
-                        <div className="user-panel">
-                            <span className="close"></span>
-                            <div className="user-panel__logo">
-                                <a>
-                                    <img src="/images/caesars-rewards-logo.png" alt="user" />
-                                </a>
-                            </div>
-                            <div className="user-panel__name">
-                                Hello, <strong>{loginInfo.username}</strong>
-                            </div>
-                            <div className="user-panel__credits">
-                                <strong>{loginInfo.tierscore}</strong>
-                                <span>Tier Credit</span>
-                            </div>
-                            <ul className="user-panel__item">
-                                <li>
-                                    <span>Tier Staus</span>
-                                    <strong>{getTierName(loginInfo.tier)}</strong>
-                                </li>
-                                <li>
-                                    <span>Rewards Credit</span>
-                                    <strong>{loginInfo.accountbalance}</strong>
-                                </li>
-                                <li>
-                                    <span>Rewards #</span>
-                                    <strong>{loginInfo.accountid}</strong>
-                                </li>
-                            </ul>
-                            <div className="btn-wrap">
-                                <button className="button button-outline">Sign Out</button>
-                            </div>
-                        </div>
+                        <HeaderUserOverlay userData={loginInfo} />
                     </li>
                 </ul>
                 <div className="add-to">
