@@ -68,7 +68,7 @@ export const recordOffersDetailsData = (offerId) => {
     try {
         const defaultData = getDataLayerWithDefaultValue("OfferDetails");
         const offerDetailssData = {
-            offersCode: offerId ? offerId : ""
+            offerCode: offerId ? offerId : ""
         };
         recordDataLayer({ ...defaultData, ...offerDetailssData });
     } catch (ex) {}
