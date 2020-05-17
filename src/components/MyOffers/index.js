@@ -27,16 +27,15 @@ const mapDispatchToProps = (dispatch) => ({
 class MyOffers extends Component {
     componentWillMount() {
         this.applyDefaultFilterAndSort();
-        //DataLayer
-        try {
-            recordMyOffersData("MyOffer", this.props.offers.length);
-        } catch (err) {
-            //ignore datalayer error
-        }
     }
 
     componentDidMount() {
         scrollPageToBanner();
+        //DataLayer logging
+        const { offers } = this.props;
+        if (offers && offers.length) {
+            recordMyOffersData(offers.length);
+        }
     }
 
     constructor() {

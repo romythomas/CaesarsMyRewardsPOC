@@ -40,11 +40,9 @@ class OfferDetails extends Component {
 
     componentDidMount() {
         scrollPageToBanner();
-        //DataLayer
-        try {
-            recordOffersDetailsData("OfferDetails", id);
-        } catch (err) {
-            //ignore datalayer error
+        //DataLayer logging
+        if (this.offer && this.offer.id) {
+            recordOffersDetailsData(this.offer.id);
         }
     }
 

@@ -1,104 +1,85 @@
-import TagManager from 'react-gtm-module'
-import {isMobile} from 'react-device-detect';
+import TagManager from "react-gtm-module";
+import { isMobile } from "react-device-detect";
 
-/**
- * 
- * @param {*} dataLayer 
- */
-const recordDataLayer =(dataLayer) =>{
+const trackingRootName = "MyCR";
+const pageCategory = "CR";
+const signinStatus = "signedIn";
+const deviceUsed = isMobile ? "mobile" : "fullsite";
+
+const detaLayerName = "CaesarsRewardsData";
+const eventName = "eventNameXYZ";
+const gtmId = "GTM-M3G8GRQ";
+const gtmAuth = "BCFx0jNZTbW6ccUTK_kOfw";
+const gtmPreview = "env-1";
+
+const recordDataLayer = (dataLayer) => {
     const tagManagerData = {
         dataLayer: dataLayer,
         events: {
-          eventName: 'eventNameXYZ'
+            eventName: eventName
         },
-        gtmId: 'GTM-M363HGQ',
-        auth: 'WAeUcta8vBjHD_FnBxtJKw',
-        preview: 'env-1',
-        dataLayerName: 'MyRewardsDataLayer'
-      }
-      TagManager.initialize(tagManagerData);
-}
+        gtmId: gtmId,
+        auth: gtmAuth,
+        preview: gtmPreview,
+        dataLayerName: detaLayerName
+    };
+    TagManager.initialize(tagManagerData);
+};
 
-/**
- * 
- * @param {*} pageName 
- * @param {*} tierscore 
- * @param {*} propcode 
- * @param {*} email 
- * @param {*} tierCode 
- * @param {*} accountid 
- */
-export const recordMyRewardsData =(pageName, tierscore, propcode, email, tierCode, accountid) =>{
-    const dataLayer = {
-        page: (pageName!=null)? pageName: "MyRewards",
-        L1: "MyCR",
-        L2: "MyCR: " + (pageName!=null)? pageName: "MyRewards",
-        L3: "MyCR: " + (pageName!=null)? pageName: "MyRewards",
-        acct_balance: (tierscore!=null)? tierscore:null,
-        dom_prop: (propcode!=null)? propcode:null,
-        nUrl: window.location,
-        pageCategory: "CR",
-        signinStatus: "signedIn",
-        tier: (tierCode!=null)? tierCode:null,
-        cr_number: (accountid!=null)? accountid:null,
-        view: (isMobile)? "mobile": "fullsite"
+const getDataLayerWithDefaultValue = (pageName) => {
+    pageName = pageName ? pageName : "";
+    return {
+        page: pageName,
+        L1: trackingRootName,
+        L2: `${trackingRootName}: ${pageName}`,
+        L3: `${trackingRootName}: ${pageName}`,
+        pageCategory: pageCategory,
+        signinStatus: signinStatus,
+        nUrl: location.href,
+        view: deviceUsed
     };
-    recordDataLayer(dataLayer);
-}
-/**
- * 
- * @param {*} pageName 
- * @param {*} offers 
- */
-export const recordMyOffersData =(pageName, offers) =>{
-    const dataLayer = {
-        page: (pageName!=null)? pageName: "MyRewards",
-        L1: "MyCR",
-        L2: "MyCR: " + (pageName!=null)? pageName: "MyRewards",
-        L3: "MyCR: " + (pageName!=null)? pageName: "MyRewards",
-        nUrl: window.location,
-        pageCategory: "CR",
-        signinStatus: "signedIn",
-        view: (isMobile)? "mobile": "fullsite",
-        offers: (offers!=null)? offers : null
-    };
-    recordDataLayer(dataLayer);
-}
-/**
- * 
- * @param {*} pageName 
- * @param {*} offerid 
- */
-export const recordOffersDetailsData =(pageName, offerid) =>{
-    const dataLayer = {
-        page: (pageName!=null)? pageName: "MyRewards",
-        L1: "MyCR",
-        L2: "MyCR: " + (pageName!=null)? pageName: "MyRewards",
-        L3: "MyCR: " + (pageName!=null)? pageName: "MyRewards",
-        nUrl: window.location,
-        pageCategory: "CR",
-        signinStatus: "signedIn",
-        view: (isMobile)? "mobile": "fullsite",
-        offerId: (offerid!=null)? offerid : null
-    };
-    recordDataLayer(dataLayer);
-}
-/**
- * 
- * @param {*} pageName 
- * @param {*} offers 
- */
-export const recordErrorData =(errorText) =>{
-    const dataLayer = {
-        page: "Error Message",
-        L1: "MyCR",
-        L2: "MyCR: Error Message",
-        L3: "MyCR: Error Message",
-        nUrl: window.location,
-        pageCategory: "CR",
-        signinStatus: "signedIn",
-        view: (isMobile)? "mobile": "fullsite",
-        errorText: errorText
-    };
-    recordDataLayer(dataLayer);
-}
+};
+
+export const recordMyRewardsData = (tier, propcode, accountid) => {
+    try {
+        const { tierscore, code } = tier;
+        const defaultData = getDataLayerWithDefaultValue("MyRewards");
+        const myRewardsData = {
+            acct_balance: tierscore ? tierscore : "",
+            dom_prop: propcode ? propcode : "",
+            tier: code ? code : "",
+            cr_number: accountid ? accountid : ""
+        };
+        recordDataLayer({ ...defaultData, ...myRewardsData });
+    } catch (ex) {}
+};
+
+export const recordMyOffersData = (offersCount) => {
+    try {
+        const defaultData = getDataLayerWithDefaultValue("MyOffers");
+        const myOffersData = {
+            offersCount: offersCount ? offersCount : 0
+        };
+        recordDataLayer({ ...defaultData, ...myOffersData });
+    } catch (ex) {}
+};
+
+export const recordOffersDetailsData = (offerId) => {
+    try {
+        const defaultData = getDataLayerWithDefaultValue("OfferDetails");
+        const offerDetailssData = {
+            offersCode: offerId ? offerId : ""
+        };
+        recordDataLayer({ ...defaultData, ...offerDetailssData });
+    } catch (ex) {}
+};
+
+export const recordErrorData = (errorMessage) => {
+    try {
+        const defaultData = getDataLayerWithDefaultValue("ErrorPage");
+        const errorPageData = {
+            errorMessage: errorMessage ? errorMessage : ""
+        };
+        recordDataLayer({ ...defaultData, ...errorPageData });
+    } catch (ex) {}
+};

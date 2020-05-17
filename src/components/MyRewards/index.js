@@ -37,6 +37,15 @@ class MyRewards extends Component {
         );
     }
 
+    componentWillReceiveProps(nextProps) {
+        //DataLayer logging
+        const { logininfo } = nextProps;
+        if (logininfo) {
+            const { tier, propcode, accountid } = logininfo;
+            recordMyRewardsData(tier, propcode, accountid);
+        }
+    }
+
     componentDidMount() {
         scrollPageToBanner();
     }
@@ -44,20 +53,6 @@ class MyRewards extends Component {
     render() {
         const { logininfo, feeds, properties, offers, enterpriseFeed, priceAlert, reservations } = this.props;
         if (logininfo && feeds && properties) {
-            //DataLayer
-            try {
-                recordMyRewardsData(
-                    "MyRewards",
-                    logininfo.tier.tierscore,
-                    logininfo.propcode,
-                    logininfo.email,
-                    logininfo.tier.code,
-                    logininfo.accountid
-                );
-            } catch (err) {
-                //ignore datalayer error
-            }
-
             return (
                 <div className="container-fluid">
                     <ScrollUpButton ContainerClassName="scroll-top" ShowAtPosition={500} />
