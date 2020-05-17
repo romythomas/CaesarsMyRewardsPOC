@@ -4,12 +4,12 @@ import OfferItem from "./OfferItem";
 import ErrorMessage from "../Common/ErrorMessage";
 
 const mapStateToProps = (state) => ({
-    filteredSortedOffers: state.offers.offers,
+    filteredSortedOffers: state.offers.offers
 });
 
 const OfferList = (props) => {
     const { filteredSortedOffers } = props;
-    if(filteredSortedOffers && filteredSortedOffers.length){
+    if (filteredSortedOffers && filteredSortedOffers.length) {
         return (
             <div className="listing">
                 <ul className="row">
@@ -18,16 +18,15 @@ const OfferList = (props) => {
                     })}
                 </ul>
             </div>
-        );   
-    }
-    else
-    {
+        );
+    } else {
         return (
-            <ErrorMessage 
+            <ErrorMessage
                 errorText="No offers available for your selection."
-                linkText="Clear Filters" 
-                clearFilter={props.clearFilter} />
-        )
+                linkText="Clear Filters"
+                clearFilter={props.clearFilter}
+            />
+        );
     }
 };
 
