@@ -35,7 +35,7 @@ const MultiSelectList = (props) => {
     };
 
     const onClose = () => {
-        setIsActiveState(false);
+        setIsActiveState((isActiveState) => false);
     };
 
     const onTextClick = () => {
