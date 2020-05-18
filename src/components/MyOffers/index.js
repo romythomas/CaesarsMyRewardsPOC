@@ -207,8 +207,8 @@ class MyOffers extends Component {
                     const offerTypeFilter = JSON.parse(type.toLowerCase());
                     const typeFilter = [];
                     offerTypes.map((type) => {
-                        if (offerTypeFilter.includes(type.toLowerCase())) {
-                            typeFilter.push(type);
+                        if (offerTypeFilter.includes(type.name.toLowerCase())) {
+                            typeFilter.push(type.value);
                         }
                     });
                     selectedOfferFilters = updateSelectedFilter(selectedOfferFilters, {

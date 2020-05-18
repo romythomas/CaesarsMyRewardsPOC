@@ -1,7 +1,17 @@
 const caesarsDomain = "http://www.caesars.com";
 
 export const getOfferFilterTypes = () => {
-    return ["Hotel", "Cash", "Gaming", "Entertainment", "Events", "Dining", "Other", "Package", "Favorite"];
+    return [
+        { value: "Hotel", name: "Hotel" },
+        { value: "Cash", name: "Cash" },
+        { value: "Gaming", name: "Gaming" },
+        { value: "Entertainment", name: "Entertainment" },
+        { value: "Events", name: "Events" },
+        { value: "Dining", name: "Dining" },
+        { value: "Others", name: "Other" },
+        { value: "Package", name: "Package" },
+        { value: "F", name: "Favorite" }
+    ];
 };
 
 export const getOfferSortTypes = () => {

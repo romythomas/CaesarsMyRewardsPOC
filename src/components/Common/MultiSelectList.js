@@ -13,15 +13,31 @@ const MultiSelectList = (props) => {
     const isDefaultValueAvailable = defaultValue && defaultValue.length;
     let selectedValues = isDefaultValueAvailable ? defaultValue : [];
 
+    const getFilterNameFromValue = (value) => {
+        if (value) {
+            const dataItem = dataList.find((data) => {
+                return data.value.toLowerCase() === value.toLowerCase();
+            });
+            const { name } = dataItem;
+            return name ? name : "";
+        }
+        return "";
+    };
+
+    const selectedFilterNames = [];
+    selectedValues.map((value) => {
+        selectedFilterNames.push(getFilterNameFromValue(value));
+    });
+
     const onChange = (value) => {
         if (props.onChange) {
             const { target } = value;
-            if (target && target.nextElementSibling && target.nextElementSibling.innerText) {
-                const targetText = target.nextElementSibling.innerText;
+            if (target && target.dataset) {
+                const { value } = target.dataset;
                 if (target.checked) {
-                    selectedValues.push(targetText);
+                    selectedValues.push(value);
                 } else {
-                    selectedValues = selectedValues.filter((item) => item.toLowerCase() !== targetText.toLowerCase());
+                    selectedValues = selectedValues.filter((item) => item.toLowerCase() !== value.toLowerCase());
                 }
                 props.onChange(selectedValues);
             }
@@ -53,7 +69,7 @@ const MultiSelectList = (props) => {
                             type="text"
                             onClick={onTextClick}
                             id={selectId}
-                            value={selectedValues.join(",")}
+                            value={selectedFilterNames.join(",")}
                             readOnly
                         />
                         <label className="form-control-placeholder" htmlFor={selectId}>
@@ -67,19 +83,20 @@ const MultiSelectList = (props) => {
                             <ul className="multiselectlist__listwrap">
                                 <li className="multiselectlist__listitem">
                                     {dataList.map((data, index) => {
-                                        let isChecked = isDefaultValueAvailable ? defaultValue.includes(data) : false;
+                                        let isChecked = isDefaultValueAvailable ? defaultValue.includes(data.value) : false;
                                         return (
                                             <div key={index} className="multiselectlist__item">
                                                 <input
                                                     id={selectId + "-chk-" + index}
                                                     onChange={onChange}
                                                     className="checkbox-custom"
+                                                    data-value={data.value}
                                                     name={selectId + "-chk-" + index}
                                                     checked={isChecked}
                                                     type="checkbox"
                                                 />
                                                 <label htmlFor={selectId + "-chk-" + index} className="checkbox-custom-label">
-                                                    {data}
+                                                    {data.name}
                                                 </label>
                                             </div>
                                         );
