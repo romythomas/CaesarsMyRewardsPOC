@@ -79,32 +79,27 @@ const SideNavigation = (props) => {
             <ul className="nav-mobbile">
                 <li className="list-group-item">
                     <a href="https://www.caesars.com/myrewards/benefits-overview">
-                        {" "}
-                        <i className="icon__benifits"></i> <span>Benifits</span>{" "}
+                        <i className="icon__benifits"></i> <span>Benifits</span>
                     </a>
                 </li>
                 <li className="list-group-item">
                     <a href="https://www.caesars.com/myrewards/earn-and-redeem">
-                        {" "}
-                        <i className="icon__earn"></i> <span>Earn & Redeem</span>{" "}
+                        <i className="icon__earn"></i> <span>Earn & Redeem</span>
                     </a>
                 </li>
                 <li className="list-group-item">
                     <a href="https://www.caesars.com/myrewards/promotions">
-                        {" "}
-                        <i className="icon__promotion"></i> <span>Promotions</span>{" "}
+                        <i className="icon__promotion"></i> <span>Promotions</span>
                     </a>
                 </li>
                 <li className="list-group-item">
                     <a href="https://www.caesars.com/myrewards/partners">
-                        {" "}
-                        <i className="icon__partner"></i> <span>Partners</span>{" "}
+                        <i className="icon__partner"></i> <span>Partners</span>
                     </a>
                 </li>
                 <li className="list-group-item">
                     <a href="https://www.caesars.com/book">
-                        {" "}
-                        <i className="icon__book"></i> <span>Book Now</span>{" "}
+                        <i className="icon__book"></i> <span>Book Now</span>
                     </a>
                 </li>
             </ul>
