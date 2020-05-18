@@ -2,7 +2,6 @@ import agent from "../agent";
 import Header from "./Common/Header";
 import Footer from "./Common/Footer";
 import SpotLight from "./Common/SpotLight";
-import SideNavigation from "./Common/SideNavigation";
 import React, { Component, Suspense, lazy } from "react";
 import { connect } from "react-redux";
 import { Route, Switch, Redirect } from "react-router-dom";
@@ -87,7 +86,6 @@ class App extends Component {
             return (
                 <div>
                     <Header appName={this.props.appName} loginInfo={this.props.loginInfo} />
-                    <SideNavigation appName={this.props.appName}></SideNavigation>
                     <div id="page-content">
                         <SpotLight appName={this.props.appName}></SpotLight>
                         <div id="sub-content">

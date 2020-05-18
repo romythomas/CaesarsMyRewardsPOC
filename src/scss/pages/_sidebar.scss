@@ -1,239 +1,234 @@
 //sidebar starts here
 .sidebar {
-	left: 0;
-	width: 230px;
-	background: #f8f8f8;
-	position: fixed;
-	height: 100%;
-	z-index: 10000;
-	transition: all .2s ease 0s;
-	top:61px;
-	-webkit-box-shadow: 6px 0px 13px -10px rgba(0,0,0,0.35);
-	-moz-box-shadow: 6px 0px 13px -10px rgba(0,0,0,0.35);
-	box-shadow: 6px 0px 13px -10px rgba(0,0,0,0.35);
-	@include break-point(991px){
-		left:-240px;
-		overflow: auto;
-	}
-	li{
-		&.list-group-item{
-			padding: 0;
-			background-color: none;
-			border-radius: none;
-			border: none;
-			&:last-child{
-				border: none;
-			}
-			.collapse {
-				&:not(.show) {
-					display: block;
-					@include break-point(991px){
-						  display: none;
-					}
-				}
-			}
-			a{
-				text-decoration: none;
-				padding: 10px 13px;
-				display: block;
-				height: 39px;
-				font-family: OpenSans-Light;
-				&.selected{
-					background: $custome-secondary;
-					color:$custome-white;
-					i{
-						-webkit-text-stroke-color: #fff;
-					} 
-				}
-				&:hover{
-					background:$custome-secondary;
-					color:$custome-white;
-					i{
-						-webkit-text-stroke-color: #fff;
-					}
-				}
-				&.open{
-					&:after{
-						@include fontawesome;
-						content: "\f107";
-						right: 10px;
-						top: 6px;
-						font-size:16px;
-					}
-					&.collapsed{
-						&:after{
-							content: "\f105";
-						}
-					}
-					
-					&.main-head{
-						display: none;
-						@include break-point(991px){
-							display: block;
-						}
-						font-family: OpenSans-Bold;
-						span{
-							margin: 0;
-						}
-					}
-				}
-				span{
-					margin-left:30px;
-					text-transform: uppercase;
-				}
-				i{
-					font-style:normal;
-					position:relative;
-					font-size:18px;
-					display:table-cell;
-					&:before{
-						@include fontawesome;
-						content: "\f091";
-						left:0;
-						top:-2px;
-						font-size:16px;
-					}
-					&.icon__offer{
-						&:before{
-							content: "\f0e0";
-						}
-					}
-					&.icon__leaderboard{
-						&:before{
-							content: "\f201";
-						}
-					}
-					&.icon__quest{
-						&:before{
-							content: "\f059";
-						}
-					}
-					&.icon__profile{
-						&:before{
-							content: "\f007";
-						}
-					}
-					&.icon__payment{
-						&:before{
-							content: "\f09d";
-						}
-					}
-						&.icon__reservation{
-						&:before{
-							content: "\f145";
-						}
-					}
-					&.icon__price{
-						&:before{
-							content: "\f155";
-						}
-					}
-					&.icon__win{
-						&:before{
-							content: "\f087";
-						}
-					}
-					&.icon__reward{
-						&:before{
-							content: "\f19d";
-						}
-					}
-					&.icon__casino{
-						&:before{
-							content: "\f0d6";
-						}
-					}
-					&.icon__gift{
-						&:before{
-							content: "\f06b";
-						}
-					}
-					&.icon__benifits{
-						&:before{
-							content: "\f0fe";
-						}
-					}
-					&.icon__earn{
-						&:before{
-							content: "\f237";
-						}
-					}
-					&.icon__promotion{
-						&:before{
-							content: "\f0a1";
-						}
-					}
-					&.icon__partner{
-						&:before{
-							content: "\f2b5";
-						}
-					}
-					&.icon__book{
-						&:before{
-							content: "\f090";
-						}
-					}
-				}
-			}
-			li{
-				position: relative;
-				li{
-					position: relative;
-					&:hover{
-						.nav-fly{
-							display: block;
-						}
-					}
-				}
-			}
-			.nav-fly{
-				position: absolute;
-				right: -230px;
-				width: 100%;
-				background: #eee;
-				display: none;
-				top: 0;
-				@include break-point(991px){
-					position: relative;
-					right: 0;
-					background: #ddd;
-				}
-			}
-			.main-sub{
-				li{
-					>a{
-						padding-left: 30px;
-					}
-				}
-			}
-		}
-		.secondary-sub{
-			background: #eee;
-			li{
-				a{
-					background: none;
-					border: none;
-					&:hover{
-						background: #ccc;
-						color: $custome-secondary;
-					}
-				}
-			}
-		}
+    left: 0;
+    width: 230px;
+    background: #f8f8f8;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    transition: all 0.2s ease 0s;
+    top: 61px;
+    -webkit-box-shadow: 6px 0px 13px -10px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 6px 0px 13px -10px rgba(0, 0, 0, 0.35);
+    box-shadow: 6px 0px 13px -10px rgba(0, 0, 0, 0.35);
+    @include break-point(991px) {
+        left: -240px;
+        overflow: auto;
+    }
+    li {
+        &.list-group-item {
+            padding: 0;
+            background-color: none;
+            border-radius: none;
+            border: none;
+            &:last-child {
+                border: none;
+            }
+            .collapse {
+                &:not(.show) {
+                    display: block;
+                    @include break-point(991px) {
+                        display: none;
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+                padding: 10px 13px;
+                display: block;
+                height: 39px;
+                font-family: OpenSans-Light;
+                &.selected {
+                    background: $custome-secondary;
+                    color: $custome-white;
+                    i {
+                        -webkit-text-stroke-color: #fff;
+                    }
+                }
+                &:hover {
+                    background: $custome-secondary;
+                    color: $custome-white;
+                    i {
+                        -webkit-text-stroke-color: #fff;
+                    }
+                }
+                &.open {
+                    &:after {
+                        @include fontawesome;
+                        content: "\f107";
+                        right: 10px;
+                        top: 6px;
+                        font-size: 16px;
+                    }
+                    &.collapsed {
+                        &:after {
+                            content: "\f105";
+                        }
+                    }
 
-	}
+                    &.main-head {
+                        display: none;
+                        @include break-point(991px) {
+                            display: block;
+                        }
+                        font-family: OpenSans-Bold;
+                        span {
+                            margin: 0;
+                        }
+                    }
+                }
+                span {
+                    margin-left: 30px;
+                    text-transform: uppercase;
+                }
+                i {
+                    font-style: normal;
+                    position: relative;
+                    font-size: 18px;
+                    display: table-cell;
+                    &:before {
+                        @include fontawesome;
+                        content: "\f091";
+                        left: 0;
+                        top: -2px;
+                        font-size: 16px;
+                    }
+                    &.icon__offer {
+                        &:before {
+                            content: "\f0e0";
+                        }
+                    }
+                    &.icon__leaderboard {
+                        &:before {
+                            content: "\f201";
+                        }
+                    }
+                    &.icon__quest {
+                        &:before {
+                            content: "\f059";
+                        }
+                    }
+                    &.icon__profile {
+                        &:before {
+                            content: "\f007";
+                        }
+                    }
+                    &.icon__payment {
+                        &:before {
+                            content: "\f09d";
+                        }
+                    }
+                    &.icon__reservation {
+                        &:before {
+                            content: "\f145";
+                        }
+                    }
+                    &.icon__price {
+                        &:before {
+                            content: "\f155";
+                        }
+                    }
+                    &.icon__win {
+                        &:before {
+                            content: "\f087";
+                        }
+                    }
+                    &.icon__reward {
+                        &:before {
+                            content: "\f19d";
+                        }
+                    }
+                    &.icon__casino {
+                        &:before {
+                            content: "\f0d6";
+                        }
+                    }
+                    &.icon__gift {
+                        &:before {
+                            content: "\f06b";
+                        }
+                    }
+                    &.icon__benifits {
+                        &:before {
+                            content: "\f0fe";
+                        }
+                    }
+                    &.icon__earn {
+                        &:before {
+                            content: "\f237";
+                        }
+                    }
+                    &.icon__promotion {
+                        &:before {
+                            content: "\f0a1";
+                        }
+                    }
+                    &.icon__partner {
+                        &:before {
+                            content: "\f2b5";
+                        }
+                    }
+                    &.icon__book {
+                        &:before {
+                            content: "\f090";
+                        }
+                    }
+                }
+            }
+            li {
+                position: relative;
+                li {
+                    position: relative;
+                    &:hover {
+                        .nav-fly {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .nav-fly {
+                position: absolute;
+                right: -230px;
+                width: 100%;
+                background: #eee;
+                display: none;
+                top: 0;
+                @include break-point(991px) {
+                    position: relative;
+                    right: 0;
+                    background: #ddd;
+                }
+            }
+            .main-sub {
+                li {
+                    > a {
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+        .secondary-sub {
+            background: #eee;
+            li {
+                a {
+                    background: none;
+                    border: none;
+                    &:hover {
+                        background: #ccc;
+                        color: $custome-secondary;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.sidebar__active{
-	@include break-point(991px){
-		padding-left:0;
-	}
-	.sidebar{
-		@include break-point(991px){
-			width: 100%;
-			transition: all .4s ease 0s;
-			left: 0;
-		}
-	}
+.sidebar__active {
+    .sidebar {
+        @include break-point(991px) {
+            width: 100%;
+            transition: all 0.4s ease 0s;
+            left: 0;
+        }
+    }
 }
-
