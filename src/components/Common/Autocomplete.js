@@ -153,7 +153,6 @@ const Autocomplete = (props) => {
             updateTextValueAndPlaceholder(dafaultDataDisplay);
         };
 
-        //debugger;
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
         return (
             <ClickAwayListener onClickAway={onclose}>
