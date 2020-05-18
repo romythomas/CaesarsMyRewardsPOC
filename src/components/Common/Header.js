@@ -77,7 +77,7 @@ class Header extends React.Component {
     render() {
         const { loginInfo } = this.props;
         return (
-            <div className={`${this.state.isMenuOpen ? "sidebar__active" : ""}`}>
+            <div className={`header-sidebar ${this.state.isMenuOpen ? "sidebar__active" : ""}`}>
                 <header className="header fixed-top">
                     <div className="logo">
                         <div
