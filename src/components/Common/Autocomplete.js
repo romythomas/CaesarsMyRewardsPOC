@@ -1,175 +1,27 @@
-import React from "react";
-
-const loadScript = () => {
-    $(document).ready(function () {
-        let count = 1;
-        const autocomplete = document.getElementsByClassName("autocomplete")[0];
-        const autocomplete_component = document.getElementById("autocomplete-component");
-        const autocomplete_content = autocomplete_component.querySelector("div.autocomplete-content");
-        const autocomplete_list_array = autocomplete_component.querySelectorAll("li.autocomplete__item");
-        let autocomplete_text_input = autocomplete_component.getElementsByClassName("autocomplete-search")[0];
-
-        autocomplete_text_input.addEventListener("input", function (e) {
-            for (let i = 0; i < autocomplete_list_array.length; i++) {
-                matching(autocomplete_list_array[i]);
-            }
-            add_activeClass();
-            key_up_down();
-        });
-
-        autocomplete_text_input.addEventListener("click", function (e) {
-            add_activeClass();
-            change_valueToPlaceholder();
-            init_list();
-            key_up_down();
-        });
-
-        autocomplete_text_input.addEventListener("keypress", function (e) {
-            const highlightedElement = autocomplete_content.querySelector('[data-highlight="true"]');
-            if (highlightedElement && !highlightedElement.classList.contains("disabled")) {
-                if (e.keyCode == 13) {
-                    set_selected(highlightedElement);
-                    e.target.value = highlightedElement.querySelector("span").innerText;
-                }
-                remove_activeClass();
-                init_list();
-            }
-        });
-
-        function matching(item) {
-            let str = new RegExp(autocomplete_text_input.value, "gi");
-            if (item.dataset.searchcontent.match(str)) {
-                item.dataset.display = "true";
-            } else {
-                item.dataset.display = "false";
-                item.dataset.highlight = "false";
-                count = 0;
-            }
-        }
-
-        function init_list() {
-            count = 0;
-            for (let i = 0; i < autocomplete_list_array.length; i++) {
-                init_item(autocomplete_list_array[i]);
-                autocomplete_list_array[i].addEventListener("click", copy_paste);
-            }
-        }
-
-        function init_item(item) {
-            item.dataset.display = "true";
-            item.dataset.highlight = "false";
-        }
-
-        function change_valueToPlaceholder() {
-            if (autocomplete_text_input.value) {
-                autocomplete_text_input.placeholder = autocomplete_text_input.value;
-            }
-            autocomplete_text_input.value = "";
-        }
-
-        function set_selectedToText() {
-            const selectedElements = autocomplete_component.querySelectorAll('li.autocomplete__item[data-selected="true"]');
-            if (selectedElements && selectedElements.length) {
-                const selectedValue = selectedElements[0].querySelector("span").innerText;
-                autocomplete_text_input.setAttribute("value", selectedValue);
-                autocomplete_text_input.value = selectedValue;
-            } else {
-                autocomplete_text_input.value = "";
-            }
-            autocomplete_text_input.placeholder = "";
-        }
-
-        function add_activeClass() {
-            autocomplete.classList.add("active");
-        }
-
-        function remove_activeClass() {
-            autocomplete.classList.remove("active");
-        }
-
-        function copy_paste(e) {
-            set_selected(this);
-            const selectedValue = this.querySelector("span").innerText;
-            autocomplete_text_input.setAttribute("value", selectedValue);
-            autocomplete_text_input.value = selectedValue;
-            // todo : check match of list text and input value for .current
-            init_list();
-            remove_activeClass();
-        }
-
-        function set_selected(item) {
-            const selectedElements = autocomplete_component.querySelectorAll('li.autocomplete__item[data-selected="true"]');
-            if (selectedElements && selectedElements.length) {
-                for (let i = 0; i < selectedElements.length; i++) {
-                    selectedElements[i].dataset.selected = "false";
-                }
-            }
-            item.dataset.selected = "true";
-            remove_activeClass();
-        }
-
-        function key_up_down() {
-            let items = autocomplete_component.querySelectorAll('li.autocomplete__item[data-display="true"]');
-            let last = items[items.length - 1];
-            let first = items[0];
-
-            autocomplete_text_input.onkeydown = function (e) {
-                if (e.keyCode === 38) {
-                    count--;
-                    count = count <= 0 ? items.length : count;
-                    items[count - 1].dataset.highlight = items[count - 1] ? "true" : "false";
-                    if (items[count]) {
-                        items[count].dataset.highlight = "false";
-                    } else {
-                        first.dataset.highlight = "false";
-                    }
-                }
-
-                if (e.keyCode === 40) {
-                    items[count].dataset.highlight = items[count] ? "true" : "false";
-                    if (items[count - 1]) {
-                        items[count - 1].dataset.highlight = "false";
-                    } else {
-                        last.dataset.highlight = "false";
-                    }
-                    count++;
-                    count = count >= items.length ? 0 : count;
-                }
-            };
-        }
-        $(".autocomplete .close").on("click touch", function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            remove_activeClass();
-            set_selectedToText();
-        });
-        $(document).on("click", "body", function (event) {
-            if (event) {
-                const { target } = event;
-                const targetClassName = target.className ? "." + target.className : "";
-                if (targetClassName !== "autocomplete" && $(autocomplete_component).find(target).length <= 0) {
-                    remove_activeClass();
-                    set_selectedToText();
-                }
-            }
-        });
-    });
-};
+import React, { useState } from "react";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const Autocomplete = (props) => {
-    const { dataList, defaultValue, stylingClass } = props;
-    let { elementId, title } = props;
-
-    elementId = elementId ? elementId : "autocomplete-lst-component";
-    title = title ? title : "Select Value";
-
-    let dafaultDataDisplay = "",
-        defaultDataValue = "",
-        valueSelectedClassName = "";
+    const { dataList } = props;
 
     if (dataList && dataList.length) {
+        const { dataList, defaultValue, stylingClass } = props;
+        let { elementId, title } = props;
+
+        elementId = elementId ? elementId : "autocomplete-lst-component";
+        title = title ? title : "Select Value";
+
+        const componentAttrs = { displayAttr: "true", highlightAttr: "false" };
+        let modifiedDataList = dataList.map((data) => {
+            return { ...data, ...componentAttrs };
+        });
+
+        let dafaultDataDisplay = "",
+            defaultDataValue = "",
+            valueSelectedClassName = "";
+
         if (defaultValue) {
-            const dafaultData = dataList.find((data) => {
+            const dafaultData = modifiedDataList.find((data) => {
                 return data.value.toUpperCase() === defaultValue.toUpperCase();
             });
             if (dafaultData) {
@@ -179,64 +31,183 @@ const Autocomplete = (props) => {
             }
         }
 
-        const onClick = (value) => {
+        const [isActiveState, setIsActiveState] = useState(false);
+        const [placeHolderValue, setPlaceHolderValue] = useState("");
+        const [arrowCursor, setArrowCursor] = useState(-1);
+        const [textInputValue, setTextInputValue] = useState(dafaultDataDisplay);
+        const [componentData, setComponentData] = useState(modifiedDataList);
+
+        const initializeDataList = (dataList) => {
+            const updatedData = componentData.map((data) => {
+                data.displayAttr = "true";
+                data.highlightAttr = "false";
+                return data;
+            });
+            setComponentData((componentData) => updatedData);
+        };
+
+        const addActiveState = () => {
+            setIsActiveState((isActiveState) => true);
+        };
+
+        const removeActiveState = () => {
+            setIsActiveState((isActiveState) => false);
+        };
+
+        const changeTextValueToPlaceholder = (text) => {
+            setPlaceHolderValue((placeHolderValue) => (text ? text : ""));
+            setTextInputValue((textInputValue) => "");
+        };
+
+        const updateTextValueAndPlaceholder = (text) => {
+            setPlaceHolderValue((placeHolderValue) => "");
+            setTextInputValue((textInputValue) => (text ? text : ""));
+        };
+
+        const updateMatchingItems = (text) => {
+            const searchedText = new RegExp(text ? text : "", "gi");
+            const updatedData = componentData.map((data) => {
+                if (data.searchdata.match(searchedText)) {
+                    data.displayAttr = "true";
+                } else {
+                    data.displayAttr = "false";
+                    data.highlightAttr = "false";
+                }
+                return data;
+            });
+            setComponentData((componentData) => updatedData);
+        };
+
+        const selectItemFromList = (value, text) => {
+            initializeDataList();
+            removeActiveState();
+            updateTextValueAndPlaceholder(text ? text : "");
+            props.onChange(value ? value : "");
+        };
+
+        const onClick = (event) => {
             if (props.onChange) {
-                const { target } = value;
+                const { target } = event;
                 if (target) {
                     let valueElement = target.className === "autocomplete__itemname" ? target.parentNode : target;
-                    if (valueElement && valueElement.dataset && valueElement.dataset.value) {
-                        props.onChange(valueElement.dataset.value);
+                    const { dataset } = valueElement;
+                    if (dataset) {
+                        const { value, text } = dataset;
+                        selectItemFromList(value, text);
                     }
                 }
             }
         };
 
-        loadScript();
+        const onTextClick = (event) => {
+            const { target } = event;
+            addActiveState();
+            changeTextValueToPlaceholder(target ? target.defaultValue : "");
+            initializeDataList();
+        };
+
+        const onTextChange = (event) => {
+            const { target } = event;
+            let { value } = target;
+            value = value ? value : "";
+            updateMatchingItems(value);
+            setTextInputValue((textInputValue) => value);
+        };
+
+        const onTextKeyDown = (event) => {
+            const { keyCode } = event;
+            if (keyCode === 38 || keyCode === 40) {
+                let newArrowCursor = 0;
+                let isArrowKeyPressed = false;
+                if (keyCode === 38 && arrowCursor > 0) {
+                    newArrowCursor = arrowCursor - 1;
+                    isArrowKeyPressed = true;
+                } else if (keyCode === 40 && arrowCursor < componentData.length - 1) {
+                    newArrowCursor = arrowCursor + 1;
+                    isArrowKeyPressed = true;
+                }
+                if (isArrowKeyPressed) {
+                    try {
+                        const updatedData = componentData.map((data) => {
+                            data.highlightAttr = "false";
+                            return data;
+                        });
+                        updatedData[newArrowCursor].highlightAttr = "true";
+                        setComponentData((componentData) => updatedData);
+                        setArrowCursor((arrowCursor) => newArrowCursor);
+                    } catch (ex) {}
+                }
+            } else if (props.onChange && keyCode === 13) {
+                const selectedData = componentData.filter((data) => {
+                    return data.highlightAttr === "true";
+                });
+                if (selectedData && selectedData.length) {
+                    const { value, display } = selectedData[0];
+                    selectItemFromList(value, display);
+                }
+            }
+        };
+
+        const onclose = (event) => {
+            removeActiveState();
+            updateTextValueAndPlaceholder(dafaultDataDisplay);
+        };
+
+        //debugger;
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
         return (
-            <div className={`autocomplete ${valueSelectedClassName}`} id="autocomplete-component">
-                <span className="close"></span>
-                <div className="select-wrap">
-                    <input
-                        className="form-control txt autocomplete-search"
-                        type="text"
-                        autoComplete="off"
-                        defaultValue={dafaultDataDisplay}
-                        placeholder=""
-                        id={elementId}
-                    />
-                    <label className="form-control-placeholder" htmlFor={elementId}>
-                        {title}
-                    </label>
-                </div>
-                <div className="autocomplete-content">
-                    <div className="autocomplete__list">
-                        <ul className="autocomplete__listwrap">
-                            {dataList.map((item, index) => {
-                                let stylingClassToApply = "";
-                                if (item.isStylingRequired) {
-                                    stylingClassToApply += "highlight " + (stylingClass ? stylingClass : "");
-                                }
-                                const isSelected = item.value.toUpperCase() === defaultDataValue.toUpperCase();
-                                return (
-                                    <li
-                                        key={index}
-                                        className={"autocomplete__item " + stylingClassToApply}
-                                        data-searchcontent={item.searchdata}
-                                        data-selected={isSelected.toString()}
-                                        data-display="true"
-                                        data-value={item.value}
-                                        data-highlight="false"
-                                        onClick={onClick}
-                                    >
-                                        <span className="autocomplete__itemname">{item.display}</span>
-                                    </li>
-                                );
-                            })}
-                        </ul>
+            <ClickAwayListener onClickAway={onclose}>
+                <div
+                    className={`autocomplete ${valueSelectedClassName} ${isActiveState ? "active" : ""}`}
+                    id="autocomplete-component"
+                >
+                    <span className="close" onClick={onclose}></span>
+                    <div className="select-wrap">
+                        <input
+                            className="form-control txt autocomplete-search"
+                            type="text"
+                            autoComplete="off"
+                            onClick={onTextClick}
+                            onChange={onTextChange}
+                            onKeyDown={onTextKeyDown}
+                            value={textInputValue}
+                            placeholder={placeHolderValue}
+                            id={elementId}
+                        />
+                        <label className="form-control-placeholder" htmlFor={elementId}>
+                            {title}
+                        </label>
+                    </div>
+                    <div className="autocomplete-content">
+                        <div className="autocomplete__list">
+                            <ul className="autocomplete__listwrap">
+                                {componentData.map((item, index) => {
+                                    let stylingClassToApply = "";
+                                    if (item.isStylingRequired) {
+                                        stylingClassToApply += "highlight " + (stylingClass ? stylingClass : "");
+                                    }
+                                    const isSelected = item.value.toUpperCase() === defaultDataValue.toUpperCase();
+                                    return (
+                                        <li
+                                            key={index}
+                                            className={"autocomplete__item " + stylingClassToApply}
+                                            data-searchcontent={item.searchdata}
+                                            data-selected={isSelected.toString()}
+                                            data-display={item.displayAttr}
+                                            data-value={item.value}
+                                            data-text={item.display}
+                                            data-highlight={item.highlightAttr}
+                                            onClick={onClick}
+                                        >
+                                            <span className="autocomplete__itemname">{item.display}</span>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </ClickAwayListener>
         );
     }
 };
