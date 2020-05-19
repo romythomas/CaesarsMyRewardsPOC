@@ -81,6 +81,12 @@
                 &[data-selected="true"] {
                     font-family: "Montserrat Bold";
                 }
+                &[data-disabled="true"] {
+                    pointer-events: none;
+                    opacity: 0.6;
+                    cursor: text;
+                    color: gray;
+                }
             }
         }
     }

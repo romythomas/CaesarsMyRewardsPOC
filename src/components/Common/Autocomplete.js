@@ -108,7 +108,7 @@ const Autocomplete = (props) => {
                 if (target) {
                     let valueElement = target.className === "autocomplete__itemname" ? target.parentNode : target;
                     const { dataset } = valueElement;
-                    if (dataset) {
+                    if (dataset && !dataset.isDisabled) {
                         const { value, text } = dataset;
                         selectItemFromList(value, text);
                     }
@@ -178,7 +178,7 @@ const Autocomplete = (props) => {
                 const selectedData = componentData.filter((data) => {
                     return data.highlightAttr === "true";
                 });
-                if (selectedData && selectedData.length) {
+                if (selectedData && selectedData.length && !selectedData[0].isDisabled) {
                     const { value, display } = selectedData[0];
                     selectItemFromList(value, display);
                 }
@@ -234,6 +234,7 @@ const Autocomplete = (props) => {
                                             className={"autocomplete__item " + stylingClassToApply}
                                             data-searchcontent={item.searchdata}
                                             data-selected={isSelected.toString()}
+                                            data-disabled={item.isDisabled}
                                             data-display={item.displayAttr}
                                             data-value={item.value}
                                             data-text={item.display}

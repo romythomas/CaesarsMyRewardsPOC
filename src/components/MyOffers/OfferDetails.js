@@ -75,12 +75,15 @@ class OfferDetails extends Component {
         const { propertyList } = this.offer;
         if (markets && markets.length && propertyList && propertyList.length) {
             const marketsOfProperties = getMarketCodeListOfPropertyCodes(markets, propertyList);
-            this.marketPropertyListData = getStructuredMarketsPropertiesList(markets);
+            this.marketPropertyListData = getStructuredMarketsPropertiesList(markets).map((data) => {
+                data.isDisabled = data.isMarket;
+                return data;
+            });
             this.marketPropertyListData = this.marketPropertyListData.filter((data) => {
                 return marketsOfProperties.includes(data.value) || propertyList.includes(data.value);
             });
             const firstProperty = this.marketPropertyListData.find((item) => {
-                return !item.isMarket;
+                return !item.isDisabled;
             });
             if (firstProperty && firstProperty.value) {
                 this.setState({
@@ -146,7 +149,6 @@ class OfferDetails extends Component {
                                 <div className="details-propertyselect">
                                     <Autocomplete
                                         dataList={this.marketPropertyListData}
-                                        stylingClass={"disabled"}
                                         defaultValue={selectedProperty}
                                         elementId="navigate-from-offer-details"
                                         title="Where do you want to go?"
