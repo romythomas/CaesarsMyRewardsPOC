@@ -23,10 +23,11 @@ class OfferDetails extends Component {
     constructor(props) {
         super(props);
 
+        this.state = { selectedProperty: "" };
+
         this.offer = "";
         this.imageUrl = getImageUrl();
         this.marketPropertyListData = [];
-        this.selectedProperty = "";
 
         this.onLocationChange = this.onLocationChange.bind(this);
         this.gotoBookingWebsite = this.gotoBookingWebsite.bind(this);
@@ -82,34 +83,36 @@ class OfferDetails extends Component {
                 return !item.isMarket;
             });
             if (firstProperty && firstProperty.value) {
-                this.selectedProperty = firstProperty.value;
+                this.setState({
+                    selectedProperty: firstProperty.value
+                });
             }
         }
     }
 
     onLocationChange(value) {
         if (value) {
-            this.selectedProperty = value;
+            this.setState({
+                selectedProperty: value
+            });
         }
     }
 
     gotoBookingWebsite() {
-        const { selectedProperty, offer } = this;
-        if (selectedProperty && offer) {
-            let { id, start, end } = offer;
-            if (id && start && end) {
-                start = getMoment(start).format("MM/DD/YYYY");
-                end = getMoment(end).format("MM/DD/YYYY");
-                const redirectionUrl = `${getCaesarsDomain()}/book/?propCode=${selectedProperty}&view=ratecal&arrival=${start}&departure=${end}&offerCode=${id}`;
-                window.location = redirectionUrl;
-            }
+        const { selectedProperty } = this.state;
+        let { id, start, end } = this.offer;
+        if (selectedProperty && id && start && end) {
+            start = getMoment(start).format("MM/DD/YYYY");
+            end = getMoment(end).format("MM/DD/YYYY");
+            const redirectionUrl = `${getCaesarsDomain()}/book/?propCode=${selectedProperty}&view=ratecal&arrival=${start}&departure=${end}&offerCode=${id}`;
+            window.location = redirectionUrl;
         }
     }
 
     render() {
         if (this.offer) {
             const { id, title, end, description, pref } = this.offer;
-
+            const { selectedProperty } = this.state;
             return (
                 <div className="container-fluid">
                     <div className="title">
@@ -144,7 +147,7 @@ class OfferDetails extends Component {
                                     <Autocomplete
                                         dataList={this.marketPropertyListData}
                                         stylingClass={"disabled"}
-                                        defaultValue={this.selectedProperty}
+                                        defaultValue={selectedProperty}
                                         elementId="navigate-from-offer-details"
                                         title="Where do you want to go?"
                                         onChange={this.onLocationChange}
