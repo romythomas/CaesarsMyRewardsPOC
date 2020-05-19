@@ -93,6 +93,15 @@ const Autocomplete = (props) => {
             setArrowCursor((arrowCursor) => (index >= 0 ? index : -1));
         };
 
+        const removeHighlightsAndCursorIndex = () => {
+            const updatedData = componentData.map((data) => {
+                data.highlightAttr = "false";
+                return data;
+            });
+            setComponentData((componentData) => updatedData);
+            setArrowCursor((arrowCursor) => -1);
+        };
+
         const onClick = (event) => {
             if (props.onChange) {
                 const { target } = event;
@@ -121,8 +130,24 @@ const Autocomplete = (props) => {
             let { value } = target;
             value = value ? value : "";
             updateMatchingItems(value);
+            removeHighlightsAndCursorIndex();
             setTextInputValue((textInputValue) => value);
-            setArrowCursorValue(value ? -1 : defaultDataIndex);
+        };
+
+        const findIndexOfVisibleItemFromList = (currentIndex) => {
+            const displayedData = componentData.filter((data) => {
+                return data.displayAttr === "true";
+            });
+            if (displayedData && displayedData.length > currentIndex) {
+                const displayedDataItem = displayedData[currentIndex];
+                if (displayedDataItem) {
+                    const mainListIndex = componentData.findIndex((data) => {
+                        return data.value.toLowerCase() === displayedDataItem.value.toLowerCase();
+                    });
+                    return mainListIndex;
+                }
+            }
+            return -1;
         };
 
         const onTextKeyDown = (event) => {
@@ -143,7 +168,8 @@ const Autocomplete = (props) => {
                             data.highlightAttr = "false";
                             return data;
                         });
-                        updatedData[newArrowCursor].highlightAttr = "true";
+                        const realIndex = findIndexOfVisibleItemFromList(newArrowCursor);
+                        updatedData[realIndex].highlightAttr = "true";
                         setComponentData((componentData) => updatedData);
                         setArrowCursor((arrowCursor) => newArrowCursor);
                     } catch (ex) {}
