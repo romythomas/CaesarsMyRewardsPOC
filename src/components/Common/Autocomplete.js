@@ -18,7 +18,7 @@ const Autocomplete = (props) => {
 
         let dafaultDataDisplay = "",
             defaultDataValue = "",
-            valueSelectedClassName = "",
+            isValueSelected = false,
             defaultDataIndex = -1;
 
         if (defaultValue) {
@@ -31,7 +31,7 @@ const Autocomplete = (props) => {
             if (dafaultData) {
                 dafaultDataDisplay = dafaultData.display;
                 defaultDataValue = dafaultData.value;
-                valueSelectedClassName = "value-selected";
+                isValueSelected = true;
             }
         }
 
@@ -162,14 +162,19 @@ const Autocomplete = (props) => {
             updateTextValueAndPlaceholder(dafaultDataDisplay);
         };
 
+        const onClearValue = () => {
+            selectItemFromList("", "");
+        };
+
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
         return (
             <ClickAwayListener onClickAway={onclose}>
                 <div
-                    className={`autocomplete ${valueSelectedClassName} ${isActiveState ? "active" : ""}`}
+                    className={`autocomplete ${isValueSelected ? "value-selected" : ""} ${isActiveState ? "active" : ""}`}
                     id="autocomplete-component"
                 >
-                    <span className="close" onClick={onclose}></span>
+                    <span className="close close-component" onClick={onclose}></span>
+                    <span className="close clear-component" onClick={onClearValue}></span>
                     <div className="select-wrap">
                         <input
                             className="form-control txt autocomplete-search"
