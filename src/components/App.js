@@ -45,7 +45,7 @@ class App extends Component {
         }
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         //load common data - login, offerlist and getmarkets
         this.props.onLogin(
             Promise.all([
