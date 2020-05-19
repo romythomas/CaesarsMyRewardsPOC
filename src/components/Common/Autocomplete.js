@@ -89,8 +89,8 @@ const Autocomplete = (props) => {
             props.onChange(value ? value : "");
         };
 
-        const setArrowCursorValue = () => {
-            setArrowCursor((arrowCursor) => defaultDataIndex);
+        const setArrowCursorValue = (index) => {
+            setArrowCursor((arrowCursor) => (index >= 0 ? index : -1));
         };
 
         const onClick = (event) => {
@@ -108,11 +108,12 @@ const Autocomplete = (props) => {
         };
 
         const onTextClick = (event) => {
-            const { target } = event;
-            addActiveState();
-            changeTextValueToPlaceholder(target ? target.defaultValue : "");
-            initializeDataList();
-            setArrowCursorValue();
+            if (!isActiveState) {
+                addActiveState();
+                changeTextValueToPlaceholder(dafaultDataDisplay ? dafaultDataDisplay : "");
+                initializeDataList();
+                setArrowCursorValue(defaultDataIndex);
+            }
         };
 
         const onTextChange = (event) => {
@@ -121,6 +122,7 @@ const Autocomplete = (props) => {
             value = value ? value : "";
             updateMatchingItems(value);
             setTextInputValue((textInputValue) => value);
+            setArrowCursorValue(value ? -1 : defaultDataIndex);
         };
 
         const onTextKeyDown = (event) => {
