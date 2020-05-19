@@ -18,9 +18,13 @@ const Autocomplete = (props) => {
 
         let dafaultDataDisplay = "",
             defaultDataValue = "",
-            valueSelectedClassName = "";
+            valueSelectedClassName = "",
+            defaultDataIndex = -1;
 
         if (defaultValue) {
+            defaultDataIndex = modifiedDataList.findIndex((data) => {
+                return data.value.toUpperCase() === defaultValue.toUpperCase();
+            });
             const dafaultData = modifiedDataList.find((data) => {
                 return data.value.toUpperCase() === defaultValue.toUpperCase();
             });
@@ -33,7 +37,7 @@ const Autocomplete = (props) => {
 
         const [isActiveState, setIsActiveState] = useState(false);
         const [placeHolderValue, setPlaceHolderValue] = useState("");
-        const [arrowCursor, setArrowCursor] = useState(-1);
+        const [arrowCursor, setArrowCursor] = useState(defaultDataIndex);
         const [textInputValue, setTextInputValue] = useState(dafaultDataDisplay);
         const [componentData, setComponentData] = useState(modifiedDataList);
 
@@ -85,6 +89,10 @@ const Autocomplete = (props) => {
             props.onChange(value ? value : "");
         };
 
+        const setArrowCursorValue = () => {
+            setArrowCursor((arrowCursor) => defaultDataIndex);
+        };
+
         const onClick = (event) => {
             if (props.onChange) {
                 const { target } = event;
@@ -104,6 +112,7 @@ const Autocomplete = (props) => {
             addActiveState();
             changeTextValueToPlaceholder(target ? target.defaultValue : "");
             initializeDataList();
+            setArrowCursorValue();
         };
 
         const onTextChange = (event) => {
