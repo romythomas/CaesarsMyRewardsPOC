@@ -11,6 +11,7 @@ import ProgressBarItem from "./ProgressBarItem";
 import { GET_PROFILE } from "../../constants/actionTypes";
 import { recordMyRewardsData } from "../../utilities/Gtm-Module";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
+import LoadingSpinner from "../Common/LoadingSpinner";
 import { scrollPageToBanner } from "../../utilities/Helper";
 
 const mapStateToProps = (state) => ({
@@ -95,13 +96,7 @@ class MyRewards extends Component {
                 </div>
             );
         } else {
-            return (
-                <div className="container-fluid">
-                    <div className="title">
-                        <h1>Loading</h1>
-                    </div>
-                </div>
-            );
+            return <LoadingSpinner />;
         }
     }
 }

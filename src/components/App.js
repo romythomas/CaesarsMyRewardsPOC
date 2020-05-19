@@ -5,7 +5,6 @@ import SpotLight from "./Common/SpotLight";
 import React, { Component, Suspense, lazy } from "react";
 import { connect } from "react-redux";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { hideWarning, scrollPageToBanner } from "../utilities/Helper";
 import LoadingSpinner from "./Common/LoadingSpinner";
 import { history } from "../store";
 import { LOGIN } from "../constants/actionTypes";
@@ -36,14 +35,6 @@ const mapDispatchToProps = (dispatch) => ({
     onLogin: (payload) => dispatch({ type: LOGIN, payload })
 });
 
-hideWarning();
-
-const loadScript = () => {
-    $(document).ready(function () {
-        scrollPageToBanner();
-    });
-};
-
 class App extends Component {
     constructor() {
         super();
@@ -70,7 +61,6 @@ class App extends Component {
     }
 
     render() {
-        loadScript();
         const { offers, markets, properties, reservations, enterpriseFeed, priceAlert, loginInfo } = this.props;
         if (
             markets &&

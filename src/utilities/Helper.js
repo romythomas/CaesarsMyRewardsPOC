@@ -222,30 +222,6 @@ export const scrollPageToBanner = () => {
 };
 
 /**
- *  * @param  {...any} warnings
- *  hide componentWillMount, componentWillUpdate, componentWillReceiveProps warnings
- */
-export const hideWarning = (...warnings) => {
-    try {
-        const warn = console.warn;
-        let showWarning = true;
-        if (warnings.length > 0) {
-            warnings.forEach((warning) => {
-                if (warning.includes("componentWillReceiveProps")) showWarning = false;
-                else if (warning.includes("componentWillMount")) showWarning = false;
-                else if (warning.includes("componentWillUpdate")) showWarning = false;
-            });
-        }
-        if (showWarning) warn(...warnings);
-        console.warn = hideWarning;
-    } catch (
-        er //swallow error
-    ) {
-        ("");
-    }
-};
-
-/**
  * Returns moment format of the date value passed in.
  * @param {String} dateValue - A date value in string format.
  * @returns {Object} - Moment object value of the date.
