@@ -1,78 +1,78 @@
 //multiselectlist starts here
 .multiselectlist {
-  position: relative;
-  .form-control-placeholder,
-  .form-control.txt {
-    cursor: pointer;
-    color: transparent;
-    text-shadow: 0 0 0 #000;
-    &:focus {
-      outline: none;
-    }
-  }
-  .multiselectlist-content {
-    background: $custome-white;
-    position: absolute;
-    width: 450px;
-    right: 0;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
-    display: none;
-    z-index: 99;
-    @include break-point(991px) {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      top: 0;
-      z-index: 9999;
-    }
-    .multiselectlist__list {
-      text-align: center;
-    }
-    ul {
-      text-align: left;
-      display: flex;
-      margin: 30px 15px;
-      @include break-point(991px) {
-        margin-top: 0;
-        display: block;
-      }
-      li {
-        display: flex;
-        flex-wrap: wrap;
-        @include break-point(991px) {
-          display: block;
-          margin-bottom: 30px;
-          margin-right: 10px;
+    position: relative;
+    .form-control-placeholder,
+    .form-control.txt {
+        cursor: pointer;
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+        &:focus {
+            outline: none;
         }
-        .multiselectlist__item {
-          width: 33.33%;
-          @include break-point(991px) {
-            width: 100%;
-            margin-top: 20px;
-            font-size: 15px;
-          }
-        }
-      }
-      h6 {
-        margin: 0 0 15px 0;
-      }
     }
-    .multiselectlist__btn {
-      background: #f1f1f6;
-      padding: 10px;
-      text-align: right;
-      .apply-selection {
-        display: none;
-        @include break-point(991px) {
-          display: inline-block;
-          margin-left: 10px;
-        }
-      }
-    }
-  }
-  &.open {
     .multiselectlist-content {
-      display: block;
+        background: $custome-white;
+        position: absolute;
+        width: 450px;
+        right: 0;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
+        display: none;
+        z-index: 99;
+        @include break-point(991px) {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            z-index: 9999;
+        }
+        .multiselectlist__list {
+            text-align: center;
+        }
+        ul {
+            text-align: left;
+            display: flex;
+            margin: 30px 15px;
+            @include break-point(991px) {
+                margin-top: 0;
+                display: block;
+            }
+            li {
+                display: flex;
+                flex-wrap: wrap;
+                @include break-point(991px) {
+                    display: block;
+                    margin-bottom: 30px;
+                    margin-right: 10px;
+                }
+                .multiselectlist__item {
+                    width: 33.33%;
+                    @include break-point(991px) {
+                        width: 100%;
+                        margin-top: 20px;
+                        font-size: 15px;
+                    }
+                }
+            }
+            h6 {
+                margin: 0 0 15px 0;
+            }
+        }
+        .multiselectlist__btn {
+            background: #f1f1f6;
+            padding: 10px;
+            text-align: right;
+            .apply-selection {
+                display: none;
+                @include break-point(991px) {
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+        }
     }
-  }
+    &.open {
+        .multiselectlist-content {
+            display: block;
+        }
+    }
 }
