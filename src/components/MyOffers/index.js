@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class MyOffers extends Component {
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.applyDefaultFilterAndSort();
     }
 

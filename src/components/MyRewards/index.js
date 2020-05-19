@@ -32,13 +32,13 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class MyRewards extends Component {
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.props.onGetGuestProfile(
             Promise.all([agent.Profile.getGuestProfile(this.props.accountID), agent.Profile.getFeeds()])
         );
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         //DataLayer logging
         const { logininfo } = nextProps;
         if (logininfo) {

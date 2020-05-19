@@ -33,7 +33,7 @@ class OfferDetails extends Component {
         this.gotoBookingWebsite = this.gotoBookingWebsite.bind(this);
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.findOfferDetails();
         this.updateImageUrl();
         this.updateMarketPropertyValues();
