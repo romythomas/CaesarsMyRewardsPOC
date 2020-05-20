@@ -1,5 +1,5 @@
 import React from "react";
-import { getProperty, getMoment } from "../../utilities/Helper";
+import { getProperty, getMoment, truncate } from "../../utilities/Helper";
 import { getImageUrl, getCaesarsDomain } from "../../constants/configs";
 import { Link } from "react-router-dom";
 
@@ -34,7 +34,7 @@ const OfferItem = (props) => {
                     </div>
                 </div>
                 <div className="listing__details">
-                    <h2>{title}</h2>
+                    <h2>{truncate(title, 63)}</h2>
                     <span className="rate">&nbsp;</span>
                 </div>
                 <div className="btn-wrap-double">
