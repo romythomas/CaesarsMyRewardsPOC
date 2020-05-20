@@ -105,7 +105,7 @@ const SearchCalendar = (props) => {
         //Check if date value is presented in the slection
         if (target && target.dataset && target.dataset.value) {
             //Find startdate and enddate. Then convert them to moment
-            const startDate = getMoment(target.dataset.value);
+            const startDate = getMoment(new Date(target.dataset.value));
             const endDate = startDate.clone().endOf("month");
             //If callback event is present in props and date values are valid, pass values to component property
             if (props.onChange && startDate.isValid() && endDate.isValid()) {

@@ -5,10 +5,11 @@ import OfferFilter from "./OfferFilter";
 import { FILTER_SORT_OFFER } from "../../constants/actionTypes";
 import { filterOffers, updateSelectedFilter } from "../../utilities/Filter";
 import { sortOffers } from "../../utilities/Sort";
-import { getUrlParams, getMoment, scrollPageToBanner } from "../../utilities/Helper";
+import { getMoment, scrollPageToBanner } from "../../utilities/Helper";
 import { getOfferSortTypes, getOfferFilterTypes } from "../../constants/configs";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import { recordMyOffersData } from "../../utilities/Gtm-Module";
+import queryString from "query-string";
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -158,8 +159,8 @@ class MyOffers extends Component {
                     }
                 });
             } else if (startdate || enddate) {
-                const urlStartDate = getMoment(startdate);
-                const urlEndDate = getMoment(enddate);
+                const urlStartDate = getMoment(new Date(startdate));
+                const urlEndDate = getMoment(new Date(enddate));
                 if (urlStartDate.isValid() && urlStartDate.isSameOrAfter(getMoment(), "day")) {
                     filterStartDate = urlStartDate;
                 }
@@ -234,8 +235,8 @@ class MyOffers extends Component {
     }
 
     applyDefaultFilterAndSort(isAllFiltersCleared) {
-        const { location } = this.props;
-        const searchParams = getUrlParams(location ? location.search : "");
+        const { search } = location;
+        const searchParams = queryString.parse(search ? search.toLowerCase() : "");
         this.createDefaultFilterAndSort(isAllFiltersCleared ? "" : searchParams);
         this.updateOfferList();
     }
