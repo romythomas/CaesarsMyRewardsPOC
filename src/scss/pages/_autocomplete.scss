@@ -6,7 +6,7 @@
         z-index: 9;
         &:before {
             right: 10px;
-            top: 7px;
+            top: 5px;
         }
     }
     .form-control-placeholder,
@@ -122,11 +122,11 @@
     &.value-selected {
         .close.clear-component {
             display: block;
-            &:before {
-                -webkit-text-stroke: 2px #fff;
-                font-size: 22px;
-                right: 10px;
-                top: 5px;
+            @include break-point(991px) {
+                &:before {
+                    -webkit-text-stroke: 2px #fff;
+                    font-size: 22px;
+                }
             }
         }
         .select-wrap {
