@@ -101,12 +101,16 @@
         margin: 0 15px;
         position: relative;
         .close {
-            right: 27px;
             @include break-point(767px) {
                 right: 10px;
             }
         }
         .autocomplete {
+            .close.close-component {
+                &:before {
+                    right: 3px;
+                }
+            }
             .close.clear-component {
                 display: none;
             }
