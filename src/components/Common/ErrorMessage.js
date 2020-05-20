@@ -1,16 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { recordErrorData } from "../../utilities/Gtm-Module";
 
 const ErrorMessage = (props) => {
     let { errorText, linkText, clearFilter } = props;
     errorText = errorText ? errorText : "Sorry!!! Please try again later.";
 
-    useEffect(() => {
-        //DataLayer logging
-        if (errorText) {
-            recordErrorData(errorText);
-        }
-    }, []);
+    //DataLayer logging
+    if (errorText) {
+        recordErrorData(errorText);
+    }
 
     return (
         <div className="alert alert-danger" role="alert">
