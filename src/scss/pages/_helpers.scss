@@ -453,10 +453,10 @@ select:-webkit-autofill:focus {
     height: 35px;
     top: 5px;
     right: 5px;
+    color: $custome-secondary;
     &:before {
         @include fontawesome;
         content: "\f08a";
-        color: #000;
         right: 6px;
         font-size: 22px;
         top: 2px;
@@ -464,7 +464,6 @@ select:-webkit-autofill:focus {
     &.active {
         &:before {
             content: "\f004";
-            color: $custome-secondary;
         }
     }
 }
