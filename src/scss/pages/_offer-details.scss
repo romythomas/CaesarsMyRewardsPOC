@@ -99,6 +99,7 @@
     }
     .details-propertyselect {
         margin: 0 15px;
+        position: relative;
         .close {
             right: 27px;
             @include break-point(767px) {
