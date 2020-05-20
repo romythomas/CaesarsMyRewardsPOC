@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import { connect } from "react-redux";
 import OfferList from "./OfferList";
 import OfferFilter from "./OfferFilter";
@@ -30,16 +30,19 @@ class MyOffers extends Component {
     }
 
     componentDidMount() {
-        scrollPageToBanner();
         //DataLayer logging
         const { offers } = this.props;
         if (offers && offers.length) {
             recordMyOffersData(offers.length);
         }
+        scrollPageToBanner(this.myOfferRef);
     }
 
     constructor() {
         super();
+
+        this.myOfferRef = createRef();
+
         this.selectedOfferSort = "";
         this.selectedOfferFilters = [];
 
@@ -239,9 +242,8 @@ class MyOffers extends Component {
 
     render() {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid" ref={this.myOfferRef}>
                 <ScrollUpButton ContainerClassName="scroll-top" ShowAtPosition={500} />
-
                 <OfferFilter
                     onLocationChange={this.onLocationChange}
                     onDateRangeChange={this.onDateRangeChange}

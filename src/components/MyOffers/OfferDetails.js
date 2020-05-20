@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import { connect } from "react-redux";
 import {
     getProperty,
@@ -23,6 +23,8 @@ class OfferDetails extends Component {
     constructor(props) {
         super(props);
 
+        this.offerDetailsRef = createRef();
+
         this.state = { selectedProperty: "" };
 
         this.offer = "";
@@ -40,11 +42,11 @@ class OfferDetails extends Component {
     }
 
     componentDidMount() {
-        scrollPageToBanner();
         //DataLayer logging
         if (this.offer && this.offer.id) {
             recordOffersDetailsData(this.offer.id);
         }
+        scrollPageToBanner(this.offerDetailsRef);
     }
 
     findOfferDetails() {
@@ -117,7 +119,7 @@ class OfferDetails extends Component {
             const { id, title, end, description, pref } = this.offer;
             const { selectedProperty } = this.state;
             return (
-                <div className="container-fluid">
+                <div className="container-fluid" ref={this.offerDetailsRef}>
                     <div className="title">
                         <h1>My Offer Details</h1>
                     </div>

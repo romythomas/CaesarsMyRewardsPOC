@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import agent from "../../agent";
 import { connect } from "react-redux";
 import RewardCreditItem from "./RewardCreditItem";
@@ -32,6 +32,11 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class MyRewards extends Component {
+    constructor(props) {
+        super(props);
+        this.myRewardsRef = createRef();
+    }
+
     UNSAFE_componentWillMount() {
         this.props.onGetGuestProfile(
             Promise.all([agent.Profile.getGuestProfile(this.props.accountID), agent.Profile.getFeeds()])
@@ -48,14 +53,14 @@ class MyRewards extends Component {
     }
 
     componentDidMount() {
-        scrollPageToBanner();
+        scrollPageToBanner(this.myRewardsRef);
     }
 
     render() {
         const { logininfo, feeds, properties, offers, enterpriseFeed, priceAlert, reservations } = this.props;
         if (logininfo && feeds && properties) {
             return (
-                <div className="container-fluid">
+                <div className="container-fluid" ref={this.myRewardsRef}>
                     <ScrollUpButton ContainerClassName="scroll-top" ShowAtPosition={500} />
                     <div className="title">
                         <h1>My Rewards</h1>

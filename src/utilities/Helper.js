@@ -215,9 +215,10 @@ export const getFavouriteClassName = (pref) => {
     return "";
 };
 
-export const scrollPageToBanner = () => {
-    if ($("#sub-content").length) {
-        $("html, body").animate({ scrollTop: $("#sub-content").offset().top - 80 }, 1);
+export const scrollPageToBanner = (ref) => {
+    if (ref && ref.current) {
+        const { offsetTop } = ref.current;
+        window.scrollTo(0, offsetTop - 80);
     }
 };
 
