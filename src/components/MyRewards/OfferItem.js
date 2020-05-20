@@ -24,9 +24,9 @@ const OfferItem = (props) => {
                 <h3>My Offer</h3>
                 <div className="listing__img">
                     <img className="thumb" src={imageUrl} alt="offer image" />
-                    <div className="img-info">
-                        <h5>{title}</h5>
-                        <span className="place">{propertyName}</span>
+                    <div className="img-info my-rewards">
+                        <h5>{propertyName}</h5>
+                        <span className="place">{title}</span>
                     </div>
                 </div>
                 <div className="listing__details">

@@ -27,13 +27,13 @@ const ReservationItem = (props) => {
                 <img className="thumb" src={imageUrl} alt="Caesars" />
                 <div className="img-info">
                     <h5>{propertyName}</h5>
-                    <span className="place"></span>
+                    <span className="place">&nbsp;</span>
                 </div>
             </div>
             <div className="listing__details">
                 <h2>Check-in: {getMoment(new Date(reservations.checkInDate)).format("MM/DD/YYYY")}</h2>
                 <h2>Check-out: {getMoment(new Date(reservations.checkOutDate)).format("MM/DD/YYYY")}</h2>
-                <span className="rate"></span>
+                <span className="rate">&nbsp;</span>
             </div>
             <div className="btn-wrap-double">
                 <button className="button">View All</button>
