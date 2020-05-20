@@ -26,11 +26,11 @@ const OfferItem = (props) => {
                     <img className="thumb" src={imageUrl} alt="offer image" />
                     <div className="img-info my-rewards">
                         <h5>{propertyName}</h5>
-                        <span className="place">{title}</span>
                     </div>
                 </div>
                 <div className="listing__details">
-                    <h2>{truncate(description, 63)}</h2>
+                    <h2>{title}</h2>
+                    <span className="rate">&nbsp;</span>
                 </div>
                 <div className="btn-wrap-double">
                     <Link className="button" id="viewoffer" to={`/offerdetails/${id}`}>

@@ -27,7 +27,6 @@ const ReservationItem = (props) => {
                 <img className="thumb" src={imageUrl} alt="Caesars" />
                 <div className="img-info">
                     <h5>{propertyName}</h5>
-                    <span className="place">&nbsp;</span>
                 </div>
             </div>
             <div className="listing__details">
