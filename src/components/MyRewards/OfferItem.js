@@ -1,17 +1,22 @@
 import React from "react";
-import { getProperty, truncate } from "../../utilities/Helper";
+import { getProperty, getMoment } from "../../utilities/Helper";
 import { getImageUrl, getCaesarsDomain } from "../../constants/configs";
 import { Link } from "react-router-dom";
 
 const OfferItem = (props) => {
     const { offerList, propertyList } = props;
-    const offer = offerList && offerList.length ? offerList[0] : null;
+    let offer = null;
+    if (offerList && offerList.length) {
+        offer = offerList.find((offer) => {
+            return getMoment(offer.end).endOf("day").isSameOrAfter(getMoment());
+        });
+    }
 
     let imageUrl = getImageUrl();
     let propertyName = "";
 
     if (offer && offer.propertyList && offer.propertyList.length && propertyList && propertyList.length) {
-        const { title, description, id } = offer;
+        const { title, id } = offer;
         const offerProperty = offer.propertyList[0];
         var property = getProperty(propertyList, offerProperty);
         if (property) {
