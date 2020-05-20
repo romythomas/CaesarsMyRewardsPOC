@@ -82,12 +82,12 @@ class App extends Component {
                             <Suspense fallback={<LoadingSpinner />}>
                                 <Switch>
                                     <Redirect exact from="/" to="myrewards" />
-                                    <Route exact path="/myrewards" component={MyRewards} />
-                                    <Route exact path="/myoffers" component={MyOffers} />
-                                    <Route exact path="/leaderboard" component={LeaderBoard} />
-                                    <Route exact path="/badges" component={QuestForRewards} />
-                                    <Route exact path="/reservations" component={Reservation} />
-                                    <Route exact path="/offerdetails/:id" component={OfferDetails} />
+                                    <Route exact path="/myrewards" render={() => <MyRewards />} />
+                                    <Route exact path="/myoffers" render={() => <MyOffers />} />
+                                    <Route exact path="/leaderboard" render={() => <LeaderBoard />} />
+                                    <Route exact path="/badges" render={() => <QuestForRewards />} />
+                                    <Route exact path="/reservations" render={() => <Reservation />} />
+                                    <Route exact path="/offerdetails/:id" render={(props) => <OfferDetails {...props} />} />
                                 </Switch>
                             </Suspense>
                         </div>
