@@ -64,7 +64,7 @@ const OfferFilter = (props) => {
             </div>
             <div className="form--search">
                 <ul className="row">
-                    <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <li className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <Autocomplete
                             dataList={marketPropertyListData}
                             elementId="market-property"
@@ -73,7 +73,7 @@ const OfferFilter = (props) => {
                             onChange={props.onLocationChange}
                         />
                     </li>
-                    <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <li className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <SearchCalendar
                             calendarId="offer-calendar"
                             defaultType={defaultCalendarSelection}
@@ -82,7 +82,7 @@ const OfferFilter = (props) => {
                             onChange={props.onDateRangeChange}
                         />
                     </li>
-                    <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <li className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <MultiSelectList
                             dataList={offerTypes}
                             title="Offer Types"
@@ -91,7 +91,7 @@ const OfferFilter = (props) => {
                             onChange={props.onOfferTypeChange}
                         />
                     </li>
-                    <li className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <li className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <Textbox
                             textboxId="offerCodeSearch"
                             title="Offer Code"
