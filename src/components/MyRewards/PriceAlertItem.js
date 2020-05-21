@@ -39,7 +39,7 @@ const PriceAlertItem = (props) => {
 
     return (
         <div className="listing-wrap">
-            <h3>My Price Alert</h3>
+            <h3>My Price Alerts</h3>
             <div className="listing__img">
                 <img className="thumb" src={rooms[0].roomImageUrl} alt="price alert image" />
                 <div className="img-info">

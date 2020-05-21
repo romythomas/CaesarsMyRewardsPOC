@@ -22,7 +22,7 @@ const ReservationItem = (props) => {
 
     return (
         <div className="listing-wrap">
-            <h3>My Reservation</h3>
+            <h3>My Reservations</h3>
             <div className="listing__img">
                 <img className="thumb" src={imageUrl} alt="Caesars" />
                 <div className="img-info">
