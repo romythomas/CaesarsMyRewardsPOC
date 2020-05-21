@@ -94,7 +94,7 @@ class App extends Component {
                                 </Switch>
                             </Suspense>
                         ) : (
-                            <ErrorMessage />
+                            <ErrorMessage errorText="Sorry! Website is currently down. Please try again later." />
                         )}
                     </div>
                 </div>
