@@ -201,7 +201,11 @@ const SearchCalendar = (props) => {
                             onSelect={onDateChnage}
                             minimumDate={new Date(minimumDate)}
                             maximumDate={new Date(maximumDate)}
-                            value={getMomentRange(dateCalendarStartDate, dateCalendarEndDate)}
+                            value={
+                                dateCalendarStartDate && dateCalendarEndDate
+                                    ? getMomentRange(dateCalendarStartDate, dateCalendarEndDate)
+                                    : null
+                            }
                             selectionType="range"
                             numberOfCalendars={2}
                         />
