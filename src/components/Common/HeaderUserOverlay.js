@@ -57,9 +57,8 @@ const HeaderUserOverlay = (props) => {
                 </div>
             </ClickAwayListener>
         );
-    } else {
-        return null;
     }
+    return null;
 };
 
 export default HeaderUserOverlay;
