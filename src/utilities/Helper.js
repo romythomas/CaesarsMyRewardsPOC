@@ -159,6 +159,7 @@ export const getStructuredMarketsPropertiesList = (markets) => {
             propertyList.push({
                 display: propertyName,
                 value: property.Code,
+                marketCode: market.Code,
                 isDisabled: false,
                 isStylingRequired: false,
                 isMarket: false,
@@ -168,6 +169,7 @@ export const getStructuredMarketsPropertiesList = (markets) => {
         marketPropertyListData.push({
             display: marketName,
             value: market.Code,
+            marketCode: "",
             isDisabled: false,
             isStylingRequired: true,
             isMarket: true,

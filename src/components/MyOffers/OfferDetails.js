@@ -100,14 +100,19 @@ class OfferDetails extends Component {
         let firstProperty = "";
         if (searchParams && searchParams.propcode) {
             firstProperty = marketPropertyListData.find((item) => {
-                return !item.isDisabled && item.value.toLowerCase() === searchParams.propcode;
+                return item.value.toLowerCase() === searchParams.propcode;
             });
         }
-        if (!firstProperty) {
+        if (firstProperty && firstProperty.isMarket) {
+            firstProperty = marketPropertyListData.find((item) => {
+                return item.marketCode.toLowerCase() === searchParams.propcode;
+            });
+        } else if (!firstProperty) {
             firstProperty = marketPropertyListData.find((item) => {
                 return !item.isDisabled;
             });
         }
+
         if (firstProperty && firstProperty.value) {
             this.setState({
                 selectedProperty: firstProperty.value
