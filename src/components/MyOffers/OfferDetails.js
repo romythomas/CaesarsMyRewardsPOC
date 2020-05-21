@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 import {
     getProperty,
     getMoment,
@@ -24,6 +25,7 @@ class OfferDetails extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            isRedirectToMyOffers: false,
             hasDataFetched: false,
             selectedProperty: "",
             offer: null,
@@ -32,6 +34,7 @@ class OfferDetails extends Component {
         };
         this.onLocationChange = this.onLocationChange.bind(this);
         this.gotoBookingWebsite = this.gotoBookingWebsite.bind(this);
+        this.gotoOffersList = this.gotoOffersList.bind(this);
     }
 
     componentDidMount() {
@@ -97,6 +100,12 @@ class OfferDetails extends Component {
         }
     }
 
+    gotoOffersList() {
+        this.setState({
+            isRedirectToMyOffers: true
+        });
+    }
+
     gotoBookingWebsite() {
         const { selectedProperty, offer } = this.state;
         if (selectedProperty && offer) {
@@ -109,7 +118,10 @@ class OfferDetails extends Component {
     }
 
     render() {
-        const { hasDataFetched, offer, imageUrl, selectedProperty, marketPropertyListData } = this.state;
+        const { isRedirectToMyOffers, hasDataFetched, offer, imageUrl, selectedProperty, marketPropertyListData } = this.state;
+        if (isRedirectToMyOffers) {
+            return <Redirect to="/myoffers" />;
+        }
         if (!hasDataFetched) {
             return <LoadingSpinner />;
         }
@@ -204,7 +216,7 @@ class OfferDetails extends Component {
                 </div>
             );
         }
-        return <ErrorMessage errorText={OFFER_DETAILS_ERROR} />;
+        return <ErrorMessage errorText={OFFER_DETAILS_ERROR} linkText="View all offers" clearFilter={this.gotoOffersList} />;
     }
 }
 
