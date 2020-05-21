@@ -14,9 +14,9 @@ const ErrorMessage = (props) => {
     return (
         <div className="alert alert-danger" role="alert">
             {errorText}{" "}
-            {linkText && linkText.length && clearFilter ? (
+            {linkText && clearFilter ? (
                 <a className="alert-link" onClick={clearFilter}>
-                    Clear Filters
+                    {linkText}
                 </a>
             ) : (
                 ""
