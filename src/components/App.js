@@ -74,7 +74,7 @@ class App extends Component {
             markets.length && offers.length && properties.length && reservations && priceAlert && enterpriseFeed && loginInfo;
 
         return (
-            <div>
+            <div className="main">
                 <Header loginInfo={this.props.loginInfo} />
                 <div id="page-content">
                     <SpotLight />
