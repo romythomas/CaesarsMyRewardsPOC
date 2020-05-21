@@ -40,19 +40,16 @@ class MyRewards extends Component {
     componentDidMount() {
         Promise.all([agent.Profile.getGuestProfile(), agent.Profile.getFeeds()]).then((response) => {
             this.props.onGetGuestProfile(response);
+            //DataLayer logging
+            const { logininfo } = this.props;
+            if (logininfo) {
+                const { tier, propcode, accountid } = logininfo;
+                recordMyRewardsData(tier, propcode, accountid);
+            }
             this.setState({
                 hasDataFetched: true
             });
         });
-    }
-
-    componentDidUpdate() {
-        //DataLayer logging
-        const { logininfo } = this.props;
-        if (logininfo) {
-            const { tier, propcode, accountid } = logininfo;
-            recordMyRewardsData(tier, propcode, accountid);
-        }
     }
 
     render() {
