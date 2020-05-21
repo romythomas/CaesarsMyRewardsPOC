@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.38132ba633e8f98cdb8bd1cca1e34d8f.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("/precache-manifest.bf75d977debe432408563729629f488d.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
   "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
