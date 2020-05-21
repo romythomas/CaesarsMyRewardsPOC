@@ -57,44 +57,10 @@ class OfferDetails extends Component {
                 recordOffersDetailsData(id);
                 if (propertyList && propertyList.length) {
                     if (properties && properties.length) {
-                        const property = getProperty(properties, propertyList[0]);
-                        if (property) {
-                            this.setState({
-                                imageUrl: `http://caesars.com${property.thumbnail.url}`
-                            });
-                        }
+                        this.updateImageUrl(properties, propertyList);
                     }
                     if (markets && markets.length) {
-                        const marketsOfProperties = getMarketCodeListOfPropertyCodes(markets, propertyList);
-                        let marketPropertyListData = getStructuredMarketsPropertiesList(markets).map((data) => {
-                            data.isDisabled = data.isMarket;
-                            return data;
-                        });
-                        marketPropertyListData = marketPropertyListData.filter((data) => {
-                            return marketsOfProperties.includes(data.value) || propertyList.includes(data.value);
-                        });
-                        this.setState({
-                            marketPropertyListData: marketPropertyListData
-                        });
-
-                        const { search } = location;
-                        const searchParams = queryString.parse(search ? search.toLowerCase() : "");
-                        let firstProperty = "";
-                        if (searchParams && searchParams.propcode) {
-                            firstProperty = marketPropertyListData.find((item) => {
-                                return !item.isDisabled && item.value.toLowerCase() === searchParams.propcode;
-                            });
-                        }
-                        if (!firstProperty) {
-                            firstProperty = marketPropertyListData.find((item) => {
-                                return !item.isDisabled;
-                            });
-                        }
-                        if (firstProperty && firstProperty.value) {
-                            this.setState({
-                                selectedProperty: firstProperty.value
-                            });
-                        }
+                        this.getMarketsPropertiesList(markets, propertyList);
                     }
                 }
             }
@@ -102,6 +68,51 @@ class OfferDetails extends Component {
         this.setState({
             hasDataFetched: true
         });
+    }
+
+    updateImageUrl(properties, propertyList) {
+        const property = getProperty(properties, propertyList[0]);
+        if (property) {
+            this.setState({
+                imageUrl: `http://caesars.com${property.thumbnail.url}`
+            });
+        }
+    }
+
+    getMarketsPropertiesList(markets, propertyList) {
+        const marketsOfProperties = getMarketCodeListOfPropertyCodes(markets, propertyList);
+        let marketPropertyListData = getStructuredMarketsPropertiesList(markets).map((data) => {
+            data.isDisabled = data.isMarket;
+            return data;
+        });
+        marketPropertyListData = marketPropertyListData.filter((data) => {
+            return marketsOfProperties.includes(data.value) || propertyList.includes(data.value);
+        });
+        this.setState({
+            marketPropertyListData: marketPropertyListData
+        });
+        this.setDefaultProperty(marketPropertyListData);
+    }
+
+    setDefaultProperty(marketPropertyListData) {
+        const { search } = location;
+        const searchParams = queryString.parse(search ? search.toLowerCase() : "");
+        let firstProperty = "";
+        if (searchParams && searchParams.propcode) {
+            firstProperty = marketPropertyListData.find((item) => {
+                return !item.isDisabled && item.value.toLowerCase() === searchParams.propcode;
+            });
+        }
+        if (!firstProperty) {
+            firstProperty = marketPropertyListData.find((item) => {
+                return !item.isDisabled;
+            });
+        }
+        if (firstProperty && firstProperty.value) {
+            this.setState({
+                selectedProperty: firstProperty.value
+            });
+        }
     }
 
     onLocationChange(value) {
