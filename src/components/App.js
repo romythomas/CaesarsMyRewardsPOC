@@ -71,7 +71,6 @@ class App extends Component {
         if (contentRef) {
             const { current } = contentRef;
             if (current) {
-                console.log("Offset top: " + current.offsetTop);
                 window.scrollTo(0, current.offsetTop - 80);
             }
         }
