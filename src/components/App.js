@@ -69,26 +69,19 @@ class App extends Component {
 
     render() {
         const { hasDataFetched } = this.state;
-        if (!hasDataFetched) {
-            return (
-                <div>
-                    <Header />
-                    <div id="page-content">
-                        <SpotLight />
-                        <LoadingSpinner />
-                    </div>
-                    <Footer />
-                </div>
-            );
-        }
         const { offers, markets, properties, reservations, enterpriseFeed, priceAlert, loginInfo } = this.props;
-        if (markets.length && offers.length && properties.length && reservations && priceAlert && enterpriseFeed && loginInfo) {
-            return (
-                <div>
-                    <Header loginInfo={this.props.loginInfo} />
-                    <div id="page-content">
-                        <SpotLight />
-                        <div id="sub-content">
+        const isPropsAvailable =
+            markets.length && offers.length && properties.length && reservations && priceAlert && enterpriseFeed && loginInfo;
+
+        return (
+            <div>
+                <Header loginInfo={this.props.loginInfo} />
+                <div id="page-content">
+                    <SpotLight />
+                    <div id="sub-content">
+                        {!hasDataFetched ? (
+                            <LoadingSpinner />
+                        ) : isPropsAvailable ? (
                             <Suspense fallback={<LoadingSpinner />}>
                                 <Switch>
                                     <Redirect exact from="/" to="myrewards" />
@@ -100,23 +93,14 @@ class App extends Component {
                                     <Route exact path="/offerdetails/:id" render={(props) => <OfferDetails {...props} />} />
                                 </Switch>
                             </Suspense>
-                        </div>
+                        ) : (
+                            <ErrorMessage />
+                        )}
                     </div>
-                    <Footer />
                 </div>
-            );
-        } else {
-            return (
-                <div>
-                    <Header />
-                    <div id="page-content">
-                        <SpotLight />
-                        <ErrorMessage errorText="Sorry!! Website is currently down." />
-                    </div>
-                    <Footer />
-                </div>
-            );
-        }
+                <Footer />
+            </div>
+        );
     }
 }
 
