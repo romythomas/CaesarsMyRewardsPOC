@@ -1,11 +1,11 @@
-import React, { Component, createRef } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import OfferList from "./OfferList";
 import OfferFilter from "./OfferFilter";
 import { FILTER_SORT_OFFER } from "../../constants/actionTypes";
 import { filterOffers, updateSelectedFilter } from "../../utilities/Filter";
 import { sortOffers } from "../../utilities/Sort";
-import { getMoment, scrollPageToBanner } from "../../utilities/Helper";
+import { getMoment } from "../../utilities/Helper";
 import { getOfferSortTypes, getOfferFilterTypes } from "../../constants/configs";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import { recordMyOffersData } from "../../utilities/Gtm-Module";
@@ -33,22 +33,16 @@ class MyOffers extends Component {
         if (offers && offers.length) {
             recordMyOffersData(offers.length);
         }
-        scrollPageToBanner(this.myOfferRef);
         this.applyDefaultFilterAndSort();
     }
 
     constructor() {
         super();
-
-        this.myOfferRef = createRef();
-
         this.selectedOfferSort = "";
         this.selectedOfferFilters = [];
-
         this.state = {
             isDefaultFilterApplied: false
         };
-
         //This binding is necessary to make `this` work in the callback
         this.onLocationChange = this.onLocationChange.bind(this);
         this.onDateRangeChange = this.onDateRangeChange.bind(this);
@@ -251,7 +245,7 @@ class MyOffers extends Component {
             return <LoadingSpinner />;
         }
         return (
-            <div className="container-fluid" ref={this.myOfferRef}>
+            <div className="container-fluid">
                 <ScrollUpButton ContainerClassName="scroll-top" ShowAtPosition={500} />
                 <OfferFilter
                     onLocationChange={this.onLocationChange}

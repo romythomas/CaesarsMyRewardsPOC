@@ -198,13 +198,6 @@ export const getFavouriteClassName = (pref) => {
     return "";
 };
 
-export const scrollPageToBanner = (ref) => {
-    if (ref && ref.current) {
-        const { offsetTop } = ref.current;
-        window.scrollTo(0, offsetTop - 80);
-    }
-};
-
 /**
  * Returns moment format of the date value passed in.
  * @param {String} dateValue - A date value in string format.

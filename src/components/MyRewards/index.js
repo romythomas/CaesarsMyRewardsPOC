@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React, { Component } from "react";
 import agent from "../../agent";
 import { connect } from "react-redux";
 import RewardCreditItem from "./RewardCreditItem";
@@ -12,7 +12,6 @@ import { GET_PROFILE } from "../../constants/actionTypes";
 import { recordMyRewardsData } from "../../utilities/Gtm-Module";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import LoadingSpinner from "../Common/LoadingSpinner";
-import { scrollPageToBanner } from "../../utilities/Helper";
 
 const mapStateToProps = (state) => ({
     token: state.common.token,
@@ -33,7 +32,6 @@ const mapDispatchToProps = (dispatch) => ({
 class MyRewards extends Component {
     constructor(props) {
         super(props);
-        this.myRewardsRef = createRef();
         this.state = {
             hasDataFetched: false
         };
@@ -46,7 +44,6 @@ class MyRewards extends Component {
                 hasDataFetched: true
             });
         });
-        scrollPageToBanner(this.myRewardsRef);
     }
 
     componentDidUpdate() {
@@ -66,7 +63,7 @@ class MyRewards extends Component {
         const { logininfo, feeds, properties, offers, enterpriseFeed, priceAlert, reservations } = this.props;
         if (logininfo && feeds && properties) {
             return (
-                <div className="container-fluid" ref={this.myRewardsRef}>
+                <div className="container-fluid">
                     <ScrollUpButton ContainerClassName="scroll-top" ShowAtPosition={500} />
                     <div className="title">
                         <h1>My Rewards</h1>

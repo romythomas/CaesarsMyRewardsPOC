@@ -1,12 +1,11 @@
-import React, { Component, createRef } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
     getProperty,
     getMoment,
     getFavouriteClassName,
     getMarketCodeListOfPropertyCodes,
-    getStructuredMarketsPropertiesList,
-    scrollPageToBanner
+    getStructuredMarketsPropertiesList
 } from "../../utilities/Helper";
 import Autocomplete from "../Common/Autocomplete";
 import { getImageUrl, getCaesarsDomain } from "../../constants/configs";
@@ -23,9 +22,6 @@ const mapStateToProps = (state) => ({
 class OfferDetails extends Component {
     constructor(props) {
         super(props);
-
-        this.offerDetailsRef = createRef();
-
         this.state = {
             hasDataFetched: false,
             selectedProperty: "",
@@ -33,7 +29,6 @@ class OfferDetails extends Component {
             imageUrl: getImageUrl(),
             marketPropertyListData: []
         };
-
         this.onLocationChange = this.onLocationChange.bind(this);
         this.gotoBookingWebsite = this.gotoBookingWebsite.bind(this);
     }
@@ -43,7 +38,6 @@ class OfferDetails extends Component {
         if (this.offer && this.offer.id) {
             recordOffersDetailsData(this.offer.id);
         }
-        scrollPageToBanner(this.offerDetailsRef);
         this.fetchOfferDetails();
     }
 
@@ -123,7 +117,7 @@ class OfferDetails extends Component {
         if (offer) {
             const { id, title, end, description, pref } = offer;
             return (
-                <div className="container-fluid" ref={this.offerDetailsRef}>
+                <div className="container-fluid">
                     <div className="title">
                         <h1>My Offer Details</h1>
                     </div>
