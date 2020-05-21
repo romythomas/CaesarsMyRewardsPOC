@@ -59,3 +59,15 @@ export const filterOffers = (offers, selectedOfferFilters, markets) => {
     }
     return filteredOffers;
 };
+
+export const getFilterValue = (selectedOfferFilters, filterType) => {
+    if (selectedOfferFilters && selectedOfferFilters.length && filterType) {
+        const selectedFilter = selectedOfferFilters.find((filter) => {
+            return filter.filterType.toLowerCase() === "location";
+        });
+        if (selectedFilter) {
+            return selectedFilter.filterValue;
+        }
+    }
+    return null;
+};

@@ -11,6 +11,7 @@ import {
 import Autocomplete from "../Common/Autocomplete";
 import { getImageUrl, getCaesarsDomain } from "../../constants/configs";
 import { recordOffersDetailsData } from "../../utilities/Gtm-Module";
+import queryString from "query-string";
 import ErrorMessage from "../Common/ErrorMessage";
 import { OFFER_DETAILS_ERROR } from "../../constants/errorMessages";
 import LoadingSpinner from "../Common/LoadingSpinner";
@@ -75,9 +76,20 @@ class OfferDetails extends Component {
                         this.setState({
                             marketPropertyListData: marketPropertyListData
                         });
-                        const firstProperty = marketPropertyListData.find((item) => {
-                            return !item.isDisabled;
-                        });
+
+                        const { search } = location;
+                        const searchParams = queryString.parse(search ? search.toLowerCase() : "");
+                        let firstProperty = "";
+                        if (searchParams && searchParams.propcode) {
+                            firstProperty = marketPropertyListData.find((item) => {
+                                return !item.isDisabled && item.value.toLowerCase() === searchParams.propcode;
+                            });
+                        }
+                        if (!firstProperty) {
+                            firstProperty = marketPropertyListData.find((item) => {
+                                return !item.isDisabled;
+                            });
+                        }
                         if (firstProperty && firstProperty.value) {
                             this.setState({
                                 selectedProperty: firstProperty.value
