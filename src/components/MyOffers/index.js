@@ -10,6 +10,7 @@ import { getOfferSortTypes, getOfferFilterTypes } from "../../constants/configs"
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import { recordMyOffersData } from "../../utilities/Gtm-Module";
 import queryString from "query-string";
+import LoadingSpinner from "../Common/LoadingSpinner";
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -43,6 +44,10 @@ class MyOffers extends Component {
 
         this.selectedOfferSort = "";
         this.selectedOfferFilters = [];
+
+        this.state = {
+            isDefaultFilterApplied: false
+        };
 
         //This binding is necessary to make `this` work in the callback
         this.onLocationChange = this.onLocationChange.bind(this);
@@ -236,9 +241,15 @@ class MyOffers extends Component {
         const searchParams = queryString.parse(search ? search.toLowerCase() : "");
         this.createDefaultFilterAndSort(isAllFiltersCleared ? "" : searchParams);
         this.updateOfferList();
+        this.setState({
+            isDefaultFilterApplied: true
+        });
     }
 
     render() {
+        if (!this.state.isDefaultFilterApplied) {
+            return <LoadingSpinner />;
+        }
         return (
             <div className="container-fluid" ref={this.myOfferRef}>
                 <ScrollUpButton ContainerClassName="scroll-top" ShowAtPosition={500} />
