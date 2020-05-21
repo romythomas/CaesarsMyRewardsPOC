@@ -8,6 +8,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import LoadingSpinner from "./Common/LoadingSpinner";
 import { history } from "../store";
 import { LOGIN } from "../constants/actionTypes";
+import ErrorMessage from "./Common/ErrorMessage";
 
 const MyRewards = lazy(() => import(/* webpackChunkName: "MyRewards" */ "./MyRewards"));
 const MyOffers = lazy(() => import(/* webpackChunkName: "MyOffers" */ "./MyOffers"));
@@ -38,6 +39,10 @@ class App extends Component {
     constructor() {
         super();
 
+        this.state = {
+            hasDataFetched: false
+        };
+
         const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
         if (path) {
             history.replace(path);
@@ -46,32 +51,38 @@ class App extends Component {
 
     componentDidMount() {
         //load common data - login, offerlist and getmarkets
-        this.props.onLogin(
-            Promise.all([
-                agent.Auth.login(),
-                agent.Offers.getOfferList(),
-                agent.Markets.getMarkets(),
-                agent.Properties.getProperties(),
-                agent.Reservations.getReservation(),
-                agent.PriceAlert.getPriceAlert(),
-                agent.Enterprise.getLowestRate()
-            ])
-        );
+        Promise.all([
+            agent.Auth.login(),
+            agent.Offers.getOfferList(),
+            agent.Markets.getMarkets(),
+            agent.Properties.getProperties(),
+            agent.Reservations.getReservation(),
+            agent.PriceAlert.getPriceAlert(),
+            agent.Enterprise.getLowestRate()
+        ]).then((response) => {
+            this.props.onLogin(response);
+            this.setState({
+                hasDataFetched: true
+            });
+        });
     }
 
     render() {
+        const { hasDataFetched } = this.state;
+        if (!hasDataFetched) {
+            return (
+                <div>
+                    <Header />
+                    <div id="page-content">
+                        <SpotLight />
+                        <LoadingSpinner />
+                    </div>
+                    <Footer />
+                </div>
+            );
+        }
         const { offers, markets, properties, reservations, enterpriseFeed, priceAlert, loginInfo } = this.props;
-        if (
-            markets &&
-            markets.length &&
-            offers &&
-            offers.length &&
-            properties &&
-            reservations &&
-            priceAlert &&
-            enterpriseFeed &&
-            loginInfo
-        ) {
+        if (markets.length && offers.length && properties.length && reservations && priceAlert && enterpriseFeed && loginInfo) {
             return (
                 <div>
                     <Header loginInfo={this.props.loginInfo} />
@@ -97,8 +108,11 @@ class App extends Component {
         } else {
             return (
                 <div>
-                    <Header loginInfo={this.props.loginInfo} />
-                    <LoadingSpinner />
+                    <Header />
+                    <div id="page-content">
+                        <SpotLight />
+                        <ErrorMessage errorText="Sorry!! Website is currently down." />
+                    </div>
                     <Footer />
                 </div>
             );

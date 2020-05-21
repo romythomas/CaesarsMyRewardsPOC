@@ -3,13 +3,13 @@ import { LOGIN } from "../constants/actionTypes";
 const defaultState = {
     accountID: null,
     token: null,
-    loginInfo: [],
+    loginInfo: null,
     offers: [],
     markets: [],
     properties: [],
-    reservations: [],
-    enterpriseFeed: [],
-    priceAlert: []
+    reservations: null,
+    enterpriseFeed: null,
+    priceAlert: null
 };
 
 export default (state = defaultState, action) => {
