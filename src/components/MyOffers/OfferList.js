@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import OfferItem from "./OfferItem";
 import ErrorMessage from "../Common/ErrorMessage";
+import { OFFERS_LIST_ERROR } from "../../constants/errorMessages";
 
 const mapStateToProps = (state) => ({
     filteredSortedOffers: state.offers.offers
@@ -20,13 +21,7 @@ const OfferList = (props) => {
             </div>
         );
     } else {
-        return (
-            <ErrorMessage
-                errorText="No offers available for your selection."
-                linkText="Clear Filters"
-                clearFilter={props.clearFilter}
-            />
-        );
+        return <ErrorMessage errorText={OFFERS_LIST_ERROR} linkText="Clear Filters" clearFilter={props.clearFilter} />;
     }
 };
 

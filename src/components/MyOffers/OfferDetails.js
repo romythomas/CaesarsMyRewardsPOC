@@ -11,6 +11,7 @@ import Autocomplete from "../Common/Autocomplete";
 import { getImageUrl, getCaesarsDomain } from "../../constants/configs";
 import { recordOffersDetailsData } from "../../utilities/Gtm-Module";
 import ErrorMessage from "../Common/ErrorMessage";
+import { OFFER_DETAILS_ERROR } from "../../constants/errorMessages";
 import LoadingSpinner from "../Common/LoadingSpinner";
 
 const mapStateToProps = (state) => ({
@@ -203,7 +204,7 @@ class OfferDetails extends Component {
                 </div>
             );
         }
-        return <ErrorMessage errorText="No offer details available." />;
+        return <ErrorMessage errorText={OFFER_DETAILS_ERROR} />;
     }
 }
 

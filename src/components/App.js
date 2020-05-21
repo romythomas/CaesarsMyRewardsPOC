@@ -9,6 +9,7 @@ import LoadingSpinner from "./Common/LoadingSpinner";
 import { history } from "../store";
 import { LOGIN } from "../constants/actionTypes";
 import ErrorMessage from "./Common/ErrorMessage";
+import { APP_ERROR } from "../constants/errorMessages";
 
 const MyRewards = lazy(() => import(/* webpackChunkName: "MyRewards" */ "./MyRewards"));
 const MyOffers = lazy(() => import(/* webpackChunkName: "MyOffers" */ "./MyOffers"));
@@ -103,7 +104,7 @@ class App extends Component {
                                 </Switch>
                             </Suspense>
                         ) : (
-                            <ErrorMessage errorText="Sorry! Website is currently down. Please try again later." />
+                            <ErrorMessage errorText={APP_ERROR} />
                         )}
                     </div>
                 </div>

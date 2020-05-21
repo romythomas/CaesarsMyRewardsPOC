@@ -1,9 +1,10 @@
 import React from "react";
 import { recordErrorData } from "../../utilities/Gtm-Module";
+import { GLOBAL_ERROR } from "../../constants/errorMessages";
 
 const ErrorMessage = (props) => {
     let { errorText, linkText, clearFilter } = props;
-    errorText = errorText ? errorText : "Sorry! Please try again later.";
+    errorText = errorText ? errorText : GLOBAL_ERROR;
 
     //DataLayer logging
     if (errorText) {

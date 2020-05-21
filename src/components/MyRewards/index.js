@@ -12,6 +12,8 @@ import { GET_PROFILE } from "../../constants/actionTypes";
 import { recordMyRewardsData } from "../../utilities/Gtm-Module";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import LoadingSpinner from "../Common/LoadingSpinner";
+import ErrorMessage from "../Common/ErrorMessage";
+import { MY_REWARDS_ERROR } from "../../constants/errorMessages";
 
 const mapStateToProps = (state) => ({
     token: state.common.token,
@@ -101,7 +103,7 @@ class MyRewards extends Component {
                 </div>
             );
         }
-        return <ErrorMessage errorText="Sorry! Your profile details are not available now. Please try again later." />;
+        return <ErrorMessage errorText={MY_REWARDS_ERROR} />;
     }
 }
 
