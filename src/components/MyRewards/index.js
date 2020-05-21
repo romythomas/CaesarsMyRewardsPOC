@@ -37,23 +37,20 @@ class MyRewards extends Component {
         this.myRewardsRef = createRef();
     }
 
-    UNSAFE_componentWillMount() {
+    componentDidMount() {
+        scrollPageToBanner(this.myRewardsRef);
         this.props.onGetGuestProfile(
             Promise.all([agent.Profile.getGuestProfile(this.props.accountID), agent.Profile.getFeeds()])
         );
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate() {
         //DataLayer logging
-        const { logininfo } = nextProps;
+        const { logininfo } = this.props;
         if (logininfo) {
             const { tier, propcode, accountid } = logininfo;
             recordMyRewardsData(tier, propcode, accountid);
         }
-    }
-
-    componentDidMount() {
-        scrollPageToBanner(this.myRewardsRef);
     }
 
     render() {

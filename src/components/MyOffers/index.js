@@ -26,10 +26,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class MyOffers extends Component {
-    UNSAFE_componentWillMount() {
-        this.applyDefaultFilterAndSort();
-    }
-
     componentDidMount() {
         //DataLayer logging
         const { offers } = this.props;
@@ -37,6 +33,7 @@ class MyOffers extends Component {
             recordMyOffersData(offers.length);
         }
         scrollPageToBanner(this.myOfferRef);
+        this.applyDefaultFilterAndSort();
     }
 
     constructor() {

@@ -25,20 +25,15 @@ class OfferDetails extends Component {
 
         this.offerDetailsRef = createRef();
 
-        this.state = { selectedProperty: "" };
-
-        this.offer = "";
-        this.imageUrl = getImageUrl();
-        this.marketPropertyListData = [];
+        this.state = {
+            selectedProperty: "",
+            offer: null,
+            imageUrl: getImageUrl(),
+            marketPropertyListData: []
+        };
 
         this.onLocationChange = this.onLocationChange.bind(this);
         this.gotoBookingWebsite = this.gotoBookingWebsite.bind(this);
-    }
-
-    UNSAFE_componentWillMount() {
-        this.findOfferDetails();
-        this.updateImageUrl();
-        this.updateMarketPropertyValues();
     }
 
     componentDidMount() {
@@ -47,27 +42,51 @@ class OfferDetails extends Component {
             recordOffersDetailsData(this.offer.id);
         }
         scrollPageToBanner(this.offerDetailsRef);
+        this.updateOfferDetails();
     }
 
-    findOfferDetails() {
-        const { offers, match } = this.props;
+    updateOfferDetails() {
+        const { offers, markets, properties, match } = this.props;
         if (offers && offers.length && match.params && match.params.id) {
             const offerItem = offers.filter((offer) => {
                 return offer.id.toLowerCase() === match.params.id.toLowerCase();
             });
             if (offerItem && offerItem.length) {
-                this.offer = offerItem[0];
-            }
-        }
-    }
-
-    updateImageUrl() {
-        const { properties } = this.props;
-        const { propertyList } = this.offer;
-        if (properties && properties.length && propertyList && propertyList.length) {
-            const property = getProperty(properties, propertyList[0]);
-            if (property) {
-                this.imageUrl = `http://caesars.com${property.thumbnail.url}`;
+                this.setState({
+                    offer: offerItem[0]
+                });
+                const { propertyList } = offerItem[0];
+                if (propertyList && propertyList.length) {
+                    if (properties && properties.length) {
+                        const property = getProperty(properties, propertyList[0]);
+                        if (property) {
+                            this.setState({
+                                imageUrl: `http://caesars.com${property.thumbnail.url}`
+                            });
+                        }
+                    }
+                    if (markets && markets.length) {
+                        const marketsOfProperties = getMarketCodeListOfPropertyCodes(markets, propertyList);
+                        let marketPropertyListData = getStructuredMarketsPropertiesList(markets).map((data) => {
+                            data.isDisabled = data.isMarket;
+                            return data;
+                        });
+                        marketPropertyListData = marketPropertyListData.filter((data) => {
+                            return marketsOfProperties.includes(data.value) || propertyList.includes(data.value);
+                        });
+                        this.setState({
+                            marketPropertyListData: marketPropertyListData
+                        });
+                        const firstProperty = marketPropertyListData.find((item) => {
+                            return !item.isDisabled;
+                        });
+                        if (firstProperty && firstProperty.value) {
+                            this.setState({
+                                selectedProperty: firstProperty.value
+                            });
+                        }
+                    }
+                }
             }
         }
     }
@@ -115,9 +134,9 @@ class OfferDetails extends Component {
     }
 
     render() {
-        if (this.offer) {
-            const { id, title, end, description, pref } = this.offer;
-            const { selectedProperty } = this.state;
+        const { offer, imageUrl, selectedProperty, marketPropertyListData } = this.state;
+        if (offer) {
+            const { id, title, end, description, pref } = offer;
             return (
                 <div className="container-fluid" ref={this.offerDetailsRef}>
                     <div className="title">
@@ -127,7 +146,7 @@ class OfferDetails extends Component {
                         <div className="row">
                             <div className="col-md-4 col-sm-6">
                                 <div className="thumb">
-                                    <img src={this.imageUrl} alt="offer details image" />
+                                    <img src={imageUrl} alt="offer details image" />
                                     <div className={`fav ${getFavouriteClassName(pref)}`}></div>
                                 </div>
                             </div>
@@ -150,7 +169,7 @@ class OfferDetails extends Component {
                             <div className="col-sm-6 col-xs-12">
                                 <div className="details-propertyselect">
                                     <Autocomplete
-                                        dataList={this.marketPropertyListData}
+                                        dataList={marketPropertyListData}
                                         defaultValue={selectedProperty}
                                         elementId="navigate-from-offer-details"
                                         title="Where do you want to go?"
