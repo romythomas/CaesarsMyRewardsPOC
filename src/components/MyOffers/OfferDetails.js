@@ -12,6 +12,7 @@ import Autocomplete from "../Common/Autocomplete";
 import { getImageUrl, getCaesarsDomain } from "../../constants/configs";
 import { recordOffersDetailsData } from "../../utilities/Gtm-Module";
 import ErrorMessage from "../Common/ErrorMessage";
+import LoadingSpinner from "../Common/LoadingSpinner";
 
 const mapStateToProps = (state) => ({
     offers: state.common.offers,
@@ -26,6 +27,7 @@ class OfferDetails extends Component {
         this.offerDetailsRef = createRef();
 
         this.state = {
+            hasDataFetched: false,
             selectedProperty: "",
             offer: null,
             imageUrl: getImageUrl(),
@@ -42,10 +44,10 @@ class OfferDetails extends Component {
             recordOffersDetailsData(this.offer.id);
         }
         scrollPageToBanner(this.offerDetailsRef);
-        this.updateOfferDetails();
+        this.fetchOfferDetails();
     }
 
-    updateOfferDetails() {
+    fetchOfferDetails() {
         const { offers, markets, properties, match } = this.props;
         if (offers && offers.length && match.params && match.params.id) {
             const offerItem = offers.filter((offer) => {
@@ -89,29 +91,9 @@ class OfferDetails extends Component {
                 }
             }
         }
-    }
-
-    updateMarketPropertyValues() {
-        const { markets } = this.props;
-        const { propertyList } = this.offer;
-        if (markets && markets.length && propertyList && propertyList.length) {
-            const marketsOfProperties = getMarketCodeListOfPropertyCodes(markets, propertyList);
-            this.marketPropertyListData = getStructuredMarketsPropertiesList(markets).map((data) => {
-                data.isDisabled = data.isMarket;
-                return data;
-            });
-            this.marketPropertyListData = this.marketPropertyListData.filter((data) => {
-                return marketsOfProperties.includes(data.value) || propertyList.includes(data.value);
-            });
-            const firstProperty = this.marketPropertyListData.find((item) => {
-                return !item.isDisabled;
-            });
-            if (firstProperty && firstProperty.value) {
-                this.setState({
-                    selectedProperty: firstProperty.value
-                });
-            }
-        }
+        this.setState({
+            hasDataFetched: true
+        });
     }
 
     onLocationChange(value) {
@@ -134,7 +116,10 @@ class OfferDetails extends Component {
     }
 
     render() {
-        const { offer, imageUrl, selectedProperty, marketPropertyListData } = this.state;
+        const { hasDataFetched, offer, imageUrl, selectedProperty, marketPropertyListData } = this.state;
+        if (!hasDataFetched) {
+            return <LoadingSpinner />;
+        }
         if (offer) {
             const { id, title, end, description, pref } = offer;
             return (
