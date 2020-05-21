@@ -25,7 +25,7 @@ const SelectList = (props) => {
         }
     };
     if (dataList && dataList.length) {
-        let valueToDisplay = selectedSort ? selectedSort : "";
+        let valueToDisplay = selectedSort ? selectedSort : dataList[0].value;
 
         return (
             <ClickAwayListener onClickAway={onClose}>
