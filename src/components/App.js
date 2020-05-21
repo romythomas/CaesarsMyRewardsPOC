@@ -49,7 +49,7 @@ class App extends Component {
         this.props.onLogin(
             Promise.all([
                 agent.Auth.login(),
-                agent.Offers.getOfferList(this.props.accountID),
+                agent.Offers.getOfferList(),
                 agent.Markets.getMarkets(),
                 agent.Properties.getProperties(),
                 agent.Reservations.getReservation(),
