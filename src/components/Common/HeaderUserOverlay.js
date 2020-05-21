@@ -57,6 +57,8 @@ const HeaderUserOverlay = (props) => {
                 </div>
             </ClickAwayListener>
         );
+    } else {
+        return null;
     }
 };
 

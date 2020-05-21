@@ -1,27 +1,13 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
-
-const mapStateToProps = state => ({
-  appName: state.common.appName,
-  token: state.common.token
-});
-
-const mapDispatchToProps = () => ({
- 
-});
+import React, { Component } from "react";
 
 class LeaderBoard extends Component {
-
-  render() {
-    return (
-      <div className="page">
-
-        <h2>LeaderBoard Page</h2>
-
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="page">
+                <h2>LeaderBoard Page</h2>
+            </div>
+        );
+    }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LeaderBoard);
+export default LeaderBoard;

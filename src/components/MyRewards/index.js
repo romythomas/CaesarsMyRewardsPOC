@@ -15,7 +15,6 @@ import LoadingSpinner from "../Common/LoadingSpinner";
 import { scrollPageToBanner } from "../../utilities/Helper";
 
 const mapStateToProps = (state) => ({
-    appName: state.common.appName,
     token: state.common.token,
     logininfo: state.guestProfile.logininfo,
     feeds: state.guestProfile.feeds,

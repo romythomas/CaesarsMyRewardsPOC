@@ -19,7 +19,6 @@ const OfferDetails = lazy(() => import(/* webpackChunkName: "OfferDetails" */ ".
 const mapStateToProps = (state) => {
     return {
         appLoaded: state.common.appLoaded,
-        appName: state.common.appName,
         loginInfo: state.common.loginInfo,
         redirectTo: state.common.redirectTo,
         offers: state.common.offers,
@@ -75,9 +74,9 @@ class App extends Component {
         ) {
             return (
                 <div>
-                    <Header appName={this.props.appName} loginInfo={this.props.loginInfo} />
+                    <Header loginInfo={this.props.loginInfo} />
                     <div id="page-content">
-                        <SpotLight appName={this.props.appName}></SpotLight>
+                        <SpotLight />
                         <div id="sub-content">
                             <Suspense fallback={<LoadingSpinner />}>
                                 <Switch>
@@ -92,15 +91,15 @@ class App extends Component {
                             </Suspense>
                         </div>
                     </div>
-                    <Footer appName={this.props.appName}> </Footer>
+                    <Footer />
                 </div>
             );
         } else {
             return (
                 <div>
-                    <Header appName={this.props.appName} loginInfo={this.props.loginInfo} />
+                    <Header loginInfo={this.props.loginInfo} />
                     <LoadingSpinner />
-                    <Footer appName={this.props.appName}> </Footer>
+                    <Footer />
                 </div>
             );
         }
