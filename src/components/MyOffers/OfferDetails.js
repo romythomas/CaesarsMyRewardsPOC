@@ -34,10 +34,6 @@ class OfferDetails extends Component {
     }
 
     componentDidMount() {
-        //DataLayer logging
-        if (this.offer && this.offer.id) {
-            recordOffersDetailsData(this.offer.id);
-        }
         this.fetchOfferDetails();
     }
 
@@ -51,7 +47,9 @@ class OfferDetails extends Component {
                 this.setState({
                     offer: offerItem[0]
                 });
-                const { propertyList } = offerItem[0];
+                const { propertyList, id } = offerItem[0];
+                //DataLayer logging
+                recordOffersDetailsData(id);
                 if (propertyList && propertyList.length) {
                     if (properties && properties.length) {
                         const property = getProperty(properties, propertyList[0]);
@@ -99,11 +97,11 @@ class OfferDetails extends Component {
     }
 
     gotoBookingWebsite() {
-        const { selectedProperty } = this.state;
-        let { id, start, end } = this.offer;
-        if (selectedProperty && id && start && end) {
-            start = getMoment(start).format("MM/DD/YYYY");
-            end = getMoment(end).format("MM/DD/YYYY");
+        const { selectedProperty, offer } = this.state;
+        if (selectedProperty && offer) {
+            let { id, start, end } = offer;
+            start = getMoment(new Date(start)).format("MM/DD/YYYY");
+            end = getMoment(new Date(end)).format("MM/DD/YYYY");
             const redirectionUrl = `${getCaesarsDomain()}/book/?propCode=${selectedProperty}&view=ratecal&arrival=${start}&departure=${end}&offerCode=${id}`;
             window.location = redirectionUrl;
         }
