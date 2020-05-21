@@ -46,6 +46,7 @@ class MyRewards extends Component {
                 hasDataFetched: true
             });
         });
+        scrollPageToBanner(this.myRewardsRef);
     }
 
     componentDidUpdate() {
