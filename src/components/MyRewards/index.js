@@ -34,13 +34,18 @@ class MyRewards extends Component {
     constructor(props) {
         super(props);
         this.myRewardsRef = createRef();
+        this.state = {
+            hasDataFetched: false
+        };
     }
 
     componentDidMount() {
-        scrollPageToBanner(this.myRewardsRef);
-        this.props.onGetGuestProfile(
-            Promise.all([agent.Profile.getGuestProfile(this.props.accountID), agent.Profile.getFeeds()])
-        );
+        Promise.all([agent.Profile.getGuestProfile(), agent.Profile.getFeeds()]).then((response) => {
+            this.props.onGetGuestProfile(response);
+            this.setState({
+                hasDataFetched: true
+            });
+        });
     }
 
     componentDidUpdate() {
@@ -53,6 +58,10 @@ class MyRewards extends Component {
     }
 
     render() {
+        const { hasDataFetched } = this.state;
+        if (!hasDataFetched) {
+            return <LoadingSpinner />;
+        }
         const { logininfo, feeds, properties, offers, enterpriseFeed, priceAlert, reservations } = this.props;
         if (logininfo && feeds && properties) {
             return (
@@ -96,9 +105,8 @@ class MyRewards extends Component {
                     </div>
                 </div>
             );
-        } else {
-            return <LoadingSpinner />;
         }
+        return <ErrorMessage errorText="Sorry! Your profile details are not available now. Please try again later." />;
     }
 }
 
