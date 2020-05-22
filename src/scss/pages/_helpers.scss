@@ -57,7 +57,7 @@ body {
     color: $custome-black;
     font-family: "Montserrat Regular", Helvetica, Arial, sans-serif;
     transition: all 0.11s ease 0s;
-    -webkit-overflow-scrolling: touch !important;
+    -webkit-overflow-scrolling: touch;
     overflow: auto;
     height: 100% !important;
 }
@@ -156,6 +156,7 @@ i {
 .freeze {
     @include break-point(991px) {
         overflow: hidden;
+        position: fixed;
     }
 }
 
