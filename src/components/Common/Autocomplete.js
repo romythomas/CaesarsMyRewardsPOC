@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const Autocomplete = (props) => {
@@ -193,6 +193,15 @@ const Autocomplete = (props) => {
         const onClearValue = () => {
             selectItemFromList("", "");
         };
+
+        useEffect(() => {
+            //Handle body scroll
+            if (isActiveState) {
+                document.body.classList.add("freeze");
+            } else {
+                document.body.classList.remove("freeze");
+            }
+        });
 
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
         return (

@@ -74,6 +74,14 @@ class Header extends React.Component {
         });
     }
 
+    componentDidUpdate() {
+        if (this.state.isMenuOpen) {
+            document.body.classList.add("freeze");
+        } else {
+            document.body.classList.remove("freeze");
+        }
+    }
+
     render() {
         const { loginInfo } = this.props;
         return (

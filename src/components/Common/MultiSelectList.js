@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const MultiSelectList = (props) => {
@@ -57,6 +57,15 @@ const MultiSelectList = (props) => {
     const onTextClick = () => {
         setIsActiveState((isActiveState) => !isActiveState);
     };
+
+    useEffect(() => {
+        //Handle body scroll
+        if (isActiveState) {
+            document.body.classList.add("freeze");
+        } else {
+            document.body.classList.remove("freeze");
+        }
+    });
 
     if (dataList && dataList.length) {
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.

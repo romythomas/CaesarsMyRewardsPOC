@@ -58,7 +58,7 @@ body {
     font-family: "Montserrat Regular", Helvetica, Arial, sans-serif;
     transition: all 0.11s ease 0s;
     -webkit-overflow-scrolling: touch !important;
-    overflow: auto !important;
+    overflow: auto;
     height: 100% !important;
 }
 ul,
@@ -149,6 +149,13 @@ i {
         padding: 4px 16px;
         color: $custome-secondary;
         padding: 8px 20px;
+    }
+}
+
+/*Mobile Scroll control*/
+.freeze {
+    @include break-point(991px) {
+        overflow: hidden;
     }
 }
 

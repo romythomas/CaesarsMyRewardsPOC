@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { getMoment, getMomentRange } from "../../utilities/Helper";
 import DateRangePicker from "react-daterange-picker";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
@@ -156,6 +156,15 @@ const SearchCalendar = (props) => {
     $(".dateRangeCalendar__item").on("touchstart", ".DateRangePicker__Date", function (event) {
         if (event && event.cancelable) {
             event.stopPropagation();
+        }
+    });
+
+    useEffect(() => {
+        //Handle body scroll
+        if (isActiveState) {
+            document.body.classList.add("freeze");
+        } else {
+            document.body.classList.remove("freeze");
         }
     });
 
