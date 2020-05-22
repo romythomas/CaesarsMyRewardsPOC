@@ -3,6 +3,9 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const SelectList = (props) => {
     const { dataList, defaultValue } = props;
+    let { elementId } = props;
+
+    elementId = elementId ? elementId : "select-list";
 
     const [isActiveState, setIsActiveState] = useState(false);
     const [selectedSort, setSelectedSort] = useState(defaultValue);
@@ -38,7 +41,11 @@ const SelectList = (props) => {
                                 valueToDisplay = data.name;
                             }
                             return (
-                                <li className={isSelected ? "active" : ""} key={index}>
+                                <li
+                                    id={`${elementId}__select__item__${index}`}
+                                    className={isSelected ? "active" : ""}
+                                    key={index}
+                                >
                                     <a onClick={onClick} value={data.value} key={index}>
                                         {data.name}
                                     </a>

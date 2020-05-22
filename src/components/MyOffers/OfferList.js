@@ -18,7 +18,7 @@ const OfferList = (props) => {
             <div className="listing">
                 <ul className="row">
                     {props.filteredSortedOffers.map((offer, index) => {
-                        return <OfferItem key={index} offer={offer} defaultProperty={selectedLocation} />;
+                        return <OfferItem index={index} key={index} offer={offer} defaultProperty={selectedLocation} />;
                     })}
                 </ul>
             </div>

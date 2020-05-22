@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 });
 
 const OfferItem = (props) => {
-    const { offer, properties, defaultProperty } = props;
+    const { index, offer, properties, defaultProperty } = props;
     let offerImageUrl = "images/list-img.jpg";
     const propertyDetails = getProperty(properties, offer.propertyList[0]);
     if (propertyDetails && propertyDetails.thumbnail && propertyDetails.thumbnail.url) {
@@ -20,7 +20,7 @@ const OfferItem = (props) => {
         offerDetailsURL += `?propCode=${defaultProperty}`;
     }
     return (
-        <li className="col-md-3 col-sm-6">
+        <li id={`offer__item__${index}`} className="col-md-3 col-sm-6">
             <div className="listing-wrap">
                 <div className="listing__detailswrap">
                     <div className="listing__img">
@@ -43,7 +43,7 @@ const OfferItem = (props) => {
                     </div>
                 </div>
                 <div className="btn-wrap">
-                    <Link className="button" to={offerDetailsURL}>
+                    <Link id={`offer__item__button__${index}`} className="button" to={offerDetailsURL}>
                         Details
                     </Link>
                 </div>

@@ -59,7 +59,12 @@ const OfferFilter = (props) => {
             <div className="title">
                 <h1>My Offers</h1>
                 <div className="sort">
-                    <SelectList dataList={offerSortTypes} defaultValue={defaultSort} onClick={props.onSortingChange} />
+                    <SelectList
+                        dataList={offerSortTypes}
+                        elementId="offer-sort"
+                        defaultValue={defaultSort}
+                        onClick={props.onSortingChange}
+                    />
                 </div>
             </div>
             <div className="form--search">

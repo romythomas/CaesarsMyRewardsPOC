@@ -10,15 +10,16 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
  */
 const SearchCalendar = (props) => {
     //Values that are passed as properties to the component
-    const { defaultType, defaultDateValue, defaultMonthValue, calendarId } = props;
-    let { minimumDate, maximumDate, title } = props;
+    const { defaultType, defaultDateValue, defaultMonthValue } = props;
+    let { minimumDate, maximumDate, title, calendarId } = props;
 
     //Local state objects used to handle show/hide of component and handle selection of calendar (month/date)
     const [isActiveState, setIsActiveState] = useState(false);
     const [defaultCalendar, setDefaultCalendar] = useState(defaultType);
 
-    //Set title, if not present in props
+    //Set title and id, if not present in props
     title = title ? title : "Start date - End date";
+    calendarId = calendarId ? calendarId : "search-calendar";
     //Set lowest and highest calendar selectable dates, if not defined in properties
     minimumDate = minimumDate && getMoment(minimumDate).isValid() ? getMoment(minimumDate) : getMoment();
     maximumDate = maximumDate && getMoment(maximumDate).isValid() ? getMoment(maximumDate) : getMoment().add(1, "year");
@@ -223,6 +224,7 @@ const SearchCalendar = (props) => {
                                 return (
                                     <li
                                         key={index}
+                                        id={`${calendarId}__month__item__${index}`}
                                         className={`month-item ${activeClassNames}`}
                                         data-value={date.format("MMM D, YYYY")}
                                         onClick={onMonthChange}

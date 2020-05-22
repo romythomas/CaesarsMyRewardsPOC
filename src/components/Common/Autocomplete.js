@@ -9,7 +9,7 @@ const Autocomplete = (props) => {
         const { dataList, defaultValue, stylingClass } = props;
         let { elementId, title } = props;
 
-        elementId = elementId ? elementId : "autocomplete-lst-component";
+        elementId = elementId ? elementId : "autocomplete-list-component";
         title = title ? title : "Select Value";
 
         const componentAttrs = { displayAttr: "true", highlightAttr: "false" };
@@ -237,6 +237,7 @@ const Autocomplete = (props) => {
                                     return (
                                         <li
                                             key={index}
+                                            id={`${elementId}__autocomplete__item__${index}`}
                                             className={"autocomplete__item " + stylingClassToApply}
                                             data-searchcontent={item.searchdata}
                                             data-selected={isSelected.toString()}
