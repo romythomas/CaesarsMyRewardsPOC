@@ -1,29 +1,5 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "33f225b8f5f7d6b34a0926f58f96c1e9",
-    "url": "/029b9bc9d72f4d799803735f6295f763.ttf"
-  },
-  {
-    "revision": "50145685042b4df07a1fd19957275b81",
-    "url": "/043771c999cd4d47d9f33c9c7e42c392.ttf"
-  },
-  {
-    "revision": "184c553c59496c96a2d7acca680c85fa",
-    "url": "/12ba843c75312dd308b0c43a97349566.woff"
-  },
-  {
-    "revision": "629a55a7e793da068dc580d184cc0e31",
-    "url": "/17e98b9e5586529b13ccb1f7af16861c.ttf"
-  },
-  {
-    "revision": "ab459481bb83f2cf53e5da9d7067323b",
-    "url": "/2ca169c90e53d1d0480b5680bfca1d23.woff"
-  },
-  {
-    "revision": "1bf71be111189e76987a4bb9b3115cb7",
-    "url": "/3d5923f94fc319b5652a7feb9dfa2b28.ttf"
-  },
-  {
     "revision": "ebc855869ee28faef9d9",
     "url": "/LeaderBoard.chunk.js"
   },
@@ -48,16 +24,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Reservation.chunk.js"
   },
   {
-    "revision": "40eddf41ee3db3b0eb8e",
+    "revision": "a908c228859d85c03b65",
     "url": "/bundle.js?v=4"
   },
   {
     "revision": "798e963a269e84c8d39ec63f1965734d",
-    "url": "/c3c6001eee0c75a7dcc2cb46beedc9db.woff"
+    "url": "/fonts/Montserrat-Black.woff"
+  },
+  {
+    "revision": "184c553c59496c96a2d7acca680c85fa",
+    "url": "/fonts/Montserrat-Bold.woff"
+  },
+  {
+    "revision": "ab459481bb83f2cf53e5da9d7067323b",
+    "url": "/fonts/Montserrat-Regular.woff"
   },
   {
     "revision": "bc62a80cc62cf21407b9d71a116dd67a",
-    "url": "/cdffefafe4a4c52c5dea60f91914582e.woff"
+    "url": "/fonts/Montserrat-SemiBold.woff"
+  },
+  {
+    "revision": "50145685042b4df07a1fd19957275b81",
+    "url": "/fonts/OpenSans-Bold.ttf"
+  },
+  {
+    "revision": "1bf71be111189e76987a4bb9b3115cb7",
+    "url": "/fonts/OpenSans-Light.ttf"
+  },
+  {
+    "revision": "629a55a7e793da068dc580d184cc0e31",
+    "url": "/fonts/OpenSans-Regular.ttf"
+  },
+  {
+    "revision": "33f225b8f5f7d6b34a0926f58f96c1e9",
+    "url": "/fonts/OpenSans-Semibold.ttf"
   },
   {
     "url": "/icon_128x128.9b5167d60bc3e0257240ff24024bbfba.png"
