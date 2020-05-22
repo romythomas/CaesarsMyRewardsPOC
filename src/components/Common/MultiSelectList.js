@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { handelBodyScroll } from "../../utilities/Helper";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const MultiSelectList = (props) => {
@@ -60,11 +61,7 @@ const MultiSelectList = (props) => {
 
     useEffect(() => {
         //Handle body scroll
-        if (isActiveState) {
-            document.body.classList.add("freeze");
-        } else {
-            document.body.classList.remove("freeze");
-        }
+        handelBodyScroll(isActiveState);
     });
 
     if (dataList && dataList.length) {

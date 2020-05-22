@@ -1,4 +1,5 @@
 import React from "react";
+import { handelBodyScroll } from "../../utilities/Helper";
 import HeaderUserOverlay from "./HeaderUserOverlay";
 import SideNavigation from "./SideNavigation";
 
@@ -75,11 +76,8 @@ class Header extends React.Component {
     }
 
     componentDidUpdate() {
-        if (this.state.isMenuOpen) {
-            document.body.classList.add("freeze");
-        } else {
-            document.body.classList.remove("freeze");
-        }
+        //Handle body scroll
+        handelBodyScroll(this.state.isMenuOpen);
     }
 
     render() {

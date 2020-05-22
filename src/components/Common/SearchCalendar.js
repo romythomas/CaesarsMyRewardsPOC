@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getMoment, getMomentRange } from "../../utilities/Helper";
+import { getMoment, getMomentRange, handelBodyScroll } from "../../utilities/Helper";
 import DateRangePicker from "react-daterange-picker";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
@@ -161,11 +161,7 @@ const SearchCalendar = (props) => {
 
     useEffect(() => {
         //Handle body scroll
-        if (isActiveState) {
-            document.body.classList.add("freeze");
-        } else {
-            document.body.classList.remove("freeze");
-        }
+        handelBodyScroll(isActiveState);
     });
 
     /**********************************************************************************************************

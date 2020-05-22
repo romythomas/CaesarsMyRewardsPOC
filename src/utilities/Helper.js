@@ -221,3 +221,15 @@ export const getMoment = (dateValue) => {
 export const getMomentRange = (startDate, endDate) => {
     return moment.range(startDate, endDate);
 };
+
+/**
+ * Sets class to body for blocking scroll, if component state is open
+ * @param {Boolean} stateValue - Is open state of component.
+ */
+export const handelBodyScroll = (stateValue) => {
+    if (stateValue) {
+        document.body.classList.add("freeze");
+    } else {
+        document.body.classList.remove("freeze");
+    }
+};
