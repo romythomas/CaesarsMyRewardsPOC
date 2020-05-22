@@ -1,28 +1,28 @@
 //form starts here
-nav{
-	&.navbar{
-		margin-right: auto;
-		@include break-point(991px){
-			display: none;
-		}
-	}
+nav {
+    &.navbar {
+        margin-right: auto;
+        @include break-point(991px) {
+            display: none;
+        }
+    }
 
-	.navbar-collapse{
-		.nav-link{
-			color: $custome-white;
-			font-family: OpenSans-Light;
-			&:hover{
-				text-decoration: underline;
-				color: $custome-white;
-			}
-		}
-	}
+    .navbar-collapse {
+        .nav-link {
+            color: $custome-white;
+            font-family: OpenSans-Light;
+            &:hover {
+                text-decoration: underline;
+                color: $custome-white;
+            }
+        }
+    }
 }
 
-.nav-mobbile{
-	display: none;
-	@include break-point(991px){
-		display: block;
-	}
+.nav-mobbile {
+    display: none;
+    @include break-point(991px) {
+        display: block;
+        background: #f8f8f8;
+    }
 }
-
