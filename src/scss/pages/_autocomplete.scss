@@ -36,7 +36,8 @@
             padding: 10px 0px;
             ul.autocomplete__listwrap {
                 @include break-point(991px) {
-                    margin-bottom: 120px;
+                    margin-bottom: 60px;
+                    padding-bottom: 60px;
                 }
             }
             li {
