@@ -156,7 +156,7 @@ i {
 .freeze {
     @include break-point(991px) {
         overflow: hidden;
-        position: fixed;
+        position: relative;
     }
 }
 
