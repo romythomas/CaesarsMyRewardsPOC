@@ -30,16 +30,9 @@
         @include break-point(991px) {
             max-height: none;
             height: 100vh;
-            overflow-y: scroll;
         }
         .autocomplete__list {
             padding: 10px 0px;
-            ul.autocomplete__listwrap {
-                @include break-point(991px) {
-                    margin-bottom: 60px;
-                    padding-bottom: 60px;
-                }
-            }
             li {
                 padding: 10px 0 10px 20px;
                 &:hover {
@@ -104,6 +97,8 @@
             width: 100%;
             left: 0;
             padding: 20px 10px 0 10px;
+            height: 100%;
+            overflow: auto;
             .txt {
                 border: none;
                 border-bottom: #ced4da solid 1px;
