@@ -6,7 +6,7 @@ const WebpackPwaManifest = require("webpack-pwa-manifest");
 module.exports = {
     entry: path.join(__dirname, "/src/index.js"),
     output: {
-        filename: "bundle.js?v=3",
+        filename: "bundle.js?v=4",
         chunkFilename: "[name].chunk.js",
         path: path.join(__dirname, "/dist"),
         publicPath: "/"
