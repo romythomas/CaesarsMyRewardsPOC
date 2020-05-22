@@ -1,16 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const preventScroll = (event) => {
-    if (event.cancelable) {
-        event.preventDefault();
-    }
-};
-
 const SideNavigation = (props) => {
     const { onMenuSelection } = props;
     return (
-        <aside className="sidebar" onTouchStart={preventScroll}>
+        <aside className="sidebar">
             <ul className="list-group" id="sidebar">
                 <li className="list-group-item">
                     <a href="#menu1" data-toggle="collapse" data-parent="#sidebar" className="main-head open">
