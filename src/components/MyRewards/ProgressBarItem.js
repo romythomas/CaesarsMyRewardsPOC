@@ -83,7 +83,7 @@ const ProgressBarItem = (props) => {
             </div>
             <div className="progress-text">
               <strong>25000</strong>
-              <span>Diomond</span>
+              <span>Diamond</span>
             </div>
           </li>
           <li>
