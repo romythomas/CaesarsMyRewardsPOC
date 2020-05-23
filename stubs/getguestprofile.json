@@ -66,22 +66,22 @@
       "previouscode": "DIAMOND",
       "tiercreditbalances": {
         "earnedhospitality": 0,
-        "promogaming": 1053,
+        "promogaming": 453,
         "earned": 0,
-        "gaming": 1053,
+        "gaming": 453,
         "hospitality": 0,
         "promohospitality": 0,
         "earnedgaming": 0,
-        "totalbalance": 1053,
-        "promotion": 1053
+        "totalbalance": 453,
+        "promotion": 453
       },
       "expirationdate": "12/31/1899",
       "extendedcode": "GLD",
-      "tierscore": 1053
+      "tierscore": 453
     },
     "rewardcredits": {
       "asofdate": "03/03/2020",
-      "balance": 3947,
+      "balance": 1165,
       "lastearned": "03/03/2020",
       "expirationdate": "09/03/2020"
     },
