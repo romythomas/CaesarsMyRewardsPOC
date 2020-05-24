@@ -2,6 +2,7 @@ const path = require("path");
 const HWP = require("html-webpack-plugin");
 const { InjectManifest } = require("workbox-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
+const webpack = require("webpack");
 
 module.exports = {
     entry: path.join(__dirname, "/src/index.js"),
@@ -77,6 +78,7 @@ module.exports = {
     },
     plugins: [
         new HWP({ template: path.join(__dirname, "src/index.html") }),
+        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb/),
         new WebpackPwaManifest({
             name: "Caesars Progressive Web App",
             orientation: "portrait",
@@ -130,7 +132,6 @@ module.exports = {
                 }
             ]
         }),
-
         new InjectManifest({
             swSrc: "./src/src-sw.js",
             swDest: "src.sw.js",
