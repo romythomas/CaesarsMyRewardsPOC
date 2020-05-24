@@ -7,7 +7,7 @@ const webpack = require("webpack");
 module.exports = {
     entry: path.join(__dirname, "/src/index.js"),
     output: {
-        filename: "bundle.js?v=4",
+        filename: "bundle.[hash].js",
         chunkFilename: "[name].chunk.js",
         path: path.join(__dirname, "/dist"),
         publicPath: "/"
@@ -68,7 +68,7 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "[name].[ext]",
+                            name: "[name].[hash].[ext]",
                             outputPath: "fonts/"
                         }
                     }
