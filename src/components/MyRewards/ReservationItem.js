@@ -8,37 +8,47 @@ import { getImageUrl } from "../../constants/configs";
  */
 const ReservationItem = (props) => {
     const { propertyList, reservationList } = props;
+    let reservation = reservationList.reservations[0];
+    if (reservation) {
+        let imageUrl = getImageUrl();
+        let propertyName = "";
 
-    let imageUrl = getImageUrl();
-    let propertyName = "";
-    let reservations = reservationList.reservations[0];
-    if (propertyList && reservations && reservations && reservations.propertyCode) {
-        let property = getProperty(props.propertyList, reservations.propertyCode);
-        if (property) {
-            imageUrl = `http://caesars.com${property.thumbnail.url}/hd/m/cover`;
-            propertyName = property.propertyName.toUpperCase();
+        const { propertyCode, checkInDate, checkOutDate } = reservation;
+        if (propertyList && propertyCode) {
+            const property = getProperty(propertyList, propertyCode);
+            if (property) {
+                imageUrl = `http://caesars.com${property.thumbnail.url}/hd/m/cover`;
+                propertyName = property.propertyName.toUpperCase();
+            }
         }
-    }
 
-    return (
-        <div className="listing-wrap">
-            <h3>My Reservations</h3>
-            <div className="listing__img">
-                <img className="thumb" src={imageUrl} alt="Caesars" />
-                <div className="img-info">
-                    <h5>{propertyName}</h5>
+        return (
+            <div className="listing-wrap">
+                <h3>My Reservations</h3>
+                <div className="listing__img">
+                    <img className="thumb" src={imageUrl} alt="Caesars" />
+                    <div className="img-info">
+                        <h5>{propertyName}</h5>
+                    </div>
+                </div>
+                <div className="listing__details">
+                    <h2>
+                        Check-in:{" "}
+                        {checkInDate ? getMoment(new Date(checkInDate.toString()), "MM-DD-YYYY").format("MM/DD/YYYY") : ""}
+                    </h2>
+                    <h2>
+                        Check-out:{" "}
+                        {checkOutDate ? getMoment(new Date(checkOutDate.toString()), "MM-DD-YYYY").format("MM/DD/YYYY") : ""}
+                    </h2>
+                    <span className="rate">&nbsp;</span>
+                </div>
+                <div className="btn-wrap-double">
+                    <button className="button">View All</button>
                 </div>
             </div>
-            <div className="listing__details">
-                <h2>Check-in: {getMoment(new Date(reservations.checkInDate), "MM-DD-YYYY").format("MM/DD/YYYY")}</h2>
-                <h2>Check-out: {getMoment(new Date(reservations.checkOutDate), "MM-DD-YYYY").format("MM/DD/YYYY")}</h2>
-                <span className="rate">&nbsp;</span>
-            </div>
-            <div className="btn-wrap-double">
-                <button className="button">View All</button>
-            </div>
-        </div>
-    );
+        );
+    }
+    return null;
 };
 
 export default ReservationItem;
