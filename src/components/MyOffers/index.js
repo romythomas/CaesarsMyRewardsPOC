@@ -155,8 +155,8 @@ class MyOffers extends Component {
                     }
                 });
             } else if (startdate || enddate) {
-                const urlStartDate = getMoment(startdate);
-                const urlEndDate = getMoment(enddate);
+                const urlStartDate = getMoment(startdate, ["MM-DD-YYYY", "YYYY-MM-DD"]);
+                const urlEndDate = getMoment(enddate, ["MM-DD-YYYY", "YYYY-MM-DD"]);
                 if (urlStartDate.isValid() && urlStartDate.isSameOrAfter(getMoment(), "day")) {
                     filterStartDate = urlStartDate;
                 }
