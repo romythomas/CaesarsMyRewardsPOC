@@ -1,5 +1,5 @@
 import React from "react";
-import { getProperty, getMoment } from "../../utilities/Helper";
+import { getProperty, getFormattedMoment } from "../../utilities/Helper";
 import { getImageUrl } from "../../constants/configs";
 
 /**
@@ -32,8 +32,8 @@ const ReservationItem = (props) => {
                     </div>
                 </div>
                 <div className="listing__details">
-                    <h2>Check-in: {checkInDate ? getMoment(checkInDate).format("MM/DD/YYYY") : "No Date"}</h2>
-                    <h2>Check-out: {checkOutDate ? getMoment(checkOutDate).format("MM/DD/YYYY") : "No Date"}</h2>
+                    <h2>Check-in: {checkInDate ? getFormattedMoment(checkInDate).format("MM/DD/YYYY") : "No Date"}</h2>
+                    <h2>Check-out: {checkOutDate ? getFormattedMoment(checkOutDate).format("MM/DD/YYYY") : "No Date"}</h2>
                     <span className="rate">&nbsp;</span>
                 </div>
                 <div className="btn-wrap-double">
