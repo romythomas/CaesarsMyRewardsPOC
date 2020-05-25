@@ -57,9 +57,6 @@ body {
     color: $custome-black;
     font-family: "Montserrat Regular", Helvetica, Arial, sans-serif;
     transition: all 0.11s ease 0s;
-    -webkit-transition: all 0.11s ease 0s;
-    -moz-transition: all 0.11s ease 0s;
-    -o-transition: all 0.11s ease 0s;
     -webkit-overflow-scrolling: touch;
     overflow: auto;
     height: 100% !important;
@@ -83,9 +80,6 @@ h6 {
 
 a {
     transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
     color: #000;
     &:hover {
         cursor: pointer;
@@ -125,9 +119,6 @@ i {
     text-align: center;
     text-transform: uppercase;
     transition: all 0.2s ease 0s;
-    -webkit-transition: all 0.2s ease 0s;
-    -moz-transition: all 0.2s ease 0s;
-    -o-transition: all 0.2s ease 0s;
     border: none;
     border-radius: 2px;
     position: relative;
@@ -243,9 +234,6 @@ select:-webkit-autofill:focus {
 .txt:focus + .form-control-placeholder {
     font-size: 10px;
     transform: translate3d(0, -30%, 0);
-    -webkit-transform: translate3d(0, -30%, 0);
-    -moz-transform: translate3d(0, -30%, 0);
-    -o-transform: translate3d(0, -30%, 0);
     opacity: 1;
     color: #666;
 }
@@ -260,9 +248,6 @@ select:-webkit-autofill:focus {
     top: 0;
     padding: 10px 0 0 13px;
     transition: all 200ms;
-    -webkit-transition: all 200ms;
-    -moz-transition: all 200ms;
-    -o-transition: all 200ms;
     opacity: 0.5;
     cursor: text;
 }
@@ -372,15 +357,10 @@ select:-webkit-autofill:focus {
     background: $custome-white;
     margin: 0 0 3px;
     transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
     display: block;
 }
 .open .bar1 {
     -webkit-transform: rotate(-45deg) translate(0px, 5px);
-    -moz-transform: rotate(-45deg) translate(0px, 5px);
-    -o-transform: rotate(-45deg) translate(0px, 5px);
     transform: rotate(-45deg) translate(0px, 5px);
 }
 
@@ -390,8 +370,6 @@ select:-webkit-autofill:focus {
 
 .open .bar3 {
     -webkit-transform: rotate(45deg) translate(-4px, -8px);
-    -moz-transform: rotate(45deg) translate(-4px, -8px);
-    -o-transform: rotate(45deg) translate(-4px, -8px);
     transform: rotate(45deg) translate(-4px, -8px);
 }
 
