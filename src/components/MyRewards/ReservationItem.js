@@ -30,8 +30,8 @@ const ReservationItem = (props) => {
                 </div>
             </div>
             <div className="listing__details">
-                <h2>Check-in: {getMoment(new Date(reservations.checkInDate)).format("MM/DD/YYYY")}</h2>
-                <h2>Check-out: {getMoment(new Date(reservations.checkOutDate)).format("MM/DD/YYYY")}</h2>
+                <h2>Check-in: {getMoment(new Date(reservations.checkInDate), "MM-DD-YYYY").format("MM/DD/YYYY")}</h2>
+                <h2>Check-out: {getMoment(new Date(reservations.checkOutDate), "MM-DD-YYYY").format("MM/DD/YYYY")}</h2>
                 <span className="rate">&nbsp;</span>
             </div>
             <div className="btn-wrap-double">
