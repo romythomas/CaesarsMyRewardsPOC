@@ -222,6 +222,10 @@ export const getMomentRange = (startDate, endDate) => {
     return moment.range(startDate, endDate);
 };
 
+export const getIsoMoment = () => {
+    return moment.ISO_8601;
+};
+
 /**
  * Sets class to body for blocking scroll, if component state is open
  * @param {Boolean} stateValue - Is open state of component.
