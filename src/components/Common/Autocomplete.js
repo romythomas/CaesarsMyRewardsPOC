@@ -161,11 +161,9 @@ const Autocomplete = (props) => {
                 if (keyCode === 38 && arrowCursor > 0) {
                     newArrowCursor = arrowCursor - 1;
                     isArrowKeyPressed = true;
-                    scrollItemIntoView(420);
                 } else if (keyCode === 40 && arrowCursor < componentData.length - 1) {
                     newArrowCursor = arrowCursor + 1;
                     isArrowKeyPressed = true;
-                    scrollItemIntoView(340);
                 }
                 if (isArrowKeyPressed) {
                     try {
@@ -199,17 +197,22 @@ const Autocomplete = (props) => {
             selectItemFromList("", "");
         };
 
-        const scrollItemIntoView = (position) => {
+        const scrollItemIntoView = () => {
             const { current } = listRef;
-            if (current && arrowCursor >= 0) {
-                const itemPosition = current.children[0].children[0].children[arrowCursor].offsetTop;
-                current.scrollTo(0, itemPosition - (position ? position : 0));
+            try {
+                const itemOffsetTop = current.children[0].children[0].children[arrowCursor].offsetTop;
+                current.scrollTo(0, itemOffsetTop - 380);
+            } catch (ex) {
+                console.log(ex);
             }
         };
 
         useEffect(() => {
             //Handle body scroll
             handelBodyScroll(isActiveState);
+            if (isActiveState) {
+                scrollItemIntoView();
+            }
         });
 
         //Do not change below HTML structure, id names and class names, as they are referenced in the scripts above.
