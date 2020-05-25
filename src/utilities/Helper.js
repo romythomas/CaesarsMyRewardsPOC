@@ -231,14 +231,7 @@ export const getMomentRange = (startDate, endDate) => {
 export const getFormattedMoment = (date) => {
     const formattedDate = date ? new Date(date.replace(/-/gi, "/")) : null;
     if (formattedDate && formattedDate != "Invalid Date") {
-        const fDate =
-            formattedDate.getFullYear().toString() +
-            "/" +
-            (formattedDate.getMonth() + 1).toString() +
-            "/" +
-            formattedDate.getDate().toString();
-        console.log(fDate);
-        return moment(fDate);
+        return moment(formattedDate);
     }
     return moment(null);
 };
