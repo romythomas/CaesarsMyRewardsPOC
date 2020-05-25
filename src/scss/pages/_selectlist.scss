@@ -1,86 +1,113 @@
 //selectlist  starts here
 .selectList.dropdown {
-	width: 175px;
-	position: relative;
-	border: #c6c8cc solid 1px;
-	color: $custome-primary;
-	font-size: 14px;
-	font-weight: 600;
-	& > span {
-		cursor: pointer;
-		padding: 5px 16px 5px 35px;
-		border-radius: 6px;
-		display: block;
-		position: relative;
-		transition: all .3s ease;
-		&:after {
-			@include fontawesome;
-			content: "\f0d7";
-			top: 30%;
-			left: 12px;
-		}
-		&:before {
-			@include fontawesome;
-			content: "\f0d8";
-			top: 9%;
-			left: 12px;
-		}
-	}
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		opacity: 0;
-		visibility: hidden;
-		position: absolute;
-		max-height: calc(var(--max-scroll) * 42px);
-		top: 20px;
-		left: 0;
-		z-index: 1;
-		right: 0;
-		background:$custome-white;
-		overflow-x: hidden;
-		overflow-y: auto;
-		transform-origin: 0 0;
-		transition: opacity .2s ease, visibility .2s ease, transform .3s cubic-bezier(.4, .6, .5, 1.32);
-		transform: scale(.8) translate(0, 4px);
-		box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
-		li {
-			opacity: 0;
-			transform: translate(6px, 0);
-			transition: all .3s ease;
-			a {
-				cursor: pointer;
-				display: block;
-				padding: 10px 16px;
-				color: var(--listText);
-				text-decoration: none;
-				outline: none;
-				position: relative;
-				transition: all .3s ease;
-				&:hover {
-					color: var(--listTextActive);
-				}
-			}
-			&.active {
-				a {
-					color: $custome-black;
-					background: #f1f1f6;
-					font-weight: 700;
-				}
-			}
-		}
-	}
-	&.open {
-		ul {
-			opacity: 1;
-			visibility: visible;
-			transform: scale(1) translate(0, 12px);
-			transition: opacity .3s ease, visibility .3s ease, transform .3s cubic-bezier(.4, .6, .5, 1.32);
-			li {
-				opacity: 1;
-				transform: translate(0, 0);
-			}
-		}
-	}
+    width: 175px;
+    position: relative;
+    border: #c6c8cc solid 1px;
+    color: $custome-primary;
+    font-size: 14px;
+    font-weight: 600;
+    & > span {
+        cursor: pointer;
+        padding: 5px 16px 5px 35px;
+        border-radius: 6px;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        &:after {
+            @include fontawesome;
+            content: "\f0d7";
+            top: 30%;
+            left: 12px;
+        }
+        &:before {
+            @include fontawesome;
+            content: "\f0d8";
+            top: 9%;
+            left: 12px;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        max-height: calc(var(--max-scroll) * 42px);
+        top: 20px;
+        left: 0;
+        z-index: 1;
+        right: 0;
+        background: $custome-white;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transform-origin: 0 0;
+        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+        -webkit-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+        -moz-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+        -o-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+        transform: scale(0.8) translate(0, 4px);
+        -webkit-transform: scale(0.8) translate(0, 4px);
+        -moz-transform: scale(0.8) translate(0, 4px);
+        -o-transform: scale(0.8) translate(0, 4px);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
+        li {
+            opacity: 0;
+            transform: translate(6px, 0);
+            -webkit-transform: translate(6px, 0);
+            -moz-transform: translate(6px, 0);
+            -o-transform: translate(6px, 0);
+            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            a {
+                cursor: pointer;
+                display: block;
+                padding: 10px 16px;
+                color: var(--listText);
+                text-decoration: none;
+                outline: none;
+                position: relative;
+                transition: all 0.3s ease;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                &:hover {
+                    color: var(--listTextActive);
+                }
+            }
+            &.active {
+                a {
+                    color: $custome-black;
+                    background: #f1f1f6;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    &.open {
+        ul {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1) translate(0, 12px);
+            -webkit-transform: scale(1) translate(0, 12px);
+            -moz-transform: scale(1) translate(0, 12px);
+            -o-transform: scale(1) translate(0, 12px);
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+            -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+            -moz-transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+            -o-transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+            li {
+                opacity: 1;
+                transform: translate(0, 0);
+                -webkit-transform: translate(0, 0);
+                -moz-transform: translate(0, 0);
+                -o-transform: translate(0, 0);
+            }
+        }
+    }
 }

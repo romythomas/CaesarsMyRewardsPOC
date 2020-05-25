@@ -1,382 +1,389 @@
 //SearchCalendar starts here
 .searchCalendar {
-  position: relative;
-  .form-control-placeholder,
-  .form-control.txt {
-    cursor: pointer;
-    color: transparent;
-    text-shadow: 0 0 0 #000;
-    &:focus {
-      outline: none;
-    }
-  }
-  .searchCalendar-content {
-    background: $custome-white;
-    position: absolute;
-    width: 660px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
-    display: none;
-    z-index: 99999;
-    right: 0;
-    @include break-point(991px) {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      top: 0;
-      right: 0;
-      padding: 10px;
-      z-index: 9999;
-      overflow: scroll;
-      text-align: center;
-    }
-    .searchCalendar-options {
-      text-align: center;
-      button {
-        background-color: #f1f1f6;
-        color: #0a0a0a;
-        height: 32px;
-        border-width: initial;
-        border-style: none;
-        border-image: initial;
-        border-radius: 4px;
-        border-color: rgb(112, 115, 120);
-        margin: 15px 1px;
-        min-width: 150px;
-        text-transform: uppercase;
-        &:hover {
-          box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 30px;
-        }
-        &.selected {
-          background-color: rgb(112, 115, 120);
-          color: rgb(255, 255, 255);
-          height: 40px;
-          border-width: initial;
-          border-style: none;
-          border-image: initial;
-          border-radius: 4px;
-          border-color: rgb(112, 115, 120);
-          margin: 4px 0px !important;
-        }
-      }
-    }
-    .dateRangeCalendar__item {
-      display: none;
-      &.active {
-        display: block;
-      }
-    }
-    .monthRangeCalendar__item {
-      display: none;
-      &.active {
-        display: block;
-      }
-      .monthRangeCalendar__list {
-        padding: 16px;
-        display: flex;
-        flex-wrap: wrap;
-        @include break-point(767px) {
-          justify-content: center;
-        }
-      }
-      li.month-item {
-        padding: 8px 10px;
-        margin: 8px 6px;
-        width: 145px;
-        text-align: center;
+    position: relative;
+    .form-control-placeholder,
+    .form-control.txt {
         cursor: pointer;
-        border: 1px solid #000;
-        text-transform: uppercase;
-        border-radius: 2px;
-        &:hover {
-          box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 30px;
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+        &:focus {
+            outline: none;
         }
-        @include break-point(767px) {
-          width: 45%;
-        }
-      }
-      li.month-item.active {
-        background-color: rgb(173, 31, 35);
-        color: rgb(255, 255, 255);
-        border: none;
-        &:hover {
-          background-color: #fff;
-          border: 1px solid rgb(173, 31, 35);
-          color: rgb(173, 31, 35);
-        }
-      }
     }
-  }
-  &.open {
     .searchCalendar-content {
-      display: block;
+        background: $custome-white;
+        position: absolute;
+        width: 660px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
+        display: none;
+        z-index: 99999;
+        right: 0;
+        @include break-point(991px) {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            z-index: 9999;
+            overflow: scroll;
+            text-align: center;
+        }
+        .searchCalendar-options {
+            text-align: center;
+            button {
+                background-color: #f1f1f6;
+                color: #0a0a0a;
+                height: 32px;
+                border-width: initial;
+                border-style: none;
+                border-image: initial;
+                border-radius: 4px;
+                border-color: rgb(112, 115, 120);
+                margin: 15px 1px;
+                min-width: 150px;
+                text-transform: uppercase;
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 30px;
+                }
+                &.selected {
+                    background-color: rgb(112, 115, 120);
+                    color: rgb(255, 255, 255);
+                    height: 40px;
+                    border-width: initial;
+                    border-style: none;
+                    border-image: initial;
+                    border-radius: 4px;
+                    border-color: rgb(112, 115, 120);
+                    margin: 4px 0px !important;
+                }
+            }
+        }
+        .dateRangeCalendar__item {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+        .monthRangeCalendar__item {
+            display: none;
+            &.active {
+                display: block;
+            }
+            .monthRangeCalendar__list {
+                padding: 16px;
+                display: flex;
+                flex-wrap: wrap;
+                @include break-point(767px) {
+                    justify-content: center;
+                }
+            }
+            li.month-item {
+                padding: 8px 10px;
+                margin: 8px 6px;
+                width: 145px;
+                text-align: center;
+                cursor: pointer;
+                border: 1px solid #000;
+                text-transform: uppercase;
+                border-radius: 2px;
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 30px;
+                }
+                @include break-point(767px) {
+                    width: 45%;
+                }
+            }
+            li.month-item.active {
+                background-color: rgb(173, 31, 35);
+                color: rgb(255, 255, 255);
+                border: none;
+                &:hover {
+                    background-color: #fff;
+                    border: 1px solid rgb(173, 31, 35);
+                    color: rgb(173, 31, 35);
+                }
+            }
+        }
     }
-  }
+    &.open {
+        .searchCalendar-content {
+            display: block;
+        }
+    }
 }
 
 /*Code from Calendar package*/
 .DateRangePicker {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 0;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 0;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .DateRangePicker__Legend {
-  color: #52575e;
-  font-size: 14px;
-  line-height: 16px;
-  list-style-type: none;
-  margin: 20px 0;
-  padding: 0;
+    color: #52575e;
+    font-size: 14px;
+    line-height: 16px;
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
 }
 .DateRangePicker__LegendItem {
-  display: inline-block;
-  margin: 0 20px;
+    display: inline-block;
+    margin: 0 20px;
 }
 .DateRangePicker__LegendItemColor {
-  border-radius: 50%;
-  display: inline-block;
-  height: 14px;
-  margin-right: 6px;
-  vertical-align: text-bottom;
-  width: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    display: inline-block;
+    height: 14px;
+    margin-right: 6px;
+    vertical-align: text-bottom;
+    width: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
 }
 .DateRangePicker__LegendItemColor--selection {
-  background-color: #ed5434;
+    background-color: #ed5434;
 }
 .DateRangePicker__PaginationArrow {
-  border: 0;
-  cursor: pointer;
-  display: block;
-  height: 35px;
-  outline: none;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  white-space: nowrap;
-  width: 35px;
-  z-index: 1;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    height: 35px;
+    outline: none;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    width: 35px;
+    z-index: 1;
 }
 .DateRangePicker__PaginationArrow--previous {
-  left: 20px;
+    left: 20px;
 }
 .DateRangePicker__PaginationArrow--next {
-  right: 20px;
+    right: 20px;
 }
 
 .DateRangePicker__PaginationArrowIcon {
-  position: absolute;
-  top: 11px;
-  width: 0;
+    position: absolute;
+    top: 11px;
+    width: 0;
 }
 .DateRangePicker__PaginationArrowIcon--is-disabled {
-  opacity: 0.25;
-  cursor: no-drop;
+    opacity: 0.25;
+    cursor: no-drop;
 }
 .DateRangePicker__PaginationArrowIcon--previous {
-  right: 11px;
-  border: solid #000;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 6px;
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
+    right: 11px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
 }
 .DateRangePicker__PaginationArrowIcon--next {
-  border: solid black;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 6px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
 }
 .DateRangePicker__Month {
-  color: #333;
-  display: inline-block;
-  margin: 0 20px;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    color: #333;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .DateRangePicker__MonthHeader {
-  color: #000;
-  font-size: 14px;
-  font-weight: bold;
-  height: 35px;
-  line-height: 35px;
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Montserrat Bold";
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat Bold";
 }
 .DateRangePicker__MonthHeaderLabel {
-  display: inline-block;
-  position: relative;
+    display: inline-block;
+    position: relative;
 }
 .DateRangePicker__MonthHeaderSelect {
-  background: #e4e4e4;
-  border: 0;
-  cursor: pointer;
-  display: inline-block;
-  height: 100%;
-  left: 0;
-  margin: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 5;
+    background: #e4e4e4;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
 }
 .DateRangePicker__MonthDates {
-  border-collapse: separate;
-  border-spacing: 0 1px;
-  margin: 0;
-  width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1px;
+    margin: 0;
+    width: 100%;
 }
 .DateRangePicker__WeekdayHeading,
 .DateRangePicker__Date {
-  font-size: 14px;
-  line-height: 1;
-  padding: 18px 8px;
-  width: 40px;
-  text-align: center;
+    font-size: 14px;
+    line-height: 1;
+    padding: 18px 8px;
+    width: 40px;
+    text-align: center;
 }
 .DateRangePicker__WeekdayHeading {
-  color: #000;
-  font-weight: bold;
-  font-size: 9px;
-  text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-size: 9px;
+    text-transform: uppercase;
 }
 .DateRangePicker__WeekdayHeading abbr[title] {
-  border-bottom-width: 0;
-  color: #000;
-  cursor: pointer;
-  font-size: inherit;
-  text-decoration: none;
+    border-bottom-width: 0;
+    color: #000;
+    cursor: pointer;
+    font-size: inherit;
+    text-decoration: none;
 }
 .DateRangePicker__Date {
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
 }
 .DateRangePicker__Date--otherMonth {
-  opacity: 0.25;
-  visibility: hidden;
+    opacity: 0.25;
+    visibility: hidden;
 }
 .DateRangePicker__Date--is-disabled {
-  color: #cdcdd1;
-  cursor: default;
+    color: #cdcdd1;
+    cursor: default;
 }
 .DateRangePicker__Date--is-selected {
-  color: #fff;
+    color: #fff;
 }
 .DateRangePicker__Date--is-highlighted {
-  color: #fff;
+    color: #fff;
 }
 .DateRangePicker__CalendarDatePeriod {
-  bottom: 0;
-  position: absolute;
-  top: 0;
+    bottom: 0;
+    position: absolute;
+    top: 0;
 }
 .DateRangePicker__CalendarDatePeriod--am {
-  left: 0;
-  right: 50%;
+    left: 0;
+    right: 50%;
 }
 .DateRangePicker__CalendarDatePeriod--pm {
-  left: 50%;
-  right: 0;
+    left: 50%;
+    right: 0;
 }
 .DateRangePicker__CalendarSelection {
-  bottom: 5px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  height: 40px;
+    bottom: 5px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    height: 40px;
 }
 .DateRangePicker__CalendarSelection--inOtherMonth {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 .DateRangePicker__CalendarSelection--start {
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-  background-color: rgb(112, 115, 120);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: rgb(112, 115, 120);
 }
 .DateRangePicker__CalendarSelection--end {
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-  background-color: rgb(112, 115, 120);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(112, 115, 120);
 }
 .DateRangePicker__CalendarSelection--segment {
-  background-color: rgb(190, 192, 197);
+    background-color: rgb(190, 192, 197);
 }
 .DateRangePicker__CalendarSelection--single {
-  border-radius: 5px;
+    border-radius: 5px;
 }
 .DateRangePicker__CalendarSelection--is-pending {
-  color: rgb(255, 255, 255);
-  background-color: rgb(112, 115, 120);
+    color: rgb(255, 255, 255);
+    background-color: rgb(112, 115, 120);
 }
 .DateRangePicker__CalendarHighlight {
-  background-color: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  bottom: 5px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 5px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    bottom: 5px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 5px;
 }
 .DateRangePicker__CalendarHighlight--inOtherMonth {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 .DateRangePicker__CalendarHighlight--start {
-  border-bottom-left-radius: 5px;
-  border-right-width: 0;
-  border-top-left-radius: 5px;
-  left: 5px;
+    border-bottom-left-radius: 5px;
+    border-right-width: 0;
+    border-top-left-radius: 5px;
+    left: 5px;
 }
 .DateRangePicker__CalendarHighlight--end {
-  border-bottom-right-radius: 5px;
-  border-left-width: 0;
-  border-top-right-radius: 5px;
-  right: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-width: 0;
+    border-top-right-radius: 5px;
+    right: 5px;
 }
 .DateRangePicker__CalendarHighlight--segment {
-  border-left-width: 0;
-  border-right-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
 }
 .DateRangePicker__CalendarHighlight--single {
-  background-color: rgb(112, 115, 120);
-  border: none;
-  border-radius: 5px;
+    background-color: rgb(112, 115, 120);
+    border: none;
+    border-radius: 5px;
 }
 .DateRangePicker__HalfDateStates {
-  bottom: -50px;
-  left: -50px;
-  position: absolute;
-  right: -50px;
-  top: -50px;
-  transform: rotate(30deg);
+    bottom: -50px;
+    left: -50px;
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
 }
 .DateRangePicker__FullDateStates {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 .DateRangePicker__DateLabel {
-  display: block;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  z-index: 1;
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
 }

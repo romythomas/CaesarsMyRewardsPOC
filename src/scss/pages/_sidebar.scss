@@ -6,6 +6,9 @@
     height: 100vh;
     z-index: 9997;
     transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
     -webkit-box-shadow: 6px 0px 13px -10px rgba(0, 0, 0, 0.35);
     -moz-box-shadow: 6px 0px 13px -10px rgba(0, 0, 0, 0.35);
     box-shadow: 6px 0px 13px -10px rgba(0, 0, 0, 0.35);
@@ -232,6 +235,9 @@
         @include break-point(991px) {
             width: 100%;
             transition: all 0.4s ease 0s;
+            -webkit-transition: all 0.4s ease 0s;
+            -moz-transition: all 0.4s ease 0s;
+            -o-transition: all 0.4s ease 0s;
             left: 0;
         }
     }
