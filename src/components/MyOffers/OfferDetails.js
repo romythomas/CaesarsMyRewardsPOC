@@ -138,8 +138,8 @@ class OfferDetails extends Component {
         const { selectedProperty, offer } = this.state;
         if (selectedProperty && offer) {
             let { id, start, end } = offer;
-            start = getMoment(new Date(start)).format("MM/DD/YYYY");
-            end = getMoment(new Date(end)).format("MM/DD/YYYY");
+            start = getMoment(start).format("MM/DD/YYYY");
+            end = getMoment(end).format("MM/DD/YYYY");
             const redirectionUrl = `${getCaesarsDomain()}/book/?propCode=${selectedProperty}&view=ratecal&arrival=${start}&departure=${end}&offerCode=${id}`;
             window.location = redirectionUrl;
         }
