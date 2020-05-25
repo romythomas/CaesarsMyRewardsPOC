@@ -4,15 +4,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/LeaderBoard.chunk.js"
   },
   {
-    "revision": "a11252a3d27044fb9a7b",
+    "revision": "44885ea344ade7afbd75",
     "url": "/MyOffers.chunk.js"
   },
   {
-    "revision": "e5ccf2f35a7db0b17c0d",
+    "revision": "303810154911c9a962d4",
     "url": "/MyRewards.chunk.js"
   },
   {
-    "revision": "f7e8ac64000e9a2267a9",
+    "revision": "0bf83faf7454f8f30c95",
     "url": "/OfferDetails.chunk.js"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Reservation.chunk.js"
   },
   {
-    "url": "/bundle.56fba18b9f3a0c5a4c63.js"
+    "url": "/bundle.49fa98d5d06f00fdd4c2.js"
   },
   {
     "revision": "798e963a269e84c8d39ec63f1965734d",
@@ -83,7 +83,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/icon_96x96.a6419fdf1304f08e159fabb12f788297.png"
   },
   {
-    "revision": "2f1abc9fd14170de5878c3a0c8ff9ba7",
+    "revision": "f4d4e7dd040ee0fb3756a5e27c97ff5e",
     "url": "/index.html"
   },
   {
