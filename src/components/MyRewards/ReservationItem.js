@@ -1,5 +1,5 @@
 import React from "react";
-import { getProperty, getMoment, getIsoMoment } from "../../utilities/Helper";
+import { getProperty, getMoment } from "../../utilities/Helper";
 import { getImageUrl } from "../../constants/configs";
 
 /**
