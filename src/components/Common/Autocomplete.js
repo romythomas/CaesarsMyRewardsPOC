@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import { handelBodyScroll } from "../../utilities/Helper";
 
@@ -41,6 +41,8 @@ const Autocomplete = (props) => {
         const [arrowCursor, setArrowCursor] = useState(defaultDataIndex);
         const [textInputValue, setTextInputValue] = useState(dafaultDataDisplay);
         const [componentData, setComponentData] = useState(modifiedDataList);
+
+        const listRef = useRef(null);
 
         const initializeDataList = (dataList) => {
             const updatedData = componentData.map((data) => {
@@ -159,9 +161,11 @@ const Autocomplete = (props) => {
                 if (keyCode === 38 && arrowCursor > 0) {
                     newArrowCursor = arrowCursor - 1;
                     isArrowKeyPressed = true;
+                    scrollItemIntoView(420);
                 } else if (keyCode === 40 && arrowCursor < componentData.length - 1) {
                     newArrowCursor = arrowCursor + 1;
                     isArrowKeyPressed = true;
+                    scrollItemIntoView(340);
                 }
                 if (isArrowKeyPressed) {
                     try {
@@ -195,6 +199,14 @@ const Autocomplete = (props) => {
             selectItemFromList("", "");
         };
 
+        const scrollItemIntoView = (position) => {
+            const { current } = listRef;
+            if (current && arrowCursor >= 0) {
+                const itemPosition = current.children[0].children[0].children[arrowCursor].offsetTop;
+                current.scrollTo(0, itemPosition - (position ? position : 0));
+            }
+        };
+
         useEffect(() => {
             //Handle body scroll
             handelBodyScroll(isActiveState);
@@ -225,7 +237,7 @@ const Autocomplete = (props) => {
                             {title}
                         </label>
                     </div>
-                    <div className="autocomplete-content">
+                    <div className="autocomplete-content" ref={listRef}>
                         <div className="autocomplete__list">
                             <ul className="autocomplete__listwrap">
                                 {componentData.map((item, index) => {
