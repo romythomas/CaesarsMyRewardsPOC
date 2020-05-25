@@ -222,8 +222,18 @@ export const getMomentRange = (startDate, endDate) => {
     return moment.range(startDate, endDate);
 };
 
-export const getIsoMoment = () => {
-    return moment.ISO_8601;
+/**
+ * Moment always expects date to be in ISO format.
+ * Create date in required format if the format of input date is wrong and then convert it to memoment.
+ * @param {String} date - A date value which has to be converted to moment format.
+ * @returns {Object} - Moment object value of the date.
+ */
+export const getFormattedMoment = (date) => {
+    const formattedDate = date ? new Date(date) : null;
+    if (formattedDate && formattedDate != "Invalid Date") {
+        return moment(formattedDate.getFullYear() + "-" + (formattedDate.getMonth() + 1) + "-" + formattedDate.getDate());
+    }
+    return moment(null);
 };
 
 /**

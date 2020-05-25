@@ -5,7 +5,7 @@ import OfferFilter from "./OfferFilter";
 import { FILTER_SORT_OFFER } from "../../constants/actionTypes";
 import { filterOffers, updateSelectedFilter } from "../../utilities/Filter";
 import { sortOffers } from "../../utilities/Sort";
-import { getMoment } from "../../utilities/Helper";
+import { getMoment, getFormattedMoment } from "../../utilities/Helper";
 import { getOfferSortTypes, getOfferFilterTypes } from "../../constants/configs";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import { recordMyOffersData } from "../../utilities/Gtm-Module";
@@ -155,8 +155,8 @@ class MyOffers extends Component {
                     }
                 });
             } else if (startdate || enddate) {
-                const urlStartDate = getMoment(startdate, ["MM-DD-YYYY", "YYYY-MM-DD"]);
-                const urlEndDate = getMoment(enddate, ["MM-DD-YYYY", "YYYY-MM-DD"]);
+                const urlStartDate = getFormattedMoment(startdate);
+                const urlEndDate = getFormattedMoment(enddate);
                 if (urlStartDate.isValid() && urlStartDate.isSameOrAfter(getMoment(), "day")) {
                     filterStartDate = urlStartDate;
                 }
