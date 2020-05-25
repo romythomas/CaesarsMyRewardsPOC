@@ -20,7 +20,7 @@ const OfferItem = (props) => {
         const offerProperty = offer.propertyList[0];
         var property = getProperty(propertyList, offerProperty);
         if (property) {
-            imageUrl = `${getCaesarsDomain()}${property.thumbnail.url}/hd/m/cover`;
+            imageUrl = `${getCaesarsDomain()}${property.thumbnail.url}/hd/l/cover`;
             propertyName = property.propertyName;
         }
 

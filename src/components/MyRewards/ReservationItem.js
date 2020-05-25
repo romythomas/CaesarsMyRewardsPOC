@@ -17,7 +17,7 @@ const ReservationItem = (props) => {
         if (propertyList && propertyCode) {
             const property = getProperty(propertyList, propertyCode);
             if (property) {
-                imageUrl = `http://caesars.com${property.thumbnail.url}/hd/m/cover`;
+                imageUrl = `http://caesars.com${property.thumbnail.url}/hd/l/cover`;
                 propertyName = property.propertyName.toUpperCase();
             }
         }

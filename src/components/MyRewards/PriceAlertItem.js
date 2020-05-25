@@ -22,7 +22,7 @@ const PriceAlertItem = (props) => {
         if (lowestRate) {
             let property = getProperty(propertyList, lowestRate.propertyCode);
             if (property) {
-                imageUrl = `http://caesars.com${property.thumbnail.url}/hd/m/cover`;
+                imageUrl = `http://caesars.com${property.thumbnail.url}/hd/l/cover`;
                 propertyName = property.propertyName.toUpperCase();
             }
             if (lowestRate.rate < parseInt(priceAlert.threshold, 10)) {
