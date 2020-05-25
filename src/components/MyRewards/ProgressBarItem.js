@@ -33,7 +33,7 @@ const ProgressBarItem = (props) => {
     //find marker template
     let template = feeds.markertemplates[userbrackettier.markerTemplate];
     progressbarpercent = `${((score - template.progressbarOrigin) / template.progressbarDivisor) * 100}%`;
-    creditsNeeded = userbrackettier.creditsMinuend - score;
+    creditsNeeded = 4000 - score;
     progressBarMessage = userbrackettier.progressBarMessage;
     tierText = userbrackettier.tierText;
 
@@ -64,7 +64,7 @@ const ProgressBarItem = (props) => {
             </div>
             <div className="progress-text">
               <samp>0</samp>
-              <strong>5000</strong>
+              <strong>4000</strong>
               <span>Gold</span>
             </div>
           </li>
@@ -73,7 +73,7 @@ const ProgressBarItem = (props) => {
               <img src="images/icon-platinum.png" alt="Caesars" />
             </div>
             <div className="progress-text">
-              <strong>15000</strong>
+              <strong>13000</strong>
               <span>Platinum</span>
             </div>
           </li>
