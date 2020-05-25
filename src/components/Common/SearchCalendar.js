@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getMoment, getMomentRange, getFormattedMoment, handelBodyScroll } from "../../utilities/Helper";
+import { getMoment, getMomentRange, handelBodyScroll } from "../../utilities/Helper";
 import DateRangePicker from "react-daterange-picker";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
@@ -106,7 +106,7 @@ const SearchCalendar = (props) => {
         //Check if date value is presented in the slection
         if (target && target.dataset && target.dataset.value) {
             //Find startdate and enddate. Then convert them to moment
-            const startDate = getFormattedMoment(target.dataset.value);
+            const startDate = getMoment(new Date(target.dataset.value));
             const endDate = startDate.clone().endOf("month");
             //If callback event is present in props and date values are valid, pass values to component property
             if (props.onChange && startDate.isValid() && endDate.isValid()) {
