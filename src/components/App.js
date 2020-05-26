@@ -68,13 +68,16 @@ class App extends Component {
     }
 
     componentDidUpdate() {
-        const { contentRef } = this;
-        if (contentRef) {
-            const { current } = contentRef;
-            if (current) {
-                window.scrollTo(0, current.offsetTop - 80);
+        const timer = setTimeout(() => {
+            const { contentRef } = this;
+            if (contentRef) {
+                const { current } = contentRef;
+                if (current) {
+                    window.scrollTo(0, current.offsetTop - 80);
+                }
             }
-        }
+        }, 20);
+        return () => clearTimeout(timer);
     }
 
     render() {
