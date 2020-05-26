@@ -73,7 +73,7 @@ const ProgressBarItem = (props) => {
               <img src="images/icon-platinum.png" alt="Caesars" />
             </div>
             <div className="progress-text">
-              <strong>13000</strong>
+              <strong>12000</strong>
               <span>Platinum</span>
             </div>
           </li>
@@ -82,7 +82,7 @@ const ProgressBarItem = (props) => {
               <img src="images/icon-diomond.png" alt="Caesars" />
             </div>
             <div className="progress-text">
-              <strong>25000</strong>
+              <strong>125000</strong>
               <span>Diamond</span>
             </div>
           </li>
