@@ -6,7 +6,7 @@
     "tier": "G",
     "firstname": "TRTEST",
     "lastname": "TEST",
-    "accountbalance": "3947",
+    "accountbalance": "1165",
     "zip": "94945",
     "domprop": "CLV",
     "dob": "-817585200000",
@@ -14,6 +14,6 @@
     "restrictedstatus": "",
     "source": "TRAS",
     "expires": "1585144692069",
-    "tierscore": "1053"
+    "tierscore": "453"
   }
 }
